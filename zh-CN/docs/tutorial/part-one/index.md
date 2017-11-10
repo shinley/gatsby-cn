@@ -1,20 +1,20 @@
 ---
-title: Gatsby.js Tutorial Part One
+title: Gatsby.js 教程 第一部分
 typora-copy-images-to: './'
 ---
-Hello fellow Gatsby-er! Welcome to *part one* of our community Gatsby.js tutorial.
+使用Gatsby的朋友们，大家好！ 欢迎来到我们社区的第一部分Gatsby.js教程。
 
-In this tutorial you'll be gently introduced to the Gatsby development environment, how to create component pages, and how to build and deploy Gatsby sites.
+在本教程中，我们将给你介绍Gatsby的开发环境，如何创建组件页面以及如何构建和部署Gatsby网站。
 
-Sit down, buckle up, and let's get going!
+坐好了， 系上安全带，我们出发了！
 
 ## 检查你的开发环境
 
-Let's check first that you have everything setup to start creating with Gatsby. You will need a recent version of [Node.js](https://nodejs.org) installed.
+首先检查一下你是否已经设置了好了一切，然后Gatsby创建。 你需要安装最新版本的Node.js。
 
-Node.js is a programming tool for running JavaScript on servers and in your computer's terminal. Gatsby is built using Node.js.
+Node.js是在服务器和终端上运行JavaScript的编程工具。 盖茨比是用Node.js构建的。
 
-Open a terminal window. See [these instructions](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/) for Mac users and [these other instructions](https://www.quora.com/How-do-I-open-terminal-in-windows) for Windows users. In your terminal window, type `node --version` then `npm --version`.
+打开一个终端窗口。 Mac用户请参阅这些说明，Windows用户请参阅其它说明。 在你的终端窗口中，输入node --version，然后输入npm --version。
 
 You should see something like:
 
