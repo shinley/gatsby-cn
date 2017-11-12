@@ -26,23 +26,23 @@ Gatsby supports versions of Node back to v4 and NPM to v3.
 
 ## 安装“Hello World”启动器(Starter)
 
-Gatsby使用“Starters”开始新项目 As the name suggests, starters are partially built Gatsby sites pre-configured to help you get moving faster. There are several official starters and many others contributed from the Gatsby community! [See the Starters page for the full list](/docs/gatsby-starters/).
+Gatsby使用“Starters”开始新项目 顾名思义，“starters”部分建立了预先配置的Gatsby网站，以帮助您更快地开始。 有一些官方的的“starters”和许多其他从Gatsby社区贡献的“starters”！ 详细信息请查看 Starters页面
 
-To install a starter, first install Gatsby's terminal program by typing the following command into the a terminal window and hit ENTER.
+要安装starter，首先在终端窗口中输入以下命令来安装Gatsby的终端程序，然后按下ENTER键。
 
 ```sh
 npm install --global gatsby-cli
 ```
 
-Once that's installed, type the following command in and hit ENTER:
+安装完成后，在中输入以下命令并按Enter键：
 
 ```sh
 gatsby new tutorial-part-one https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-This command downloads the files for the starter and then installs the needed NPM packages. It should take around 1.5-3 minutes to finish. It may look like nothing is happening at first; be patient!
+该命令下载启动程序的文件，然后安装所需的NPM软件包。 完成大约需要1.5-3分钟。 一开始可能看起来没有任何事情发生， 耐心一点！
 
-Now let's try running Gatsby!
+现在我们来试试运行Gatsby！
 
 Gatsby has a built-in development server. Let's start it up by typing in the following commands into the same terminal window you've used so far in this tutorial.
 
