@@ -16,17 +16,17 @@ Node.js是在服务器和终端上运行JavaScript的编程工具。 盖茨比�
 
 打开一个终端窗口。 Mac用户请参阅这些说明，Windows用户请参阅其它说明。 在你的终端窗口中，输入node --version，然后输入npm --version。
 
-You should see something like:
+你会看到以下信息：
 
 ![Check if node.js/npm is installed](check-versions.png)
 
 Gatsby supports versions of Node back to v4 and NPM to v3.
 
-If you don't have Node.js installed, go to https://nodejs.org/ and install the recommended version for your operating system.
+如果您没有安装Node.js，请到https://nodejs.org/并安装适用于您的操作系统的推荐版本。
 
-## Install the "Hello World" starter
+## 安装“Hello World”启动器(Starter)
 
-Gatsby uses "starters" for starting new projects. As the name suggests, starters are partially built Gatsby sites pre-configured to help you get moving faster. There are several official starters and many others contributed from the Gatsby community! [See the Starters page for the full list](/docs/gatsby-starters/).
+Gatsby使用“Starters”开始新项目 As the name suggests, starters are partially built Gatsby sites pre-configured to help you get moving faster. There are several official starters and many others contributed from the Gatsby community! [See the Starters page for the full list](/docs/gatsby-starters/).
 
 To install a starter, first install Gatsby's terminal program by typing the following command into the a terminal window and hit ENTER.
 
