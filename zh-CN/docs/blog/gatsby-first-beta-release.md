@@ -1,30 +1,22 @@
 ---
 title: Gatsby's first beta release
-date: "2017-06-15"
-author: "Kyle Mathews"
-image: "images/13382568193_31cfce63be_o-edited.jpg"
+date: 2017-06-15
+author: Kyle Mathews
+image: images/13382568193_31cfce63be_o-edited.jpg
 imageAuthor: Kees Torn
-imageAuthorLink: https://flic.kr/p/mozahn
+imageAuthorLink: 'https://flic.kr/p/mozahn'
 imageTitle: Container ship loading containers
-excerpt: "We shipped today Gatsby's first beta for 1.0! Gatsby is a modern blazing-fast static site generator for React.js…"
+excerpt: We shipped today Gatsby's first beta for 1.0! Gatsby is a modern blazing-fast static site generator for React.js…
 ---
-We shipped today Gatsby's first beta for 1.0! Gatsby is a modern blazing-fast static
-site generator for React.js.
+We shipped today Gatsby's first beta for 1.0! Gatsby is a modern blazing-fast static site generator for React.js.
 
-Ten months and one day ago [I announced I was now working full-time on
-Gatsby](https://www.bricolage.io/gatsby-open-source-work/) followed a month
-later by posting [an issue kickstarting the rewrite of Gatsby for a 1.0
-release](https://github.com/gatsbyjs/gatsby/issues/419)
+Ten months and one day ago [I announced I was now working full-time on Gatsby](https://www.bricolage.io/gatsby-open-source-work/) followed a month later by posting [an issue kickstarting the rewrite of Gatsby for a 1.0 release](https://github.com/gatsbyjs/gatsby/issues/419)
 
-Since then 40 contributors have pushed 723 commits contributing to 23 alpha releases
-before today's first beta release. It's been a really enjoyable experience watching
-Gatsby v1 take form and helping shape that and the growing community around it.
+Since then 40 contributors have pushed 723 commits contributing to 23 alpha releases before today's first beta release. It's been a really enjoyable experience watching Gatsby v1 take form and helping shape that and the growing community around it.
 
 ### What's part of v1
 
-From Gatsby's initial release just over two years ago, Gatsby has let you build
-static websites using React.js components as well as markdown, JSON,
-and YAML.
+From Gatsby's initial release just over two years ago, Gatsby has let you build static websites using React.js components as well as markdown, JSON, and YAML.
 
 Building on this strong foundation, v1 adds:
 
@@ -34,10 +26,10 @@ Building on this strong foundation, v1 adds:
 
 ## Special thanks to
 
-Getting to this point wouldn't have happened without the help of many individuals
-and companies.
+Getting to this point wouldn't have happened without the help of many individuals and companies.
 
 ### Individuals
+
 * [Thijs Koerselman](https://github.com/0x80)
 * [Jason Quense](https://github.com/jquense)
 * [Fabien Bernard](https://github.com/fabien0102)
@@ -64,8 +56,7 @@ and companies.
 
 ### Our open source hosting/testing infastructure providers
 
-It'd be impossible to write open source code without the generous support
-of these infrastructure providers.
+It'd be impossible to write open source code without the generous support of these infrastructure providers.
 
 * [Netlify](https://www.netlify.com/) *Awesome static site continuous delivery & hosting*
 * [Travis CI](https://travis-ci.org) *Test runner in the cloud*
@@ -74,6 +65,7 @@ of these infrastructure providers.
 ## Changelog since 1.0.0-alpha.20
 
 ### Added
+
 * Allow for gatsby-remark-smartypants options [#1166](https://github.com/gatsbyjs/gatsby/pull/1166) @mitchejj
 * New design (for gatsbyjs.org) + new home page [#1170](https://github.com/gatsbyjs/gatsby/pull/1170) @kyleamathews
 * Add ability to locally define plugins [#1126](https://github.com/gatsbyjs/gatsby/pull/1126) @0x80
@@ -84,12 +76,14 @@ of these infrastructure providers.
 * Add documentation to gatsby-remark-prism @kyleamathews
 
 ### Changed
+
 * Move all filter operators for connections under a top-level "filter" field [#1177](https://github.com/gatsbyjs/gatsby/pull/1177) @kyleamathews
 * Change `linkPrefix` to `pathPrefix` and add an example site [#1155](https://github.com/gatsbyjs/gatsby/pull/1155) @kyleamathews
 * Make the plugin options for remark plugins the second argument (like everywhere else) [#1167](https://github.com/gatsbyjs/gatsby/pull/1167) @kyleamathews
 * Start using next instead of canary in example sites for package versions @kyleamathews
 
 ### Fixed
+
 * Fix graphql compiler on typescript [#949](https://github.com/gatsbyjs/gatsby/pull/949) @fabien0102
 * Replace react.createClass with ES6 classes in examples html.js, add PropTypes [#1169](https://github.com/gatsbyjs/gatsby/pull/1169) @abachuk
 * Fix windows build pull [#1158](https://github.com/gatsbyjs/gatsby/pull/1158) @kyleamathews
