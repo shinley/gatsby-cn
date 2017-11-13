@@ -69,12 +69,12 @@ Gatsby的开发服务器是一个“热加载”服务器，这意味着您对Re
 
 现在，您已经在代码编辑软件中打开了“tutorial-part-one”文件夹，现在可以编辑您的网站了。 在代码编辑软件中，您需要找到`` src/pages/index.js</ code>。 一旦你发现，尝试在页面组件中把“Hello World！”修改为 “Hello Gatsby！”。 浏览器中的文本会随着改变。</p>
 
-<p>Try some other tricks, like the ones below:</p>
+<p>尝试一些其他的技巧，如下所示：</p>
 
 <ol>
-<li><p>Gatsby lets you add "inline styles" via a JavaScript style "prop" (we'll learn about other styling options later).</p>
+<li><p>Gatsby允许您通过JavaScript风格的“prop”属性添加“内联风格”（稍后我们将了解其他样式选项）。</p>
 
-<p>Try making your page component look like this:</p></li>
+<p>尝试使您的页面组件如下所示：</p></li>
 </ol>
 
 <pre><code class="jsx">import React from "react"
@@ -82,9 +82,9 @@ Gatsby的开发服务器是一个“热加载”服务器，这意味着您对Re
 export default () => <div style={{ color: `blue` }}>Hello Gatsby!</div>
 ``</pre> 
 
-Change the color to "pink". Then to "tomato".
+将颜色更改为“粉红色”。 然后去“番茄色”。
 
-1. Add some paragraph text.
+1. 添加一些段落文字。
 
 ```jsx{5-6}
 import React from "react"
@@ -96,7 +96,7 @@ export default () =>
  </div>
 ```
 
-1. Add an image
+1. 添加一张图片。
 
 ```jsx{7}
 import React from "react"
@@ -109,13 +109,13 @@ export default () =>
  </div>
 ```
 
-Now your screen should look something like this.
+现在你的屏幕应该看起来像这样。
 
 ![Screen Shot 2017-06-03 at 11.57.10 AM](moving-along.png)
 
-## Linking between pages
+## 链接页面
 
-Websites are pages and links between pages. While we've now got a pretty sweet first page—one page and no links doesn't feel very webby. So let's create a new page.
+网站是页面和页面之间的链接。 虽然我们现在已经有了一个非常甜蜜的第一页，一个页面，没有任何联系不感觉很webby。 所以让我们创建一个新的页面。
 
 First create the link to the new page.
 
