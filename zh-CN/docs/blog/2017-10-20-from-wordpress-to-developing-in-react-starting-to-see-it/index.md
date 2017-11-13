@@ -1,9 +1,8 @@
 ---
 title: From WordPress to Developing in React — Starting to See It
-date: "2017-10-20"
-author: "Benjamin Read"
+date: 2017-10-20
+author: Benjamin Read
 ---
-
 As a frontend designer I've always prided myself on being a HTML and CSS specialist. My use of JavaScript has been limited to animations and DOM manipulation. However, at [Indigo Tree](https://indigotree.co.uk "Indigo Tree: We Build Awesome Websites") we're branching out from our staple of WordPress and trying different methods of creating websites with functionality that our clients require, whilst maximising their budget.
 
 We're also bracing ourselves for what we’re anticipating to be the stormfront of [Gutenberg](https://wordpress.org/plugins/gutenberg/ "Gutenberg Wordpress plugins") for our WordPress projects. Once it's included in the WordPress Core, writing components in JavaScript for the Gutenberg editor will be necessary for every developer on a project.
@@ -12,8 +11,7 @@ So I decided to dive into learning React with a few courses and some experimenta
 
 ## Letting Go
 
-The first thing I had to do while investigating React was to let go of some preconceived ideas I had - that JSX is just plain weird, that JSS (JavaScript Stylesheets) was an unnecessary abstraction.
-So I tried not to be bothered by the templating weirdness too much and embrace the differences. My classes soon became `classNames`s, my `<a>` tags became `<Links>`, and I quickly saw what people had been enthusing about.
+The first thing I had to do while investigating React was to let go of some preconceived ideas I had - that JSX is just plain weird, that JSS (JavaScript Stylesheets) was an unnecessary abstraction. So I tried not to be bothered by the templating weirdness too much and embrace the differences. My classes soon became `classNames`s, my `<a>` tags became `<Links>`, and I quickly saw what people had been enthusing about.
 
 Managing everything in one place is such a cathartic experience.
 
@@ -52,7 +50,8 @@ export const query = graphql`
   }
 `
 ```
-Whilst this might _look_ weird, it actually makes it much easier to understand what’s going on. You know you’re dealing with this data, using this HTML, and with CSS-in-JS strategies such as Styled Components, you can see exactly what CSS is going to be implemented too. In one file.
+
+Whilst this might *look* weird, it actually makes it much easier to understand what’s going on. You know you’re dealing with this data, using this HTML, and with CSS-in-JS strategies such as Styled Components, you can see exactly what CSS is going to be implemented too. In one file.
 
 Beautiful.
 
@@ -90,7 +89,6 @@ However, since I'm managing my HTML with JavaScript, why not CSS as well? As abo
 Following the [tutorial on Gatsbyjs](https://www.gatsbyjs.org/tutorial/) I built up my project from scratch, breaking things profusely at first, but it honestly didn’t take long to gain confidence enough so that I launched my first site at [freebabylon5.com](https://freebabylon5.com "Our last, best hope of getting back on the air") recently.
 
 Be warned: the tutorial isn’t quite finished yet, you might be better off starting with [one of the starter kits already available](https://www.gatsbyjs.org/docs/gatsby-starters/), so that you get `react-helmet` and active links implemented, the 2 things I had to learn independently.
-
 
 ## The Way Forward?
 
