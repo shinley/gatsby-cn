@@ -1,7 +1,6 @@
 ---
-title: "Adding Images, Fonts, and Files"
+title: Adding Images, Fonts, and Files
 ---
-
 With Webpack you can **`import` a file right in a JavaScript module**. This tells Webpack to include that file in the bundle. Unlike CSS imports, importing a file gives you a string value. This value is the final path you can reference in your code, e.g. as the `src` attribute of an image or the `href` of a link to a PDF.
 
 To reduce the number of requests to the server, importing images that are less than 10,000 bytes returns a [data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) instead of a path. This applies to the following file extensions: svg, jpg, jpeg, png, gif, mp4, webm, wav, mp3, m4a, aac, and oga.
@@ -44,8 +43,7 @@ An alternative way of handling static assets is described in the next section.
 
 You can also add other assets to a `static` folder at the root of your project.
 
-Note that we normally encourage you to `import` assets in JavaScript files instead.
-This mechanism provides a number of benefits:
+Note that we normally encourage you to `import` assets in JavaScript files instead. This mechanism provides a number of benefits:
 
 * Scripts and stylesheets get minified and bundled together to avoid extra network requests.
 * Missing files cause compilation errors instead of 404 errors for your users.
@@ -74,8 +72,7 @@ Keep in mind the downsides of this approach:
 
 ### When to Use the `static` Folder
 
-Normally we recommend importing [stylesheets](#adding-a-stylesheet), [images, and fonts](#adding-images-and-fonts) from JavaScript.
-The `static` folder is useful as a workaround for a number of less common cases:
+Normally we recommend importing [stylesheets](#adding-a-stylesheet), [images, and fonts](#adding-images-and-fonts) from JavaScript. The `static` folder is useful as a workaround for a number of less common cases:
 
 * You need a file with a specific name in the build output, such as [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 * You have thousands of images and need to dynamically reference their paths.
