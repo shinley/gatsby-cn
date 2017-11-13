@@ -1,12 +1,12 @@
 ---
 title: Gatsby Style Guide
 ---
-
 The Gatsby community is building out a more comprehensive Guides section. It will be full of relevant articles written to be easily understood by the awesome people who love building with Gatsby!
 
 We plan, write, and maintain these Guide articles on Github.
 
 ## Table of Contents
+
 - [What are Guide articles?](#what-are-guide-articles)
 - [What can I write an article about?](#what-can-i-write-an-article-about)
 - [How to contribute](#how-to-contribute)
@@ -53,12 +53,7 @@ Make sure to maintain your local fork going forward so it stays up-to-date with 
 Finally, if you want to run a version of the guides repository locally, follow these steps:
 
 1. Ensure you have the yarn package manager installed `npm install -g yarn`
-2. Fork this repository
-👇
-`git clone https://github.com/YOUR-GITHUB-USERNAME/guides.git`
-`cd guides`
-`yarn install`
-`yarn run dev`
+2. Fork this repository 
 
 In this project we are using `yarn` because [`Netlify`](https://www.netlify.com/) builds our site with `yarn`.
 
@@ -67,6 +62,7 @@ In this project we are using `yarn` because [`Netlify`](https://www.netlify.com/
 We've written the following article style guide to help you get started with contributing.
 
 # Table of Contents
+
 - [Article title](#article-title)
 - [Modularity](#modularity)
 - [General writing tips](#general-writing-tips)
@@ -93,7 +89,7 @@ Here are some folder name examples:
 - 404-pages
 - what-is-graphql
 
-Note: Just to clarify, you can include special characters in the article title but *not* in the folder name (e.g. Title: What is GraphQL? and Folder Name: what-is-graphql). 
+Note: Just to clarify, you can include special characters in the article title but *not* in the folder name (e.g. Title: What is GraphQL? and Folder Name: what-is-graphql).
 
 # Modularity
 
@@ -111,9 +107,7 @@ The introduction paragraph should only be a 1-2 sentence explanation of the main
 
 Keep paragraphs short (around 1-4 sentences). People are more likely to read several short paragraphs instead of a huge block of text.
 
-Use active voice instead of passive voice. Generally, it's a more concise and more straightforward way to communicate a subject. For example:
-- (Passive) The for loop in JavaScript is used by programmers to...
-- (Active) Programmers use the for loop in JavaScript to...
+Use active voice instead of passive voice. Generally, it's a more concise and more straightforward way to communicate a subject. For example: - (Passive) The for loop in JavaScript is used by programmers to... - (Active) Programmers use the for loop in JavaScript to...
 
 If you want to abbreviate a term in your article, write it out fully first, then put the abbreviation in parentheses. For example, "In computer science, an abstract syntax tree (AST) is ..."
 
@@ -140,31 +134,30 @@ Here are specific formatting guidelines for any code:
 - Show generally-accepted best practices, particularly for accessibility
 - Comments made should have a space between the comment characters and the comment themselves
 - GitHub-flavored markdown supports syntax highlighting in code blocks for many programming languages. To use it, indicate the language after starting ```
-   ```html
-        <div class="awesome" id="more-awesome">
-          <p>This is text in html</p>
-        </div>
-    ```
+    
+    ```html
+    <div class="awesome" id="more-awesome">
+      <p>This is text in html</p>
+    </div>
+```
 
-    ```javascript
-        function logTheThings(stuff) {
-         console.log(stuff);
-        }
-    ```
+```javascript
+    function logTheThings(stuff) {
+     console.log(stuff);
+    }
+```
 
-    ```css
-       .awesome {
-          background-color: #FCCFCC;
-        }
-    ```
-
+```css
+   .awesome {
+      background-color: #FCCFCC;
+    }
+```
 
 # Adding images to articles
 
 For including images, if the images aren't already hosted somewhere else on the web, you'll need to put them online yourself. A good way to do this is to commit them to a GitHub repository of your own, then push them to GitHub. Then you can right click the image and copy its image source.
 
-Then you'd just need to reference them in your markdown file with this syntax:
-`[your alt text](your url)`
+Then you'd just need to reference them in your markdown file with this syntax: `[your alt text](your url)`
 
 Then the images should show up when you click the "preview table" tab.
 
