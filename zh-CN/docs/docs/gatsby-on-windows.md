@@ -1,21 +1,11 @@
 ---
 title: Gatsby on Windows
 ---
-
 ## Setting up your environment for building native Node.js modules.
 
-Many Gatsby plugins and themes require building native Node.js modules, e.g.
-[Sharp (a common Gatsby dependency used for image
-processing)](/packages/gatsby-plugin-sharp/). To do so, you need a
-functional build environment (Python and Visual C++ Build Tools).
+Many Gatsby plugins and themes require building native Node.js modules, e.g. [Sharp (a common Gatsby dependency used for image processing)](/packages/gatsby-plugin-sharp/). To do so, you need a functional build environment (Python and Visual C++ Build Tools).
 
-The easy way to setup your build environment on Windows is to install the
-[`windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools)
-package by running `npm install windows-build-tools -g` on an admin
-PowerShell console. Upon installing this package, it downloads and installs the
-Visual C++ Build Tools 2015, provided free of charge by Microsoft. These tools
-are required to compile popular native modules. It will also install Python
-2.7, configuring your machine and npm appropriately.
+The easy way to setup your build environment on Windows is to install the [`windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools) package by running `npm install windows-build-tools -g` on an admin PowerShell console. Upon installing this package, it downloads and installs the Visual C++ Build Tools 2015, provided free of charge by Microsoft. These tools are required to compile popular native modules. It will also install Python 2.7, configuring your machine and npm appropriately.
 
 ### If `npm install` still fails...
 
@@ -26,7 +16,6 @@ This might be your problem if, after running `npm install` on a Gatsby site, you
 If you suspect this is your problem, download the [Visual Studio Community 2015 Package](https://www.visualstudio.com/products/visual-studio-community-vs) and install only the part of the package that interests us : `Programming languages > Visual C++ > Common tools for Visual Studio 2015`. Be sure to download the 2015 version of VS Community, not the 2017 version (see Note 1 below) ; you'll have to use the [search bar on the VS site](https://www.visualstudio.com/products/visual-studio-community-vs) to find it. You can uncheck everything else. You don't need to install the full VS2015 Express on your system and this won't mess up your existing VS201x installs.
 
 ![Common tools for Visual Studio 2015 inside the VS 2015 Community Package](https://i.stack.imgur.com/J1aet.png)
-
 
 Then run the commands on Gatsby:
 
