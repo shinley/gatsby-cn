@@ -1,7 +1,8 @@
 ---
 title: Gatsby.js Tutorial Part Three
-typora-copy-images-to: './'
+typora-copy-images-to: ./
 ---
+
 Gatsby lets you easily create "layout components". Layout components are sections of your site that you want to share across multiple pages. For example, Gatsby sites will commonly have a layout component with a shared header and footer. Other common things to add to layouts are a sidebar and navigation menu.
 
 On this page, the sidebar to the left (assuming you're on a larger device) and the header at the top are part of gatsbyjs.org's layout component.
@@ -88,6 +89,8 @@ export default () =>
     </p>
   </div>
 ```
+
+
 
 ![no-layout](no-layout.png)
 

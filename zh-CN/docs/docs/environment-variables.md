@@ -1,7 +1,8 @@
 ---
-title: Environment Variables
+title: "Environment Variables"
 ---
-You can easily provide environment variables to your site.
+
+You can easily provide environment variables to your site. 
 
 For JavaScript loaded into the browser, just add a `.env.development` and/or `.env.production` file in your root folder for development or production builds respectively. The environment variables are embedded during build time using Webpack's [DefinePlugin](https://webpack.js.org/plugins/define-plugin/). Because these variables are provided at build time, you will need restart your dev server or rebuild your site after changing them.
 
@@ -13,23 +14,26 @@ If you want to access variables in `.env.*` files in your node.js code, use the 
 
 ## Example
 
-    # Example .env.development file
-    
-    API_URL=https://dev.example.com/api
-    
+```
+# Example .env.development file
 
-    # Example .env.production file
-    
-    API_URL=https://example.com/api
-    
-    
+API_URL=https://dev.example.com/api
+```
+
+```
+# Example .env.production file
+
+API_URL=https://example.com/api
+
+```
 
 These variables will be available to your site as `process.env.API_URL`.
 
 ## Example
 
-    GATSBY_ASSETS_URL=http://s3.amazonaws.com/bucketname
-    
+```
+GATSBY_ASSETS_URL=http://s3.amazonaws.com/bucketname
+```
 
 ```jsx
 // usage
@@ -41,6 +45,8 @@ render() {
   )
 }
 ```
+
+
 
 > You can not override certain environment variables as some are used internally for optimizations during build
 

@@ -50,13 +50,13 @@ export default () => (
       },
     }}
   >
-    <MobileNavItem linkTo="/docs/" label="Docs" icon={DocsIcon} />
-    <MobileNavItem linkTo="/tutorial/" label="Tutorial" icon={TutorialIcon} />
+    <MobileNavItem linkTo="/docs/" label="文档" icon={DocsIcon} />
+    <MobileNavItem linkTo="/tutorial/" label="教程" icon={TutorialIcon} />
     <MobileNavItem
       linkTo="/community/"
-      label="Community"
+      label="社区"
       icon={CommunityIcon}
     />
-    <MobileNavItem linkTo="/blog/" label="Blog" icon={BlogIcon} />
+    <MobileNavItem linkTo="/blog/" label="博客" icon={BlogIcon} />
   </div>
 )

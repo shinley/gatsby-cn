@@ -1,7 +1,9 @@
 ---
 title: Gatsby Lifecycle APIs
 ---
-Gatsby provides a rich set of lifecycle APIs to hook into Gatsby's bootstrap, build, and client runtime operations.
+
+Gatsby provides a rich set of lifecycle APIs to hook into Gatsby's bootstrap, build, and
+client runtime operations.
 
 Gatsby's design principles include:
 

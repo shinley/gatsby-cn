@@ -1,17 +1,19 @@
 ---
 title: Browser Support
 ---
+
 Gatsby supports [the same browsers as the current stable version of React.js](https://facebook.github.io/react/docs/react-dom.html#browser-support) which is currently IE9+ as well as the most recent versions of other popular browsers.
 
 ## Polyfills
 
 Gatsby uses the ES6 Promise API. As some older browsers don't support this, Gatsby includes by default a Promise polyfill. If you would like to provide your own Promise polyfill, you can set `polyfill` to `false` in your `gatsby-config.js`:
 
-    module.exports = {
-      polyfill: false,
-      // ...
-    }
-    
+```
+module.exports = {
+  polyfill: false,
+  // ...
+}
+```
 
 ## Specify what browsers your project supports using "Browserslist"
 
@@ -21,12 +23,13 @@ This article is a good introduction to the growing community of tools around Bro
 
 By default, Gatsby emulates the following config:
 
-    javascript
-    // package.json
-    {
-      "browserslist": [
-        "> 1%",
-        "IE >= 9",
-        "last 2 versions"
-      ]
-    }
+ ```javascript
+// package.json
+{
+  "browserslist": [
+    "> 1%",
+    "IE >= 9",
+    "last 2 versions"
+  ]
+}
+```

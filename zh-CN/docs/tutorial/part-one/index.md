@@ -1,48 +1,53 @@
 ---
-title: Gatsby.js 教程 第一部分
-typora-copy-images-to: './'
+title: Gatsby.js Tutorial Part One
+typora-copy-images-to: ./
 ---
-使用Gatsby的朋友们，大家好！ 欢迎来到我们社区的第一部分Gatsby.js教程。
 
-在本教程中，我们将给你介绍Gatsby的开发环境，如何创建组件页面以及如何构建和部署Gatsby网站。
+Hello fellow Gatsby-er! Welcome to *part one* of our community Gatsby.js tutorial.
 
-坐好了， 系上安全带，我们出发了！
+In this tutorial you'll be gently introduced to the Gatsby development environment, how to create component pages, and how to build and deploy Gatsby sites.
+
+Sit down, buckle up, and let's get going!
 
 ## 检查你的开发环境
 
-首先检查一下你是否已经设置了好了一切，然后Gatsby创建。 你需要安装最新版本的Node.js。
+Let's check first that you have everything setup to start creating with Gatsby. You will need a recent version of [Node.js](https://nodejs.org) installed.
 
-Node.js是在服务器和终端上运行JavaScript的编程工具。 盖茨比是用Node.js构建的。
+Node.js is a programming tool for running JavaScript on servers and in your computer's terminal. Gatsby is built using Node.js.
 
-打开一个终端窗口。 Mac用户请参阅这些说明，Windows用户请参阅其它说明。 在你的终端窗口中，输入node --version，然后输入npm --version。
+Open a terminal window. See [these instructions](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/) for Mac users and [these other instructions](https://www.quora.com/How-do-I-open-terminal-in-windows) for Windows users. In your terminal window, type `node --version` then `npm --version`.
 
-你会看到以下信息：
+You should see something like:
 
 ![Check if node.js/npm is installed](check-versions.png)
 
 Gatsby supports versions of Node back to v4 and NPM to v3.
 
-如果您没有安装Node.js，请到https://nodejs.org/并安装适用于您的操作系统的推荐版本。
+If you don't have Node.js installed, go to https://nodejs.org/ and install the recommended version for your operating system.
 
-## 安装“Hello World”启动器(Starter)
+## Install the "Hello World" starter
 
-Gatsby使用“Starters”开始新项目 顾名思义，“starters”部分建立了预先配置的Gatsby网站，以帮助您更快地开始。 有一些官方的的“starters”和许多其他从Gatsby社区贡献的“starters”！ 详细信息请查看 Starters页面
+Gatsby uses "starters" for starting new projects. As the name suggests, starters are partially built Gatsby sites pre-configured to help you get moving faster. There are several official starters and many others contributed from the Gatsby community! [See the Starters page for the full list](/docs/gatsby-starters/).
 
-要安装starter，首先在终端窗口中输入以下命令来安装Gatsby的终端程序，然后按下ENTER键。
+To install a starter, first install Gatsby's terminal program by typing the following command into the a terminal window and hit ENTER.
 
 ```sh
 npm install --global gatsby-cli
 ```
 
-安装完成后，在中输入以下命令并按Enter键：
+
+
+Once that's installed, type the following command in and hit ENTER:
 
 ```sh
 gatsby new tutorial-part-one https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-该命令下载启动程序的文件，然后安装所需的NPM软件包。 完成大约需要1.5-3分钟。 一开始可能看起来没有任何事情发生， 耐心一点！
 
-现在我们来试试运行Gatsby！
+
+This command downloads the files for the starter and then installs the needed NPM packages. It should take around 1.5-3 minutes to finish. It may look like nothing is happening at first; be patient!
+
+Now let's try running Gatsby!
 
 Gatsby has a built-in development server. Let's start it up by typing in the following commands into the same terminal window you've used so far in this tutorial.
 
@@ -51,13 +56,13 @@ cd tutorial-part-one
 gatsby develop
 ```
 
-You should see shortly some text that says `The development server is listening at:` <http://localhost:8000>. Open that address in your browser and...
+You should see shortly some text that says `The development server is listening at:` [http://localhost:8000](http://localhost:8000). Open that address in your browser and...
 
 ![Gatsby.js hello world](hello-world.png)
 
 Yeah! It's working!!!
 
-Too cool 
+Too cool 😎
 
 Gatsby's development server is a "hot reloading" server, meaning any change you make to your React.js page components (and later we'll learn, your data files) will hot reload in the browser.
 
@@ -72,8 +77,8 @@ Now that you've opened the "tutorial-part-one" folder in your code editing softw
 Try some other tricks, like the ones below:
 
 1. Gatsby lets you add "inline styles" via a JavaScript style "prop" (we'll learn about other styling options later).
-    
-    Try making your page component look like this:
+
+   Try making your page component look like this:
 
 ```jsx
 import React from "react"
@@ -81,9 +86,9 @@ import React from "react"
 export default () => <div style={{ color: `blue` }}>Hello Gatsby!</div>
 ```
 
-Change the color to "pink". Then to "tomato".
+   Change the color to "pink". Then to "tomato".
 
-1. Add some paragraph text.
+2. Add some paragraph text.
 
 ```jsx{5-6}
 import React from "react"
@@ -95,7 +100,7 @@ export default () =>
  </div>
 ```
 
-1. Add an image
+3. Add an image
 
 ```jsx{7}
 import React from "react"
@@ -163,6 +168,8 @@ Save that and now you should be able to click back and forth between the two pag
   <source type="video/mp4" src="/images/clicking-2.mp4"></source>
   <p>Your browser does not support the video element.</p>
 </video>
+
+
 
 ## Interactive page
 
@@ -288,13 +295,17 @@ class Counter extends React.Component {
 export default Counter
 ```
 
-There you go! A working React.js counter inside your static website 
+There you go! A working React.js counter inside your static website 👌
 
 One fun thing too is that hot reloading isn't just for content and styles but it works on code as well. Try changing the amount by which clicking on the buttons changes the count.
 
 ## Deploying Gatsby.js websites on the web
 
-Gatsby.js is a *static site generator* which makes deploying Gatsby sites to the web really easy. There are no servers to setup or complicated databases to deploy. Instead, the Gatsby `build` command produces a directory of static HTML and JavaScript files which you can deploy to a static site hosting service.
+Gatsby.js is a *static site generator* which makes deploying Gatsby sites to
+the web really easy. There are no servers to setup or complicated databases to
+deploy.  Instead, the Gatsby `build` command produces a directory of static
+HTML and JavaScript files which you can deploy to a static site hosting
+service.
 
 Let's try using [Surge](http://surge.sh/) for deploying our first Gatsby website. Surge is one of many "static site hosts" which make it really easy to deploy Gatsby sites.
 
@@ -310,7 +321,8 @@ Then build your site by running in the terminal at the root of your site:
 gatsby build
 ```
 
-Building should take 15-30 seconds. Take a look at the generated files by looking at the `public` directory:
+Building should take 15-30 seconds. Take a look at the generated files by looking
+at the `public` directory:
 
 ```bash
 ls public
@@ -330,4 +342,7 @@ Open the web address listed on the bottom line (`lowly-pain.surge.sh` in this ca
 
 ## Good work!
 
-In this tutorial, you've installed Gatsby, played in the development environment, and deployed your first site! Awesome! We hope you're enjoying yourself so far. Feel free to continue now to [the second part of the tutorial](/tutorial/part-two/) or go exploring around the rest of the site.
+In this tutorial, you've installed Gatsby, played in the development
+environment, and deployed your first site! Awesome! We hope you're enjoying
+yourself so far. Feel free to continue now to [the second part of the tutorial](/tutorial/part-two/)
+or go exploring around the rest of the site.

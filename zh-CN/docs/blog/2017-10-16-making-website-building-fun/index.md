@@ -1,9 +1,10 @@
 ---
-title: Making website building fun
+title: "Making website building fun"
 date: 2017-10-16
-author: Kyle Mathews
-typora-copy-images-to: './'
+author: "Kyle Mathews"
+typora-copy-images-to: ./
 ---
+
 I still remember the first non-trivial React component I built in 2014—not long after I started using React seriously.
 
 I decided to port to React [headroom.js](http://wicky.nillia.ms/headroom.js/)—a JavaScript library that shows & hides headers as you scroll up & down a site.
@@ -75,7 +76,7 @@ Every one loves new projects. Why? Because they're simple! We can dive in and ex
 Fred Brooks wrote in his classic book *The Mythical Man-Month*:
 
 > The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework, so readily capable of realizing grand conceptual structures…
-> 
+>
 > Yet the program construct, unlike the poet's words, is real in the sense that it moves and works, producing visible outputs separate from the construct itself. […] The magic of myth and legend has come true in our time. One types the correct incantation on a keyboard, and a display screen comes to life, showing things that never were nor could be.
 
 Technology is incredibly fun when we, like the wizard of fantasy, can type an incantation on our computer and a new creation comes to life.
@@ -98,7 +99,7 @@ Perhaps you've been on projects that followed the red curve as well as others, t
 
 Projects *do* get more complex as they scale but there are very large projects that still don't feel very complex while there are relatively small projects that are mired in complexity.
 
-Alan Kay told a great story in his recent talk [The Power of Simplicity](https://www.youtube.com/watch?v=NdSD07U5uBs) (story starts at 5:45) about the history of modeling planet orbits in our solar system.
+Alan Kay told a great story in his recent talk [The Power of Simplicity](https://www.youtube.com/watch?v=NdSD07U5uBs)  (story starts at 5:45) about the history of modeling planet orbits in our solar system.
 
 ![Cassini model of planet motion](Cassini_apparent.jpg)
 
@@ -149,6 +150,8 @@ export default ({ data }) => (
   </div>
 )
 ```
+
+
 
 So this is all very nice and it's far better to be able to use this from NPM vs. implementing it yourself or cobbling together several standalone libraries.
 

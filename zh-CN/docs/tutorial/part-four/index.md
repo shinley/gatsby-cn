@@ -1,10 +1,11 @@
 ---
 title: Gatsby.js Tutorial Part Four
-typora-copy-images-to: './'
+typora-copy-images-to: ./
 ---
-Welcome to Part Four of the tutorial! Halfway through! Hope things are starting to feel pretty comfortable 
 
-But don't get too comfortable In this tutorial, we're headed to new territory which will require some brain stretching to fully understand. In the next two parts of the tutorial, we'll be diving into the Gatsby data layer! A powerful feature of Gatsby that lets you easily build sites from markdown, Wordpress, headless CMSs, and other data sources of all flavors.
+Welcome to Part Four of the tutorial! Halfway through! Hope things are starting to feel pretty comfortable 😀
+
+But don't get too comfortable 😉. In this tutorial, we're headed to new territory which will require some brain stretching to fully understand. In the next two parts of the tutorial, we'll be diving into the Gatsby data layer! A powerful feature of Gatsby that lets you easily build sites from markdown, Wordpress, headless CMSs, and other data sources of all flavors.
 
 ## Recap of first half of the tutorial
 
@@ -30,7 +31,7 @@ Data can also live in file types like markdown, CSV, etc. as well as databases a
 
 **Gatsby's data layer lets us pull data from these (and any other source) directly into our components**—in the shape and form we want.
 
-## How Gatsby's data layer uses GraphQL to pull data into components
+## How Gatsby's data layer uses GraphQL to pull data into components 
 
 If you're familiar with the React world, there are many options for loading data into components. One of the most popular and robust of these is a technology called [GraphQL](http://graphql.org/).
 
@@ -150,13 +151,13 @@ module.exports = {
 }
 ```
 
-Add the above files and then run `gatsby develop` like normal and you should see the following:
+Add the above files and then run `gatsby develop` like normal and you should see the following: 
 
 ![start](start.png)
 
 We have another simple site with a layout and two pages.
 
-Now let's start querying 
+Now let's start querying 😋
 
 When building sites, it's common to want to reuse common bits of data across the site. Like the *site title* for example. Look at the `/about/` page. You'll notice that we have the site title in both the layout component (the site header) as well as in the title of the About page. But what if we want to change the site title at some point in the future? We'd have to search across all our components for spots using the site title. Which is both cumbersome and error-prone, especially as sites get larger and more complex. Much better to store the title in one place and then *pull* that title into components whenever we need it.
 
@@ -255,7 +256,7 @@ export const query = graphql`
 `
 ```
 
-It worked!! 
+It worked!! 🎉
 
 ![fake-title-graphql](fake-title-graphql.png)
 
@@ -322,7 +323,7 @@ module.exports = {
 
 Save that and restart the gatsby development server. Then open up Graph*i*QL again.
 
-If you bring up the autocomplete window you'll see:
+If you bring up the autocomplete window you'll see:	
 
 ![graphiql-filesystem](graphiql-filesystem.png)
 
@@ -438,7 +439,7 @@ export const query = graphql`
 `
 ```
 
-And… 
+And… 😲
 
 ![my-files-page](my-files-page.png)
 
@@ -589,7 +590,7 @@ Which looks great! Except…the order of the posts is wrong.
 
 But this is easy to fix. When querying a connection of some type, you can pass a variety of arguments to the query. You can `sort` and `filter` nodes, set how many nodes to `skip`, and choose the `limit` of how many nodes to retrieve. With this powerful set of operators, we can select any data we want—in the format we need.
 
-In our index page's query, change `allMarkdownRemark` to `allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC})`. Save this and the sort order should be fixed.
+In our index page's query, change `allMarkdownRemark` to `  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC})`. Save this and the sort order should be fixed.
 
 Try opening Graph*i*QL and playing with different sort options. You can sort the `allFile` connection along with other connections.
 
@@ -629,7 +630,7 @@ exports.onCreateNode = ({ node }) => {
 }
 ```
 
-We want to use each markdown file name to create the page slug. So `pandas-and-bananas.md"` will become `/pandas-and-bananas/`. But how do we get the file name from the `MarkdownRemark` node? To get it, we need to *traverse* the "node graph" to its *parent* `File` node, as `File` nodes contain data we need about files on disk. To do that, modify our function again:
+We want to use each markdown file name to create the page slug. So `pandas-and-bananas.md"` will become `/pandas-and-bananas/`. But how do we get the file name from the `MarkdownRemark` node? To get it, we need to *traverse* the "node graph" to its *parent* `File`  node, as `File` nodes contain data we need about files on disk. To do that, modify our function again:
 
 ```javascript{1,3-4}
 exports.onCreateNode = ({ node, getNode }) => {
@@ -802,7 +803,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 }
 ```
 
-Restart the development server and our pages will be created! An easy way to find new pages you create while developing is to go to a random path where Gatsby will helpfully show you a list of pages on the site. If you go to <http://localhost:8000/sdf> you'll see the new pages we created.
+Restart the development server and our pages will be created! An easy way to find new pages you create while developing is to go to a random path where Gatsby will helpfully show you a list of pages on the site. If you go to [http://localhost:8000/sdf](http://localhost:8000/sdf) you'll see the new pages we created.
 
 ![new-pages](new-pages.png)
 

@@ -1,14 +1,15 @@
 ---
 title: Web Performance 101—also, why is Gatsby so fast?
-date: 2017-09-13
-author: Kyle Mathews
-image: reactnext-gatsby-performance.001.png
+date: "2017-09-13"
+author: "Kyle Mathews"
+image: "reactnext-gatsby-performance.001.png"
 showImageInArticle: false
-typora-copy-images-to: './'
+typora-copy-images-to: ./
 ---
-*I gave this talk last weekend at [ReactNext](http://react-next.com/) in Tel Aviv. I spoke on the basics of measuring and improving web performance and how Gatsby is designed so sites built with it are always very very fast.*
 
-*Slides to follow interspersed with notes.*
+_I gave this talk last weekend at [ReactNext](http://react-next.com/) in Tel Aviv. I spoke on the basics of measuring and improving web performance and how Gatsby is designed so sites built with it are always very very fast._
+
+_Slides to follow interspersed with notes._
 
 ![reactnext-gatsby-performance.001](reactnext-gatsby-performance.001.png)
 
@@ -86,7 +87,7 @@ Washingtonpost.com gets its first significant paint at around 5 seconds but it t
 
 ![reactnext-gatsby-performance.033](reactnext-gatsby-performance.033.png)
 
-Woah! **2365** Speed Index! gatsbyjs.org—stop making everyone look so bad! 
+Woah! **2365** Speed Index! gatsbyjs.org—stop making everyone look so bad! 😎
 
 And notice how steep the visual progress line is. Gatsby knows where it's going and gets there quick.
 
@@ -210,6 +211,6 @@ As I was prepping for my talk, Tom Dale of Ember, conveniently made similar poin
 
 Building highly performant websites is a science in and of itself. Our goal with Gatsby is to give you an approachable, highly productive modern development environment that lets you concentrate on what matters to you—content, design, and interactions—and we take care of turning your amazing site into the fastest site possible.
 
-If you've been waiting to try out React, Gatsby is a great place to start! If you're struggling to make your React app fast, try switching to Gatsby! If you're tired of using technology X to build websites and have a huge secret crush on React, well, Gatsby is waiting with open arms 
+If you've been waiting to try out React, Gatsby is a great place to start! If you're struggling to make your React app fast, try switching to Gatsby! If you're tired of using technology X to build websites and have a huge secret crush on React, well, Gatsby is waiting with open arms 🤗
 
 And lastly, *if you're a performance-obsessed engineer like me, come help build Gatsby* and improve the performance of thousands (numbers growing quickly) of Gatsby sites on the internet.

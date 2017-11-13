@@ -1,11 +1,12 @@
 ---
-title: Rebuilding my portfolio website with the great GatsbyJS and WordPress
-date: 2017-10-05
-image: gatsby-article-cover-image.jpg
-author: David James
-excerpt: Recreating my WordPress portfolio site using GatsbyJS, React and the WordPress REST API
+title: "Rebuilding my portfolio website with the great GatsbyJS and WordPress"
+date: "2017-10-05"
+image: "gatsby-article-cover-image.jpg"
+author: "David James"
+excerpt: "Recreating my WordPress portfolio site using GatsbyJS, React and the WordPress REST API"
 ---
-*This article was originally published on [my portfolio site](http://dfjames.com/blog/site-generating-with-the-great-gatsbyjs) on October 1, 2017.*
+
+_This article was originally published on [my portfolio site](http://dfjames.com/blog/site-generating-with-the-great-gatsbyjs) on October 1, 2017._
 
 # Site generating with the great GatsbyJS
 
@@ -66,7 +67,12 @@ export const postQuery = graphql`
 
 ## Wrap up and future
 
-In just a few weekends I managed to rebuild my portfolio site with the blog I wanted. I'd highly recommend [Gatsby](https://www.gatsbyjs.org/tutorial/) for anyone who has started getting acquainted with React. Before I started this project I didn't know a lot about: * Static site generation/JAMstack * Creating a Progressive Web App (PWA) and what qualifies as one * React Router * GraphQL * WordPress REST API
+In just a few weekends I managed to rebuild my portfolio site with the blog I wanted. I'd highly recommend [Gatsby](https://www.gatsbyjs.org/tutorial/) for anyone who has started getting acquainted with React. Before I started this project I didn't know a lot about:
+* Static site generation/JAMstack
+* Creating a Progressive Web App (PWA) and what qualifies as one
+* React Router
+* GraphQL
+* WordPress REST API
 
 Moving forward with Gatsby, I'd like to extend my site to include pagination within the blog, use [Styled Components](https://www.styled-components.com/) and ensure the site scores a 90+ overall on [Lighthouse](https://developers.google.com/web/tools/lighthouse/), Google’s performance auditing tool.
 
