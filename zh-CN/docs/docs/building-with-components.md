@@ -1,7 +1,6 @@
 ---
 title: Building with Components
 ---
-
 ## Requirements
 
 To use Gatsby, you will need a basic understanding of React components.
@@ -135,8 +134,7 @@ export default class Template extends React.Component {
 
 In this file you can modify the `<head>` metadata, general structure of the document and add external links.
 
-Typically you should omit this from your site as the default html.js file will suffice. If you need
-more control over server rendering, then it's valuable to have an html.js.
+Typically you should omit this from your site as the default html.js file will suffice. If you need more control over server rendering, then it's valuable to have an html.js.
 
 Example:
 
