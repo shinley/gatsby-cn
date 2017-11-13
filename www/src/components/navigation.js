@@ -157,11 +157,11 @@ export default ({ pathname }) => {
             },
           }}
         >
-          <NavItem linkTo="/docs/">Docs</NavItem>
-          <NavItem linkTo="/tutorial/">Tutorial</NavItem>
-          <NavItem linkTo="/community/">Community</NavItem>
-          <NavItem linkTo="/features/">Features</NavItem>
-          <NavItem linkTo="/blog/">Blog</NavItem>
+          <NavItem linkTo="/docs/">文档</NavItem>
+          <NavItem linkTo="/tutorial/">教程</NavItem>
+          <NavItem linkTo="/community/">社区</NavItem>
+          <NavItem linkTo="/features/">特性</NavItem>
+          <NavItem linkTo="/blog/">博客</NavItem>
         </ul>
         <div
           css={{
