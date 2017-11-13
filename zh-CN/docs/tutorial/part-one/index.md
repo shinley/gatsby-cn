@@ -61,25 +61,26 @@ gatsby develop
 
 Gatsby的开发服务器是一个“热加载”服务器，这意味着您对React.js页面组件（以及后来我们将了解的，您的数据文件）所做的任何更改都将在浏览器中重新加载。
 
-This is huge because it makes development so much faster and fun.
+这是它最大的优点，因为它使开发更快更有趣。
 
-Let's try it.
+让我们试一下!
 
-You'll need code editing software for the next part of this tutorial. [VS Code](https://code.visualstudio.com/) is a nice one. With your code editor, open a folder on your computer called "tutorial-part-one." This folder was automatically created when you ran the previous terminal commands in the first part of this tutorial.
+本教程的下一部分需要使用代码编辑软件。 VS Code是一个不错的选择。 使用代码编辑器，在计算机上打开一个名为“tutorial-part-one”的文件夹。 当你在本教程的第一部分中运行先前的终端命令时，该文件夹是自动创建的。
 
-Now that you've opened the "tutorial-part-one" folder in your code editing software, it's time to edit your website. In the code editing software, you'll need to find the `src/pages/index.js`. Once you find that, try changing "Hello world!" in the page component to "Hello Gatsby!". The text in your browser should change within a second.
+现在，您已经在代码编辑软件中打开了“tutorial-part-one”文件夹，现在可以编辑您的网站了。 在代码编辑软件中，您需要找到`` src/pages/index.js</ code>。 一旦你发现，尝试在页面组件中把“Hello World！”修改为 “Hello Gatsby！”。 浏览器中的文本会随着改变。</p>
 
-Try some other tricks, like the ones below:
+<p>Try some other tricks, like the ones below:</p>
 
-1. Gatsby lets you add "inline styles" via a JavaScript style "prop" (we'll learn about other styling options later).
-    
-    Try making your page component look like this:
+<ol>
+<li><p>Gatsby lets you add "inline styles" via a JavaScript style "prop" (we'll learn about other styling options later).</p>
 
-```jsx
-import React from "react"
+<p>Try making your page component look like this:</p></li>
+</ol>
+
+<pre><code class="jsx">import React from "react"
 
 export default () => <div style={{ color: `blue` }}>Hello Gatsby!</div>
-```
+``</pre> 
 
 Change the color to "pink". Then to "tomato".
 
