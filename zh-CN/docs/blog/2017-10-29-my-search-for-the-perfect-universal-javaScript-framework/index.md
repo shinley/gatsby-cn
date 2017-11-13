@@ -1,9 +1,8 @@
 ---
 title: My search for the perfect universal JavaScript framework
-date: "2017-10-29"
-author: "Tal Bereznitskey"
+date: 2017-10-29
+author: Tal Bereznitskey
 ---
-
 It was 2010 when [Backbone.js](http://backbonejs.org) came out. Finally I could write structured code to create full web applications for our users. And with Backbone.js and Node.js, a new dream started to emerge, a website that starts rendering on the server side and continues to render on the users’ browsers.
 
 I spent days and nights trying to build a generic isomorphic web framework that starts with server side rendering (SSR) and then continues work in the browser. It was difficult to design and I could only make it meet the use case of my company—with lots of small hacks to get the job done. Airbnb made a shot at building such a framework as well with [rendr](https://github.com/rendrjs/rendr). It was the closest thing to a Backbone.js isomorphic web framework, but it didn’t support the full features of Backbone.
