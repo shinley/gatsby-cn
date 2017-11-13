@@ -1,9 +1,8 @@
 ---
 title: Migrate from Hugo to Gatsby
 date: 2017-11-06
-author: "Kalin Chernev"
+author: Kalin Chernev
 ---
-
 ## Introduction
 
 As my [recent evaluations of Gatsby](https://kalinchernev.github.io/learn-gatsbyjs) were positive, I decided to migrate my personal blog.
@@ -23,7 +22,7 @@ This article will highlight lessons learned from the process, with the aim to pr
 
 ### Background before you start
 
-[Hugo](https://gohugo.io/) is a super fast, convenient and well-supported tool for working with static sites. I think today it's still more mature and closer to classical CMS comparing to Gatsby workflows. 
+[Hugo](https://gohugo.io/) is a super fast, convenient and well-supported tool for working with static sites. I think today it's still more mature and closer to classical CMS comparing to Gatsby workflows.
 
 As it's an older ecosystem, when you need a ready plugin or a theme for quick gratification, it's more likely to find something ready online for Hugo.
 
@@ -74,6 +73,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   });
 };
 ```
+
 As you see, getting the list of posts can be done in a single query.
 
 The result of this query can later be handled by a "creator" function, which I prefer to keep in a separate module. For example, creating posts works like following:
@@ -97,6 +97,7 @@ module.exports = (createPage, nodes) => {
   });
 };
 ```
+
 I re-use the `slug` field of the frontmatter of my existing structure. I don't have to generate or calculate slugs based on information of other fields, i.e. my scenario is easier than the tutorial on the official docs.
 
 This is an example of "unfair" easy - I don't have to do literally anything to keep my previous URLs of existing content the same in the new system.
@@ -111,41 +112,34 @@ Steps were quite easy:
 
 Add `gatsby-plugin-typography` and `typography-theme-moraga` (for example) and "enable" the plugin in the `gatsby-config.js` file:
 
-```javascript=
-{
-  resolve: `gatsby-plugin-typography`,
-  options: {
-    pathToConfigModule: `src/utils/typography`,
-  },
-},
-```
+```javascript= { resolve: `gatsby-plugin-typography`, options: { pathToConfigModule: `src/utils/typography`, }, },
 
-In `src/utils/typograhy` add:
-
-```javascript=
-import Typography from 'typography';
-import theme from 'typography-theme-moraga';
-
-theme.overrideThemeStyles = () => {
-  return {
-    // Color contrast correction https://dequeuniversity.com/rules/axe/2.2/color-contrast
-    a: {
-      color: `#185D8B`,
-    },
-    img: {
-      position: `relative`,
-      left: `50%`,
-      transform: `translateX(-50%)`,
-    },
-  };
-};
-
-theme.baseFontSize = `22px`;
-const typography = new Typography(theme);
-
-module.exports = typography;
-
-```
+    <br />In `src/utils/typograhy` add:
+    
+    ```javascript=
+    import Typography from 'typography';
+    import theme from 'typography-theme-moraga';
+    
+    theme.overrideThemeStyles = () => {
+      return {
+        // Color contrast correction https://dequeuniversity.com/rules/axe/2.2/color-contrast
+        a: {
+          color: `#185D8B`,
+        },
+        img: {
+          position: `relative`,
+          left: `50%`,
+          transform: `translateX(-50%)`,
+        },
+      };
+    };
+    
+    theme.baseFontSize = `22px`;
+    const typography = new Typography(theme);
+    
+    module.exports = typography;
+    
+    
 
 and start the project again to see:
 
@@ -331,13 +325,11 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown"}
 ```
 
-The only interesting part is the `gatsby` branch which I used in parallel to the `blog` branch. The `gatsby`
-branch is my development/staging and `blog` is my production.
+The only interesting part is the `gatsby` branch which I used in parallel to the `blog` branch. The `gatsby` branch is my development/staging and `blog` is my production.
 
 The branch in this configuration has to match to deployment branch of Netlify service:
 
 ![](Efubv8f.png)
-
 
 This is my admin page React component which is placed in `src/pages/admin` so that Gatsby delivers the HTML page at `/admin`.
 
@@ -388,7 +380,7 @@ This content workflow fits very well in the model we have as developers and prov
 
 In this blog post I shared how a migration to Gatsby from a static generator like Hugo can work. The reasons for doing a migration like this are part development benefits (it's a lot easier) and also a better production site which feels as smooth as a single page application.
 
-We also went through the few technical details necessary to realize the migration, using GraphQL query, creators and templates. 
+We also went through the few technical details necessary to realize the migration, using GraphQL query, creators and templates.
 
 Lastly, we added an admin panel to make content management easier for our editors and clients.
 
