@@ -1,16 +1,15 @@
 ---
-title: "Migrating My Blog From Hexo To Gatsby"
-date: "2017-10-01"
-image: "hexo-to-gatsby.png"
-author: "Ian Sinnott"
-excerpt: "How I migrated my blog to Gatsby and how you can do the same."
+title: Migrating My Blog From Hexo To Gatsby
+date: 2017-10-01
+image: hexo-to-gatsby.png
+author: Ian Sinnott
+excerpt: How I migrated my blog to Gatsby and how you can do the same.
 ---
-
-_This article was originally posted on [my blog (original link)](https://blog.iansinnott.com/migrating-a-blog-to-gatsby-part-2-of-gatsby-migration/). I'm reposting here in the hopes that it helps more people get started with Gatsby!_
+*This article was originally posted on [my blog (original link)](https://blog.iansinnott.com/migrating-a-blog-to-gatsby-part-2-of-gatsby-migration/). I'm reposting here in the hopes that it helps more people get started with Gatsby!*
 
 # Migrating a blog to Gatsby
 
----
+* * *
 
 **Abstract:** Gatsby is a great tool for building a blog. In part 1 I did the more simple task of migrating an existing React site to Gatsby. This time I migrated my blog, which was a lot more involved and required a lot more Gatsby-specific knowledge.
 
@@ -24,11 +23,11 @@ Here's the gist of what I'm going to cover:
 
 Let's jump in.
 
----
+* * *
 
 ## Preparing your existing blog for migration
 
-**NOTE:** If you _don't_ already have a blog or want to create one from scratch there's a [tutorial for exactly that right here](https://www.gatsbyjs.org/blog/2017-07-19-creating-a-blog-with-gatsby/).
+**NOTE:** If you *don't* already have a blog or want to create one from scratch there's a [tutorial for exactly that right here](https://www.gatsbyjs.org/blog/2017-07-19-creating-a-blog-with-gatsby/).
 
 Let's move some files around. Gatsby gives you a good amount of flexibility when it comes to file structure, but for consistency with the docs I'm going to use the suggested file structure for migrating my blog. How you handle this step will depend on what you're migrating from. I am migrating form Hexo, which is very similar to Jekyll in how it structures files.
 
@@ -40,16 +39,15 @@ You could also simply delete everything other than your raw content. It's up to 
 
 Here's what that looks like for me:
 
-```
-.
-├── content
-│   ├── _drafts
-│   │   └── [ Draft markdown files ... ]
-│   └── _posts
-│       └── [ Post markdown files ... ]
-└── hexo.bak
-    └── [ All my old hexo related files ... ]
-```
+    .
+    ├── content
+    │   ├── _drafts
+    │   │   └── [ Draft markdown files ... ]
+    │   └── _posts
+    │       └── [ Post markdown files ... ]
+    └── hexo.bak
+        └── [ All my old hexo related files ... ]
+    
 
 For the rest of this post I'll ignore the `hexo.bak/` directory because it's not relevant to Gatsby.
 
@@ -68,33 +66,31 @@ rm -rf temp-gatsby-files     # Remove the temp directory
 
 However you get Gatsby initialized in your repository root, afterwards you should have a file structure that looks something like this:
 
-```
-.
-├── content
-│   └── [ Markdown files ... ]
-├── public
-│   └── index.html
-├── src
-│   ├── layouts
-│   │   ├── index.css
-│   │   └── index.js
-│   └── pages
-│       ├── 404.js
-│       ├── index.js
-│       └── page-2.js
-├── gatsby-config.js
-└── package.json
-```
+    .
+    ├── content
+    │   └── [ Markdown files ... ]
+    ├── public
+    │   └── index.html
+    ├── src
+    │   ├── layouts
+    │   │   ├── index.css
+    │   │   └── index.js
+    │   └── pages
+    │       ├── 404.js
+    │       ├── index.js
+    │       └── page-2.js
+    ├── gatsby-config.js
+    └── package.json
+    
 
 Now run the Gatsby dev server to make sure everything works:
 
-```
-npm run develop
-```
+    npm run develop
+    
 
 **NOTE:** If you open up `package.json` you can see what the `develop` script is doing.
 
-Boom 💥! The default site is up.
+Boom 
 
 ![Gatsby Default Screen](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-08-26%20at%2012.57.40%20PM.png)
 
@@ -106,9 +102,8 @@ Let's customize that landing page to render a list of posts. You will also proba
 
 This is pretty simple. Just modify the primary layout file that was generated:
 
-```
-src/layouts/index.js
-```
+    src/layouts/index.js
+    
 
 You can also customize the styles in `src/layouts/index.css`. Stylus, Sass, Less, etc are also supported if you add the appropriate plugin. [Here's the list](https://github.com/gatsbyjs/gatsby/tree/master/packages) (there's a page on the website too, but the source is more up to date).
 
@@ -118,9 +113,8 @@ You can also customize the styles in `src/layouts/index.css`. Stylus, Sass, Less
 
 Also straightforward, just edit:
 
-```
-src/pages/index.js
-```
+    src/pages/index.js
+    
 
 This file is where we'll actually render out the list of posts. So where the hell does that data come from??
 
@@ -128,9 +122,9 @@ This file is where we'll actually render out the list of posts. So where the hel
 
 Now we're getting in to the meat of Gatsby and one of the areas where it really shines: Data sources. You can pull in data from anywhere to be rendered in your blog, but for our use case the only data source will be the file system (aka the markdown files stored on your hard drive).
 
-But first, let's check out [GraphiQL][]. It's an excellent playground for testing out GraphQL queries in any GraphQL project. Gatsby ships with it enabled by default, thank goodness. GraphQL can actually be oddly opaque without this excellent tool.
+But first, let's check out [GraphiQL](https://github.com/graphql/graphiql). It's an excellent playground for testing out GraphQL queries in any GraphQL project. Gatsby ships with it enabled by default, thank goodness. GraphQL can actually be oddly opaque without this excellent tool.
 
-Visit <http://localhost:8000/___graphql> in the browser and you'll be greeted with this lovely dev tool:
+Visit [http://localhost:8000/___graphql](http://localhost:8000/___graphql) in the browser and you'll be greeted with this lovely dev tool:
 
 ![Gatsby Graphiql](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-08-26%20at%201.31.08%20PM.png)
 
@@ -140,9 +134,8 @@ I recommend getting to know this tool if you're not already familiar. You will b
 
 If you play around with GraphiQL you'll notice there's not that much there. Let's fix that. We need to teach Gatsby how to query the file system. Luckily this is so common it's been done for you. Install the file system source plugin:
 
-```
-yarn add gatsby-source-filesystem
-```
+    yarn add gatsby-source-filesystem
+    
 
 Now modify `gatsby-config.js` to both use the plugin and tell it what directory to source files from. Add this to the `plugins` array:
 
@@ -181,9 +174,8 @@ This will list all the files in the directory you specified to the plugin. You c
 
 Being able to query files is a big win, and if you have a directory of HTML files this is all you will need. But if you want to render markdown files as HTML you will need another plugin. Let's add that now:
 
-```
-yarn add gatsby-transformer-remark
-```
+    yarn add gatsby-transformer-remark
+    
 
 As before, add it to the `plugins` field in `gatsby-config.js`:
 
@@ -196,7 +188,7 @@ As before, add it to the `plugins` field in `gatsby-config.js`:
 }
 ```
 
-This particular plugin can also take _its own_ plugins via the `plugins` option. I've left it empty but this is where you can add things like syntax highlighting or auto-linking of headers. Here's the current list: https://www.npmjs.com/search?q=gatsby-remark
+This particular plugin can also take *its own* plugins via the `plugins` option. I've left it empty but this is where you can add things like syntax highlighting or auto-linking of headers. Here's the current list: https://www.npmjs.com/search?q=gatsby-remark
 
 Save and restart your dev server, then go into GraphiQL and try out the new `allMarkdownRemark` field:
 
@@ -214,20 +206,19 @@ query {
 
 This query gives you the full HTML for all your markdown files. If you are using frontmatter you can also access that here. I'm assuming you have a `title` field in your frontmatter:
 
-```
-query {
-  allMarkdownRemark {
-    edges {
-      node {
-        frontmatter {
-          title
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
+            }
+            html
+          }
         }
-        html
       }
     }
-  }
-}
-```
+    
 
 Now you have access to the full HTML of your posts as well as the titles. With this we have enough information to render a list of posts on the front page.
 
@@ -289,7 +280,7 @@ Now let's looks specifically at where we render a link for each blog post:
 ))}
 ```
 
-Notice that the data shape is exactly what we specified in the GraphQL query. This may seem like a lot of nesting just to get at an array of data, but GraphQL emphasizes _clarity_ over conciseness. You'll notice that if you run your GraphQL query in GraphiQL the data will have the exact shape described above.
+Notice that the data shape is exactly what we specified in the GraphQL query. This may seem like a lot of nesting just to get at an array of data, but GraphQL emphasizes *clarity* over conciseness. You'll notice that if you run your GraphQL query in GraphiQL the data will have the exact shape described above.
 
 And that brings us finally to the page query:
 
@@ -309,7 +300,7 @@ export const pageQuery = graphql`
 
 This is how you get data from Gatsby into your react components. Make sure you don't misspell `pageQuery` otherwise you won't get what you want.
 
-Also note that `graphql` is just some magic global variable. Your linter will probably complain about it being undefined and you will just have to ignore it. Personally I think it would be more clear if `graphql` was imported from Gatsby, but the project is still young so the API could change at some point ¯\\\_(ツ)\_/¯
+Also note that `graphql` is just some magic global variable. Your linter will probably complain about it being undefined and you will just have to ignore it. Personally I think it would be more clear if `graphql` was imported from Gatsby, but the project is still young so the API could change at some point ¯\\*(ツ)*/¯
 
 ### Linking to blog posts
 
@@ -389,7 +380,7 @@ This was exactly my situation. The URL was actually derived from the title of th
 
 ## Adding custom data to the GraphQL schema
 
-If I have a post named "Isn't this a fun title" then I want the URL to be "isnt-this-a-fun-title". Notice that spaces turn into hyphens and special characters are removed. This is simple enough to do in JavaScript, but it felt wrong to do it on the fly when rendering components. This is _data_ so I wanted to be able to query it through GraphQL.
+If I have a post named "Isn't this a fun title" then I want the URL to be "isnt-this-a-fun-title". Notice that spaces turn into hyphens and special characters are removed. This is simple enough to do in JavaScript, but it felt wrong to do it on the fly when rendering components. This is *data* so I wanted to be able to query it through GraphQL.
 
 Enter `setFieldsOnGraphQLNodeType`.
 
@@ -427,11 +418,11 @@ Basically you check the type of node and if it's a type your interested in you r
 
 I've omitted the implementation of `getURL` here, but you can see the [source code here](https://github.com/iansinnott/iansinnott.github.io/blob/gatsby-migration/gatsby-node.js#L17) (NOTE: in the source it's called `getSlug` instead of `getURL`).
 
-You can use this technique to add any field you want to your GraphQL schema. Now you should be all set to render `Link` components that actually point somewhere interesting 👍.
+You can use this technique to add any field you want to your GraphQL schema. Now you should be all set to render `Link` components that actually point somewhere interesting 
 
 ## Generating pages from markdown files
 
-This is where it all comes together. If you finished the last section you would have ended up with a bunch of links that point to the correct URL but when you tried visiting the URL there was nothing there 😕. This is because Gatsby hasn't yet generated an additional pages. It's still just rendering whatever is in your `src/pages/` directory.
+This is where it all comes together. If you finished the last section you would have ended up with a bunch of links that point to the correct URL but when you tried visiting the URL there was nothing there This is because Gatsby hasn't yet generated an additional pages. It's still just rendering whatever is in your `src/pages/` directory.
 
 By default, Gatsby will create a static HTML page for everything under `src/pages/`. At this point we've discussed `src/pages/index.js` extensively. It will be the `index.html` page of your site, and thus your landing page.
 
@@ -488,8 +479,7 @@ I've included the pseudo code to highlight the fact that nothing too magical is 
 So in order to make this work we also need to be able to query GraphQL just like we do in the page query. Gatsby let's us do exactly that by giving us access to the `graphql` object and letting us return a promise so that we can do async work.
 
 ```js
-
-// NOTE: I'm using async/await to simplify the code since it's now natively supported
+<br />// NOTE: I'm using async/await to simplify the code since it's now natively supported
 // in Node 8.x. This means that our function will return a promise
 exports.createPages = async ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
@@ -556,12 +546,12 @@ export default class BlogPost extends React.Component {
 // NOTE: The $id var is passed in via context when calling createPage in gatsby-node.js
 export const pageQuery = graphql`
   query PostById($id: String!) {
-  	markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
       }
       html
-  	}
+    }
   }
 `;
 ```
@@ -594,8 +584,6 @@ In my opinion Gatsby provides a few killer features:
 
 It's not a perfect project (looking at you global `graphql` object) and it's still under heavy development, so you may run in to bugs, but in my view the pros heavily outweigh the cons. It's a best-in-class static site generator and well worth the adoption time if you want to customize your blog.
 
----
+* * *
 
 If anything was unclear or you have more questions feel free to ask me on [Twitter](https://twitter.com/ian_sinn).
-
-[GraphiQL]: https://github.com/graphql/graphiql
