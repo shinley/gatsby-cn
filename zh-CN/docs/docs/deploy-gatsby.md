@@ -1,7 +1,6 @@
 ---
-title: "Deploying Gatsby"
+title: Deploying Gatsby
 ---
-
 ## Tutorials for deploying on different static site hosts
 
 * [S3/Cloudfront](/docs/deploy-gatsby/#amazon-s3-and-cloudfront)
@@ -9,9 +8,9 @@ title: "Deploying Gatsby"
 
 ## Amazon S3 and Cloudfront
 
-If you decide to host your Gatsby site on S3 with Cloudfront as CDN, you should change the "Origin Domain Name" on the Cloudfront panel with the real URL of your S3 bucket: **examplewebsite.com.s3-website-eu-west-1.amazonaws.com** replacing the default URL suggested by Amazon **examplewebsite.com.s3.amazonaws.com**. 
+If you decide to host your Gatsby site on S3 with Cloudfront as CDN, you should change the "Origin Domain Name" on the Cloudfront panel with the real URL of your S3 bucket: **examplewebsite.com.s3-website-eu-west-1.amazonaws.com** replacing the default URL suggested by Amazon **examplewebsite.com.s3.amazonaws.com**.
 
-Without this change, [S3 doesn't look for index.html files when serving "clean urls"](https://forums.aws.amazon.com/message.jspa?messageID=314454). 
+Without this change, [S3 doesn't look for index.html files when serving "clean urls"](https://forums.aws.amazon.com/message.jspa?messageID=314454).
 
 ## Github Pages
 
@@ -25,21 +24,19 @@ First add **gh-pages** as a `devDependency` of your site and create an npm scrip
 
 Then add a `deploy` script in your `package.json` file.
 
-```
-"scripts": {
-  "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-}
-```
+    "scripts": {
+      "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    }
+    
 
 In the `gatsby-config.js`, set the `pathPrefix` to be added to your site's link paths. The `pathPrefix` should be the project name in your repository. (ex. `https://github.com/username/project-name` - your `pathPrefix` should be `/project-name`). See [the docs page on path prefixing for more](/docs/path-prefix/).
 
-```
-module.exports = {
-  pathPrefix: `/project-name`,
-}
-```
+    module.exports = {
+      pathPrefix: `/project-name`,
+    }
+    
 
-Now run `yarn deploy` or `npm run deploy`. Preview changes in your github page `https://username.github.io/project-name/`. You can also find the link to your site on Github under `Settings` > `Github Pages`. 
+Now run `yarn deploy` or `npm run deploy`. Preview changes in your github page `https://username.github.io/project-name/`. You can also find the link to your site on Github under `Settings` > `Github Pages`.
 
 ### Deploying a user/organization site
 
@@ -49,11 +46,10 @@ The repository for these sites requires a special name. See https://help.github.
 
 Like with project sites, add `gh-pages` as a `devDependency` and add a `deploy` script to your site's `package.json` file:
 
-```
-"scripts": {
-  "deploy": "gatsby build && gh-pages -d public --branch master",
-}
-```
+    "scripts": {
+      "deploy": "gatsby build && gh-pages -d public --branch master",
+    }
+    
 
 ## Debugging tips
 
@@ -61,14 +57,12 @@ Like with project sites, add `gh-pages` as a `devDependency` and add a `deploy` 
 
 If you see the following error:
 
-```
-Unable to find element with ID ##
-```
+    Unable to find element with ID ##
+    
 
 or alternatively
 
-```
-Uncaught Error: Minified React error #32; visit http://facebook.github.io/react/docs/error-decoder.html?invariant=32&args[]=## for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
-```
+    Uncaught Error: Minified React error #32; visit http://facebook.github.io/react/docs/error-decoder.html?invariant=32&args[]=## for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    
 
-This is a new problem when dealing with static sites built with React.  React uses HTML comments to help identify locations of components that do not render anything.  If you are using a CDN that minifies your HTML, it will eliminate the HTML comments used by react to take control of the page on the client.
+This is a new problem when dealing with static sites built with React. React uses HTML comments to help identify locations of components that do not render anything. If you are using a CDN that minifies your HTML, it will eliminate the HTML comments used by react to take control of the page on the client.
