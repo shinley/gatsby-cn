@@ -51,15 +51,15 @@ cd tutorial-part-one
 gatsby develop
 ```
 
-You should see shortly some text that says `The development server is listening at:` <http://localhost:8000>. Open that address in your browser and...
+您应该很快会看到一些文字说明开发服务器正在监听：http://localhost:8000。 在您的浏览器中打开该地址，然后...
 
 ![Gatsby.js hello world](hello-world.png)
 
-Yeah! It's working!!!
+这样，它就开始工作了！
 
-Too cool 
+是不是很酷？ 
 
-Gatsby's development server is a "hot reloading" server, meaning any change you make to your React.js page components (and later we'll learn, your data files) will hot reload in the browser.
+Gatsby的开发服务器是一个“热加载”服务器，这意味着您对React.js页面组件（以及后来我们将了解的，您的数据文件）所做的任何更改都将在浏览器中重新加载。
 
 This is huge because it makes development so much faster and fun.
 
