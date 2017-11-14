@@ -1,0 +1,2 @@
+webpackJsonp([98439993317596],{623:function(e,n){e.exports={data:{markdownRemark:{html:"<p>Coming soon.</p>",excerpt:"Coming soon.",timeToRead:1,frontmatter:{title:"Design Principles"},parent:{__typename:"File",relativePath:"docs/design-principles.md"}}},pathContext:{slug:"/docs/design-principles/"}}}});
+//# sourceMappingURL=path---docs-design-principles-52b223d4a489c602de95.js.map
