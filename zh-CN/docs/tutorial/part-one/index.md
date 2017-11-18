@@ -259,7 +259,7 @@ export default Counter
 </p>
 
 <p>
-  First we'll setup the component state.
+  首先，我们将设置组件状态。
 </p>
 
 <pre><code class="jsx{4-7,13}">import React from "react"
@@ -286,11 +286,11 @@ export default Counter
 </code></pre>
 
 <p>
-  We're now rendering the current count from the component state.
+  我们现在从组件状态呈现当前计数。
 </p>
 
 <p>
-  Let's now change the state when we click on our buttons.
+  现在让我们改变状态，当我们点击我们的按钮。
 </p>
 
 <pre><code class="jsx{14-19}">import React from "react"
@@ -325,51 +325,51 @@ export default Counter
 </p>
 
 <p>
-  One fun thing too is that hot reloading isn't just for content and styles but it works on code as well. Try changing the amount by which clicking on the buttons changes the count.
+  一个有趣的事情是，热加载不仅仅是内容和风格，而且它也适用于代码。 尝试更改点击按钮更改计数的数量。
 </p>
 
 <h2>
-  Deploying Gatsby.js websites on the web
+  在网络上部署Gatsby.js网站
 </h2>
 
 <p>
-  Gatsby.js is a <em>static site generator</em> which makes deploying Gatsby sites to the web really easy. There are no servers to setup or complicated databases to deploy. Instead, the Gatsby <code>build</code> command produces a directory of static HTML and JavaScript files which you can deploy to a static site hosting service.
+  Gatsby.js是一个静态站点生成器，使得部署Gatsby网站非常容易。 没有服务器来设置或复杂的数据库部署。 相反，Gatsby build命令会生成一个静态HTML和JavaScript文件的目录，您可以将其部署到静态网站托管服务。
 </p>
 
 <p>
-  Let's try using <a href="http://surge.sh/">Surge</a> for deploying our first Gatsby website. Surge is one of many "static site hosts" which make it really easy to deploy Gatsby sites.
+  让我们尝试使用Surge来部署我们的第一个Gatsby网站。 Surge是许多“静态站点主机”之一，这使得部署Gatsby站点非常容易。
 </p>
 
 <p>
-  First install their terminal tool:
+  首先安装他们的终端工具：
 </p>
 
 <pre><code class="bash">npm install --global surge
 </code></pre>
 
 <p>
-  Then build your site by running in the terminal at the root of your site:
+  然后通过在您的网站的根目录中运行终端来建立您的网站：
 </p>
 
 <pre><code class="bash">gatsby build
 </code></pre>
 
 <p>
-  Building should take 15-30 seconds. Take a look at the generated files by looking at the <code>public</code> directory:
+  构建应该需要15-30秒。 通过查看public目录来查看生成的文件：
 </p>
 
 <pre><code class="bash">ls public
 </code></pre>
 
 <p>
-  Then finally deploy your site by publishing the generated files to surge.sh. You'll first need to create a (free) account by typing <code>surge</code>. Then run:
+  然后通过将生成的文件发布到surge.sh来最终部署您的网站。 您首先需要输入surge来创建一个（免费）帐户。 然后运行：
 </p>
 
 <pre><code class="bash">surge public/
 </code></pre>
 
 <p>
-  Once this finishes running, you should see in your terminal something like:
+  一旦这个运行完成，你应该在你的终端看到像这样的：
 </p>
 
 <p>
