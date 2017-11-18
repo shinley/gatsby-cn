@@ -12,7 +12,7 @@ typora-copy-images-to: './'
 
 虽然看似简单的变化，但它对于如何考虑构建网站有着深远的影响。
 
-Take the simple example of creating a custom button. In the past you would create a CSS class (perhaps `.primary-button`) with your custom styles and then whenever you want to apply those styles e.g.
+以创建自定义按钮的简单示例为例。 In the past you would create a CSS class (perhaps `.primary-button`) with your custom styles and then whenever you want to apply those styles e.g.
 
 ```html
 <button class="primary-button">
