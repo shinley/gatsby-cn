@@ -1,10 +1,10 @@
 ---
-title: Gatsby.js Tutorial Part Two
+title: Gatsby.js教程第二部分
 typora-copy-images-to: './'
 ---
-Welcome to part two of the Gatsby tutorial!
+欢迎来到Gatsby教程的第二部分！
 
-In this part we're going to explore options for styling Gatsby websites and dive deeper into using React components for building sites.
+在这一部分，我们将探索Gatsby网站的样式选择，并深入探讨如何使用React组件来构建网站。
 
 ## Building with components
 
