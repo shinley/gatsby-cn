@@ -89,7 +89,7 @@ export default () =>
   </div>
 ```
 
-![no-layout](no-layout.png)
+![没有布局](no-layout.png)
 
 我们现在有一个很好的个人网站的开始！
 
@@ -114,7 +114,7 @@ export default ({ children }) =>
 
 停止gatsby develop，并重新启动新的布局生效。
 
-![with-layout2](不错的是，布局正在像现在一样工作，我们的文本被中心化，并且被限制在我们指定的650像素宽的列上。)
+![使用布局2](不错的是，布局正在像现在一样工作，我们的文本被中心化，并且被限制在我们指定的650像素宽的列上。)
 
 甜美的是，布局正在像现在一样工作，我们的文本被中心化，并且被限制在我们指定的650像素宽的列上。
 
@@ -132,9 +132,9 @@ export default ({ children }) =>
 
 如果我们转到三个页面中的任何一页，我们会看到相同的标题，例如 /about/page：
 
-![with-title](让我们将导航链接添加到我们的三个页面中的每一个。)
+![使用标题](让我们将导航链接添加到我们的三个页面中的每一个。)
 
-Let's add navigation links to each of our three pages.
+让我们为我们的三个页面添加导航链接。
 
 ```jsx{2-9,12-22}
 import React from "react"
@@ -163,10 +163,10 @@ export default ({ children }) =>
   </div>
 ```
 
-![with-navigation](with-navigation.png)
+![使用导航](我们终于得到它了！ 一个简单的全局导航的三页网站。)
 
-And there we have it! A three page site with a simple global navigation.
+我们终于得到它了！ 一个简单的全局导航的三页网站。
 
-With your new "layout component" powers, you can easily add headers, footers, global navigation, sidebars, etc. to your Gatsby sites.
+有了您的新“布局组件”的能力，您可以轻松地添加标题，页脚，全球导航，侧边栏等到您的Gatsby网站。
 
-Continue on to [part four of the tutorial where we'll start learning about Gatsby's data layer and programmatic pages!](/tutorial/part-four/)
+继续阅读本教程的第四部分，我们将开始了解Gatsby的数据层和编程页面！
