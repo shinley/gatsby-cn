@@ -1,26 +1,26 @@
 ---
-title: Gatsby.js Tutorial Part Three
+title: Gatsby.js教程第三部分
 typora-copy-images-to: './'
 ---
-Gatsby lets you easily create "layout components". Layout components are sections of your site that you want to share across multiple pages. For example, Gatsby sites will commonly have a layout component with a shared header and footer. Other common things to add to layouts are a sidebar and navigation menu.
+盖茨比让你轻松创建“布局组件”。 布局组件是您要在多个页面上共享的网站部分。 例如，Gatsby网站通常会有一个共享页眉和页脚的布局组件。 其他常见的东西添加到布局是侧边栏和导航菜单。
 
-On this page, the sidebar to the left (assuming you're on a larger device) and the header at the top are part of gatsbyjs.org's layout component.
+在这个页面上，左边的边栏（假设你在一个更大的设备上）和顶部的头部是gatsbyjs.org布局组件的一部分。
 
-Let's dive in and explore Gatsby layouts.
+让我们深入探索盖茨比的布局。
 
-First, create a new site for this part of the tutorial. We'll use the "hello world" starter again.
+首先，为本教程的这一部分创建一个新的站点。 我们将再次使用“hello world”启动器(Starter)。
 
 ```shell
 gatsby new tutorial-part-three https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-Once the site is finished installing, install `gatsby-plugin-typography`. For the Typography.js theme, let's try this time the "Fairy Gates" typography theme.
+一旦网站完成安装，请安装gatsby-plugin-typography。 对于Typography.js主题，我们来试试这个“童话门”的排版主题吧。
 
 ```shell
 npm install --save gatsby-plugin-typography typography-theme-fairy-gates
 ```
 
-Create the typography config file at `src/utils/typography.js`
+在src/utils/typography.js中创建排版配置文件
 
 ```javascript
 import Typography from "typography"
@@ -31,7 +31,7 @@ const typography = new Typography(fairyGateTheme)
 module.exports = typography
 ```
 
-Then our site's `gatsby-config.js`
+那么我们的网站的gatsby-config.js
 
 ```javascript
 module.exports = {
@@ -46,7 +46,7 @@ module.exports = {
 }
 ```
 
-Now, let's add a few different pages: a front page, an about page, and a contact page.
+现在，我们添加几个不同的页面：一个首页，一个关于页面和一个联系页面。
 
 `src/pages/index.js`
 
