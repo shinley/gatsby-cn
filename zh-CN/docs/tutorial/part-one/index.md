@@ -177,19 +177,22 @@ export default () =&gt;
 </video>
 
 <h2>
-  Interactive page
+  交互式页面
 </h2>
 
 <p>
-  One nice thing about using Gatsby for building websites vs other tools is it's so easy to add interactivity to your pages. React.js was designed for Facebook.com and is used on many other world-class web applications.
+  使用Gatsby构建网站vs其他工具的一个好处是可以很容易地为您的页面添加交互性。 React.js是为Facebook.com设计的，在许多其他世界级的Web应用程序上使用
 </p>
 
 <p>
-  Let's see how easy it is to add interactive elements to our pages.
+  让我们看看添加交互式元素到我们的页面是多么容易。
 </p>
 
 <p>
-  We'll start by creating a new link to a page at <code>/counter</code>/ from our original <code>index.js</code> page component <code>&lt;Link to="/counter/"&gt;Counter&lt;/Link&gt;</code>.
+  我们首先创建一个新的链接到我们原来的index.js页面组件中的/counter/的页面
+  
+  <Link to ="/counter/" />
+  Counter </ Link>。
 </p>
 
 <pre><code class="jsx{13-15}">import React from "react"
