@@ -8,9 +8,9 @@ typora-copy-images-to: './'
 
 ## Building with components
 
-One of the big mental shifts you make when starting to build with components is that now your CSS, HTML, and JavaScript are tightly coupled, often living even within the same file.
+在开始构建组件时，您所做的一个重大转变就是现在您的CSS，HTML和JavaScript紧密结合，甚至在同一个文件中也是如此。
 
-While a seemingly simple change, it has profound implications for how you think about building websites.
+虽然看似简单的变化，但它对于如何考虑构建网站有着深远的影响。
 
 Take the simple example of creating a custom button. In the past you would create a CSS class (perhaps `.primary-button`) with your custom styles and then whenever you want to apply those styles e.g.
 
