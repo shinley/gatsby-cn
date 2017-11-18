@@ -91,17 +91,17 @@ export default () =>
 
 ![no-layout](no-layout.png)
 
-We now have the start of a nice personal site!
+我们现在有一个很好的个人网站的开始！
 
-But there are a few problems. First, it'd be nice if the page content was centered on the screen like in part two of the tutorial. And second, we should really have some sort of global navigation so it's easy for visitors to find and visit each of the sub-pages.
+但是有一些问题。 首先，如果页面内容像教程的第二部分那样集中在屏幕上，那就好了。 其次，我们真的应该有一些全球导航，所以访问者很容易找到并访问每个子页面。
 
-Let's tackle these problems by creating our first layout component.
+让我们通过创建我们的第一个布局组件来解决这些问题。
 
-## Our first layout component
+## 我们的第一个布局组件
 
-First, create a new directory at `src/layouts`. All layout components have to be in this directory.
+首先，在src/layouts创建一个新目录。 所有布局组件都必须位于此目录中。
 
-Let's create a very simple layout component at `src/layouts/index.js`
+让我们在src/layouts/index.js创建一个非常简单的布局组件
 
 ```jsx
 import React from "react"
@@ -112,13 +112,13 @@ export default ({ children }) =>
   </div>
 ```
 
-Stop `gatsby develop` and start it again for the new layout to take effect.
+停止gatsby develop，并重新启动新的布局生效。
 
-![with-layout2](with-layout2.png)
+![with-layout2](不错的是，布局正在像现在一样工作，我们的文本被中心化，并且被限制在我们指定的650像素宽的列上。)
 
-Sweet, the layout is working as now our text is centered and constrained to a column 650 pixels wide as we specified.
+甜美的是，布局正在像现在一样工作，我们的文本被中心化，并且被限制在我们指定的650像素宽的列上。
 
-Let's now add our site title.
+现在添加我们的网站标题。
 
 ```jsx{5}
 import React from "react"
@@ -130,9 +130,9 @@ export default ({ children }) =>
   </div>
 ```
 
-If we go to any of our three pages we'll see the same title added e.g. the `/about/` page:
+如果我们转到三个页面中的任何一页，我们会看到相同的标题，例如 /about/page：
 
-![with-title](with-title.png)
+![with-title](让我们将导航链接添加到我们的三个页面中的每一个。)
 
 Let's add navigation links to each of our three pages.
 
