@@ -18,7 +18,7 @@ Node.js是在服务器和终端上运行JavaScript的编程工具。 盖茨比�
 
 你会看到以下信息：
 
-![Check if node.js/npm is installed](check-versions.png)
+![检查是否安装了node.js / npm](check-versions.png)
 
 Gatsby支持的Node的最小版本是v4, NPM的版本是V3.
 
@@ -146,7 +146,7 @@ export default () =&gt;
 </p>
 
 <p>
-  <img src="dev-404.png" alt="Gatsby.js development 404 page" />
+  <img src="dev-404.png" alt="Gatsby.js 开发404页面" />
 </p>
 
 <p>
@@ -321,7 +321,7 @@ export default Counter
 </code></pre>
 
 <p>
-  There you go! A working React.js counter inside your static website
+  好了！ 一个在你的静态网站里面工作的React.js计数器
 </p>
 
 <p>
@@ -373,17 +373,17 @@ export default Counter
 </p>
 
 <p>
-  <img src="surge-deployment.png" alt="Screenshot of publishing Gatsby site with Surge" />
+  <img src="surge-deployment.png" alt="用Surge发布Gatsby网站" />
 </p>
 
 <p>
-  Open the web address listed on the bottom line (<code>lowly-pain.surge.sh</code> in this case) and you'll see your newly published site!
+  打开底线列出的网址（在这种情况下，lowly-pain.surge.sh），你会看到你的新发布的网站！
 </p>
 
 <h2>
-  Good work!
+  干的好！
 </h2>
 
 <p>
-  In this tutorial, you've installed Gatsby, played in the development environment, and deployed your first site! Awesome! We hope you're enjoying yourself so far. Feel free to continue now to <a href="/tutorial/part-two/">the second part of the tutorial</a> or go exploring around the rest of the site.
+  在本教程中，您已经安装了Gatsby，在开发环境中显示，并部署了您的第一个站点！ 非常好！ 希望你能享受目前的这一切。 随时可以继续到本教程的第二部分，或者去探索网站的其他部分。
 </p>
