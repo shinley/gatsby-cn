@@ -214,7 +214,7 @@ export default () =&gt;
 </code></pre>
 
 <p>
-  Add that link, click on it, and then we'll create a "Hello World" page component for <code>/counter/</code> as before. But instead of using the "functional component" form as we did before, we'll create a "class" component.
+  添加该链接，点击它，然后我们将像以前一样为/counter/创建一个“Hello World”页面组件。 但是，我们不是像以前那样使用“功能组件”表单，而是创建一个“类”组件。
 </p>
 
 <pre><code class="jsx">import React from "react"
@@ -229,11 +229,11 @@ export default Counter
 </code></pre>
 
 <p>
-  The class form of React allows us to have component state. We'll need that for our counter.
+  React的类形式允许我们有组件状态。 我们需要这个为我们的计数器。
 </p>
 
 <p>
-  Let's continue to flesh out our counter. Let's add two buttons. One to increment and one to decrement the count of the counter.
+  让我们继续完善我们的计数器。 我们添加两个按钮。 一个递增，一个递减计数器的计数。
 </p>
 
 <pre><code class="jsx{5-12}">import React from "react"
