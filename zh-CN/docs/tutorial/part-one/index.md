@@ -255,7 +255,7 @@ export default Counter
 </code></pre>
 
 <p>
-  So now we have everything we need to make a nice counter. Let's make it live.
+  所以现在我们有我们需要的一切来做一个很好的计数器。 让我们做起来吧。
 </p>
 
 <p>
