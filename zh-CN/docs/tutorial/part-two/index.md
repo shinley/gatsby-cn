@@ -6,7 +6,7 @@ typora-copy-images-to: './'
 
 在这一部分，我们将探索Gatsby网站的样式选择，并深入探讨如何使用React组件来构建网站。
 
-## Building with components
+## 用组件构建
 
 在开始构建组件时，您所做的一个重大转变就是现在您的CSS，HTML和JavaScript紧密结合，甚至在同一个文件中也是如此。
 
@@ -37,11 +37,11 @@ typora-copy-images-to: './'
 </p>
 
 <p>
-  Often people will use something like Bootstrap or Foundation for their global styles. The problem with these, however, is they're difficult to customize and they're not designed to work well with React components.
+  通常人们会使用像Bootstrap或Foundation这样的全球风格。 问题是它们很难定制，而且它们不能与React组件配合使用。
 </p>
 
 <p>
-  So for this tutorial let's explore a JavaScript library called <a href="https://github.com/kyleamathews/typography.js">Typography.js</a> that generates global styles and works particularly well with Gatsby and React.
+  因此，在本教程中，我们来探索一个名为Typography.js的JavaScript库，它可以生成全局样式，并且可以与Gatsby和React一起使用。
 </p>
 
 <h3>
@@ -49,19 +49,19 @@ typora-copy-images-to: './'
 </h3>
 
 <p>
-  Typography.js is a JavaScript library which generates typographic CSS.
+  Typography.js是一个生成印刷CSS的JavaScript库。
 </p>
 
 <p>
-  Instead of directly setting the <code>font-size</code> of different HTML elements, you tell Typography.js things like your desired <code>baseFontSize</code> and <code>baseLineHeight</code> and based on these, it generates the base CSS for all your elements.
+  您不需要直接设置不同的HTML元素的字体大小，而是通过Typography.js来获得所需的baseFontSize和baseLineHeight，并根据这些信息生成所有元素的基本CSS。
 </p>
 
 <p>
-  This makes it trivial to change the font size of all elements on a site without having to directly modify the dozens of CSS rules.
+  这使得更改站点上所有元素的字体大小变得微不足道，而无需直接修改很多CSS规则。
 </p>
 
 <p>
-  Using it looks something like this:
+  使用它看起来像这样:
 </p>
 
 <pre><code class="javascript">import Typography from "typography"
@@ -75,46 +75,46 @@ const typography = new Typography({
 </code></pre>
 
 <h2>
-  Gatsby plugins
+  Gatsby插件
 </h2>
 
 <p>
-  But before we can get back to building and trying out Typography.js, let's make a quick diversion and talk about Gatsby plugins.
+  但在我们回到构建和尝试Typography.js之前，让我们快速转换一下，讨论一下Gatsby插件。
 </p>
 
 <p>
-  You're probably familiar with the idea of plugins. Many software systems support adding custom plugins to add new functionality or even modify the core workings of the software.
+  你可能很熟悉插件的概念。 许多软件系统都支持添加自定义插件来添加新功能，甚至修改软件的核心工作。
 </p>
 
 <p>
-  Gatsby plugins work the same way.
+  盖茨比插件以同样的方式工作。
 </p>
 
 <p>
-  Community members (like you!) can contribute plugins (small amounts of JavaScript code) that others can then use when building Gatsby sites.
+  社区成员（比如你）可以贡献插件（少量JavaScript代码），其他人可以在构建Gatsby网站时使用这些插件。
 </p>
 
 <p>
-  There's already dozens of plugins! Check them out at the <a href="/docs/plugins/">plugins section of the site</a>.
+  已经有很多的插件了！ 可以从 <a href="/docs/plugins/">plugins section of the site</a>检出.
 </p>
 
 <p>
-  Gatsby plugins are easy to install and use. In almost every Gatsby site you build, you will be installing plugins. While working through the rest of the tutorial, you'll have many opportunities to practice installing and using plugins.
+  盖茨比插件很容易安装和使用。 几乎在你建立的每一个Gatsby网站上，你都会安装插件。 在完成本教程的其余部分时，您将有很多机会来练习安装和使用插件。
 </p>
 
 <h2>
-  Installing your first Gatsby plugin
+  安装你的第一个Gatsby插件
 </h2>
 
 <p>
-  Let's start by creating a new site. Similar to Part One, run the following to create a new site.
+  让我们开始创建一个新的网站。 类似于第一部分，运行以下来创建一个新的站点。
 </p>
 
 <pre><code>gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
 </code></pre>
 
 <p>
-  This creates a new site with the following structure.
+  这会创建一个具有以下结构的新站点。
 </p>
 
 <pre><code class="shell">├── package.json
@@ -124,7 +124,7 @@ const typography = new Typography({
 </code></pre>
 
 <p>
-  This is the minimal setup for a Gatsby site.
+  这是Gatsby网站的最小设置。
 </p>
 
 <p>
