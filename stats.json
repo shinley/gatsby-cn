@@ -21,8 +21,8 @@
       "path---docs-dropping-images-into-static-folders-859531fa9be5bebbce5d.js.map"
     ],
     "path---contributors-kyle-mathews": [
-      "path---contributors-kyle-mathews-5757ae935b4179e1daee.js",
-      "path---contributors-kyle-mathews-5757ae935b4179e1daee.js.map"
+      "path---contributors-kyle-mathews-60d352339ad796c5cdec.js",
+      "path---contributors-kyle-mathews-60d352339ad796c5cdec.js.map"
     ],
     "path---packages-gatsby-plugin-react-css-modules": [
       "path---packages-gatsby-plugin-react-css-modules-7230da1dd30415062aae.js",
@@ -41,8 +41,8 @@
       "path---packages-gatsby-remark-prismjs-e9c21eb15853f6ad3a7b.js.map"
     ],
     "path---contributors-david-james": [
-      "path---contributors-david-james-40e843df6b4b48abc205.js",
-      "path---contributors-david-james-40e843df6b4b48abc205.js.map"
+      "path---contributors-david-james-40c8148c0891ef8b7eb7.js",
+      "path---contributors-david-james-40c8148c0891ef8b7eb7.js.map"
     ],
     "path---docs-adding-a-list-of-markdown-blog-posts": [
       "path---docs-adding-a-list-of-markdown-blog-posts-1c72aee4d318bfa1dfa3.js",
@@ -85,8 +85,8 @@
       "component---src-templates-template-docs-markdown-js-469357a70659115276e0.js.map"
     ],
     "path---contributors-ian-sinnott": [
-      "path---contributors-ian-sinnott-30eef55df2a11cda3596.js",
-      "path---contributors-ian-sinnott-30eef55df2a11cda3596.js.map"
+      "path---contributors-ian-sinnott-83da519d57a94429dc68.js",
+      "path---contributors-ian-sinnott-83da519d57a94429dc68.js.map"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-421b96c005b6e1bd800a.js",
@@ -109,8 +109,8 @@
       "path---docs-plugins-25137c5f19a4b8507efe.js.map"
     ],
     "path---contributors-tal-bereznitskey": [
-      "path---contributors-tal-bereznitskey-a7c8b8949f399549ead7.js",
-      "path---contributors-tal-bereznitskey-a7c8b8949f399549ead7.js.map"
+      "path---contributors-tal-bereznitskey-27f1a4c92aa8cfd329d5.js",
+      "path---contributors-tal-bereznitskey-27f1a4c92aa8cfd329d5.js.map"
     ],
     "path---features": [
       "path---features-a8c335009a0dd5cc84c4.js",
@@ -125,12 +125,12 @@
       "path---docs-node-interface-26b23e8db2648d8a340c.js.map"
     ],
     "path---contributors-benjamin-read": [
-      "path---contributors-benjamin-read-884f4a3d36b5cb96571d.js",
-      "path---contributors-benjamin-read-884f4a3d36b5cb96571d.js.map"
+      "path---contributors-benjamin-read-52099b79330e1e8f73f7.js",
+      "path---contributors-benjamin-read-52099b79330e1e8f73f7.js.map"
     ],
     "path---contributors-moreno-feltscher": [
-      "path---contributors-moreno-feltscher-5ac8ba02217b87d44048.js",
-      "path---contributors-moreno-feltscher-5ac8ba02217b87d44048.js.map"
+      "path---contributors-moreno-feltscher-d374dc248ada2d1ce0e3.js",
+      "path---contributors-moreno-feltscher-d374dc248ada2d1ce0e3.js.map"
     ],
     "path---packages-gatsby-plugin-styletron": [
       "path---packages-gatsby-plugin-styletron-6fbc94704f163a87764e.js",
@@ -209,8 +209,8 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---contributors-tim-arney": [
-      "path---contributors-tim-arney-0cf3b4de1cfc48be341b.js",
-      "path---contributors-tim-arney-0cf3b4de1cfc48be341b.js.map"
+      "path---contributors-tim-arney-50da48d3b6d79c38cfd1.js",
+      "path---contributors-tim-arney-50da48d3b6d79c38cfd1.js.map"
     ],
     "path---packages-gatsby-plugin-react-next": [
       "path---packages-gatsby-plugin-react-next-c9f74e169764b25e051c.js",
@@ -221,12 +221,12 @@
       "path---packages-gatsby-dev-cli-104eca8e35eac93df51e.js.map"
     ],
     "path---contributors-dustin-schau": [
-      "path---contributors-dustin-schau-0427f6527080636a389f.js",
-      "path---contributors-dustin-schau-0427f6527080636a389f.js.map"
+      "path---contributors-dustin-schau-8709d745b7e9e659f3a1.js",
+      "path---contributors-dustin-schau-8709d745b7e9e659f3a1.js.map"
     ],
     "path---tutorial-part-one": [
-      "path---tutorial-part-one-339381340147524542f6.js",
-      "path---tutorial-part-one-339381340147524542f6.js.map"
+      "path---tutorial-part-one-2edf44d0556f2f3994b0.js",
+      "path---tutorial-part-one-2edf44d0556f2f3994b0.js.map"
     ],
     "path---docs-creating-dynamically-rendered-navigation": [
       "path---docs-creating-dynamically-rendered-navigation-138e9d169d498e945775.js",
@@ -261,8 +261,8 @@
       "component---src-pages-docs-node-apis-js-b5fd780268745c70355e.js.map"
     ],
     "path---tutorial-part-three": [
-      "path---tutorial-part-three-551745b688513bced3a9.js",
-      "path---tutorial-part-three-551745b688513bced3a9.js.map"
+      "path---tutorial-part-three-70c2876886c24863a03f.js",
+      "path---tutorial-part-three-70c2876886c24863a03f.js.map"
     ],
     "path---packages-gatsby-plugin-glamorous": [
       "path---packages-gatsby-plugin-glamorous-f02bbc4333da80887570.js",
@@ -361,8 +361,8 @@
       "path---packages-gatsby-plugin-postcss-sass-c26aa1f6bacc950d772a.js.map"
     ],
     "path---contributors-samuel-goudie": [
-      "path---contributors-samuel-goudie-e7376dc0337167077016.js",
-      "path---contributors-samuel-goudie-e7376dc0337167077016.js.map"
+      "path---contributors-samuel-goudie-8551a0a5f893f571a1cb.js",
+      "path---contributors-samuel-goudie-8551a0a5f893f571a1cb.js.map"
     ],
     "path---packages-gatsby-source-wordpress-com": [
       "path---packages-gatsby-source-wordpress-com-977619ac5e6be6c6ab45.js",
@@ -413,8 +413,8 @@
       "path---packages-gatsby-plugin-glamor-0c55e97d2ec584c33d09.js.map"
     ],
     "path---contributors-kostas-bariotis": [
-      "path---contributors-kostas-bariotis-22325e16a77bde1104a2.js",
-      "path---contributors-kostas-bariotis-22325e16a77bde1104a2.js.map"
+      "path---contributors-kostas-bariotis-191a25c3d32e475fcef2.js",
+      "path---contributors-kostas-bariotis-191a25c3d32e475fcef2.js.map"
     ],
     "path---packages-gatsby-source-contentful": [
       "path---packages-gatsby-source-contentful-325b0ea6d56aab02882d.js",
@@ -433,8 +433,8 @@
       "path---packages-gatsby-plugin-sitemap-c931aa3fdd049e7dfccc.js.map"
     ],
     "path---contributors-kalin-chernev": [
-      "path---contributors-kalin-chernev-2cc6f272c3394d7fa7aa.js",
-      "path---contributors-kalin-chernev-2cc6f272c3394d7fa7aa.js.map"
+      "path---contributors-kalin-chernev-267c45b93acec04a6704.js",
+      "path---contributors-kalin-chernev-267c45b93acec04a6704.js.map"
     ],
     "path---packages-gatsby-transformer-remark": [
       "path---packages-gatsby-transformer-remark-bba2d80453eff239f4c6.js",
@@ -497,8 +497,8 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---tutorial-part-two": [
-      "path---tutorial-part-two-2905de419f6e2d46d5de.js",
-      "path---tutorial-part-two-2905de419f6e2d46d5de.js.map"
+      "path---tutorial-part-two-af6c0015674fa40d41d0.js",
+      "path---tutorial-part-two-af6c0015674fa40d41d0.js.map"
     ],
     "path---packages-gatsby-transformer-sharp": [
       "path---packages-gatsby-transformer-sharp-36e5ee509a2b211dca36.js",
@@ -541,9 +541,9 @@
       "path---packages-gatsby-plugin-manifest-37b32edd12c663a3101f.js.map"
     ],
     "app": [
-      "app-00557f9b58d665d9b604.js",
+      "app-d43907c54814b257541c.js",
       "build-js-styles.css",
-      "app-00557f9b58d665d9b604.js.map",
+      "app-d43907c54814b257541c.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-gatsby-first-beta-release": [
