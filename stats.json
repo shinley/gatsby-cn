@@ -157,8 +157,8 @@
       "path---packages-gatsby-source-hacker-news-08fb90cb35639f5be364.js.map"
     ],
     "component---src-pages-tutorial-js": [
-      "component---src-pages-tutorial-js-48ff0b4cd2801cac5bf8.js",
-      "component---src-pages-tutorial-js-48ff0b4cd2801cac5bf8.js.map"
+      "component---src-pages-tutorial-js-3eb3d8b3e56c6b9da07e.js",
+      "component---src-pages-tutorial-js-3eb3d8b3e56c6b9da07e.js.map"
     ],
     "path---docs-how-gatsby-works-with-github-pages": [
       "path---docs-how-gatsby-works-with-github-pages-600ef49a7dcd3e8aee6b.js",
@@ -541,9 +541,9 @@
       "path---packages-gatsby-plugin-manifest-37b32edd12c663a3101f.js.map"
     ],
     "app": [
-      "app-d43907c54814b257541c.js",
+      "app-9a7d88f6a957f872e00e.js",
       "build-js-styles.css",
-      "app-d43907c54814b257541c.js.map",
+      "app-9a7d88f6a957f872e00e.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-gatsby-first-beta-release": [
