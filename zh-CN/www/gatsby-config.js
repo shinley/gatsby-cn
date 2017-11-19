@@ -1,7 +1,8 @@
 module.exports = {
+  pathPrefix: `/gatsby`,
   siteMetadata: {
     title: `Gatsby`,
-    siteUrl: `https://www.gatsbyjs.org`,
+    siteUrl: `https://www.gatsbyjs.cn`,
     description: `Blazing-fast static site generator for React`,
   },
   mapping: {
