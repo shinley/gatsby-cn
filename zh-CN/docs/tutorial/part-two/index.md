@@ -539,7 +539,7 @@ export default () =&gt;
       </p>
       
       <p>
-        Glamor lets you write <em>real</em> CSS inline in your components using the same Object CSS syntax React supports for the <code>style</code> prop.
+        Glamour可以让你在你的组件中使用相同的React支持的Object CSS语法
       </p>
       
       <p>
