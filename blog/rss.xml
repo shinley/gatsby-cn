@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby]]></title><description><![CDATA[Blazing-fast static site generator for React]]></description><link>https://www.gatsbyjs.cn</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 19 Nov 2017 11:58:20 GMT</lastBuildDate><atom:link href="https://www.gatsbyjs.cn/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Migrate from Hugo to Gatsby]]></title><description><![CDATA[Introduction As my  recent evaluations of Gatsby  were positive, I decided to migrate my personal blog. Instead of quickly picking an…]]></description><link>https://www.gatsbyjs.cn/blog/2017-11-06-migrate-hugo-gatsby/</link><guid isPermaLink="false">https://www.gatsbyjs.cn/blog/2017-11-06-migrate-hugo-gatsby/</guid><dc:creator><![CDATA[Kalin Chernev]]></dc:creator><content:encoded>&lt;h2 id=&quot;introduction&quot;&gt;&lt;a href=&quot;#introduction&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby]]></title><description><![CDATA[Blazing-fast static site generator for React]]></description><link>https://www.gatsbyjs.cn</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 20 Nov 2017 03:44:22 GMT</lastBuildDate><atom:link href="https://www.gatsbyjs.cn/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Migrate from Hugo to Gatsby]]></title><description><![CDATA[Introduction As my  recent evaluations of Gatsby  were positive, I decided to migrate my personal blog. Instead of quickly picking an…]]></description><link>https://www.gatsbyjs.cn/blog/2017-11-06-migrate-hugo-gatsby/</link><guid isPermaLink="false">https://www.gatsbyjs.cn/blog/2017-11-06-migrate-hugo-gatsby/</guid><dc:creator><![CDATA[Kalin Chernev]]></dc:creator><content:encoded>&lt;h2 id=&quot;introduction&quot;&gt;&lt;a href=&quot;#introduction&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;As my &lt;a href=&quot;https://kalinchernev.github.io/learn-gatsbyjs&quot;&gt;recent evaluations of Gatsby&lt;/a&gt; were positive, I decided to migrate my personal blog.&lt;/p&gt;
 &lt;p&gt;Instead of quickly picking an already built theme with a lot of code I might not use—which I did during the previous migration from Medium to Hugo—this time, I decided to take a different route—building it from scratch.&lt;/p&gt;
 &lt;p&gt;I focused on the process, looking for ways to make site building more generic and reusable.&lt;/p&gt;
@@ -110,7 +110,7 @@ module.exports = typography;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/jJqyQIi-b1e1d1ce9cb0d7cd907ecdaf0eda91ac-d4b27.png&quot;
+    href=&quot;/static/jJqyQIi-b1e1d1ce9cb0d7cd907ecdaf0eda91ac-d4b27.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -129,10 +129,10 @@ module.exports = typography;&lt;/code&gt;&lt;/pre&gt;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Screenshot of a styled blog post&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/jJqyQIi-b1e1d1ce9cb0d7cd907ecdaf0eda91ac-d4b27.png&quot;
-        srcset=&quot;/gatsby/static/jJqyQIi-b1e1d1ce9cb0d7cd907ecdaf0eda91ac-d90db.png 197w,
-/gatsby/static/jJqyQIi-b1e1d1ce9cb0d7cd907ecdaf0eda91ac-1b81d.png 393w,
-/gatsby/static/jJqyQIi-b1e1d1ce9cb0d7cd907ecdaf0eda91ac-d4b27.png 735w&quot;
+        src=&quot;/static/jJqyQIi-b1e1d1ce9cb0d7cd907ecdaf0eda91ac-d4b27.png&quot;
+        srcset=&quot;/static/jJqyQIi-b1e1d1ce9cb0d7cd907ecdaf0eda91ac-d90db.png 197w,
+/static/jJqyQIi-b1e1d1ce9cb0d7cd907ecdaf0eda91ac-1b81d.png 393w,
+/static/jJqyQIi-b1e1d1ce9cb0d7cd907ecdaf0eda91ac-d4b27.png 735w&quot;
         sizes=&quot;(max-width: 735px) 100vw, 735px&quot;
       /&gt;
     &lt;/span&gt;
@@ -307,7 +307,7 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/Efubv8f-3f009da468e786d1ae1dcf536b13ff02-5cf44.png&quot;
+    href=&quot;/static/Efubv8f-3f009da468e786d1ae1dcf536b13ff02-5cf44.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -326,11 +326,11 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Efubv8f&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/Efubv8f-3f009da468e786d1ae1dcf536b13ff02-c4266.png&quot;
-        srcset=&quot;/gatsby/static/Efubv8f-3f009da468e786d1ae1dcf536b13ff02-4fd5b.png 197w,
-/gatsby/static/Efubv8f-3f009da468e786d1ae1dcf536b13ff02-4fc86.png 393w,
-/gatsby/static/Efubv8f-3f009da468e786d1ae1dcf536b13ff02-c4266.png 786w,
-/gatsby/static/Efubv8f-3f009da468e786d1ae1dcf536b13ff02-5cf44.png 934w&quot;
+        src=&quot;/static/Efubv8f-3f009da468e786d1ae1dcf536b13ff02-c4266.png&quot;
+        srcset=&quot;/static/Efubv8f-3f009da468e786d1ae1dcf536b13ff02-4fd5b.png 197w,
+/static/Efubv8f-3f009da468e786d1ae1dcf536b13ff02-4fc86.png 393w,
+/static/Efubv8f-3f009da468e786d1ae1dcf536b13ff02-c4266.png 786w,
+/static/Efubv8f-3f009da468e786d1ae1dcf536b13ff02-5cf44.png 934w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -372,7 +372,7 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-21603.png&quot;
+    href=&quot;/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-21603.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -391,12 +391,12 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Admin panel for Gatsby site&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-c4266.png&quot;
-        srcset=&quot;/gatsby/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-4fd5b.png 197w,
-/gatsby/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-4fc86.png 393w,
-/gatsby/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-c4266.png 786w,
-/gatsby/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-22348.png 1179w,
-/gatsby/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-21603.png 1351w&quot;
+        src=&quot;/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-c4266.png&quot;
+        srcset=&quot;/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-4fd5b.png 197w,
+/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-4fc86.png 393w,
+/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-c4266.png 786w,
+/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-22348.png 1179w,
+/static/lHMSbxx-6ad382131dc4f44d6257f24b4c9b272f-21603.png 1351w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -408,7 +408,7 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/RcynQe3-58dde5e2746c80ca596e883a664abe4c-5b1c4.png&quot;
+    href=&quot;/static/RcynQe3-58dde5e2746c80ca596e883a664abe4c-5b1c4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -427,11 +427,11 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Draft post from NetlifyCMS&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/RcynQe3-58dde5e2746c80ca596e883a664abe4c-c4266.png&quot;
-        srcset=&quot;/gatsby/static/RcynQe3-58dde5e2746c80ca596e883a664abe4c-4fd5b.png 197w,
-/gatsby/static/RcynQe3-58dde5e2746c80ca596e883a664abe4c-4fc86.png 393w,
-/gatsby/static/RcynQe3-58dde5e2746c80ca596e883a664abe4c-c4266.png 786w,
-/gatsby/static/RcynQe3-58dde5e2746c80ca596e883a664abe4c-5b1c4.png 1116w&quot;
+        src=&quot;/static/RcynQe3-58dde5e2746c80ca596e883a664abe4c-c4266.png&quot;
+        srcset=&quot;/static/RcynQe3-58dde5e2746c80ca596e883a664abe4c-4fd5b.png 197w,
+/static/RcynQe3-58dde5e2746c80ca596e883a664abe4c-4fc86.png 393w,
+/static/RcynQe3-58dde5e2746c80ca596e883a664abe4c-c4266.png 786w,
+/static/RcynQe3-58dde5e2746c80ca596e883a664abe4c-5b1c4.png 1116w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -786,7 +786,7 @@ headroom&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-581f3.png&quot;
+    href=&quot;/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-581f3.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -805,12 +805,12 @@ headroom&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;project-complexity&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-c4266.png&quot;
-        srcset=&quot;/gatsby/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-4fd5b.png 197w,
-/gatsby/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-4fc86.png 393w,
-/gatsby/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-c4266.png 786w,
-/gatsby/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-22348.png 1179w,
-/gatsby/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-581f3.png 1232w&quot;
+        src=&quot;/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-c4266.png&quot;
+        srcset=&quot;/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-4fd5b.png 197w,
+/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-4fc86.png 393w,
+/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-c4266.png 786w,
+/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-22348.png 1179w,
+/static/project-complexity-8023880-8817de144cae8c5146be1a67b6095990-581f3.png 1232w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -824,7 +824,7 @@ headroom&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-95d3e.jpg&quot;
+    href=&quot;/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-95d3e.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -843,13 +843,13 @@ headroom&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Cassini model of planet motion&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-00eda.jpg&quot;
-        srcset=&quot;/gatsby/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-c1503.jpg 197w,
-/gatsby/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-a941d.jpg 393w,
-/gatsby/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-00eda.jpg 786w,
-/gatsby/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-8e8ca.jpg 1179w,
-/gatsby/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-f009a.jpg 1572w,
-/gatsby/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-95d3e.jpg 1672w&quot;
+        src=&quot;/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-00eda.jpg&quot;
+        srcset=&quot;/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-c1503.jpg 197w,
+/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-a941d.jpg 393w,
+/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-00eda.jpg 786w,
+/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-8e8ca.jpg 1179w,
+/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-f009a.jpg 1572w,
+/static/Cassini_apparent-c7d2c86afe680b579925c06418b44000-95d3e.jpg 1672w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1517,7 +1517,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/issue-420-91566f2e0d4197e217458d8d82655426-7980c.png&quot;
+    href=&quot;/static/issue-420-91566f2e0d4197e217458d8d82655426-7980c.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1536,10 +1536,10 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;issue-420&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/issue-420-91566f2e0d4197e217458d8d82655426-7980c.png&quot;
-        srcset=&quot;/gatsby/static/issue-420-91566f2e0d4197e217458d8d82655426-2a41d.png 197w,
-/gatsby/static/issue-420-91566f2e0d4197e217458d8d82655426-6a32c.png 393w,
-/gatsby/static/issue-420-91566f2e0d4197e217458d8d82655426-7980c.png 724w&quot;
+        src=&quot;/static/issue-420-91566f2e0d4197e217458d8d82655426-7980c.png&quot;
+        srcset=&quot;/static/issue-420-91566f2e0d4197e217458d8d82655426-2a41d.png 197w,
+/static/issue-420-91566f2e0d4197e217458d8d82655426-6a32c.png 393w,
+/static/issue-420-91566f2e0d4197e217458d8d82655426-7980c.png 724w&quot;
         sizes=&quot;(max-width: 724px) 100vw, 724px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1689,7 +1689,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1708,11 +1708,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.001&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-4fc86.png 393w,
+/static/reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-c4266.png 786w,
+/static/reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1723,7 +1723,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.003-b1b7a011f2882760e4894965d830ac4e-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.003-b1b7a011f2882760e4894965d830ac4e-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1742,11 +1742,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.003&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.003-b1b7a011f2882760e4894965d830ac4e-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.003-b1b7a011f2882760e4894965d830ac4e-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.003-b1b7a011f2882760e4894965d830ac4e-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.003-b1b7a011f2882760e4894965d830ac4e-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.003-b1b7a011f2882760e4894965d830ac4e-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.003-b1b7a011f2882760e4894965d830ac4e-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.003-b1b7a011f2882760e4894965d830ac4e-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.003-b1b7a011f2882760e4894965d830ac4e-4fc86.png 393w,
+/static/reactnext-gatsby-performance.003-b1b7a011f2882760e4894965d830ac4e-c4266.png 786w,
+/static/reactnext-gatsby-performance.003-b1b7a011f2882760e4894965d830ac4e-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1757,7 +1757,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.004-5314265-804c98ec3bfe220d5b715e82e23ca3de-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.004-5314265-804c98ec3bfe220d5b715e82e23ca3de-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1776,11 +1776,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.004&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.004-5314265-804c98ec3bfe220d5b715e82e23ca3de-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.004-5314265-804c98ec3bfe220d5b715e82e23ca3de-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.004-5314265-804c98ec3bfe220d5b715e82e23ca3de-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.004-5314265-804c98ec3bfe220d5b715e82e23ca3de-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.004-5314265-804c98ec3bfe220d5b715e82e23ca3de-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.004-5314265-804c98ec3bfe220d5b715e82e23ca3de-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.004-5314265-804c98ec3bfe220d5b715e82e23ca3de-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.004-5314265-804c98ec3bfe220d5b715e82e23ca3de-4fc86.png 393w,
+/static/reactnext-gatsby-performance.004-5314265-804c98ec3bfe220d5b715e82e23ca3de-c4266.png 786w,
+/static/reactnext-gatsby-performance.004-5314265-804c98ec3bfe220d5b715e82e23ca3de-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1791,7 +1791,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.008-7151cc944a1c998c2a829ac85b12e43f-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.008-7151cc944a1c998c2a829ac85b12e43f-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1810,11 +1810,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.008&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.008-7151cc944a1c998c2a829ac85b12e43f-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.008-7151cc944a1c998c2a829ac85b12e43f-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.008-7151cc944a1c998c2a829ac85b12e43f-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.008-7151cc944a1c998c2a829ac85b12e43f-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.008-7151cc944a1c998c2a829ac85b12e43f-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.008-7151cc944a1c998c2a829ac85b12e43f-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.008-7151cc944a1c998c2a829ac85b12e43f-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.008-7151cc944a1c998c2a829ac85b12e43f-4fc86.png 393w,
+/static/reactnext-gatsby-performance.008-7151cc944a1c998c2a829ac85b12e43f-c4266.png 786w,
+/static/reactnext-gatsby-performance.008-7151cc944a1c998c2a829ac85b12e43f-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1826,7 +1826,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.007-0a7835766abcc607a25f41a710b24e7c-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.007-0a7835766abcc607a25f41a710b24e7c-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1845,11 +1845,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.007&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.007-0a7835766abcc607a25f41a710b24e7c-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.007-0a7835766abcc607a25f41a710b24e7c-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.007-0a7835766abcc607a25f41a710b24e7c-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.007-0a7835766abcc607a25f41a710b24e7c-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.007-0a7835766abcc607a25f41a710b24e7c-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.007-0a7835766abcc607a25f41a710b24e7c-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.007-0a7835766abcc607a25f41a710b24e7c-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.007-0a7835766abcc607a25f41a710b24e7c-4fc86.png 393w,
+/static/reactnext-gatsby-performance.007-0a7835766abcc607a25f41a710b24e7c-c4266.png 786w,
+/static/reactnext-gatsby-performance.007-0a7835766abcc607a25f41a710b24e7c-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1862,7 +1862,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.011-9cbd4c02b634a0b2d51619377b3ff6d1-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.011-9cbd4c02b634a0b2d51619377b3ff6d1-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1881,11 +1881,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.011&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.011-9cbd4c02b634a0b2d51619377b3ff6d1-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.011-9cbd4c02b634a0b2d51619377b3ff6d1-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.011-9cbd4c02b634a0b2d51619377b3ff6d1-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.011-9cbd4c02b634a0b2d51619377b3ff6d1-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.011-9cbd4c02b634a0b2d51619377b3ff6d1-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.011-9cbd4c02b634a0b2d51619377b3ff6d1-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.011-9cbd4c02b634a0b2d51619377b3ff6d1-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.011-9cbd4c02b634a0b2d51619377b3ff6d1-4fc86.png 393w,
+/static/reactnext-gatsby-performance.011-9cbd4c02b634a0b2d51619377b3ff6d1-c4266.png 786w,
+/static/reactnext-gatsby-performance.011-9cbd4c02b634a0b2d51619377b3ff6d1-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1897,7 +1897,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.012-0c22960d1d963ff5fea9507aaa9a0c84-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.012-0c22960d1d963ff5fea9507aaa9a0c84-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1916,11 +1916,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.012&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.012-0c22960d1d963ff5fea9507aaa9a0c84-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.012-0c22960d1d963ff5fea9507aaa9a0c84-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.012-0c22960d1d963ff5fea9507aaa9a0c84-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.012-0c22960d1d963ff5fea9507aaa9a0c84-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.012-0c22960d1d963ff5fea9507aaa9a0c84-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.012-0c22960d1d963ff5fea9507aaa9a0c84-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.012-0c22960d1d963ff5fea9507aaa9a0c84-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.012-0c22960d1d963ff5fea9507aaa9a0c84-4fc86.png 393w,
+/static/reactnext-gatsby-performance.012-0c22960d1d963ff5fea9507aaa9a0c84-c4266.png 786w,
+/static/reactnext-gatsby-performance.012-0c22960d1d963ff5fea9507aaa9a0c84-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1932,7 +1932,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.013-98ffc2e959b722daaefb5e3eb239ffdd-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.013-98ffc2e959b722daaefb5e3eb239ffdd-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1951,11 +1951,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.013&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.013-98ffc2e959b722daaefb5e3eb239ffdd-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.013-98ffc2e959b722daaefb5e3eb239ffdd-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.013-98ffc2e959b722daaefb5e3eb239ffdd-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.013-98ffc2e959b722daaefb5e3eb239ffdd-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.013-98ffc2e959b722daaefb5e3eb239ffdd-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.013-98ffc2e959b722daaefb5e3eb239ffdd-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.013-98ffc2e959b722daaefb5e3eb239ffdd-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.013-98ffc2e959b722daaefb5e3eb239ffdd-4fc86.png 393w,
+/static/reactnext-gatsby-performance.013-98ffc2e959b722daaefb5e3eb239ffdd-c4266.png 786w,
+/static/reactnext-gatsby-performance.013-98ffc2e959b722daaefb5e3eb239ffdd-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1969,7 +1969,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.015-00315c126f20cb9170d40d1894a0f1cd-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.015-00315c126f20cb9170d40d1894a0f1cd-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1988,11 +1988,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.015&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.015-00315c126f20cb9170d40d1894a0f1cd-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.015-00315c126f20cb9170d40d1894a0f1cd-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.015-00315c126f20cb9170d40d1894a0f1cd-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.015-00315c126f20cb9170d40d1894a0f1cd-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.015-00315c126f20cb9170d40d1894a0f1cd-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.015-00315c126f20cb9170d40d1894a0f1cd-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.015-00315c126f20cb9170d40d1894a0f1cd-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.015-00315c126f20cb9170d40d1894a0f1cd-4fc86.png 393w,
+/static/reactnext-gatsby-performance.015-00315c126f20cb9170d40d1894a0f1cd-c4266.png 786w,
+/static/reactnext-gatsby-performance.015-00315c126f20cb9170d40d1894a0f1cd-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2003,7 +2003,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.016-5314582-349545fa109245c58eee0603c351ab13-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.016-5314582-349545fa109245c58eee0603c351ab13-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2022,11 +2022,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.016&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.016-5314582-349545fa109245c58eee0603c351ab13-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.016-5314582-349545fa109245c58eee0603c351ab13-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.016-5314582-349545fa109245c58eee0603c351ab13-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.016-5314582-349545fa109245c58eee0603c351ab13-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.016-5314582-349545fa109245c58eee0603c351ab13-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.016-5314582-349545fa109245c58eee0603c351ab13-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.016-5314582-349545fa109245c58eee0603c351ab13-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.016-5314582-349545fa109245c58eee0603c351ab13-4fc86.png 393w,
+/static/reactnext-gatsby-performance.016-5314582-349545fa109245c58eee0603c351ab13-c4266.png 786w,
+/static/reactnext-gatsby-performance.016-5314582-349545fa109245c58eee0603c351ab13-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2038,7 +2038,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.021-d2a9b583b852e06fd5b3035e73987945-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.021-d2a9b583b852e06fd5b3035e73987945-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2057,11 +2057,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.021&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.021-d2a9b583b852e06fd5b3035e73987945-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.021-d2a9b583b852e06fd5b3035e73987945-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.021-d2a9b583b852e06fd5b3035e73987945-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.021-d2a9b583b852e06fd5b3035e73987945-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.021-d2a9b583b852e06fd5b3035e73987945-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.021-d2a9b583b852e06fd5b3035e73987945-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.021-d2a9b583b852e06fd5b3035e73987945-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.021-d2a9b583b852e06fd5b3035e73987945-4fc86.png 393w,
+/static/reactnext-gatsby-performance.021-d2a9b583b852e06fd5b3035e73987945-c4266.png 786w,
+/static/reactnext-gatsby-performance.021-d2a9b583b852e06fd5b3035e73987945-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2075,7 +2075,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.022-1861fefe28b638318a36a64427699d44-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.022-1861fefe28b638318a36a64427699d44-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2094,11 +2094,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.022&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.022-1861fefe28b638318a36a64427699d44-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.022-1861fefe28b638318a36a64427699d44-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.022-1861fefe28b638318a36a64427699d44-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.022-1861fefe28b638318a36a64427699d44-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.022-1861fefe28b638318a36a64427699d44-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.022-1861fefe28b638318a36a64427699d44-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.022-1861fefe28b638318a36a64427699d44-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.022-1861fefe28b638318a36a64427699d44-4fc86.png 393w,
+/static/reactnext-gatsby-performance.022-1861fefe28b638318a36a64427699d44-c4266.png 786w,
+/static/reactnext-gatsby-performance.022-1861fefe28b638318a36a64427699d44-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2109,7 +2109,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.023-d4ad8a00d95461e45d247cebf8f90dc0-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.023-d4ad8a00d95461e45d247cebf8f90dc0-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2128,11 +2128,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.023&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.023-d4ad8a00d95461e45d247cebf8f90dc0-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.023-d4ad8a00d95461e45d247cebf8f90dc0-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.023-d4ad8a00d95461e45d247cebf8f90dc0-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.023-d4ad8a00d95461e45d247cebf8f90dc0-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.023-d4ad8a00d95461e45d247cebf8f90dc0-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.023-d4ad8a00d95461e45d247cebf8f90dc0-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.023-d4ad8a00d95461e45d247cebf8f90dc0-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.023-d4ad8a00d95461e45d247cebf8f90dc0-4fc86.png 393w,
+/static/reactnext-gatsby-performance.023-d4ad8a00d95461e45d247cebf8f90dc0-c4266.png 786w,
+/static/reactnext-gatsby-performance.023-d4ad8a00d95461e45d247cebf8f90dc0-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2143,7 +2143,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.024-2ce21a696cbf74cc6a93fc80652dad9a-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.024-2ce21a696cbf74cc6a93fc80652dad9a-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2162,11 +2162,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.024&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.024-2ce21a696cbf74cc6a93fc80652dad9a-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.024-2ce21a696cbf74cc6a93fc80652dad9a-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.024-2ce21a696cbf74cc6a93fc80652dad9a-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.024-2ce21a696cbf74cc6a93fc80652dad9a-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.024-2ce21a696cbf74cc6a93fc80652dad9a-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.024-2ce21a696cbf74cc6a93fc80652dad9a-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.024-2ce21a696cbf74cc6a93fc80652dad9a-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.024-2ce21a696cbf74cc6a93fc80652dad9a-4fc86.png 393w,
+/static/reactnext-gatsby-performance.024-2ce21a696cbf74cc6a93fc80652dad9a-c4266.png 786w,
+/static/reactnext-gatsby-performance.024-2ce21a696cbf74cc6a93fc80652dad9a-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2178,7 +2178,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.025-94412b46e24f38df20f5ec088eec68da-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.025-94412b46e24f38df20f5ec088eec68da-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2197,11 +2197,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.025&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.025-94412b46e24f38df20f5ec088eec68da-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.025-94412b46e24f38df20f5ec088eec68da-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.025-94412b46e24f38df20f5ec088eec68da-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.025-94412b46e24f38df20f5ec088eec68da-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.025-94412b46e24f38df20f5ec088eec68da-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.025-94412b46e24f38df20f5ec088eec68da-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.025-94412b46e24f38df20f5ec088eec68da-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.025-94412b46e24f38df20f5ec088eec68da-4fc86.png 393w,
+/static/reactnext-gatsby-performance.025-94412b46e24f38df20f5ec088eec68da-c4266.png 786w,
+/static/reactnext-gatsby-performance.025-94412b46e24f38df20f5ec088eec68da-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2212,7 +2212,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.026-3fab37d29e2cdcc656ce84fb8d4bc341-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.026-3fab37d29e2cdcc656ce84fb8d4bc341-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2231,11 +2231,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.026&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.026-3fab37d29e2cdcc656ce84fb8d4bc341-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.026-3fab37d29e2cdcc656ce84fb8d4bc341-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.026-3fab37d29e2cdcc656ce84fb8d4bc341-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.026-3fab37d29e2cdcc656ce84fb8d4bc341-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.026-3fab37d29e2cdcc656ce84fb8d4bc341-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.026-3fab37d29e2cdcc656ce84fb8d4bc341-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.026-3fab37d29e2cdcc656ce84fb8d4bc341-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.026-3fab37d29e2cdcc656ce84fb8d4bc341-4fc86.png 393w,
+/static/reactnext-gatsby-performance.026-3fab37d29e2cdcc656ce84fb8d4bc341-c4266.png 786w,
+/static/reactnext-gatsby-performance.026-3fab37d29e2cdcc656ce84fb8d4bc341-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2246,7 +2246,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.027-951cff61cb61483b0715ba62582b217a-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.027-951cff61cb61483b0715ba62582b217a-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2265,11 +2265,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.027&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.027-951cff61cb61483b0715ba62582b217a-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.027-951cff61cb61483b0715ba62582b217a-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.027-951cff61cb61483b0715ba62582b217a-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.027-951cff61cb61483b0715ba62582b217a-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.027-951cff61cb61483b0715ba62582b217a-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.027-951cff61cb61483b0715ba62582b217a-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.027-951cff61cb61483b0715ba62582b217a-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.027-951cff61cb61483b0715ba62582b217a-4fc86.png 393w,
+/static/reactnext-gatsby-performance.027-951cff61cb61483b0715ba62582b217a-c4266.png 786w,
+/static/reactnext-gatsby-performance.027-951cff61cb61483b0715ba62582b217a-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2281,7 +2281,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.028-5471130-7249ff3a1d106ea1d4f9d04349869205-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.028-5471130-7249ff3a1d106ea1d4f9d04349869205-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2300,11 +2300,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.028&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.028-5471130-7249ff3a1d106ea1d4f9d04349869205-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.028-5471130-7249ff3a1d106ea1d4f9d04349869205-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.028-5471130-7249ff3a1d106ea1d4f9d04349869205-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.028-5471130-7249ff3a1d106ea1d4f9d04349869205-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.028-5471130-7249ff3a1d106ea1d4f9d04349869205-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.028-5471130-7249ff3a1d106ea1d4f9d04349869205-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.028-5471130-7249ff3a1d106ea1d4f9d04349869205-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.028-5471130-7249ff3a1d106ea1d4f9d04349869205-4fc86.png 393w,
+/static/reactnext-gatsby-performance.028-5471130-7249ff3a1d106ea1d4f9d04349869205-c4266.png 786w,
+/static/reactnext-gatsby-performance.028-5471130-7249ff3a1d106ea1d4f9d04349869205-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2315,7 +2315,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.029-664b07ca441f1a1692edaca55327af2c-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.029-664b07ca441f1a1692edaca55327af2c-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2334,11 +2334,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.029&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.029-664b07ca441f1a1692edaca55327af2c-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.029-664b07ca441f1a1692edaca55327af2c-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.029-664b07ca441f1a1692edaca55327af2c-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.029-664b07ca441f1a1692edaca55327af2c-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.029-664b07ca441f1a1692edaca55327af2c-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.029-664b07ca441f1a1692edaca55327af2c-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.029-664b07ca441f1a1692edaca55327af2c-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.029-664b07ca441f1a1692edaca55327af2c-4fc86.png 393w,
+/static/reactnext-gatsby-performance.029-664b07ca441f1a1692edaca55327af2c-c4266.png 786w,
+/static/reactnext-gatsby-performance.029-664b07ca441f1a1692edaca55327af2c-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2349,7 +2349,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.030-634c1fbfc2ddf5c4833439b54f687ccb-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.030-634c1fbfc2ddf5c4833439b54f687ccb-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2368,11 +2368,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.030&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.030-634c1fbfc2ddf5c4833439b54f687ccb-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.030-634c1fbfc2ddf5c4833439b54f687ccb-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.030-634c1fbfc2ddf5c4833439b54f687ccb-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.030-634c1fbfc2ddf5c4833439b54f687ccb-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.030-634c1fbfc2ddf5c4833439b54f687ccb-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.030-634c1fbfc2ddf5c4833439b54f687ccb-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.030-634c1fbfc2ddf5c4833439b54f687ccb-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.030-634c1fbfc2ddf5c4833439b54f687ccb-4fc86.png 393w,
+/static/reactnext-gatsby-performance.030-634c1fbfc2ddf5c4833439b54f687ccb-c4266.png 786w,
+/static/reactnext-gatsby-performance.030-634c1fbfc2ddf5c4833439b54f687ccb-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2384,7 +2384,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.031-70afc541c813e35c30f73f2f96355a04-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.031-70afc541c813e35c30f73f2f96355a04-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2403,11 +2403,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.031&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.031-70afc541c813e35c30f73f2f96355a04-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.031-70afc541c813e35c30f73f2f96355a04-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.031-70afc541c813e35c30f73f2f96355a04-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.031-70afc541c813e35c30f73f2f96355a04-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.031-70afc541c813e35c30f73f2f96355a04-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.031-70afc541c813e35c30f73f2f96355a04-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.031-70afc541c813e35c30f73f2f96355a04-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.031-70afc541c813e35c30f73f2f96355a04-4fc86.png 393w,
+/static/reactnext-gatsby-performance.031-70afc541c813e35c30f73f2f96355a04-c4266.png 786w,
+/static/reactnext-gatsby-performance.031-70afc541c813e35c30f73f2f96355a04-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2418,7 +2418,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.032-db034c611a19e328aa38ff93db4166f6-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.032-db034c611a19e328aa38ff93db4166f6-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2437,11 +2437,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.032&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.032-db034c611a19e328aa38ff93db4166f6-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.032-db034c611a19e328aa38ff93db4166f6-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.032-db034c611a19e328aa38ff93db4166f6-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.032-db034c611a19e328aa38ff93db4166f6-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.032-db034c611a19e328aa38ff93db4166f6-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.032-db034c611a19e328aa38ff93db4166f6-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.032-db034c611a19e328aa38ff93db4166f6-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.032-db034c611a19e328aa38ff93db4166f6-4fc86.png 393w,
+/static/reactnext-gatsby-performance.032-db034c611a19e328aa38ff93db4166f6-c4266.png 786w,
+/static/reactnext-gatsby-performance.032-db034c611a19e328aa38ff93db4166f6-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2452,7 +2452,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.033-720fcd8644df11ee90029b3cee68dfec-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.033-720fcd8644df11ee90029b3cee68dfec-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2471,11 +2471,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.033&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.033-720fcd8644df11ee90029b3cee68dfec-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.033-720fcd8644df11ee90029b3cee68dfec-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.033-720fcd8644df11ee90029b3cee68dfec-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.033-720fcd8644df11ee90029b3cee68dfec-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.033-720fcd8644df11ee90029b3cee68dfec-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.033-720fcd8644df11ee90029b3cee68dfec-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.033-720fcd8644df11ee90029b3cee68dfec-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.033-720fcd8644df11ee90029b3cee68dfec-4fc86.png 393w,
+/static/reactnext-gatsby-performance.033-720fcd8644df11ee90029b3cee68dfec-c4266.png 786w,
+/static/reactnext-gatsby-performance.033-720fcd8644df11ee90029b3cee68dfec-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2489,7 +2489,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.034-d932f655ce55955220b88d5fb2c3d5d6-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.034-d932f655ce55955220b88d5fb2c3d5d6-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2508,11 +2508,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.034&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.034-d932f655ce55955220b88d5fb2c3d5d6-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.034-d932f655ce55955220b88d5fb2c3d5d6-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.034-d932f655ce55955220b88d5fb2c3d5d6-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.034-d932f655ce55955220b88d5fb2c3d5d6-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.034-d932f655ce55955220b88d5fb2c3d5d6-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.034-d932f655ce55955220b88d5fb2c3d5d6-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.034-d932f655ce55955220b88d5fb2c3d5d6-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.034-d932f655ce55955220b88d5fb2c3d5d6-4fc86.png 393w,
+/static/reactnext-gatsby-performance.034-d932f655ce55955220b88d5fb2c3d5d6-c4266.png 786w,
+/static/reactnext-gatsby-performance.034-d932f655ce55955220b88d5fb2c3d5d6-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2524,7 +2524,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.035-23d6c4e0d457debbe89ef5f01917cb90-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.035-23d6c4e0d457debbe89ef5f01917cb90-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2543,11 +2543,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.035&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.035-23d6c4e0d457debbe89ef5f01917cb90-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.035-23d6c4e0d457debbe89ef5f01917cb90-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.035-23d6c4e0d457debbe89ef5f01917cb90-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.035-23d6c4e0d457debbe89ef5f01917cb90-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.035-23d6c4e0d457debbe89ef5f01917cb90-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.035-23d6c4e0d457debbe89ef5f01917cb90-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.035-23d6c4e0d457debbe89ef5f01917cb90-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.035-23d6c4e0d457debbe89ef5f01917cb90-4fc86.png 393w,
+/static/reactnext-gatsby-performance.035-23d6c4e0d457debbe89ef5f01917cb90-c4266.png 786w,
+/static/reactnext-gatsby-performance.035-23d6c4e0d457debbe89ef5f01917cb90-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2558,7 +2558,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.036-56fb5876ad47eb09d51c3aaa3c682c11-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.036-56fb5876ad47eb09d51c3aaa3c682c11-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2577,11 +2577,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.036&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.036-56fb5876ad47eb09d51c3aaa3c682c11-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.036-56fb5876ad47eb09d51c3aaa3c682c11-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.036-56fb5876ad47eb09d51c3aaa3c682c11-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.036-56fb5876ad47eb09d51c3aaa3c682c11-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.036-56fb5876ad47eb09d51c3aaa3c682c11-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.036-56fb5876ad47eb09d51c3aaa3c682c11-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.036-56fb5876ad47eb09d51c3aaa3c682c11-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.036-56fb5876ad47eb09d51c3aaa3c682c11-4fc86.png 393w,
+/static/reactnext-gatsby-performance.036-56fb5876ad47eb09d51c3aaa3c682c11-c4266.png 786w,
+/static/reactnext-gatsby-performance.036-56fb5876ad47eb09d51c3aaa3c682c11-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2592,7 +2592,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.037-ba79fdf3f838cc0b2dcbff2959c372a5-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.037-ba79fdf3f838cc0b2dcbff2959c372a5-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2611,11 +2611,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.037&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.037-ba79fdf3f838cc0b2dcbff2959c372a5-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.037-ba79fdf3f838cc0b2dcbff2959c372a5-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.037-ba79fdf3f838cc0b2dcbff2959c372a5-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.037-ba79fdf3f838cc0b2dcbff2959c372a5-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.037-ba79fdf3f838cc0b2dcbff2959c372a5-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.037-ba79fdf3f838cc0b2dcbff2959c372a5-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.037-ba79fdf3f838cc0b2dcbff2959c372a5-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.037-ba79fdf3f838cc0b2dcbff2959c372a5-4fc86.png 393w,
+/static/reactnext-gatsby-performance.037-ba79fdf3f838cc0b2dcbff2959c372a5-c4266.png 786w,
+/static/reactnext-gatsby-performance.037-ba79fdf3f838cc0b2dcbff2959c372a5-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2642,7 +2642,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.038-7fc6c3924d17de1b24f3fd59336fc282-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.038-7fc6c3924d17de1b24f3fd59336fc282-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2661,11 +2661,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.038&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.038-7fc6c3924d17de1b24f3fd59336fc282-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.038-7fc6c3924d17de1b24f3fd59336fc282-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.038-7fc6c3924d17de1b24f3fd59336fc282-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.038-7fc6c3924d17de1b24f3fd59336fc282-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.038-7fc6c3924d17de1b24f3fd59336fc282-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.038-7fc6c3924d17de1b24f3fd59336fc282-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.038-7fc6c3924d17de1b24f3fd59336fc282-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.038-7fc6c3924d17de1b24f3fd59336fc282-4fc86.png 393w,
+/static/reactnext-gatsby-performance.038-7fc6c3924d17de1b24f3fd59336fc282-c4266.png 786w,
+/static/reactnext-gatsby-performance.038-7fc6c3924d17de1b24f3fd59336fc282-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2677,7 +2677,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.039-5dd0fb06280ee8edb9a030c84941acfb-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.039-5dd0fb06280ee8edb9a030c84941acfb-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2696,11 +2696,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.039&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.039-5dd0fb06280ee8edb9a030c84941acfb-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.039-5dd0fb06280ee8edb9a030c84941acfb-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.039-5dd0fb06280ee8edb9a030c84941acfb-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.039-5dd0fb06280ee8edb9a030c84941acfb-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.039-5dd0fb06280ee8edb9a030c84941acfb-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.039-5dd0fb06280ee8edb9a030c84941acfb-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.039-5dd0fb06280ee8edb9a030c84941acfb-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.039-5dd0fb06280ee8edb9a030c84941acfb-4fc86.png 393w,
+/static/reactnext-gatsby-performance.039-5dd0fb06280ee8edb9a030c84941acfb-c4266.png 786w,
+/static/reactnext-gatsby-performance.039-5dd0fb06280ee8edb9a030c84941acfb-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2712,7 +2712,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.040-644bacdc55654e67e29a40f5e84aa87c-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.040-644bacdc55654e67e29a40f5e84aa87c-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2731,11 +2731,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.040&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.040-644bacdc55654e67e29a40f5e84aa87c-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.040-644bacdc55654e67e29a40f5e84aa87c-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.040-644bacdc55654e67e29a40f5e84aa87c-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.040-644bacdc55654e67e29a40f5e84aa87c-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.040-644bacdc55654e67e29a40f5e84aa87c-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.040-644bacdc55654e67e29a40f5e84aa87c-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.040-644bacdc55654e67e29a40f5e84aa87c-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.040-644bacdc55654e67e29a40f5e84aa87c-4fc86.png 393w,
+/static/reactnext-gatsby-performance.040-644bacdc55654e67e29a40f5e84aa87c-c4266.png 786w,
+/static/reactnext-gatsby-performance.040-644bacdc55654e67e29a40f5e84aa87c-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2747,7 +2747,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.041-5fa47a42e3db411766b44361e0cdc33e-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.041-5fa47a42e3db411766b44361e0cdc33e-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2766,11 +2766,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.041&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.041-5fa47a42e3db411766b44361e0cdc33e-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.041-5fa47a42e3db411766b44361e0cdc33e-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.041-5fa47a42e3db411766b44361e0cdc33e-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.041-5fa47a42e3db411766b44361e0cdc33e-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.041-5fa47a42e3db411766b44361e0cdc33e-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.041-5fa47a42e3db411766b44361e0cdc33e-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.041-5fa47a42e3db411766b44361e0cdc33e-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.041-5fa47a42e3db411766b44361e0cdc33e-4fc86.png 393w,
+/static/reactnext-gatsby-performance.041-5fa47a42e3db411766b44361e0cdc33e-c4266.png 786w,
+/static/reactnext-gatsby-performance.041-5fa47a42e3db411766b44361e0cdc33e-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2781,7 +2781,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.042-c18a97fdbef4476a735f5b97d3a98ad3-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.042-c18a97fdbef4476a735f5b97d3a98ad3-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2800,11 +2800,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.042&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.042-c18a97fdbef4476a735f5b97d3a98ad3-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.042-c18a97fdbef4476a735f5b97d3a98ad3-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.042-c18a97fdbef4476a735f5b97d3a98ad3-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.042-c18a97fdbef4476a735f5b97d3a98ad3-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.042-c18a97fdbef4476a735f5b97d3a98ad3-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.042-c18a97fdbef4476a735f5b97d3a98ad3-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.042-c18a97fdbef4476a735f5b97d3a98ad3-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.042-c18a97fdbef4476a735f5b97d3a98ad3-4fc86.png 393w,
+/static/reactnext-gatsby-performance.042-c18a97fdbef4476a735f5b97d3a98ad3-c4266.png 786w,
+/static/reactnext-gatsby-performance.042-c18a97fdbef4476a735f5b97d3a98ad3-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2816,7 +2816,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.043-aaff34a63015fc0d3d9782ae8756b0e7-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.043-aaff34a63015fc0d3d9782ae8756b0e7-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2835,11 +2835,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.043&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.043-aaff34a63015fc0d3d9782ae8756b0e7-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.043-aaff34a63015fc0d3d9782ae8756b0e7-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.043-aaff34a63015fc0d3d9782ae8756b0e7-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.043-aaff34a63015fc0d3d9782ae8756b0e7-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.043-aaff34a63015fc0d3d9782ae8756b0e7-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.043-aaff34a63015fc0d3d9782ae8756b0e7-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.043-aaff34a63015fc0d3d9782ae8756b0e7-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.043-aaff34a63015fc0d3d9782ae8756b0e7-4fc86.png 393w,
+/static/reactnext-gatsby-performance.043-aaff34a63015fc0d3d9782ae8756b0e7-c4266.png 786w,
+/static/reactnext-gatsby-performance.043-aaff34a63015fc0d3d9782ae8756b0e7-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2851,7 +2851,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.044-45b8112494ccc58a62d8ea5b5be79a25-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.044-45b8112494ccc58a62d8ea5b5be79a25-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2870,11 +2870,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.044&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.044-45b8112494ccc58a62d8ea5b5be79a25-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.044-45b8112494ccc58a62d8ea5b5be79a25-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.044-45b8112494ccc58a62d8ea5b5be79a25-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.044-45b8112494ccc58a62d8ea5b5be79a25-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.044-45b8112494ccc58a62d8ea5b5be79a25-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.044-45b8112494ccc58a62d8ea5b5be79a25-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.044-45b8112494ccc58a62d8ea5b5be79a25-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.044-45b8112494ccc58a62d8ea5b5be79a25-4fc86.png 393w,
+/static/reactnext-gatsby-performance.044-45b8112494ccc58a62d8ea5b5be79a25-c4266.png 786w,
+/static/reactnext-gatsby-performance.044-45b8112494ccc58a62d8ea5b5be79a25-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2886,7 +2886,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.045-68171703d5fc1890bcc5440b15c3e904-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.045-68171703d5fc1890bcc5440b15c3e904-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2905,11 +2905,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.045&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.045-68171703d5fc1890bcc5440b15c3e904-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.045-68171703d5fc1890bcc5440b15c3e904-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.045-68171703d5fc1890bcc5440b15c3e904-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.045-68171703d5fc1890bcc5440b15c3e904-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.045-68171703d5fc1890bcc5440b15c3e904-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.045-68171703d5fc1890bcc5440b15c3e904-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.045-68171703d5fc1890bcc5440b15c3e904-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.045-68171703d5fc1890bcc5440b15c3e904-4fc86.png 393w,
+/static/reactnext-gatsby-performance.045-68171703d5fc1890bcc5440b15c3e904-c4266.png 786w,
+/static/reactnext-gatsby-performance.045-68171703d5fc1890bcc5440b15c3e904-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2921,7 +2921,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.046-027b7e049e4085f3935afff84baed8e8-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.046-027b7e049e4085f3935afff84baed8e8-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2940,11 +2940,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.046&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.046-027b7e049e4085f3935afff84baed8e8-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.046-027b7e049e4085f3935afff84baed8e8-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.046-027b7e049e4085f3935afff84baed8e8-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.046-027b7e049e4085f3935afff84baed8e8-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.046-027b7e049e4085f3935afff84baed8e8-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.046-027b7e049e4085f3935afff84baed8e8-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.046-027b7e049e4085f3935afff84baed8e8-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.046-027b7e049e4085f3935afff84baed8e8-4fc86.png 393w,
+/static/reactnext-gatsby-performance.046-027b7e049e4085f3935afff84baed8e8-c4266.png 786w,
+/static/reactnext-gatsby-performance.046-027b7e049e4085f3935afff84baed8e8-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2956,7 +2956,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.047-098ae02fe53e1741cf1d413097b11d3b-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.047-098ae02fe53e1741cf1d413097b11d3b-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2975,11 +2975,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.047&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.047-098ae02fe53e1741cf1d413097b11d3b-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.047-098ae02fe53e1741cf1d413097b11d3b-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.047-098ae02fe53e1741cf1d413097b11d3b-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.047-098ae02fe53e1741cf1d413097b11d3b-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.047-098ae02fe53e1741cf1d413097b11d3b-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.047-098ae02fe53e1741cf1d413097b11d3b-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.047-098ae02fe53e1741cf1d413097b11d3b-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.047-098ae02fe53e1741cf1d413097b11d3b-4fc86.png 393w,
+/static/reactnext-gatsby-performance.047-098ae02fe53e1741cf1d413097b11d3b-c4266.png 786w,
+/static/reactnext-gatsby-performance.047-098ae02fe53e1741cf1d413097b11d3b-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2990,7 +2990,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.048-f39b2bb80b00200e381d7794b59aa1cf-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.048-f39b2bb80b00200e381d7794b59aa1cf-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3009,11 +3009,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.048&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.048-f39b2bb80b00200e381d7794b59aa1cf-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.048-f39b2bb80b00200e381d7794b59aa1cf-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.048-f39b2bb80b00200e381d7794b59aa1cf-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.048-f39b2bb80b00200e381d7794b59aa1cf-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.048-f39b2bb80b00200e381d7794b59aa1cf-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.048-f39b2bb80b00200e381d7794b59aa1cf-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.048-f39b2bb80b00200e381d7794b59aa1cf-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.048-f39b2bb80b00200e381d7794b59aa1cf-4fc86.png 393w,
+/static/reactnext-gatsby-performance.048-f39b2bb80b00200e381d7794b59aa1cf-c4266.png 786w,
+/static/reactnext-gatsby-performance.048-f39b2bb80b00200e381d7794b59aa1cf-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3024,7 +3024,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.049-ba99fa93c5e4dc66c23bd9b2d3516da6-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.049-ba99fa93c5e4dc66c23bd9b2d3516da6-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3043,11 +3043,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.049&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.049-ba99fa93c5e4dc66c23bd9b2d3516da6-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.049-ba99fa93c5e4dc66c23bd9b2d3516da6-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.049-ba99fa93c5e4dc66c23bd9b2d3516da6-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.049-ba99fa93c5e4dc66c23bd9b2d3516da6-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.049-ba99fa93c5e4dc66c23bd9b2d3516da6-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.049-ba99fa93c5e4dc66c23bd9b2d3516da6-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.049-ba99fa93c5e4dc66c23bd9b2d3516da6-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.049-ba99fa93c5e4dc66c23bd9b2d3516da6-4fc86.png 393w,
+/static/reactnext-gatsby-performance.049-ba99fa93c5e4dc66c23bd9b2d3516da6-c4266.png 786w,
+/static/reactnext-gatsby-performance.049-ba99fa93c5e4dc66c23bd9b2d3516da6-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3058,7 +3058,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.051-b0fed87187ada023823be906cfc8cd97-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.051-b0fed87187ada023823be906cfc8cd97-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3077,11 +3077,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.051&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.051-b0fed87187ada023823be906cfc8cd97-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.051-b0fed87187ada023823be906cfc8cd97-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.051-b0fed87187ada023823be906cfc8cd97-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.051-b0fed87187ada023823be906cfc8cd97-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.051-b0fed87187ada023823be906cfc8cd97-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.051-b0fed87187ada023823be906cfc8cd97-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.051-b0fed87187ada023823be906cfc8cd97-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.051-b0fed87187ada023823be906cfc8cd97-4fc86.png 393w,
+/static/reactnext-gatsby-performance.051-b0fed87187ada023823be906cfc8cd97-c4266.png 786w,
+/static/reactnext-gatsby-performance.051-b0fed87187ada023823be906cfc8cd97-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3092,7 +3092,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.052-cc6182bbece32dcae7402d9c1cc3036c-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.052-cc6182bbece32dcae7402d9c1cc3036c-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3111,11 +3111,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.052&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.052-cc6182bbece32dcae7402d9c1cc3036c-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.052-cc6182bbece32dcae7402d9c1cc3036c-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.052-cc6182bbece32dcae7402d9c1cc3036c-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.052-cc6182bbece32dcae7402d9c1cc3036c-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.052-cc6182bbece32dcae7402d9c1cc3036c-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.052-cc6182bbece32dcae7402d9c1cc3036c-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.052-cc6182bbece32dcae7402d9c1cc3036c-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.052-cc6182bbece32dcae7402d9c1cc3036c-4fc86.png 393w,
+/static/reactnext-gatsby-performance.052-cc6182bbece32dcae7402d9c1cc3036c-c4266.png 786w,
+/static/reactnext-gatsby-performance.052-cc6182bbece32dcae7402d9c1cc3036c-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3126,7 +3126,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.053-5212243759bd5451b100d06e23a81bfb-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.053-5212243759bd5451b100d06e23a81bfb-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3145,11 +3145,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.053&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.053-5212243759bd5451b100d06e23a81bfb-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.053-5212243759bd5451b100d06e23a81bfb-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.053-5212243759bd5451b100d06e23a81bfb-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.053-5212243759bd5451b100d06e23a81bfb-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.053-5212243759bd5451b100d06e23a81bfb-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.053-5212243759bd5451b100d06e23a81bfb-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.053-5212243759bd5451b100d06e23a81bfb-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.053-5212243759bd5451b100d06e23a81bfb-4fc86.png 393w,
+/static/reactnext-gatsby-performance.053-5212243759bd5451b100d06e23a81bfb-c4266.png 786w,
+/static/reactnext-gatsby-performance.053-5212243759bd5451b100d06e23a81bfb-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3160,7 +3160,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.059-6f289a2fcdf59bab9c70ceafbcff5329-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.059-6f289a2fcdf59bab9c70ceafbcff5329-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3179,11 +3179,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.059&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.059-6f289a2fcdf59bab9c70ceafbcff5329-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.059-6f289a2fcdf59bab9c70ceafbcff5329-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.059-6f289a2fcdf59bab9c70ceafbcff5329-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.059-6f289a2fcdf59bab9c70ceafbcff5329-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.059-6f289a2fcdf59bab9c70ceafbcff5329-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.059-6f289a2fcdf59bab9c70ceafbcff5329-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.059-6f289a2fcdf59bab9c70ceafbcff5329-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.059-6f289a2fcdf59bab9c70ceafbcff5329-4fc86.png 393w,
+/static/reactnext-gatsby-performance.059-6f289a2fcdf59bab9c70ceafbcff5329-c4266.png 786w,
+/static/reactnext-gatsby-performance.059-6f289a2fcdf59bab9c70ceafbcff5329-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3194,7 +3194,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.060-68d6986e78ad5c132a3b2b3a58dccc46-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.060-68d6986e78ad5c132a3b2b3a58dccc46-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3213,11 +3213,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.060&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.060-68d6986e78ad5c132a3b2b3a58dccc46-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.060-68d6986e78ad5c132a3b2b3a58dccc46-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.060-68d6986e78ad5c132a3b2b3a58dccc46-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.060-68d6986e78ad5c132a3b2b3a58dccc46-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.060-68d6986e78ad5c132a3b2b3a58dccc46-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.060-68d6986e78ad5c132a3b2b3a58dccc46-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.060-68d6986e78ad5c132a3b2b3a58dccc46-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.060-68d6986e78ad5c132a3b2b3a58dccc46-4fc86.png 393w,
+/static/reactnext-gatsby-performance.060-68d6986e78ad5c132a3b2b3a58dccc46-c4266.png 786w,
+/static/reactnext-gatsby-performance.060-68d6986e78ad5c132a3b2b3a58dccc46-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3229,7 +3229,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.061-64f381143ef4c93dfd00f2a734664a43-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.061-64f381143ef4c93dfd00f2a734664a43-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3248,11 +3248,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.061&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.061-64f381143ef4c93dfd00f2a734664a43-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.061-64f381143ef4c93dfd00f2a734664a43-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.061-64f381143ef4c93dfd00f2a734664a43-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.061-64f381143ef4c93dfd00f2a734664a43-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.061-64f381143ef4c93dfd00f2a734664a43-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.061-64f381143ef4c93dfd00f2a734664a43-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.061-64f381143ef4c93dfd00f2a734664a43-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.061-64f381143ef4c93dfd00f2a734664a43-4fc86.png 393w,
+/static/reactnext-gatsby-performance.061-64f381143ef4c93dfd00f2a734664a43-c4266.png 786w,
+/static/reactnext-gatsby-performance.061-64f381143ef4c93dfd00f2a734664a43-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3264,7 +3264,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.062-4479e4ef75d2c3e92109f8d496677158-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.062-4479e4ef75d2c3e92109f8d496677158-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3283,11 +3283,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.062&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.062-4479e4ef75d2c3e92109f8d496677158-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.062-4479e4ef75d2c3e92109f8d496677158-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.062-4479e4ef75d2c3e92109f8d496677158-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.062-4479e4ef75d2c3e92109f8d496677158-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.062-4479e4ef75d2c3e92109f8d496677158-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.062-4479e4ef75d2c3e92109f8d496677158-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.062-4479e4ef75d2c3e92109f8d496677158-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.062-4479e4ef75d2c3e92109f8d496677158-4fc86.png 393w,
+/static/reactnext-gatsby-performance.062-4479e4ef75d2c3e92109f8d496677158-c4266.png 786w,
+/static/reactnext-gatsby-performance.062-4479e4ef75d2c3e92109f8d496677158-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3299,7 +3299,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.063-c216c87dcf84f84d6261d4efc81ff587-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.063-c216c87dcf84f84d6261d4efc81ff587-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3318,11 +3318,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.063&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.063-c216c87dcf84f84d6261d4efc81ff587-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.063-c216c87dcf84f84d6261d4efc81ff587-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.063-c216c87dcf84f84d6261d4efc81ff587-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.063-c216c87dcf84f84d6261d4efc81ff587-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.063-c216c87dcf84f84d6261d4efc81ff587-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.063-c216c87dcf84f84d6261d4efc81ff587-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.063-c216c87dcf84f84d6261d4efc81ff587-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.063-c216c87dcf84f84d6261d4efc81ff587-4fc86.png 393w,
+/static/reactnext-gatsby-performance.063-c216c87dcf84f84d6261d4efc81ff587-c4266.png 786w,
+/static/reactnext-gatsby-performance.063-c216c87dcf84f84d6261d4efc81ff587-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3333,7 +3333,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.064-4a502ed6b98a1a5d9499bd4badfff796-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.064-4a502ed6b98a1a5d9499bd4badfff796-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3352,11 +3352,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.064&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.064-4a502ed6b98a1a5d9499bd4badfff796-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.064-4a502ed6b98a1a5d9499bd4badfff796-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.064-4a502ed6b98a1a5d9499bd4badfff796-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.064-4a502ed6b98a1a5d9499bd4badfff796-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.064-4a502ed6b98a1a5d9499bd4badfff796-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.064-4a502ed6b98a1a5d9499bd4badfff796-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.064-4a502ed6b98a1a5d9499bd4badfff796-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.064-4a502ed6b98a1a5d9499bd4badfff796-4fc86.png 393w,
+/static/reactnext-gatsby-performance.064-4a502ed6b98a1a5d9499bd4badfff796-c4266.png 786w,
+/static/reactnext-gatsby-performance.064-4a502ed6b98a1a5d9499bd4badfff796-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3367,7 +3367,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.065-bf9d59c49f663a111d1674e1322e0e9e-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.065-bf9d59c49f663a111d1674e1322e0e9e-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3386,11 +3386,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.065&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.065-bf9d59c49f663a111d1674e1322e0e9e-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.065-bf9d59c49f663a111d1674e1322e0e9e-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.065-bf9d59c49f663a111d1674e1322e0e9e-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.065-bf9d59c49f663a111d1674e1322e0e9e-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.065-bf9d59c49f663a111d1674e1322e0e9e-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.065-bf9d59c49f663a111d1674e1322e0e9e-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.065-bf9d59c49f663a111d1674e1322e0e9e-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.065-bf9d59c49f663a111d1674e1322e0e9e-4fc86.png 393w,
+/static/reactnext-gatsby-performance.065-bf9d59c49f663a111d1674e1322e0e9e-c4266.png 786w,
+/static/reactnext-gatsby-performance.065-bf9d59c49f663a111d1674e1322e0e9e-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3401,7 +3401,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.066-305004d0a6e4430e3b1edf4cb7d2030b-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.066-305004d0a6e4430e3b1edf4cb7d2030b-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3420,11 +3420,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.066&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.066-305004d0a6e4430e3b1edf4cb7d2030b-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.066-305004d0a6e4430e3b1edf4cb7d2030b-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.066-305004d0a6e4430e3b1edf4cb7d2030b-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.066-305004d0a6e4430e3b1edf4cb7d2030b-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.066-305004d0a6e4430e3b1edf4cb7d2030b-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.066-305004d0a6e4430e3b1edf4cb7d2030b-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.066-305004d0a6e4430e3b1edf4cb7d2030b-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.066-305004d0a6e4430e3b1edf4cb7d2030b-4fc86.png 393w,
+/static/reactnext-gatsby-performance.066-305004d0a6e4430e3b1edf4cb7d2030b-c4266.png 786w,
+/static/reactnext-gatsby-performance.066-305004d0a6e4430e3b1edf4cb7d2030b-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3435,7 +3435,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.067-6deb189ff8634580af4c74f74eec09da-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.067-6deb189ff8634580af4c74f74eec09da-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3454,11 +3454,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.067&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.067-6deb189ff8634580af4c74f74eec09da-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.067-6deb189ff8634580af4c74f74eec09da-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.067-6deb189ff8634580af4c74f74eec09da-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.067-6deb189ff8634580af4c74f74eec09da-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.067-6deb189ff8634580af4c74f74eec09da-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.067-6deb189ff8634580af4c74f74eec09da-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.067-6deb189ff8634580af4c74f74eec09da-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.067-6deb189ff8634580af4c74f74eec09da-4fc86.png 393w,
+/static/reactnext-gatsby-performance.067-6deb189ff8634580af4c74f74eec09da-c4266.png 786w,
+/static/reactnext-gatsby-performance.067-6deb189ff8634580af4c74f74eec09da-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3470,7 +3470,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.068-8b1a1dbdeeeebbf765b237e0ac19d83f-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.068-8b1a1dbdeeeebbf765b237e0ac19d83f-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3489,11 +3489,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.068&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.068-8b1a1dbdeeeebbf765b237e0ac19d83f-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.068-8b1a1dbdeeeebbf765b237e0ac19d83f-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.068-8b1a1dbdeeeebbf765b237e0ac19d83f-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.068-8b1a1dbdeeeebbf765b237e0ac19d83f-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.068-8b1a1dbdeeeebbf765b237e0ac19d83f-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.068-8b1a1dbdeeeebbf765b237e0ac19d83f-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.068-8b1a1dbdeeeebbf765b237e0ac19d83f-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.068-8b1a1dbdeeeebbf765b237e0ac19d83f-4fc86.png 393w,
+/static/reactnext-gatsby-performance.068-8b1a1dbdeeeebbf765b237e0ac19d83f-c4266.png 786w,
+/static/reactnext-gatsby-performance.068-8b1a1dbdeeeebbf765b237e0ac19d83f-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3505,7 +3505,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.069-619ee6007323adf05c233bde2e529fff-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.069-619ee6007323adf05c233bde2e529fff-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3524,11 +3524,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.069&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.069-619ee6007323adf05c233bde2e529fff-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.069-619ee6007323adf05c233bde2e529fff-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.069-619ee6007323adf05c233bde2e529fff-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.069-619ee6007323adf05c233bde2e529fff-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.069-619ee6007323adf05c233bde2e529fff-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.069-619ee6007323adf05c233bde2e529fff-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.069-619ee6007323adf05c233bde2e529fff-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.069-619ee6007323adf05c233bde2e529fff-4fc86.png 393w,
+/static/reactnext-gatsby-performance.069-619ee6007323adf05c233bde2e529fff-c4266.png 786w,
+/static/reactnext-gatsby-performance.069-619ee6007323adf05c233bde2e529fff-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3539,7 +3539,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.070-f0cf7c6a5b62ed78a249b6ab0cf886fe-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.070-f0cf7c6a5b62ed78a249b6ab0cf886fe-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3558,11 +3558,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.070&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.070-f0cf7c6a5b62ed78a249b6ab0cf886fe-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.070-f0cf7c6a5b62ed78a249b6ab0cf886fe-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.070-f0cf7c6a5b62ed78a249b6ab0cf886fe-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.070-f0cf7c6a5b62ed78a249b6ab0cf886fe-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.070-f0cf7c6a5b62ed78a249b6ab0cf886fe-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.070-f0cf7c6a5b62ed78a249b6ab0cf886fe-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.070-f0cf7c6a5b62ed78a249b6ab0cf886fe-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.070-f0cf7c6a5b62ed78a249b6ab0cf886fe-4fc86.png 393w,
+/static/reactnext-gatsby-performance.070-f0cf7c6a5b62ed78a249b6ab0cf886fe-c4266.png 786w,
+/static/reactnext-gatsby-performance.070-f0cf7c6a5b62ed78a249b6ab0cf886fe-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3573,7 +3573,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.071-669b22bef9df553c6befaaa23003d68c-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.071-669b22bef9df553c6befaaa23003d68c-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3592,11 +3592,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.071&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.071-669b22bef9df553c6befaaa23003d68c-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.071-669b22bef9df553c6befaaa23003d68c-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.071-669b22bef9df553c6befaaa23003d68c-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.071-669b22bef9df553c6befaaa23003d68c-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.071-669b22bef9df553c6befaaa23003d68c-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.071-669b22bef9df553c6befaaa23003d68c-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.071-669b22bef9df553c6befaaa23003d68c-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.071-669b22bef9df553c6befaaa23003d68c-4fc86.png 393w,
+/static/reactnext-gatsby-performance.071-669b22bef9df553c6befaaa23003d68c-c4266.png 786w,
+/static/reactnext-gatsby-performance.071-669b22bef9df553c6befaaa23003d68c-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3607,7 +3607,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.072-43f4d491dce21ccf6e72e2f9e34f7428-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.072-43f4d491dce21ccf6e72e2f9e34f7428-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3626,11 +3626,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.072&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.072-43f4d491dce21ccf6e72e2f9e34f7428-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.072-43f4d491dce21ccf6e72e2f9e34f7428-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.072-43f4d491dce21ccf6e72e2f9e34f7428-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.072-43f4d491dce21ccf6e72e2f9e34f7428-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.072-43f4d491dce21ccf6e72e2f9e34f7428-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.072-43f4d491dce21ccf6e72e2f9e34f7428-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.072-43f4d491dce21ccf6e72e2f9e34f7428-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.072-43f4d491dce21ccf6e72e2f9e34f7428-4fc86.png 393w,
+/static/reactnext-gatsby-performance.072-43f4d491dce21ccf6e72e2f9e34f7428-c4266.png 786w,
+/static/reactnext-gatsby-performance.072-43f4d491dce21ccf6e72e2f9e34f7428-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3641,7 +3641,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/reactnext-gatsby-performance.073-b2c17d416502043978dec3569059dec7-b1d1d.png&quot;
+    href=&quot;/static/reactnext-gatsby-performance.073-b2c17d416502043978dec3569059dec7-b1d1d.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3660,11 +3660,11 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;createPages
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;reactnext-gatsby-performance.073&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/reactnext-gatsby-performance.073-b2c17d416502043978dec3569059dec7-c4266.png&quot;
-        srcset=&quot;/gatsby/static/reactnext-gatsby-performance.073-b2c17d416502043978dec3569059dec7-4fd5b.png 197w,
-/gatsby/static/reactnext-gatsby-performance.073-b2c17d416502043978dec3569059dec7-4fc86.png 393w,
-/gatsby/static/reactnext-gatsby-performance.073-b2c17d416502043978dec3569059dec7-c4266.png 786w,
-/gatsby/static/reactnext-gatsby-performance.073-b2c17d416502043978dec3569059dec7-b1d1d.png 1024w&quot;
+        src=&quot;/static/reactnext-gatsby-performance.073-b2c17d416502043978dec3569059dec7-c4266.png&quot;
+        srcset=&quot;/static/reactnext-gatsby-performance.073-b2c17d416502043978dec3569059dec7-4fd5b.png 197w,
+/static/reactnext-gatsby-performance.073-b2c17d416502043978dec3569059dec7-4fc86.png 393w,
+/static/reactnext-gatsby-performance.073-b2c17d416502043978dec3569059dec7-c4266.png 786w,
+/static/reactnext-gatsby-performance.073-b2c17d416502043978dec3569059dec7-b1d1d.png 1024w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3980,7 +3980,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-80eb1.png&quot;
+    href=&quot;/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-80eb1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3999,14 +3999,14 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;My first blog post with Gatsby&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-c4266.png&quot;
-        srcset=&quot;/gatsby/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-4fd5b.png 197w,
-/gatsby/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-4fc86.png 393w,
-/gatsby/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-c4266.png 786w,
-/gatsby/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-22348.png 1179w,
-/gatsby/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-f35d4.png 1572w,
-/gatsby/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-1ea43.png 2358w,
-/gatsby/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-80eb1.png 2592w&quot;
+        src=&quot;/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-c4266.png&quot;
+        srcset=&quot;/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-4fd5b.png 197w,
+/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-4fc86.png 393w,
+/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-c4266.png 786w,
+/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-22348.png 1179w,
+/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-f35d4.png 1572w,
+/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-1ea43.png 2358w,
+/static/my-first-blog-post-deb7f0d56ec7013985a6053e9c88601d-80eb1.png 2592w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -4073,7 +4073,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-80eb1.png&quot;
+    href=&quot;/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-80eb1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4092,14 +4092,14 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Blog listing&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-c4266.png&quot;
-        srcset=&quot;/gatsby/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-4fd5b.png 197w,
-/gatsby/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-4fc86.png 393w,
-/gatsby/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-c4266.png 786w,
-/gatsby/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-22348.png 1179w,
-/gatsby/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-f35d4.png 1572w,
-/gatsby/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-1ea43.png 2358w,
-/gatsby/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-80eb1.png 2592w&quot;
+        src=&quot;/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-c4266.png&quot;
+        srcset=&quot;/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-4fd5b.png 197w,
+/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-4fc86.png 393w,
+/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-c4266.png 786w,
+/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-22348.png 1179w,
+/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-f35d4.png 1572w,
+/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-1ea43.png 2358w,
+/static/blog-listing-2a8d86802d4b0d0a8d662e1281b0f522-80eb1.png 2592w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -4122,7 +4122,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/dream-bigger-1eb72aab7f753fd71411e0b504f13608-14c24.jpeg&quot;
+    href=&quot;/static/dream-bigger-1eb72aab7f753fd71411e0b504f13608-14c24.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4141,10 +4141,10 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Dream Bigger&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/dream-bigger-1eb72aab7f753fd71411e0b504f13608-14c24.jpeg&quot;
-        srcset=&quot;/gatsby/static/dream-bigger-1eb72aab7f753fd71411e0b504f13608-04be1.jpeg 197w,
-/gatsby/static/dream-bigger-1eb72aab7f753fd71411e0b504f13608-71514.jpeg 393w,
-/gatsby/static/dream-bigger-1eb72aab7f753fd71411e0b504f13608-14c24.jpeg 721w&quot;
+        src=&quot;/static/dream-bigger-1eb72aab7f753fd71411e0b504f13608-14c24.jpeg&quot;
+        srcset=&quot;/static/dream-bigger-1eb72aab7f753fd71411e0b504f13608-04be1.jpeg 197w,
+/static/dream-bigger-1eb72aab7f753fd71411e0b504f13608-71514.jpeg 393w,
+/static/dream-bigger-1eb72aab7f753fd71411e0b504f13608-14c24.jpeg 721w&quot;
         sizes=&quot;(max-width: 721px) 100vw, 721px&quot;
       /&gt;
     &lt;/span&gt;
@@ -4190,7 +4190,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-61a42.png&quot;
+    href=&quot;/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-61a42.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4209,12 +4209,12 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Gatsby npm downloads year over year&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-c4266.png&quot;
-        srcset=&quot;/gatsby/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-4fd5b.png 197w,
-/gatsby/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-4fc86.png 393w,
-/gatsby/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-c4266.png 786w,
-/gatsby/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-22348.png 1179w,
-/gatsby/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-61a42.png 1446w&quot;
+        src=&quot;/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-c4266.png&quot;
+        srcset=&quot;/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-4fd5b.png 197w,
+/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-4fc86.png 393w,
+/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-c4266.png 786w,
+/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-22348.png 1179w,
+/static/gatsby-npm-downloads-5b6238a9feeefbc5913acf00b4bf2d05-61a42.png 1446w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -4231,7 +4231,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-d276f.png&quot;
+    href=&quot;/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-d276f.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4250,13 +4250,13 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;screenshots of above sites&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-c4266.png&quot;
-        srcset=&quot;/gatsby/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-4fd5b.png 197w,
-/gatsby/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-4fc86.png 393w,
-/gatsby/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-c4266.png 786w,
-/gatsby/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-22348.png 1179w,
-/gatsby/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-f35d4.png 1572w,
-/gatsby/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-d276f.png 1600w&quot;
+        src=&quot;/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-c4266.png&quot;
+        srcset=&quot;/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-4fd5b.png 197w,
+/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-4fc86.png 393w,
+/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-c4266.png 786w,
+/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-22348.png 1179w,
+/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-f35d4.png 1572w,
+/static/site-screenshots-69ceb3166553d88ab8ddbf5d46f33eb5-d276f.png 1600w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -4279,7 +4279,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-0298a.jpg&quot;
+    href=&quot;/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-0298a.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4298,13 +4298,13 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;container ship leaving port symbolizing of course GATSBY 1.0 HAS SHIPPED!!!&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-00eda.jpg&quot;
-        srcset=&quot;/gatsby/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-c1503.jpg 197w,
-/gatsby/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-a941d.jpg 393w,
-/gatsby/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-00eda.jpg 786w,
-/gatsby/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-8e8ca.jpg 1179w,
-/gatsby/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-f009a.jpg 1572w,
-/gatsby/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-0298a.jpg 2048w&quot;
+        src=&quot;/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-00eda.jpg&quot;
+        srcset=&quot;/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-c1503.jpg 197w,
+/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-a941d.jpg 393w,
+/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-00eda.jpg 786w,
+/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-8e8ca.jpg 1179w,
+/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-f009a.jpg 1572w,
+/static/container-ship-leaving-f8d8f7a5a1191f4ff964fa420db64a83-0298a.jpg 2048w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -4509,7 +4509,7 @@ This is my sweet blog post. &lt;span class=&quot;token bold&quot;&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-b90e3.png&quot;
+    href=&quot;/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-b90e3.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4528,14 +4528,14 @@ This is my sweet blog post. &lt;span class=&quot;token bold&quot;&gt;&lt;span cl
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;gatsbygram vs. instagram filmstrip&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-c4266.png&quot;
-        srcset=&quot;/gatsby/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-4fd5b.png 197w,
-/gatsby/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-4fc86.png 393w,
-/gatsby/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-c4266.png 786w,
-/gatsby/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-22348.png 1179w,
-/gatsby/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-f35d4.png 1572w,
-/gatsby/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-1ea43.png 2358w,
-/gatsby/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-b90e3.png 4381w&quot;
+        src=&quot;/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-c4266.png&quot;
+        srcset=&quot;/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-4fd5b.png 197w,
+/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-4fc86.png 393w,
+/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-c4266.png 786w,
+/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-22348.png 1179w,
+/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-f35d4.png 1572w,
+/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-1ea43.png 2358w,
+/static/gatsbygram-instagram-5601858ddaada0a99782cd925ec04ddd-b90e3.png 4381w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
@@ -4547,7 +4547,7 @@ This is my sweet blog post. &lt;span class=&quot;token bold&quot;&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-daf86.png&quot;
+    href=&quot;/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-daf86.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4567,12 +4567,12 @@ This is my sweet blog post. &lt;span class=&quot;token bold&quot;&gt;&lt;span cl
         alt=&quot;gatsbygram vs. instagram filmstrip repeat
 load&quot;
         title=&quot;&quot;
-        src=&quot;/gatsby/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-c4266.png&quot;
-        srcset=&quot;/gatsby/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-4fd5b.png 197w,
-/gatsby/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-4fc86.png 393w,
-/gatsby/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-c4266.png 786w,
-/gatsby/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-22348.png 1179w,
-/gatsby/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-daf86.png 1513w&quot;
+        src=&quot;/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-c4266.png&quot;
+        srcset=&quot;/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-4fd5b.png 197w,
+/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-4fc86.png 393w,
+/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-c4266.png 786w,
+/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-22348.png 1179w,
+/static/gatsbygram-instagram-repeat-load-14335d63b8d7a07b951f781833ab5bdb-daf86.png 1513w&quot;
         sizes=&quot;(max-width: 786px) 100vw, 786px&quot;
       /&gt;
     &lt;/span&gt;
