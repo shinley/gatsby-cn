@@ -388,7 +388,7 @@ export default ({ children }) =&gt;
 </code></pre>
       
       <p>
-        Then create a new component page by creating a file at <code>src/pages/about-css-modules.js</code>:
+        然后通过在src/pages/about-css-modules.js中创建一个文件来创建一个新的组件页面：
       </p>
       
       <pre><code class="javascript">import React from "react"
@@ -403,23 +403,23 @@ export default () =&gt;
 </code></pre>
       
       <p>
-        You'll notice we imported the <code>Container</code> component we just created.
+        您会注意到我们导入了刚刚创建的Container组件。
       </p>
       
       <p>
-        Your page should now look like:
+        您的页面现在应该如下所示：
       </p>
       
       <p>
-        <img src="css-modules-1.png" alt="css-modules-1" />
+        <img src="我们来创建一个简单的名单，头像和简短的拉丁传记名单。" alt="css-modules-1" />
       </p>
       
       <p>
-        Let's create a simple list of people with names, avatars, and short latin biographies.
+        我们来创建一个简单的名单，头像和简短的拉丁传记名单。
       </p>
       
       <p>
-        First, let's create the file for the CSS at <code>src/pages/about-css-modules.module.css</code>. You'll notice that the file name ends with <code>.module.css</code> instead of <code>.css</code> like normal. This is how we tell Gatsby that this CSS file should be processed as CSS modules.
+        首先，我们在src/pages/about-css-modules.module.css中创建CSS的文件。 您会注意到，文件名以.module.css结尾，而不是像普通的.css结尾。 这就是我们如何告诉Gatsby这个CSS文件应该作为CSS模块来处理。
       </p>
       
       <pre><code class="css">.user {
@@ -456,7 +456,7 @@ export default () =&gt;
 </code></pre>
       
       <p>
-        Now import that file into the <code>about-css-modules.js</code> page we created earlier. Also log the resulting import so we can see what the processed file looks like.
+        现在将该文件导入我们前面创建的about-css-modules.js页面。 同时记录结果导入，以便我们可以看到处理文件的样子。
       </p>
       
       <pre><code class="javascript">import styles from "./about-css-modules.module.css"
@@ -464,7 +464,7 @@ console.log(styles)
 </code></pre>
       
       <p>
-        If you open the developer console in your browser you'll see:
+        如果您在浏览器中打开开发者控制台，您将看到：
       </p>
       
       <p>
@@ -472,19 +472,19 @@ console.log(styles)
       </p>
       
       <p>
-        If you compare that to our CSS file, you'll see that each class is now a key in the imported object pointing to a long string e.g. <code>avatar</code> points to <code>about-css-modules-module---avatar----hYcv</code>. These are the class names CSS Modules generates. They're guaranteed to be unique across your site. And because you have to import them to use the classes, there's never any question about where some CSS is being used.
+        如果您将它与我们的CSS文件进行比较，您会看到每个类现在都是导入对象中的一个键，指向一个长字符串，例如 头像指向about-css-modules-module --- avatar ---- hYcv。 这些是CSS模块生成的类名称。 他们保证在您的网站是唯一的。 而且因为你必须导入它们才能使用这些类，所以从来没有任何关于使用某些CSS的问题。
       </p>
       
       <p>
-        Let's use our styles to create a simple <code>User</code> component.
+        让我们使用我们的样式来创建一个简单的用户组件。
       </p>
       
       <p>
-        Let's create the new component inline in the <code>about-css-modules.js</code> page component. The general rule of thumb is if you use a component in multiple places on a site, it should be in its own module file in the <code>components</code> directory. But, if it's used only in one file, create it inline.
+        让我们在about-css-modules.js页面组件中内联创建新组件。 一般的经验法则是如果你在一个站点的多个地方使用一个组件，它应该在它自己的组件目录中的模块文件中。 但是，如果仅在一个文件中使用，请将其内联创建。
       </p>
       
       <p>
-        Modify <code>about-css-modules.js</code> so it looks like the following:
+        修改about-css-modules.js，使其如下所示：
       </p>
       
       <pre><code class="jsx{6-17,23-30}">import React from "react"
@@ -523,7 +523,7 @@ export default () =&gt;
 </code></pre>
       
       <p>
-        The finished page should now look like:
+        现在完成的页面应该如下所示：
       </p>
       
       <p>
@@ -535,7 +535,7 @@ export default () =&gt;
       </h3>
       
       <p>
-        Let's create the same page using <a href="https://github.com/threepointone/glamor">Glamor</a>.
+        让我们用Glamour来创建相同的页面。
       </p>
       
       <p>
