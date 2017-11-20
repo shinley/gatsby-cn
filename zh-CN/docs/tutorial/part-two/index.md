@@ -567,11 +567,11 @@ export default () =&gt;
 </code></pre>
       
       <p>
-        Restart <code>gatsby develop</code> again to enable the Glamor plugin.
+        重新启动gatsby再次开发启用Glamor插件。
       </p>
       
       <p>
-        Now create the Glamor page at <code>src/pages/about-glamor.js</code>
+        现在在src/pages/about-glamour.js中创建Glamor页面
       </p>
       
       <pre><code class="jsx">import React from "react"
@@ -586,7 +586,7 @@ export default () =&gt;
 </code></pre>
       
       <p>
-        Let's add the same inline <code>User</code> component but this time using Glamor's <code>css</code> prop.
+        让我们添加相同的内联用户组件，但这次使用Glamor的CSS的 prop属性。
       </p>
       
       <pre><code class="jsx{5-26,32-40}">import React from "react"
