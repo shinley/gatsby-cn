@@ -497,8 +497,8 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---tutorial-part-two": [
-      "path---tutorial-part-two-87430e9250df3bb99df5.js",
-      "path---tutorial-part-two-87430e9250df3bb99df5.js.map"
+      "path---tutorial-part-two-ec556561726c7420b6de.js",
+      "path---tutorial-part-two-ec556561726c7420b6de.js.map"
     ],
     "path---packages-gatsby-transformer-sharp": [
       "path---packages-gatsby-transformer-sharp-36e5ee509a2b211dca36.js",
@@ -541,9 +541,9 @@
       "path---packages-gatsby-plugin-manifest-37b32edd12c663a3101f.js.map"
     ],
     "app": [
-      "app-6cd80604c56999c22349.js",
+      "app-2fd3a57c166c43ad3f9d.js",
       "build-js-styles.css",
-      "app-6cd80604c56999c22349.js.map",
+      "app-2fd3a57c166c43ad3f9d.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-gatsby-first-beta-release": [
@@ -641,10 +641,6 @@
     "path---packages-gatsby": [
       "path---packages-gatsby-35f480c553db68e0460a.js",
       "path---packages-gatsby-35f480c553db68e0460a.js.map"
-    ],
-    "path---cname": [
-      "path---cname-a2ab5da06fcc824347fd.js",
-      "path---cname-a2ab5da06fcc824347fd.js.map"
     ],
     "path---docs-create-source-plugin": [
       "path---docs-create-source-plugin-fbba1386afabe94c687d.js",

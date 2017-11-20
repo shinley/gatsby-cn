@@ -135,17 +135,16 @@
 <url> <loc>https://www.gatsbyjs.cn/packages/gatsby-transformer-toml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/packages/graphql-skip-limit/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/packages/gatsby-transformer-yaml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.gatsbyjs.cn/CNAME/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/404/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/colors/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/features/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.gatsbyjs.cn/tutorial/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.gatsbyjs.cn/tutorial/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/404.html</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.gatsbyjs.cn/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/docs/bound-action-creators/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/docs/browser-apis/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/docs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/docs/node-apis/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/docs/ssr-apis/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.gatsbyjs.cn/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
