@@ -635,7 +635,7 @@ export default () =&gt;
 </code></pre>
       
       <p>
-        The final Glamor page should look identical to the CSS Modules page.
+        最后的Glamor页面应该看起来与CSS模块页面相同。
       </p>
       
       <p>
@@ -643,26 +643,26 @@ export default () =&gt;
       </p>
       
       <h3>
-        Styled Components
+        样式组件
       </h3>
       
       <p>
-        For our final CSS-in-JS example, we'll try <a href="https://www.styled-components.com/">Styled Components</a>.
+        对于我们最后的CSS-in-JS示例，我们将尝试使用样式组件。
       </p>
       
       <p>
-        Styled Components lets you use actual CSS syntax inside your components.
+        样式组件允许您在组件中使用实际的CSS语法。
       </p>
       
       <p>
-        First, like normal, we'll install the Gatsby plugin for Styled Components.
+        首先，像平常一样，我们将为样式组件安装Gatsby插件。
       </p>
       
       <pre><code class="sh">npm install --save gatsby-plugin-styled-components
 </code></pre>
       
       <p>
-        Then modify the <code>gatsby-config.js</code>. Before we can use Styled Components however, we'll need to remove the Glamor plugin and delete the Glamor component page we created. The two plugins conflict with each other as both want to take control during server rendering.
+        然后修改gatsby-config.js。 在我们可以使用样式组件之前，我们需要删除Glamor插件并删除我们创建的Glamor组件页面。 这两个插件相互冲突，因为它们都想在服务器渲染过程中进行控制。
       </p>
       
       <pre><code class="javascript{9}">module.exports = {
@@ -679,7 +679,7 @@ export default () =&gt;
 </code></pre>
       
       <p>
-        Then at <code>src/pages/about-styled-components.js</code> create:
+        然后在src/pages/about-styled-components.js创建：
       </p>
       
       <pre><code class="jsx">import React from "react"
@@ -748,11 +748,11 @@ export default () =&gt;
 </code></pre>
       
       <h3>
-        Other CSS options
+        其他CSS选项
       </h3>
       
       <p>
-        Gatsby supports almost every possible styling option (if there isn't a plugin yet for your favorite CSS option, <a href="/docs/how-to-contribute/">please contribute one!</a>)
+        Gatsby支持几乎所有可能的样式选项（如果您的CSS选项没有插件，请提供一个！）
       </p>
       
       <ul>
@@ -769,10 +769,10 @@ export default () =&gt;
           <a href="/packages/gatsby-plugin-stylus/">Stylus</a>
         </li>
         <li>
-          and more!
+          更多
         </li>
       </ul>
       
       <p>
-        Now continue on to <a href="/tutorial/part-three/">Part Three</a> of the tutorial.
+        现在继续教程的第三部分。
       </p>
