@@ -543,14 +543,14 @@ export default () =&gt;
       </p>
       
       <p>
-        First install the Gatsby plugin for Glamor.
+        首先安装Glamor的Gatsby插件。
       </p>
       
       <pre><code class="shell">npm install --save gatsby-plugin-glamor
 </code></pre>
       
       <p>
-        And then add it to your <code>gatsby-config.js</code>
+        然后把它添加到你的gatsby-config.js
       </p>
       
       <pre><code class="javascript{9}">module.exports = {
