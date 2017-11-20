@@ -360,23 +360,23 @@ export default typography
       </blockquote>
       
       <p>
-        CSS Modules is very popular, as it lets you write CSS like normal but with a lot more safety. The tool automatically makes class and animation names unique so you don't have to worry about selector name collisions.
+        CSS模块非常受欢迎，因为它可以让你像平常一样编写CSS，但安全性更高。 该工具自动使类和动画的名称独特，所以你不必担心选择器名称冲突。
       </p>
       
       <p>
-        CSS Modules are highly recommended for those new to building with Gatsby (and React in general).
+        CSS模块被强烈推荐给那些用Gatsby构建的新模块（通常是React）。
       </p>
       
       <p>
-        Gatsby works out of the box with CSS Modules.
+        Gatsby开箱即用CSS模块。
       </p>
       
       <p>
-        Let's build a page using CSS Modules.
+        让我们使用CSS模块构建一个页面。
       </p>
       
       <p>
-        First, let's create a new <code>Container</code> component which we'll use for each of the CSS-in-JS examples. Create a <code>components</code> directory at <code>src/components</code> and then, in this directory, create a file named <code>container.js</code> and paste the following.
+        首先，我们创建一个新的Container组件，我们将使用它来为每个CSS-in-JS示例使用。 在src/components创建一个组件目录，然后在这个目录下创建一个名为container.js的文件并粘贴下面的代码。
       </p>
       
       <pre><code class="javascript">import React from "react"
