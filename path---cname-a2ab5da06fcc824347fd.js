@@ -1,0 +1,2 @@
+webpackJsonp([0xf661090632e8],{592:function(t,e){t.exports={data:{markdownRemark:{html:"<p>www.gatsbyjs.cn</p>",excerpt:"www.gatsbyjs.cn",timeToRead:1,frontmatter:{title:""},parent:{__typename:"File",relativePath:"CNAME.md"}}},pathContext:{slug:"/CNAME/"}}}});
+//# sourceMappingURL=path---cname-a2ab5da06fcc824347fd.js.map
