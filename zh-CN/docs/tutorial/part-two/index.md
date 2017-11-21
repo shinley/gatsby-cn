@@ -1,5 +1,5 @@
 ---
-title: Gatsby.js教程第二部分
+title: Gatsby.js Tutorial Part Two
 typora-copy-images-to: './'
 ---
 欢迎来到Gatsby教程的第二部分！
