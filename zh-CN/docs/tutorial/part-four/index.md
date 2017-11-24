@@ -338,15 +338,15 @@ module.exports = {
 
 ![allfile-query](allfile-query.png)
 
-The result is an array of File "nodes" (node is a fancy name for an object in a "graph"). Each File object has the fields we queried for.
+他的结果是一个文件“节点”的数组（节点是“图”中的对象的花式名称）。 每个File对象都有我们查询的字段。
 
-## Build a page with a GraphQL query
+## 使用GraphQL查询构建一个页面
 
-Building new pages with Gatsby often starts in Graph*i*QL. You first sketch out the data query by playing in Graph*i*QL then copy this to a React page component to start building the UI.
+用Gatsby构建新页面通常从GraphiQL开始。 您首先通过在GraphiQL中播放查看数据查询，然后将其复制到React页面组件以开始构建UI。
 
-Let's try this.
+我们来试试这个。
 
-Create a new file at `src/pages/my-files.js` with the `allFile` query we just created.
+使用我们刚创建的allFile查询在src/pages/my-files.js创建一个新文件。
 
 ```jsx{4}
 import React from "react"
@@ -372,15 +372,15 @@ export const query = graphql`
 `
 ```
 
-The `console.log(data)` line is highlighted above. It's often helpful when creating a new component to console out the data you're getting from the query so you can explore the data in your browser console while building the UI.
+Console.log（数据）行在上面突出显示。 创建一个新组件来控制从查询中获取的数据通常会很有帮助，这样您就可以在构建UI时浏览浏览器控制台中的数据。
 
-If you visit the new page at `/my-files/` and open up your browser console you will see:
+如果您访问/ my-files /中的新页面并打开浏览器控制台，您将看到：
 
 ![data-in-console](data-in-console.png)
 
-The shape of the data matches the shape of the query.
+数据的形状与查询的形状相匹配。
 
-Let's add some code to our component to print out the File data.
+让我们添加一些代码到我们的组件打印出文件数据。
 
 ```jsx{5-37}
 import React from "react"
@@ -438,19 +438,19 @@ export const query = graphql`
 `
 ```
 
-And… 
+然后... 
 
 ![my-files-page](my-files-page.png)
 
-## Transformer plugins
+## Transformer 插件
 
-Often, the format of the data we get from source plugins isn't what you want to use to build your website. The filesystem source plugin lets you query data *about* files but what if you want to query data *inside* files?
+通常，我们从源码插件获得的数据格式并不是您想要用来构建您的网站的格式。 文件系统源插件可以让你查询有关文件的数据，但是如果你想查询文件中的数据呢？
 
-To make this possible, Gatsby supports transformer plugins which take raw content from source plugins and *transform* it into something more usable.
+为了做到这一点，Gatsby支持从源插件获取原始内容的变压器插件，并将其转换为更加实用的东西。
 
-For example, markdown files. Markdown is nice to write in but when you build a page with it, you need the markdown to be HTML.
+例如，Markdown文件。 Markdown很好写，但是当你用它建立一个页面时，你需要把markdown变成HTML。
 
-Let's add a markdown file to our site at `src/pages/sweet-pandas-eating-sweets.md` (This will become our first markdown blog post) and learn how to *transform* it to HTML using transformer plugins and GraphQL.
+让我们在src/ pages/sweet-pandas-eating-sweets.md（这将成为我们的第一个markdown博客文章）中添加一个降价文件到我们的网站，并学习如何使用transformer 插件和GraphQL将其转换为HTML。
 
 ```markdown
 ---
@@ -460,12 +460,12 @@ date: "2017-08-10"
 
 Pandas are really sweet.
 
-Here's a video of a panda eating sweets.
+这是熊猫吃甜食的视频。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
 ```
 
-Once you save the file, look at `/my-files/` again—the new markdown file is in the table. This is a very powerful feature of Gatsby. Like the earlier `siteMetadata` example, source plugins can live reload data. `gatsby-source-filesystem` is always scanning for new files to be added and when they are, re-runs your queries.
+一旦保存了文件，再次查看/my-files/新的Markdown文件在表格中。 This is a very powerful feature of Gatsby. Like the earlier `siteMetadata` example, source plugins can live reload data. `gatsby-source-filesystem` is always scanning for new files to be added and when they are, re-runs your queries.
 
 Let's add a transformer plugin that can transform markdown files.
 
