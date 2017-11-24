@@ -33,15 +33,15 @@ typora-copy-images-to: './'
 </h2>
 
 <p>
-  Every site has some sort of global style. This includes things like the site's typography and background colors. These styles set the overall feel of the site—much like the color and texture of a wall sets the overall feel of a room.
+  每个网站都有一些全局的样式。 这包括网站的排版和背景颜色。 这些样式设置了网站的整体感觉 - 就像墙壁的颜色和纹理设置了整个房间的感觉。
 </p>
 
 <p>
-  Often people will use something like Bootstrap or Foundation for their global styles. The problem with these, however, is they're difficult to customize and they're not designed to work well with React components.
+  通常人们会使用像Bootstrap或Foundation这样的全局风格。 问题是它们很难定制，而且它们不能与React组件配合使用。
 </p>
 
 <p>
-  So for this tutorial let's explore a JavaScript library called <a href="https://github.com/kyleamathews/typography.js">Typography.js</a> that generates global styles and works particularly well with Gatsby and React.
+  因此，在本教程中，我们来探索一个名为Typography.js的JavaScript库，它可以生成全局样式，并且可以与Gatsby和React一起使用。
 </p>
 
 <h3>
@@ -49,19 +49,19 @@ typora-copy-images-to: './'
 </h3>
 
 <p>
-  Typography.js is a JavaScript library which generates typographic CSS.
+  Typography.js是一个生成印刷CSS的JavaScript库。
 </p>
 
 <p>
-  Instead of directly setting the <code>font-size</code> of different HTML elements, you tell Typography.js things like your desired <code>baseFontSize</code> and <code>baseLineHeight</code> and based on these, it generates the base CSS for all your elements.
+  您不需要直接设置不同的HTML元素的字体大小，而是通过Typography.js来获得所需的baseFontSize和baseLineHeight，并根据这些信息生成所有元素的基本CSS。
 </p>
 
 <p>
-  This makes it trivial to change the font size of all elements on a site without having to directly modify the dozens of CSS rules.
+  这使得更改站点上所有元素的字体大小变得微不足道，而无需直接修改很多CSS规则。
 </p>
 
 <p>
-  Using it looks something like this:
+  使用它看起来像这样:
 </p>
 
 <pre><code class="javascript">import Typography from "typography"
