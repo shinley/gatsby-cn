@@ -419,26 +419,26 @@ export default typography
 
             
             <h3>
-              CSS Modules
+              CSS模块
             </h3>
 
 
             
             <p>
-              Let's explore first <strong>CSS Modules</strong>.
+              我们来开发第一个CSS模块
             </p>
 
 
             
             <p>
-              Quoting from <a href="https://github.com/css-modules/css-modules">the CSS Module homepage</a>:
+              从CSS模块主页引用：
             </p>
 
 
             
             <blockquote>
               <p>
-                A <strong>CSS Module</strong> is a CSS file in which all class names and animation names are scoped locally by default.
+                CSS模块是一个CSS文件，其中所有类名称和动画名称默认在本地范围内。
               </p>
 
             </blockquote>
