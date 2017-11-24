@@ -2,17 +2,17 @@
 title: Gatsby.js Tutorial Part Two
 typora-copy-images-to: './'
 ---
-Welcome to part two of the Gatsby tutorial!
+欢迎来到Gatsby教程的第二部分！
 
-In this part we're going to explore options for styling Gatsby websites and dive deeper into using React components for building sites.
+在这一部分，我们将探索Gatsby网站的样式选择，并深入探讨如何使用React组件来构建网站。
 
-## Building with components
+## 用组件构建
 
-One of the big mental shifts you make when starting to build with components is that now your CSS, HTML, and JavaScript are tightly coupled, often living even within the same file.
+在开始构建组件时，您所做的一个重大转变就是现在您的CSS，HTML和JavaScript紧密结合，甚至在同一个文件中也是如此。
 
-While a seemingly simple change, it has profound implications for how you think about building websites.
+虽然看似简单的变化，但它对于如何考虑构建网站有着深远的影响。
 
-Take the simple example of creating a custom button. In the past you would create a CSS class (perhaps `.primary-button`) with your custom styles and then whenever you want to apply those styles e.g.
+以创建自定义按钮的简单示例为例。 In the past you would create a CSS class (perhaps `.primary-button`) with your custom styles and then whenever you want to apply those styles e.g.
 
 ```html
 <button class="primary-button">
