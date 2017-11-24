@@ -158,13 +158,13 @@ module.exports = {
 
 Now let's start querying 
 
-When building sites, it's common to want to reuse common bits of data across the site. Like the *site title* for example. Look at the `/about/` page. You'll notice that we have the site title in both the layout component (the site header) as well as in the title of the About page. But what if we want to change the site title at some point in the future? We'd have to search across all our components for spots using the site title. Which is both cumbersome and error-prone, especially as sites get larger and more complex. Much better to store the title in one place and then *pull* that title into components whenever we need it.
+在构建站点时，通常要重复使用站点中常见的数据位。 像网站标题例如。 看看/about/页面。 您会注意到我们在布局组件（站点标题）以及关于页面的标题中都有站点标题。 但是如果我们想在未来的某个时候改变网站的标题呢？ 我们必须使用网站标题搜索我们所有的组件。 这既麻烦又容易出错，尤其是在网站变得更大，更复杂的情况下。 将标题存储在一个地方，然后在需要的时候把这个标题放到组件中会更好。
 
-To solve this Gatsby supports a simple pattern for adding site "metadata"—like the title.
+为了解决这个问题，盖茨比支持添加网站“元数据”的简单模式，比如标题。
 
-We add this data to the `gatsby-config.js` file. Let's add our site title to `gatsby-config.js` and then query it from our layout and about page!
+我们将这些数据添加到gatsby-config.js文件中。 让我们将我们的网站标题添加到gatsby-config.js，然后从我们的布局和关于页面查询它！
 
-Edit your `gatsby-config.js`:
+编辑你的gatsby-config.js：
 
 ```javascript{2-4}
 module.exports = {
@@ -183,9 +183,9 @@ module.exports = {
 }
 ```
 
-Restart the development server.
+重新启动开发服务器。
 
-Then edit the two components:
+然后编辑这两个组件：
 
 `src/pages/about.js`
 
@@ -255,17 +255,17 @@ export const query = graphql`
 `
 ```
 
-It worked!! 
+好了！！！ 
 
 ![fake-title-graphql](fake-title-graphql.png)
 
 But let's restore the real title.
 
-One of the core principles of Gatsby is creators need an immediate connection to what they're creating ([hat tip to Bret Victor](http://blog.ezyang.com/2012/02/transcript-of-inventing-on-principleb/)). Or in other words, when you make any change to code you should immediately see the effect of that change. You manipulate an input of Gatsby and you see the new output showing up on the screen.
+Gatsby的核心原则之一是创造者需要立即联系他们正在创造的东西（帽子提示给布雷特·维克多）。 换句话说，当你对代码进行修改时，你应该立即看到这个改变的效果。 你操纵Gatsby的输入，你看到在屏幕上显示新的输出。
 
-So almost everywhere, changes you make will immediately take effect.
+所以几乎在任何地方，你所做的改变都会立即生效。
 
-Try editing the title in `siteMetadata`—change the title back to "Pandas Eating Lots". The change should show up very quickly in your browser.
+尝试在siteMetadata中编辑标题 - 将标题改回“大熊猫吃很多”。 浏览器中的变化应该会很快显示出来。
 
 ## Introducing Graph*i*QL
 
