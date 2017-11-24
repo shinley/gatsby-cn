@@ -465,15 +465,15 @@ Pandas are really sweet.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
 ```
 
-一旦保存了文件，再次查看/my-files/新的Markdown文件在表格中。 This is a very powerful feature of Gatsby. Like the earlier `siteMetadata` example, source plugins can live reload data. `gatsby-source-filesystem` is always scanning for new files to be added and when they are, re-runs your queries.
+一旦保存了文件，再次查看/my-files/新的Markdown文件在表格中。 这是Gatsby非常强大的特点。 像之前的siteMetadata示例一样，源插件可以重新加载数据。 gatsby-source-filesystem总是扫描新文件，并在它们出现时重新运行查询。
 
-Let's add a transformer plugin that can transform markdown files.
+让我们添加一个可以转换Markdown文件的transformer(转换器) 插件。
 
 ```shell
 npm install --save gatsby-transformer-remark
 ```
 
-Then add it to the `gatsby-config.js` like normal.
+然后像正常一样将它添加到gatsby-config.js中。
 
 ```javascript{13}
 module.exports = {
@@ -500,17 +500,17 @@ module.exports = {
 }
 ```
 
-Restart the development server then refresh (or open again) Graph*i*QL and look at the autocomplete:
+重新启动开发服务器，然后刷新（或再次打开）GraphiQL并查看自动完成：
 
 ![markdown-autocomplete](markdown-autocomplete.png)
 
-Select `allMarkdownRemark` again and run it like we did for `allFile`. You'll see there the markdown file we recently added. Explore the fields that are available on the `MarkdownRemark` node.
+再次选择allMarkdownRemark并像我们为allFile一样运行它。 你会看到我们最近添加的Markdown文件。 浏览MarkdownRemark节点上可用的字段。
 
 ![markdown-query](markdown-query.png)
 
-Ok! Hopefully some basics are starting to fall into place. Source plugins bring data *into* Gatsby's data system and *transformer* plugins transform raw content brought by source plugins. This simple pattern can handle all data sourcing and data transformation you might need when building a Gatsby site.
+好了， 希望一些基础知识开始落实到位。 源代码插件将数据带入到Gatsby的数据系统中，变压器插件转换源插件带来的原始内容。 这个简单的模式可以处理您在构建Gatsby网站时可能需要的所有数据采购和数据转换。
 
-## Create a list of our site's markdown files in `src/pages/index.js`
+## 在src/pages/index.js中创建我们网站的Markdown文件列表
 
 Let's now create a list of our markdown files on the front page. Like many blogs, we want to end up with a list of links on the front page pointing to each blog post. With GraphQL we can *query* for the current list of markdown blog posts so we won't need to maintain the list manually.
 
