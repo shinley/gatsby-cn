@@ -18,23 +18,23 @@ But don't get too comfortable 我们正在走向新的领域，需要一些大�
 
 什么是数据？
 
-A very computer science-y answer would be: data is things like `"strings"`, integers (`42`), objects (`{ pizza: true }`), etc.
+一个非常计算机科学的答案是：数据就像“字符串”，整数（42），对象（{pizza：true}）等等
 
-For the purpose of working in Gatsby however, a more useful answer is "everything that lives outside a React component".
+然而，为了在Gatsby工作，更有用的答案是“React组件之外的所有东西”。
 
-So far, we've been writing text and adding images *directly* in components. Which is an *excellent* way to build many websites. But, often you want to store data *outside* components and then bring the data *into* the component as needed.
+到目前为止，我们一直在编写文本，并直接在组件中添加图像。 这是建立多个网站的绝佳方式。 但是，通常要将数据存储在组件之外，然后根据需要将数据导入组件。
 
-For example, if you're building a site with Wordpress (so other contributors have a nice interface for adding & maintaining content) and Gatsby, the *data* for the site (pages and posts) are in Wordpress and you *pull* that data as needed into your components.
+例如，如果您使用Wordpress构建网站（所以其他贡献者具有良好的添加和维护内容的界面）和Gatsby，则网站（网页和帖子）的数据在Wordpress中，并根据需要将数据提取到 你的组件。
 
-Data can also live in file types like markdown, CSV, etc. as well as databases and APIs of all sorts.
+数据也可以生活在像Markdown，CSV等文件类型，以及各种数据库和API。
 
-**Gatsby's data layer lets us pull data from these (and any other source) directly into our components**—in the shape and form we want.
+Gatsby的数据层让我们可以将数据从这些（以及其他来源）中直接导入到我们的组件中 - 以我们想要的形式。
 
-## How Gatsby's data layer uses GraphQL to pull data into components
+## Gatsby的数据层如何使用GraphQL将数据提取到组件中.
 
-If you're familiar with the React world, there are many options for loading data into components. One of the most popular and robust of these is a technology called [GraphQL](http://graphql.org/).
+如果你对React世界很熟悉，有许多选项可以将数据加载到组件中。 其中最流行和最健壮的是一种名为GraphQL的技术。
 
-GraphQL was invented at Facebook to help product engineers pull needed data into components.
+GraphQL是在Facebook发明的，以帮助产品工程师将所需的数据提取到组件中。
 
 GraphQL is a **q**uery **l**anguage (the *QL* part of its name). If you're familiar with SQL, it works in a very similar way. You describe in your component, using a special syntax, the data you want and then that data is given to you.
 
