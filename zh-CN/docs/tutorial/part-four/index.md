@@ -267,34 +267,34 @@ Gatsby的核心原则之一是创造者需要立即联系他们正在创造的�
 
 尝试在siteMetadata中编辑标题 - 将标题改回“大熊猫吃很多”。 浏览器中的变化应该会很快显示出来。
 
-## Introducing Graph*i*QL
+## 介绍GraphiQL
 
-Graph*i*QL is the GraphQL IDE. It's a powerful (and all-around awesome) tool you'll use often while building Gatsby websites.
+GraphiQL是GraphQL IDE。 这是一个在构建Gatsby网站时经常使用的功能强大的（全能的）工具。
 
-You can access it when your site's development server is running—normally at http://localhost:8000/___graphql.
+您可以在网站的开发服务器正常运行时访问它（通常位于http://localhost:8000/___ graphql）。
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="/graphiql-explore.mp4"></source>
   <p>Your browser does not support the video element.</p>
 </video>
 
-Here we poke around the built-in `Site` "type" and see what fields are available on it—including the `siteMetadata` object we queried earlier. Try opening Graph*i*QL and play with your data! Press <kbd>Ctrl + Space</kbd> to bring up the autocomplete window and <kbd>Ctrl + Enter</kbd> to run the query. We'll be using Graph*i*QL a lot more through the remainder of the tutorial.
+在这里，我们围绕内置的Site“type”进行探究，看看有哪些可用的字段，包括我们之前查询过的siteMetadata对象。 尝试打开GraphiQL并显示你的数据！ 按Ctrl +空格键弹出自动填充窗口，按Ctrl + Enter键运行查询。 本教程的其余部分将更多地使用GraphiQL。
 
-## Source plugins
+## 源插件
 
-Data in Gatsby sites can come literally from anywhere: APIs, databases, CMSs, local files, etc.
+Gatsby网站的数据可以来自任何地方：API，数据库，CMS，本地文件等。
 
-Source plugins fetch data from their source. E.g. the filesystem source plugin knows how to fetch data from the file system. The Wordpress plugin knows how to fetch data from the Wordpress API.
+源插件从他们的源获取数据。 例如。 文件系统源插件知道如何从文件系统中获取数据。 Wordpress插件知道如何从Wordpress API获取数据。
 
-Let's add [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) and explore how it works.
+让我们添加gatsby-source-filesystem并探索它是如何工作的。
 
-First install the plugin:
+首先安装插件：
 
 ```sh
 npm install --save gatsby-source-filesystem
 ```
 
-Then add it to your `gatsby-config.js`:
+然后把它添加到你的gatsby-config.js中：
 
 ```javascript{6-12}
 module.exports = {
@@ -320,21 +320,21 @@ module.exports = {
 }
 ```
 
-Save that and restart the gatsby development server. Then open up Graph*i*QL again.
+保存并重新启动gatsby开发服务器。 然后再次打开GraphiQL。
 
-If you bring up the autocomplete window you'll see:
+如果你弹出自动填充窗口，你会看到：
 
 ![graphiql-filesystem](graphiql-filesystem.png)
 
-Hit <kbd>Enter</kbd> on `allFile` then type <kbd>Ctrl + Enter</kbd> to run a query.
+在allFile上输入Enter，然后按Ctrl + Enter运行查询。
 
 ![filesystem-query](filesystem-query.png)
 
-Delete the `id` from the query and bring up the autocomplete again (<kbd>Ctrl + Space</kbd>).
+从查询中删除标识并重新启动自动完成（Ctrl +空格键）。
 
 ![filesystem-autocomplete](filesystem-autocomplete.png)
 
-Try adding a number of fields to your query, pressing <kbd>Ctrl + Enter</kbd> each time to re-run the query. You'll see something like this:
+尝试添加一些字段到您的查询，每次按Ctrl + Enter重新运行查询。 你会看到这样的东西：
 
 ![allfile-query](allfile-query.png)
 
