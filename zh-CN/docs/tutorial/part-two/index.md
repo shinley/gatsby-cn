@@ -322,7 +322,7 @@ export default typography
 
           
           <p>
-            There are <a href="https://github.com/KyleAMathews/typography.js#published-typographyjs-themes">many themes available</a> for Typography.js. Let's try a couple. Run in your terminal at the root of your site:
+            为Typography.js提供了<a href="https://github.com/KyleAMathews/typography.js#published-typographyjs-themes">许多主题</a>. 我们来试试一下吧, 在您的站点的根目录下运行终端命令：
           </p>
 
 
@@ -333,7 +333,7 @@ export default typography
 
           
           <p>
-            To use the Bootstrap theme, change your typography code to:
+            要使用Bootstrap主题，请将您的印刷代码更改为：
           </p>
 
 
@@ -355,7 +355,7 @@ export default typography
 
           
           <p>
-            Themes can also add Google Fonts. The Lawton theme we installed along with the Bootstrap theme does this. Replace your typography module code with the following, then restart the dev server (necessary to load the new Google Fonts).
+            主题还可以添加Google字体。 我们与Bootstrap主题一起安装的Lawton主题是这样做的。 用以下替换您的印刷术模块代码，然后重新启动开发服务器（加载新的Google字体所必需的）。
           </p>
 
 
@@ -378,105 +378,104 @@ export default typography
 
           
           <p>
-            Typography.js has more than 30 themes! <a href="http://kyleamathews.github.io/typography.js">Try them live</a> or check out <a href="https://github.com/KyleAMathews/typography.js#published-typographyjs-themes">the complete list</a>
+            Typography.js有超过30个主题！ <a href="http://kyleamathews. github. io/typography. js">试一下</a>或者查看代码的 <a href="https://github. com/KyleAMathews/typography. js#published-typographyjs-themes">完整列表</a>
           </p>
 
 
           
           <h2>
-            Component CSS
+            CSS组件
           </h2>
 
 
           
           <p>
-            Gatsby has a wealth of options available for styling components. Let's explore three very popular and production-ready options. We'll build a simple page three times to explore each styling option.
+            盖茨比有丰富的选项可用于样式组件。 让我们来探索三个非常受欢迎的产品选项。 我们将建立一个简单的页面三次，以探索每个样式选项。
           </p>
 
 
           
           <p>
-            Each is a variant on "CSS-in-JS"—which solves many of the problems with traditional CSS.
+            每个都是“CSS-in-JS”中的一个变种，它解决了传统CSS的许多问题。
           </p>
 
 
           
           <p>
-            One of the most important problems they solve is selector name collisions. With traditional CSS, you have to be careful not to overwrite CSS selectors used elsewhere in a site because all CSS selectors live in the same global namespace. This unfortunate restriction can lead to elaborate (and often confusing) selector naming schemes.
+            他们解决的最重要的问题之一是选择器名称冲突。 使用传统的CSS，您必须小心，不要覆盖站点中其他地方使用的CSS选择器，因为所有CSS选择器都位于同一个全局名称空间中。 这个限制会让你必须小心（并且经常令人困惑）选择器命名方案。
           </p>
 
 
           
           <p>
-            With CSS-in-JS, you avoid all that as CSS selectors are scoped automatically to their component. Styles are tightly coupled with their components. This makes it very easy to know how to edit a component's CSS as there's never any confusion about how and where CSS is being used.
+            使用CSS-in-JS，可以避免所有这些，因为CSS选择器会自动限定到其组件。 样式与其组件紧密结合。 这使得知道如何编辑组件的CSS变得非常容易，因为从来没有任何关于如何和在哪里使用CSS的混淆。
           </p>
 
 
           
           <p>
-            For some background reading on CSS-in-JS, see <a href="https://speakerdeck.com/vjeux/react-css-in-js">Christopher "vjeux" Chedeau's 2014 presentation that sparked this movement</a> as well as <a href="https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660">Mark Dalgleish's more recent post "A Unified Styling Language"</a>.
-          </p>
+            有关CSS-in-JS的一些背景知识，请参见<a href="https://speakerdeck. com/vjeux/react-css-in-js"> Christopher“vjeux”Chedeau 2014年的演讲，激发了这一运动</ a >以及<a href="https://medium. com/seek-blog/a-unified-styling-language-d0c208de2660"> Mark Dalgleish最近发布的“统一样式语言”</a>。</p>
 
 
-          
-          <h3>
-            CSS Modules
-          </h3>
+            
+            <h3>
+              CSS Modules
+            </h3>
 
 
-          
-          <p>
-            Let's explore first <strong>CSS Modules</strong>.
-          </p>
-
-
-          
-          <p>
-            Quoting from <a href="https://github.com/css-modules/css-modules">the CSS Module homepage</a>:
-          </p>
-
-
-          
-          <blockquote>
+            
             <p>
-              A <strong>CSS Module</strong> is a CSS file in which all class names and animation names are scoped locally by default.
+              Let's explore first <strong>CSS Modules</strong>.
             </p>
 
-          </blockquote>
+
+            
+            <p>
+              Quoting from <a href="https://github.com/css-modules/css-modules">the CSS Module homepage</a>:
+            </p>
 
 
-          
-          <p>
-            CSS Modules is very popular, as it lets you write CSS like normal but with a lot more safety. The tool automatically makes class and animation names unique so you don't have to worry about selector name collisions.
-          </p>
+            
+            <blockquote>
+              <p>
+                A <strong>CSS Module</strong> is a CSS file in which all class names and animation names are scoped locally by default.
+              </p>
+
+            </blockquote>
 
 
-          
-          <p>
-            CSS Modules are highly recommended for those new to building with Gatsby (and React in general).
-          </p>
+            
+            <p>
+              CSS Modules is very popular, as it lets you write CSS like normal but with a lot more safety. The tool automatically makes class and animation names unique so you don't have to worry about selector name collisions.
+            </p>
 
 
-          
-          <p>
-            Gatsby works out of the box with CSS Modules.
-          </p>
+            
+            <p>
+              CSS Modules are highly recommended for those new to building with Gatsby (and React in general).
+            </p>
 
 
-          
-          <p>
-            Let's build a page using CSS Modules.
-          </p>
+            
+            <p>
+              Gatsby works out of the box with CSS Modules.
+            </p>
 
 
-          
-          <p>
-            First, let's create a new <code>Container</code> component which we'll use for each of the CSS-in-JS examples. Create a <code>components</code> directory at <code>src/components</code> and then, in this directory, create a file named <code>container.js</code> and paste the following.
-          </p>
+            
+            <p>
+              Let's build a page using CSS Modules.
+            </p>
 
 
-          
-          <pre><code class="javascript">import React from "react"
+            
+            <p>
+              First, let's create a new <code>Container</code> component which we'll use for each of the CSS-in-JS examples. Create a <code>components</code> directory at <code>src/components</code> and then, in this directory, create a file named <code>container.js</code> and paste the following.
+            </p>
+
+
+            
+            <pre><code class="javascript">import React from "react"
 
 export default ({ children }) =&gt;
   &lt;div style={{ margin: "3rem auto", maxWidth: 600 }}&gt;
@@ -485,14 +484,14 @@ export default ({ children }) =&gt;
 </code></pre>
 
 
-          
-          <p>
-            Then create a new component page by creating a file at <code>src/pages/about-css-modules.js</code>:
-          </p>
+            
+            <p>
+              Then create a new component page by creating a file at <code>src/pages/about-css-modules.js</code>:
+            </p>
 
 
-          
-          <pre><code class="javascript">import React from "react"
+            
+            <pre><code class="javascript">import React from "react"
 
 import Container from "../components/container"
 
@@ -504,38 +503,38 @@ export default () =&gt;
 </code></pre>
 
 
-          
-          <p>
-            You'll notice we imported the <code>Container</code> component we just created.
-          </p>
+            
+            <p>
+              You'll notice we imported the <code>Container</code> component we just created.
+            </p>
 
 
-          
-          <p>
-            Your page should now look like:
-          </p>
+            
+            <p>
+              Your page should now look like:
+            </p>
 
 
-          
-          <p>
-            <img src="css-modules-1.png" alt="css-modules-1" />
-          </p>
+            
+            <p>
+              <img src="css-modules-1.png" alt="css-modules-1" />
+            </p>
 
 
-          
-          <p>
-            Let's create a simple list of people with names, avatars, and short latin biographies.
-          </p>
+            
+            <p>
+              Let's create a simple list of people with names, avatars, and short latin biographies.
+            </p>
 
 
-          
-          <p>
-            First, let's create the file for the CSS at <code>src/pages/about-css-modules.module.css</code>. You'll notice that the file name ends with <code>.module.css</code> instead of <code>.css</code> like normal. This is how we tell Gatsby that this CSS file should be processed as CSS modules.
-          </p>
+            
+            <p>
+              First, let's create the file for the CSS at <code>src/pages/about-css-modules.module.css</code>. You'll notice that the file name ends with <code>.module.css</code> instead of <code>.css</code> like normal. This is how we tell Gatsby that this CSS file should be processed as CSS modules.
+            </p>
 
 
-          
-          <pre><code class="css">.user {
+            
+            <pre><code class="css">.user {
   display: flex;
   align-items: center;
   margin: 0 auto 12px auto;
@@ -569,56 +568,56 @@ export default () =&gt;
 </code></pre>
 
 
-          
-          <p>
-            Now import that file into the <code>about-css-modules.js</code> page we created earlier. Also log the resulting import so we can see what the processed file looks like.
-          </p>
+            
+            <p>
+              Now import that file into the <code>about-css-modules.js</code> page we created earlier. Also log the resulting import so we can see what the processed file looks like.
+            </p>
 
 
-          
-          <pre><code class="javascript">import styles from "./about-css-modules.module.css"
+            
+            <pre><code class="javascript">import styles from "./about-css-modules.module.css"
 console.log(styles)
 </code></pre>
 
 
-          
-          <p>
-            If you open the developer console in your browser you'll see:
-          </p>
+            
+            <p>
+              If you open the developer console in your browser you'll see:
+            </p>
 
 
-          
-          <p>
-            <img src="css-modules-console.png" alt="css-modules-console" />
-          </p>
+            
+            <p>
+              <img src="css-modules-console.png" alt="css-modules-console" />
+            </p>
 
 
-          
-          <p>
-            If you compare that to our CSS file, you'll see that each class is now a key in the imported object pointing to a long string e.g. <code>avatar</code> points to <code>about-css-modules-module---avatar----hYcv</code>. These are the class names CSS Modules generates. They're guaranteed to be unique across your site. And because you have to import them to use the classes, there's never any question about where some CSS is being used.
-          </p>
+            
+            <p>
+              If you compare that to our CSS file, you'll see that each class is now a key in the imported object pointing to a long string e.g. <code>avatar</code> points to <code>about-css-modules-module---avatar----hYcv</code>. These are the class names CSS Modules generates. They're guaranteed to be unique across your site. And because you have to import them to use the classes, there's never any question about where some CSS is being used.
+            </p>
 
 
-          
-          <p>
-            Let's use our styles to create a simple <code>User</code> component.
-          </p>
+            
+            <p>
+              Let's use our styles to create a simple <code>User</code> component.
+            </p>
 
 
-          
-          <p>
-            Let's create the new component inline in the <code>about-css-modules.js</code> page component. The general rule of thumb is if you use a component in multiple places on a site, it should be in its own module file in the <code>components</code> directory. But, if it's used only in one file, create it inline.
-          </p>
+            
+            <p>
+              Let's create the new component inline in the <code>about-css-modules.js</code> page component. The general rule of thumb is if you use a component in multiple places on a site, it should be in its own module file in the <code>components</code> directory. But, if it's used only in one file, create it inline.
+            </p>
 
 
-          
-          <p>
-            Modify <code>about-css-modules.js</code> so it looks like the following:
-          </p>
+            
+            <p>
+              Modify <code>about-css-modules.js</code> so it looks like the following:
+            </p>
 
 
-          
-          <pre><code class="jsx{6-17,23-30}">import React from "react"
+            
+            <pre><code class="jsx{6-17,23-30}">import React from "react"
 import styles from "./about-css-modules.module.css"
 
 import Container from "../components/container"
@@ -654,55 +653,55 @@ export default () =&gt;
 </code></pre>
 
 
-          
-          <p>
-            The finished page should now look like:
-          </p>
+            
+            <p>
+              The finished page should now look like:
+            </p>
 
 
-          
-          <p>
-            <img src="css-modules-final.png" alt="css-modules-final" />
-          </p>
+            
+            <p>
+              <img src="css-modules-final.png" alt="css-modules-final" />
+            </p>
 
 
-          
-          <h3>
-            Glamor
-          </h3>
+            
+            <h3>
+              Glamor
+            </h3>
 
 
-          
-          <p>
-            Let's create the same page using <a href="https://github.com/threepointone/glamor">Glamor</a>.
-          </p>
+            
+            <p>
+              Let's create the same page using <a href="https://github.com/threepointone/glamor">Glamor</a>.
+            </p>
 
 
-          
-          <p>
-            Glamor lets you write <em>real</em> CSS inline in your components using the same Object CSS syntax React supports for the <code>style</code> prop.
-          </p>
+            
+            <p>
+              Glamor lets you write <em>real</em> CSS inline in your components using the same Object CSS syntax React supports for the <code>style</code> prop.
+            </p>
 
 
-          
-          <p>
-            First install the Gatsby plugin for Glamor.
-          </p>
+            
+            <p>
+              First install the Gatsby plugin for Glamor.
+            </p>
 
 
-          
-          <pre><code class="shell">npm install --save gatsby-plugin-glamor
+            
+            <pre><code class="shell">npm install --save gatsby-plugin-glamor
 </code></pre>
 
 
-          
-          <p>
-            And then add it to your <code>gatsby-config.js</code>
-          </p>
+            
+            <p>
+              And then add it to your <code>gatsby-config.js</code>
+            </p>
 
 
-          
-          <pre><code class="javascript{9}">module.exports = {
+            
+            <pre><code class="javascript{9}">module.exports = {
   plugins: [
     {
       resolve: `gatsby-plugin-typography`,
@@ -716,20 +715,20 @@ export default () =&gt;
 </code></pre>
 
 
-          
-          <p>
-            Restart <code>gatsby develop</code> again to enable the Glamor plugin.
-          </p>
+            
+            <p>
+              Restart <code>gatsby develop</code> again to enable the Glamor plugin.
+            </p>
 
 
-          
-          <p>
-            Now create the Glamor page at <code>src/pages/about-glamor.js</code>
-          </p>
+            
+            <p>
+              Now create the Glamor page at <code>src/pages/about-glamor.js</code>
+            </p>
 
 
-          
-          <pre><code class="jsx">import React from "react"
+            
+            <pre><code class="jsx">import React from "react"
 
 import Container from "../components/container"
 
@@ -741,14 +740,14 @@ export default () =&gt;
 </code></pre>
 
 
-          
-          <p>
-            Let's add the same inline <code>User</code> component but this time using Glamor's <code>css</code> prop.
-          </p>
+            
+            <p>
+              Let's add the same inline <code>User</code> component but this time using Glamor's <code>css</code> prop.
+            </p>
 
 
-          
-          <pre><code class="jsx{5-26,32-40}">import React from "react"
+            
+            <pre><code class="jsx{5-26,32-40}">import React from "react"
 
 import Container from "../components/container"
 
@@ -794,55 +793,55 @@ export default () =&gt;
 </code></pre>
 
 
-          
-          <p>
-            The final Glamor page should look identical to the CSS Modules page.
-          </p>
+            
+            <p>
+              The final Glamor page should look identical to the CSS Modules page.
+            </p>
 
 
-          
-          <p>
-            <img src="glamor-example.png" alt="glamor-example" />
-          </p>
+            
+            <p>
+              <img src="glamor-example.png" alt="glamor-example" />
+            </p>
 
 
-          
-          <h3>
-            Styled Components
-          </h3>
+            
+            <h3>
+              Styled Components
+            </h3>
 
 
-          
-          <p>
-            For our final CSS-in-JS example, we'll try <a href="https://www.styled-components.com/">Styled Components</a>.
-          </p>
+            
+            <p>
+              For our final CSS-in-JS example, we'll try <a href="https://www.styled-components.com/">Styled Components</a>.
+            </p>
 
 
-          
-          <p>
-            Styled Components lets you use actual CSS syntax inside your components.
-          </p>
+            
+            <p>
+              Styled Components lets you use actual CSS syntax inside your components.
+            </p>
 
 
-          
-          <p>
-            First, like normal, we'll install the Gatsby plugin for Styled Components.
-          </p>
+            
+            <p>
+              First, like normal, we'll install the Gatsby plugin for Styled Components.
+            </p>
 
 
-          
-          <pre><code class="sh">npm install --save gatsby-plugin-styled-components
+            
+            <pre><code class="sh">npm install --save gatsby-plugin-styled-components
 </code></pre>
 
 
-          
-          <p>
-            Then modify the <code>gatsby-config.js</code>. Before we can use Styled Components however, we'll need to remove the Glamor plugin and delete the Glamor component page we created. The two plugins conflict with each other as both want to take control during server rendering.
-          </p>
+            
+            <p>
+              Then modify the <code>gatsby-config.js</code>. Before we can use Styled Components however, we'll need to remove the Glamor plugin and delete the Glamor component page we created. The two plugins conflict with each other as both want to take control during server rendering.
+            </p>
 
 
-          
-          <pre><code class="javascript{9}">module.exports = {
+            
+            <pre><code class="javascript{9}">module.exports = {
   plugins: [
     {
       resolve: `gatsby-plugin-typography`,
@@ -856,14 +855,14 @@ export default () =&gt;
 </code></pre>
 
 
-          
-          <p>
-            Then at <code>src/pages/about-styled-components.js</code> create:
-          </p>
+            
+            <p>
+              Then at <code>src/pages/about-styled-components.js</code> create:
+            </p>
 
 
-          
-          <pre><code class="jsx">import React from "react"
+            
+            <pre><code class="jsx">import React from "react"
 import styled from "styled-components"
 
 import Container from "../components/container"
@@ -929,48 +928,48 @@ export default () =&gt;
 </code></pre>
 
 
-          
-          <h3>
-            Other CSS options
-          </h3>
+            
+            <h3>
+              Other CSS options
+            </h3>
 
-
-          
-          <p>
-            Gatsby supports almost every possible styling option (if there isn't a plugin yet for your favorite CSS option, <a href="/docs/how-to-contribute/">please contribute one!</a>)
-          </p>
-
-
-          
-          <ul>
-            <li>
-              <a href="/packages/gatsby-plugin-sass/">Sass</a>
-            </li>
 
             
-            <li>
-              <a href="/packages/gatsby-plugin-emotion/">Emotion</a>
-            </li>
+            <p>
+              Gatsby supports almost every possible styling option (if there isn't a plugin yet for your favorite CSS option, <a href="/docs/how-to-contribute/">please contribute one!</a>)
+            </p>
+
 
             
-            <li>
-              <a href="/packages/gatsby-plugin-jss/">JSS</a>
-            </li>
+            <ul>
+              <li>
+                <a href="/packages/gatsby-plugin-sass/">Sass</a>
+              </li>
+
+              
+              <li>
+                <a href="/packages/gatsby-plugin-emotion/">Emotion</a>
+              </li>
+
+              
+              <li>
+                <a href="/packages/gatsby-plugin-jss/">JSS</a>
+              </li>
+
+              
+              <li>
+                <a href="/packages/gatsby-plugin-stylus/">Stylus</a>
+              </li>
+
+              
+              <li>
+                and more!
+              </li>
+
+            </ul>
+
 
             
-            <li>
-              <a href="/packages/gatsby-plugin-stylus/">Stylus</a>
-            </li>
-
-            
-            <li>
-              and more!
-            </li>
-
-          </ul>
-
-
-          
-          <p>
-            Now continue on to <a href="/tutorial/part-three/">Part Three</a> of the tutorial.
-          </p>
+            <p>
+              Now continue on to <a href="/tutorial/part-three/">Part Three</a> of the tutorial.
+            </p>
