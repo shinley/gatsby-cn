@@ -1,5 +1,5 @@
 ---
-title: Gatsby.js教程第三部分
+title: Gatsby.js Tutorial Part Three
 typora-copy-images-to: './'
 ---
 盖茨比让你轻松创建“布局组件”。 布局组件是您要在多个页面上共享的网站部分。 例如，Gatsby网站通常会有一个共享页眉和页脚的布局组件。 其他常见的东西添加到布局是侧边栏和导航菜单。
