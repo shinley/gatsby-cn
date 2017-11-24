@@ -2,21 +2,21 @@
 title: Gatsby.js Tutorial Part Four
 typora-copy-images-to: './'
 ---
-Welcome to Part Four of the tutorial! Halfway through! Hope things are starting to feel pretty comfortable 
+欢迎来到教程的第四部分！ 中途！ 希望事情开始感觉很舒服 
 
-But don't get too comfortable In this tutorial, we're headed to new territory which will require some brain stretching to fully understand. In the next two parts of the tutorial, we'll be diving into the Gatsby data layer! A powerful feature of Gatsby that lets you easily build sites from markdown, Wordpress, headless CMSs, and other data sources of all flavors.
+But don't get too comfortable 我们正在走向新的领域，需要一些大脑的充分理解。 在接下来的两部分教程中，我们将深入到Gatsby数据层！ Gatsby的一个强大功能，可让您轻松地从Markdown，Wordpress，无头CMS和其他所有类型的数据源构建网站。
 
-## Recap of first half of the tutorial
+## 本教程前半部分的总结
 
-So far, we've been learning how to use React.js—how powerful it is to be able to create our *own* components to act as custom building blocks for websites.
+到目前为止，我们一直在学习如何使用React.js--能够创建自己的组件以充当网站的自定义构建块的能力如何。
 
-We've also explored styling components using CSS-in-JS, which lets us encapsulate CSS within our components.
+我们还使用CSS-in-JS探索了样式组件，这使我们可以在组件中封装CSS。
 
-## Data in Gatsby
+## 数据在Gatsby
 
-A website has four parts, HTML, CSS, JS, and data. The first half of the tutorial focused on the first three. Let's learn now how to use data in Gatsby sites.
+一个网站有四个部分，HTML，CSS，JS和数据。 本教程的前半部分集中在前三个部分。 现在我们来学习如何在Gatsby网站中使用数据。
 
-What is data?
+什么是数据？
 
 A very computer science-y answer would be: data is things like `"strings"`, integers (`42`), objects (`{ pizza: true }`), etc.
 
