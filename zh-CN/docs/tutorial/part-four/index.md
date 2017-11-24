@@ -36,25 +36,25 @@ Gatsby的数据层让我们可以将数据从这些（以及其他来源）中�
 
 GraphQL是在Facebook发明的，以帮助产品工程师将所需的数据提取到组件中。
 
-GraphQL is a **q**uery **l**anguage (the *QL* part of its name). If you're familiar with SQL, it works in a very similar way. You describe in your component, using a special syntax, the data you want and then that data is given to you.
+GraphQL是一种查询语言（它的名字的QL部分）。 如果您熟悉SQL，它的工作方式非常类似。 您可以在组件中使用特殊的语法描述所需的数据，然后将数据提供给您。
 
-Gatsby uses GraphQL to let components declare the data it needs and then gives this data to components.
+Gatsby使用GraphQL让组件声明它需要的数据，然后将这些数据提供给组件。
 
-## Our first GraphQL query
+## 我们的第一个GraphQL查询
 
-Let's create another new site for this part of the tutorial like in the previous parts. We're going to build a simple markdown blog called "Pandas Eating Lots". It's dedicated to showing off the best pictures & videos of Pandas eating lots of food. Along the way we'll be dipping our toes into GraphQL and Gatsby's markdown support.
+让我们为本教程的这一部分创建另一个新的网站，就像前面的部分一样。 我们打算建立一个简单的Markdown博客, 名字叫“大熊猫吃很多”。 这是专门展示熊猫吃大量食物的最佳图片和视频。 随着我们对GraphQL的深入了解和Gatsby对Markdown的支持。
 
 ```shell
 gatsby new tutorial-part-four https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-Then install some other needed dependencies. We'll use the Typography theme Kirkham + we'll try out another CSS-in-JS library [Glamorous](https://glamorous.rocks/).
+然后安装一些其他需要的依赖项。 我们将使用字体主题Kirkham +我们将尝试另一个CSS-in-JS库Glamorous。
 
 ```shell
 npm install --save gatsby-plugin-typography gatsby-plugin-glamor glamorous typography-theme-kirkham
 ```
 
-Let's setup a site similar to what we ended with last time with a layout component and two page components.
+让我们设置一个类似于我们上次用布局组件和两个页面组件结束的站点。
 
 `src/pages/index.js`
 
@@ -134,7 +134,7 @@ const typography = new Typography(kirkhamTheme)
 module.exports = typography
 ```
 
-`gatsby-config.js` (must be in the root of your project, not under src)
+gatsby-config.js（必须在你的项目的根目录下，而不是在src下）
 
 ```javascript
 module.exports = {
@@ -150,11 +150,11 @@ module.exports = {
 }
 ```
 
-Add the above files and then run `gatsby develop` like normal and you should see the following:
+添加上面的文件，然后运行gatsby develop，你应该看到以下内容：
 
 ![start](start.png)
 
-We have another simple site with a layout and two pages.
+我们有另一个布局和两个页面简单的网站。
 
 Now let's start querying 
 
