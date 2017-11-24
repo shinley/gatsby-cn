@@ -269,13 +269,13 @@ export default () =&gt;
 
           
           <p>
-            What we're seeing here is the default CSS Typography.js produces. We can easily customize it, however. Let's do that.
+            我们在这里看到的是Typography.js生成的默认的CSS 。 但是，我们可以轻松地定制它。 我们来做吧
           </p>
 
 
           
           <p>
-            In your site, create a new directory at <code>src/utils</code>. There create a file named <code>typography.js</code>. In it, add the following code.
+            在您的站点中，在 src/utils/ code>处创建一个新目录。 在那里创建一个名为 typography.js 的文件。 在其中添加下面的代码。
           </p>
 
 
@@ -290,7 +290,7 @@ export default typography
 
           
           <p>
-            Then set this module to be used by <code>gatsby-plugin-typography</code> as its config in our <code>gatsby-config.js</code> file.
+            然后将这个模块设置为gatsby-plugin-typography作为它的配置在我们的gatsby-config.js文件中使用。
           </p>
 
 
@@ -310,13 +310,13 @@ export default typography
 
           
           <p>
-            Stop <code>gatsby develop</code> and then restart it again for our plugin change to take effect.
+            停止 gatsby develop ，然后重新启动它，让我们的插件更改生效。
           </p>
 
 
           
           <p>
-            Now all the text font sizes should be slightly bigger. Try changing the <code>baseFontSize</code> to <code>24px</code> then <code>12px</code>. All elements get resized as their <code>font-size</code> is based on the <code>baseFontSize</code>.
+            现在所有的文字字体大小都应该稍大些。 尝试将 baseFontSize 更改为 24px， 所有的元素都被调整大小，因为它们的 font-size是基于baseFontSize的。
           </p>
 
 
