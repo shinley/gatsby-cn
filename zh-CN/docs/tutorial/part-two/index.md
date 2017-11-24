@@ -75,46 +75,46 @@ const typography = new Typography({
 </code></pre>
 
 <h2>
-  Gatsby plugins
+  Gatsby插件
 </h2>
 
 <p>
-  But before we can get back to building and trying out Typography.js, let's make a quick diversion and talk about Gatsby plugins.
+  但在我们回到构建和尝试Typography.js之前，让我们快速转换一下，讨论一下Gatsby插件。
 </p>
 
 <p>
-  You're probably familiar with the idea of plugins. Many software systems support adding custom plugins to add new functionality or even modify the core workings of the software.
+  你可能很熟悉插件的概念。 许多软件系统都支持添加自定义插件来添加新功能，甚至修改软件的核心工作。
 </p>
 
 <p>
-  Gatsby plugins work the same way.
+  盖茨比插件以同样的方式工作。
 </p>
 
 <p>
-  Community members (like you!) can contribute plugins (small amounts of JavaScript code) that others can then use when building Gatsby sites.
+  社区成员（比如你）可以贡献插件（少量JavaScript代码），其他人可以在构建Gatsby网站时使用这些插件。
 </p>
 
 <p>
-  There's already dozens of plugins! Check them out at the <a href="/docs/plugins/">plugins section of the site</a>.
+  已经有很多的插件了！ 可以从 <a href="/docs/plugins/">plugins section of the site</a>检出.
 </p>
 
 <p>
-  Gatsby plugins are easy to install and use. In almost every Gatsby site you build, you will be installing plugins. While working through the rest of the tutorial, you'll have many opportunities to practice installing and using plugins.
+  盖茨比插件很容易安装和使用。 几乎在你建立的每一个Gatsby网站上，你都会安装插件。 在完成本教程的其余部分时，您将有很多机会来练习安装和使用插件。
 </p>
 
 <h2>
-  Installing your first Gatsby plugin
+  安装你的第一个Gatsby插件
 </h2>
 
 <p>
-  Let's start by creating a new site. Similar to Part One, run the following to create a new site.
+  让我们开始创建一个新的网站。 类似于第一部分，运行以下来创建一个新的站点。
 </p>
 
 <pre><code>gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
 </code></pre>
 
 <p>
-  This creates a new site with the following structure.
+  这会创建一个具有以下结构的新站点。
 </p>
 
 <pre><code class="shell">├── package.json
@@ -124,26 +124,26 @@ const typography = new Typography({
 </code></pre>
 
 <p>
-  This is the minimal setup for a Gatsby site.
+  这是Gatsby网站的最小设置。
 </p>
 
 <p>
-  To install a plugin, there's two steps. First you install the plugin's NPM package and second you add the plugin to your site's <code>gatsby-config.js</code>.
+  要安装插件，有两个步骤。 首先安装插件的NPM包，然后将插件添加到网站的gatsby-config.js中。
 </p>
 
 <p>
-  Typography.js has a Gatsby plugin, so let's install that by running:
+  Typography.js有一个Gatsby插件，所以让我们通过运行下面命令来安装：
 </p>
 
 <pre><code class="shell">npm install --save gatsby-plugin-typography
 </code></pre>
 
 <p>
-  Next, create a file at the root of your project folder named <code>gatsby-config.js</code>. This is where you add plugins to a site along with other site configuration.
+  接下来，在名为gatsby-config.js的项目文件夹的根目录下创建一个文件。 这是您将插件添加到网站以及其他网站配置的地方。
 </p>
 
 <p>
-  Copy the following into <code>gatsby-config.js</code>
+  将以下内容复制到gatsby-config.js中
 </p>
 
 <pre><code class="javascript">module.exports = {
@@ -152,7 +152,7 @@ const typography = new Typography({
 </code></pre>
 
 <p>
-  Gatsby reads the site's config file when starting. Here we tell it to look for a plugin named <code>gatsby-plugin-typography</code>. Gatsby knows to look for plugins that are NPM packages so it will find the package we installed previously.
+  启动时，Gatsby读取站点的配置文件。 在这里，我们告诉它寻找一个名为gatsby-plugin-typography的插件。 盖茨比知道寻找插件是NPM包，所以它会找到我们以前安装的软件包。
 </p>
 
 <p>
