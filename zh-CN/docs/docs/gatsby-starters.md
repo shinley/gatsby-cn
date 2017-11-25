@@ -69,7 +69,7 @@ Gatsby CLI工具可让您安装“Starters”。 这些是部分建立的网站�
 
 * [gatsby-blog-starter-kit](https://github.com/dschau/gatsby-blog-starter-kit)
     
-    Features:
+    特性
     
     * Blog post listing with previews for each blog post
     * Navigation between posts with a previous/next post button
@@ -77,7 +77,7 @@ Gatsby CLI工具可让您安装“Starters”。 这些是部分建立的网站�
 
 * [gatsby-advanced-starter](https://github.com/Vagr9K/gatsby-advanced-starter) [(demo)](https://vagr9k.github.io/gatsby-advanced-starter/)
     
-    Features:
+    特性
     
     * Great for learning about advanced features and their implementations
     * Does not contain any UI frameworks
@@ -93,7 +93,7 @@ Gatsby CLI工具可让您安装“Starters”。 这些是部分建立的网站�
 
 * [glitch-gatsby-starter-blog](https://github.com/100ideas/glitch-gatsby-starter-blog/) ([demo](https://gatsby-starter-blog.glitch.me))
     
-    Features:
+    特性
     
     * [live-edit](https://glitch.com/edit/#!/remix/gatsby-starter-blog) a temp, anon copy of app
     * same code as [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) (mostly)
@@ -107,14 +107,14 @@ Gatsby CLI工具可让您安装“Starters”。 这些是部分建立的网站�
 
 * [gatsby-starter-grommet](https://github.com/alampros/gatsby-starter-grommet) [(demo)](https://alampros.github.io/gatsby-starter-grommet/)
     
-    Features:
+    特性
     
     * Barebones configuration for using the [Grommet](https://grommet.github.io/) design system
     * Uses SASS (with CSS modules support)
 
 * [gatsby-starter-basic](https://github.com/PrototypeInteractive/gatsby-react-boilerplate) [(demo)](https://prototypeinteractive.github.io/gatsby-react-boilerplate/)
     
-    Features:
+    特性
     
     * Basic configuration and folder structure
     * Uses postcss and sass (with autoprefixer and pixrem)
@@ -125,13 +125,13 @@ Gatsby CLI工具可让您安装“Starters”。 这些是部分建立的网站�
 
 * [gatsby-starter-default-i18n](https://github.com/angeloocana/gatsby-starter-default-i18n) [(demo)](https://gatsby-starter-default-i18n.netlify.com)
     
-    Features:
+    特性
     
     * localization (Multilanguage)
 
 * [gatsby-starter-gatsbythemes](https://github.com/saschajullmann/gatsby-starter-gatsbythemes) [(demo)](https://themes.gatsbythemes.com/gatsby-starter/)
     
-    Features:
+    特性
     
     * CSS-in-JS via [Emotion](https://github.com/emotion-js/emotion).
     * Jest and Enzyme for testing.
@@ -150,7 +150,7 @@ Gatsby CLI工具可让您安装“Starters”。 这些是部分建立的网站�
 
 * [gatsby-starter-netlify-cms](https://github.com/AustinGreen/gatsby-starter-netlify-cms) [(demo)](https://gatsby-netlify-cms.netlify.com/)
     
-    Features:
+    特性
     
     * A simple blog built with Netlify CMS 
     * Basic directory organization
@@ -159,7 +159,7 @@ Gatsby CLI工具可让您安装“Starters”。 这些是部分建立的网站�
 
 * [gatsby-starter-portfolio-emma](https://github.com/LeKoArts/gatsby-starter-portfolio-emma) [(demo)](https://embalmer-glues-43220.netlify.com/)
     
-    Features:
+    特性
     
     * Perfect for designers and photographers
     * Full-width Photo Grid-Layout (Responsive Images through [gatsby-image](https://using-gatsby-image.gatsbyjs.org/))
