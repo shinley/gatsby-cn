@@ -845,9 +845,9 @@ export const query = graphql`
 
 好极了
 
-The last step is to link to our new pages from the index page.
+最后一步是从索引页面链接到我们的新页面。
 
-Return to `src/pages/index.js` and let's query for our markdown slugs and create links.
+返回到src/pages/index.js，让我们查询我们的markdown slugs并创建链接。
 
 ```jsx{3,18-19,29,46-48}
 import React from "react"
@@ -906,8 +906,8 @@ export const query = graphql`
 `
 ```
 
-And there we go! A working (albeit quite simple still) blog!
+好了！ 一个正常工作（尽管很简单）博客！
 
-Try playing more with the site. Try adding some more markdown files. Explore querying other data from the `MarkdownRemark` nodes and adding them to the frontpage or blog posts pages.
+尝试玩更多的网站。 尝试添加更多的Markdown文件。 浏览从MarkdownRemark节点查询其他数据并将其添加到首页或博客文章页面。
 
-In this part of the tutorial, we've learned the foundations of building with Gatsby's data layer. You've learned how to *source* and *transform* data using plugins. How to use GraphQL to *map* data to pages. Then how to build *page template components* where you query for data for each page.
+在本教程的这一部分，我们学习了使用Gatsby数据层构建基础。 你已经学会了如何使用插件来获取和转换数据。 如何使用GraphQL将数据映射到页面。 然后，如何构建页面模板组件，以查询每个页面的数据
