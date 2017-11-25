@@ -11,13 +11,13 @@ The [official tutorial](https://facebook.github.io/react/tutorial/tutorial.html)
 
 React组件架构通过鼓励模块化，可重用性和清晰的抽象来简化构建大型网站。 React是拥有开源组件，教程和工具的大型生态系统，可以无缝地与Gatsby一起构建网站。 Gatsby构建成几乎完全像一个正常的React应用程序。
 
-[Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html) is a good resource for learning how to structure applications with React.
+[Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html) 是学习如何使用React构建应用程序的好资源。
 
-## How does Gatsby use React Components?
+## Gatsby如何使用React组件？
 
-Everything in Gatsby is built using components.
+Gatsby的一切都是使用组件构建的。
 
-A basic directory structure of a project might look like this:
+项目的基本目录结构可能如下所示：
 
 ```sh
 .
@@ -43,9 +43,9 @@ A basic directory structure of a project might look like this:
 
 ### Page components
 
-Components under `src/pages` become pages automatically with paths based on their file name. For example `src/pages/index.jsx` is mapped to `yoursite.com` and `src/pages/about.jsx` becomes `yoursite.com/about/`.
+Src /pages下的组件会根据文件名自动生成路径。 例如src/pages/index.jsx映射到yoursite.com，src/pages/about.jsx变成yoursite.com/about/。
 
-Example:
+例如:
 
 `src/pages/about.jsx`
 
@@ -66,7 +66,7 @@ class AboutPage extends Component {
 export default AboutPage;
 ```
 
-### Page template components
+### 页面模板组件
 
 You can programmatically create pages using "page template components". All pages are React components but very often these components are fairly simple wrappers around data from files or other sources.
 
