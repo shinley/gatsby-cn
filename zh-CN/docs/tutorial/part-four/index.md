@@ -599,9 +599,9 @@ Do Pandas eat bananas? Check out this short video that shows that yes! pandas do
 
 让我们开始吧。
 
-到目前为止，我们已经通过在src/pages中放置React组件来创建页面。 现在我们将学习如何以编程方式从数据创建页面。 Gatsby并不局限于像许多静态站点生成器一样从文件中创建页面。 Gatsby允许您使用GraphQL来查询数据并将数据映射到页面 - 所有这些都是在构建时完成的。 This is a really powerful idea. We'll be exploring its implications and ways to use it for the remainder of the tutorial.
+到目前为止，我们已经通过在src/pages中放置React组件来创建页面。 现在我们将学习如何以编程方式从数据创建页面。 Gatsby并不局限于像许多静态站点生成器一样从文件中创建页面。 Gatsby允许您使用GraphQL来查询数据并将数据映射到页面 - 所有这些都是在构建时完成的。 这是一个非常强大的想法。 我们将在本教程的其余部分探讨其含义和使用方法。
 
-Creating new pages has two steps, 1) generate the "path" or "slug" for the page and 2) create the page.
+创建新页面有两个步骤，1）为页面生成“路径”或“段落”，2）创建页面。
 
 To create our markdown pages, we'll learn to use two Gatsby APIs [`onCreateNode`](/docs/node-apis/#onCreateNode) and [`createPages`](/docs/node-apis/#createPages). These are two workhorse APIs you'll see used in many sites and plugins.
 
