@@ -3,13 +3,13 @@ title: Building with Components
 ---
 ## Requirements
 
-To use Gatsby, you will need a basic understanding of React components.
+要使用Gatsby，您需要对React组件有一个基本的了解。
 
 The [official tutorial](https://facebook.github.io/react/tutorial/tutorial.html) is a good place to start.
 
-## Why React components?
+## 为什么使用React组件？
 
-React's component architecture simplifies building large websites by encouraging modularity, reusabilty, and clear abstraction. React has a large ecosystem of open source components, tutorials, and tooling that can be used seamlessly for building sites with Gatsby. Gatsby is built to behave almost exactly like a normal React application.
+React组件架构通过鼓励模块化，可重用性和清晰的抽象来简化构建大型网站。 React是拥有开源组件，教程和工具的大型生态系统，可以无缝地与Gatsby一起构建网站。 Gatsby构建成几乎完全像一个正常的React应用程序。
 
 [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html) is a good resource for learning how to structure applications with React.
 
