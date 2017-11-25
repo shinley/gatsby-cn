@@ -1,13 +1,13 @@
 ---
 title: Gatsby Starters
 ---
-The Gatsby CLI tool lets you install "starters". These are partially built sites preconfigured to help you get moving faster on creating a certain type of site.
+Gatsby CLI工具可让您安装“Starters”。 这些是部分建立的网站预先配置，以帮助您更快地创建一个特定类型的网站。
 
-When creating a new site, you can optionally specify a starter to base your new site on e.g.
+创建新网站时，您可以选择指定一个Starter作为新网站的基础，例如
 
 `gatsby new [SITE_DIRECTORY] [URL_OF_STARTER_GITHUB_REPO]`
 
-For example, to quickly create a blog using Gatsby, you could install the Gatsby Starter Blog by running:
+例如，要使用Gatsby快速创建博客，可以运行以下命令安装名为Blog的Starter：
 
 `gatsby new blog https://github.com/gatsbyjs/gatsby-starter-blog`
 
