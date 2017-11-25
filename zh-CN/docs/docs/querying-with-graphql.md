@@ -1,9 +1,9 @@
 ---
 title: Querying with GraphQL
 ---
-Rough outline
+粗糙的轮廓
 
-* What is GraphQL
+* 什么是GraphQL
 * Why GraphQL? As Gatsby runs on both server (at build time) & client, need way to specify which data is needed.
 * Emphasize this is a *build-time only* use of GraphQL. You don't need to run a GraphQL server in production. Convenient way to describe data requirements of component.
 * Why query colocation rocks.
