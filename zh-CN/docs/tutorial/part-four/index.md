@@ -4,7 +4,7 @@ typora-copy-images-to: './'
 ---
 欢迎来到教程的第四部分！ 中途！ 希望事情开始感觉很舒服 
 
-But don't get too comfortable 我们正在走向新的领域，需要一些大脑的充分理解。 在接下来的两部分教程中，我们将深入到Gatsby数据层！ Gatsby的一个强大功能，可让您轻松地从Markdown，Wordpress，无头CMS和其他所有类型的数据源构建网站。
+但不要太舒服在本教程中， 我们正在走向新的领域，需要一些大脑的充分理解。 在接下来的两部分教程中，我们将深入到Gatsby数据层！ Gatsby的一个强大功能，可让您轻松地从Markdown，Wordpress，无头CMS和其他所有类型的数据源构建网站。
 
 ## 本教程前半部分的总结
 
@@ -603,11 +603,11 @@ Do Pandas eat bananas? Check out this short video that shows that yes! pandas do
 
 创建新页面有两个步骤，1）为页面生成“路径”或“段落”，2）创建页面。
 
-To create our markdown pages, we'll learn to use two Gatsby APIs [`onCreateNode`](/docs/node-apis/#onCreateNode) and [`createPages`](/docs/node-apis/#createPages). These are two workhorse APIs you'll see used in many sites and plugins.
+要创建我们的Markdown页面，我们将学习使用两个Gatsby API onCreateNode和createPages。 这些是您将会看到在许多网站和插件中使用的两个主力API。
 
-APIs are simple to implement. To implement an API, you simply export a function with the name of the API from `gatsby-node.js`.
+API很容易实现。 要实现一个API，只需从gatsby-node.js中导出一个带有API名称的函数。
 
-So let's do that. In the root of your site, create a file named `gatsby-node.js`. Then add to it the following. This function will be called by Gatsby whenever a new node is created (or updated).
+所以让我们来做。 在您的网站的根目录中，创建一个名为gatsby-node.js的文件。 然后添加以下内容。 无论何时创建（或更新）新节点，此功能都将由盖茨比（Gatsby）调用。
 
 ```javascript
 exports.onCreateNode = ({ node }) => {
@@ -615,7 +615,7 @@ exports.onCreateNode = ({ node }) => {
 }
 ```
 
-Stop and restart the development server. As you do, you'll see quite a few newly created nodes get logged to the terminal console.
+停止并重新启动开发服务器。 和你一样，你会看到不少新创建的节点被记录到终端控制台。
 
 Let's use this API to add the slugs for our markdown pages to `MarkdownRemark` nodes.
 
