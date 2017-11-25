@@ -617,9 +617,9 @@ exports.onCreateNode = ({ node }) => {
 
 停止并重新启动开发服务器。 和你一样，你会看到不少新创建的节点被记录到终端控制台。
 
-Let's use this API to add the slugs for our markdown pages to `MarkdownRemark` nodes.
+让我们使用这个API来为MarkdownRemark节点添加我们的Markdown页面的slugs.
 
-Change our function so it now is only looking at `MarkdownRemark` nodes.
+改变我们的功能，所以现在只查看MarkdownRemark节点。
 
 ```javascript{2-4}
 exports.onCreateNode = ({ node }) => {
@@ -629,7 +629,7 @@ exports.onCreateNode = ({ node }) => {
 }
 ```
 
-We want to use each markdown file name to create the page slug. So `pandas-and-bananas.md"` will become `/pandas-and-bananas/`. But how do we get the file name from the `MarkdownRemark` node? To get it, we need to *traverse* the "node graph" to its *parent* `File` node, as `File` nodes contain data we need about files on disk. To do that, modify our function again:
+我们要使用每个Markdown文件名来创建页面slug。 所以pandas-and-bananas.md“将成为/pandas-and-bananas /。 但是，我们如何从MarkdownRemark节点获取文件名？ 为了做到这一点，我们需要遍历“节点图”到它的父节点，因为文件节点包含我们需要的有关磁盘上文件的数据。 要做到这一点，请再次修改我们的功能：
 
 ```javascript{1,3-4}
 exports.onCreateNode = ({ node, getNode }) => {
@@ -640,11 +640,11 @@ exports.onCreateNode = ({ node, getNode }) => {
 }
 ```
 
-There in your terminal you should see the relative paths for our two markdown files.
+在你的终端你应该可以看到我们两个markdown文件的相对路径。
 
 ![markdown-relative-path](markdown-relative-path.png)
 
-Now let's create slugs. As the logic for creating slugs from file names can get tricky, the `gatsby-source-filesystem` plugin ships with a function for creating slugs. Let's use that.
+现在让我们创建slugs。 由于从文件名创建slug的逻辑可能会变得棘手，gatsby-source-filesystem插件附带一个创建slug的函数。 让我们使用它。
 
 ```javascript{1,5}
 const { createFilePath } = require(`gatsby-source-filesystem`)
@@ -656,9 +656,9 @@ exports.onCreateNode = ({ node, getNode }) => {
 }
 ```
 
-The function handles finding the parent `File` node along with creating the slug. Run the development server again and you should see logged to the terminal two slugs, one for each markdown file.
+该函数处理查找父文件节点以及创建slugs。 再次运行开发服务器，你应该看到登录到终端两个slug，每个Markdown文件一个。
 
-Now lets add our new slugs directly onto the `MarkdownRemark` nodes. This is powerful, as any data we add to nodes is available to query later with GraphQL. So it'll be easy to get the slug when it comes time to create the pages.
+现在让我们直接在MarkdownRemark节点上添加新的slug。 这是非常强大的，因为我们添加到节点的任何数据都可以在稍后用GraphQL查询。 所以当创建页面时，很容易得到slugs。
 
 To do so, we'll use a function passed to our API implementation called [`createNodeField`](/docs/bound-action-creators/#createNodeField). This function allows us to create additional fields on nodes created by other plugins. Only the original creator of a node can directly modify the node—all other plugins (including our `gatsby-node.js`) must use this function to create additional fields.
 
