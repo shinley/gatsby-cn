@@ -124,7 +124,7 @@ export default () =>
 <Link />
 组件。
 
-与普通的HTML <a>元素不同，我们的链接组件用于指定要链接的页面。 让我们链接到一个路径名为/page-2 /的页面。 尝试添加。 Once you're done, the page component should look like:</p> 
+与普通的HTML <a>元素不同，我们的链接组件用于指定要链接的页面。 让我们链接到一个路径名为/page-2 /的页面。 尝试添加。 完成之后，页面组件应如下所示：</p> 
 
 <pre><code class="jsx{2,9-12}">import React from "react"
 import Link from "gatsby-link"
