@@ -9,32 +9,31 @@ Gatsby CLI工具可让您安装“Starters”。 这些是部分建立的网站�
 
 例如，要使用Gatsby快速创建博客，可以运行以下命令安装名为Blog的Starter：
 
-`gatsby new blog https://github.com/gatsbyjs/gatsby-starter-blog`
+`通过运行npm install下载文件并初始化站点`
 
-This downloads the files and initializes the site by running `npm
-install`
+这通过运行npm install下载文件并初始化站点
 
-If you don't specify a custom starter, your site will be created from the [default starter](https://github.com/gatsbyjs/gatsby-starter-default).
+如果您未指定自定义Starter，则将从[默认Starter](https://github.com/gatsbyjs/gatsby-starter-default)创建您的站点。
 
-There are several starters that have been created. Create a PR to include yours!
+有几个Starter已经创建。通过提交PR创建你的！
 
-Official:
+官方的：
 
 * [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default) [(demo)](http://gatsbyjs.github.io/gatsby-starter-default/)
 * [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) [(demo)](http://gatsbyjs.github.io/gatsby-starter-blog/)
 * [gatsby-starter-hello-world](https://github.com/gatsbyjs/gatsby-starter-hello-world) [(demo)](https://aberrant-fifth.surge.sh/)
 
-Community:
+社区的：
 
 * [gatsby-starter-blog-no-styles](https://github.com/noahg/gatsby-starter-blog-no-styles) [(demo)](http://capricious-spring.surge.sh/)
     
-    Features:
+    特性
     
-    * Same as official gatsby-starter-blog but with all styling removed
+    * 和官方的gatsby-starter-blog一样，但是所有样式都被删除了
 
 * [gatsby-material-starter](https://github.com/Vagr9K/gatsby-material-starter) [(demo)](https://vagr9k.github.io/gatsby-material-starter/)
     
-    Features:
+    特性
     
     * React-MD for Material design
     * SASS/SCSS
@@ -49,7 +48,7 @@ Community:
 
 * [gatsby-typescript-starter](https://github.com/fabien0102/gatsby-starter) [(demo)](https://fabien0102-gatsby-starter.netlify.com/)
     
-    Features:
+    特性
     
     * Semantic-ui for styling
     * TypeScript
@@ -62,7 +61,7 @@ Community:
 
 * [gatsby-starter-bootstrap](https://github.com/jaxx2104/gatsby-starter-bootstrap) [(demo)](https://jaxx2104.github.io/gatsby-starter-bootstrap/)
     
-    Features:
+    特性
     
     * Bootstrap CSS framework
     * Single column layout
