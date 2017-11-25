@@ -156,7 +156,7 @@ module.exports = {
 
 我们有另一个布局和两个页面简单的网站。
 
-Now let's start querying 
+现在让我们开始查询 
 
 在构建站点时，通常要重复使用站点中常见的数据位。 像网站标题例如。 看看/about/页面。 您会注意到我们在布局组件（站点标题）以及关于页面的标题中都有站点标题。 但是如果我们想在未来的某个时候改变网站的标题呢？ 我们必须使用网站标题搜索我们所有的组件。 这既麻烦又容易出错，尤其是在网站变得更大，更复杂的情况下。 将标题存储在一个地方，然后在需要的时候把这个标题放到组件中会更好。
 
@@ -259,7 +259,7 @@ export const query = graphql`
 
 ![fake-title-graphql](fake-title-graphql.png)
 
-But let's restore the real title.
+但是，让我们恢复真实的标题。
 
 Gatsby的核心原则之一是创造者需要立即联系他们正在创造的东西（帽子提示给布雷特·维克多）。 换句话说，当你对代码进行修改时，你应该立即看到这个改变的效果。 你操纵Gatsby的输入，你看到在屏幕上显示新的输出。
 
@@ -660,7 +660,7 @@ exports.onCreateNode = ({ node, getNode }) => {
 
 现在让我们直接在MarkdownRemark节点上添加新的slug。 这是非常强大的，因为我们添加到节点的任何数据都可以在稍后用GraphQL查询。 所以当创建页面时，很容易得到slugs。
 
-To do so, we'll use a function passed to our API implementation called [`createNodeField`](/docs/bound-action-creators/#createNodeField). This function allows us to create additional fields on nodes created by other plugins. Only the original creator of a node can directly modify the node—all other plugins (including our `gatsby-node.js`) must use this function to create additional fields.
+为此，我们将使用传递给我们的API实现的函数createNodeField。 这个函数允许我们在其他插件创建的节点上创建额外的字段。 只有节点的原始创建者才能直接修改节点 - 所有其他插件（包括我们的gatsby-node.js）都必须使用此功能来创建附加字段。
 
 ```javascript{3,4,6-11}
 const { createFilePath } = require(`gatsby-source-filesystem`)
@@ -678,7 +678,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
 }
 ```
 
-Restart the development server and open or refresh Graph*i*QL. Then run this query to see our new slugs.
+重新启动开发服务器并打开或刷新GraphiQL。 然后运行这个查询来看看我们的新slugs>。
 
 ```graphql
 {
@@ -694,9 +694,9 @@ Restart the development server and open or refresh Graph*i*QL. Then run this que
 }
 ```
 
-Now that the slugs are created, we can create the pages.
+现在创建了slugs，我们可以创建页面。
 
-In the same `gatsby-node.js` file, add the following. Here we tell Gatsby about our pages—what are their paths, what template component do they use, etc.
+在相同的gatsby-node.js文件中，添加以下内容。 在这里，我们告诉Gatsby关于我们的页面 - 他们的路径是什么，他们使用什么模板组件等等。
 
 ```javascript{15-35}
 const { createFilePath } = require(`gatsby-source-filesystem`)
@@ -736,13 +736,13 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 }
 ```
 
-We've added an implementation of the [`createPages`](/docs/node-apis/#createPages) API which Gatsby calls to add pages. We're using the passed in `graphql` function to query for the markdown slugs we just created. Then we're logging out the result of the query which should look like:
+我们添加了一个Gatsby调用来添加页面的createPages API的实现。 我们使用传入的graphql函数来查询我们刚刚创建的markdown slug。 然后我们注销查询的结果应该是这样的：
 
 ![query-markdown-slugs](query-markdown-slugs.png)
 
-We need one other thing to create pages: a page template component. Like everything in Gatsby, programmatic pages are powered by React components. When creating a page, we need to specify which component to use.
+我们还需要另外一件事来创建页面：一个页面模板组件。 像Gatsby中的所有内容一样，编程页面由React组件支持。 创建页面时，我们需要指定使用哪个组件。
 
-Create a directory at `src/templates` and then add the following in a file named `src/templates/blog-post.js`.
+在src/templates创建一个目录，然后在一个名为src/templates/blog-post.js的文件中添加以下内容。
 
 ```jsx
 import React from "react"
@@ -752,7 +752,7 @@ export default () => {
 }
 ```
 
-Then update `gatsby-node.js`
+然后更新gatsby-node.js
 
 ```javascript{1,32-41}
 const path = require(`path`)
@@ -802,15 +802,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 }
 ```
 
-Restart the development server and our pages will be created! An easy way to find new pages you create while developing is to go to a random path where Gatsby will helpfully show you a list of pages on the site. If you go to <http://localhost:8000/sdf> you'll see the new pages we created.
+重新启动开发服务器，我们的页面将被创建！ 在开发过程中找到新的页面的一个简单的方法是去一个随机的路径，在那里Gatsby会帮助你在网站上显示一个页面列表。 如果你转到http://localhost:8000/sdf，你会看到我们创建的新页面。
 
 ![new-pages](new-pages.png)
 
-Visit one of them and we see:
+访问其中一个，我们看到：
 
 ![hello-world-blog-post](hello-world-blog-post.png)
 
-Which is a bit boring. Let's pull in data from our markdown post. Change `src/templates/blog-post.js` to:
+这有点无聊。 让我们从我们的Markdown帖子中提取数据。 将src/templates/blog-post.js更改为：
 
 ```jsx
 import React from "react"
@@ -839,11 +839,11 @@ export const query = graphql`
 `
 ```
 
-And…
+然后...
 
 ![blog-post](blog-post.png)
 
-Sweet!
+好极了
 
 The last step is to link to our new pages from the index page.
 
