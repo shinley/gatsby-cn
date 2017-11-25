@@ -512,9 +512,9 @@ module.exports = {
 
 ## 在src/pages/index.js中创建我们网站的Markdown文件列表
 
-Let's now create a list of our markdown files on the front page. Like many blogs, we want to end up with a list of links on the front page pointing to each blog post. With GraphQL we can *query* for the current list of markdown blog posts so we won't need to maintain the list manually.
+现在让我们在头版上创建一个我们的Markdown文件列表。 像许多博客一样，我们希望最终在首页上指向每篇博文的链接列表。 使用GraphQL，我们可以查询当前的降价博客文章列表，所以我们不需要手动维护列表。
 
-Like with the `src/pages/my-files.js` page, replace `src/pages/index.js` with the following to add a query with some initial HTML and styling.
+与src/pages/my-files.js页面一样，将src/pages/index.js替换为以下内容以添加具有一些初始HTML和样式的查询。
 
 ```jsx
 import React from "react"
@@ -566,11 +566,11 @@ export const query = graphql`
 `
 ```
 
-Now the frontpage should look like:
+现在，首页应该是这样的：
 
 ![frontpage](frontpage.png)
 
-But our one blog post looks a bit lonely. So let's add another one at `src/pages/pandas-and-bananas.md`
+但是我们的一篇博文看起来有点孤单。 所以让我们在src/pages/pandas-and-bananas.md上再添加一个
 
 ```markdown
 ---
@@ -585,21 +585,21 @@ Do Pandas eat bananas? Check out this short video that shows that yes! pandas do
 
 ![two-posts](two-posts.png)
 
-Which looks great! Except…the order of the posts is wrong.
+这看起来不错！ 除了... 帖子的顺序是错的。
 
-But this is easy to fix. When querying a connection of some type, you can pass a variety of arguments to the query. You can `sort` and `filter` nodes, set how many nodes to `skip`, and choose the `limit` of how many nodes to retrieve. With this powerful set of operators, we can select any data we want—in the format we need.
+但这很容易解决。 查询某种类型的连接时，可以将各种参数传递给查询。 您可以对节点进行排序和过滤，设置要跳过的节点数量，并选择要检索的节点数量限制。 有了这套功能强大的运算符，我们可以根据需要的格式选择我们想要的任何数据。
 
-In our index page's query, change `allMarkdownRemark` to `allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC})`. Save this and the sort order should be fixed.
+在我们的索引页的查询中，将allMarkdownRemark改为allMarkdownRemark（sort：{fields：[frontmatter___date]，order：DESC}）。 保存这个，排序顺序应该是固定的。
 
-Try opening Graph*i*QL and playing with different sort options. You can sort the `allFile` connection along with other connections.
+尝试打开GraphiQL并使用不同的排序选项。 您可以将allFile连接与其他连接一起排序。
 
-## Programmatically creating pages from data
+## 以编程方式从数据创建页面
 
-So this is great! We have a nice index page where we're querying our markdown files. But we don't want to just see excerpts, we want actual pages for our markdown files.
+所以这太棒了！ 我们有一个很好的索引页，我们正在查询我们的降价文件。 但我们不想看到摘录，我们希望我们的降价文件的实际页面。
 
-Let's get started.
+让我们开始吧。
 
-So far, we've created pages by placing React components in `src/pages`. We'll now learn how to *programmatically* create pages from *data*. Gatsby is *not* limited to making pages from files like many static site generators. Gatsby lets you use GraphQL to query your *data* and *map* the data to *pages*—all at build time. This is a really powerful idea. We'll be exploring its implications and ways to use it for the remainder of the tutorial.
+到目前为止，我们已经通过在src/pages中放置React组件来创建页面。 现在我们将学习如何以编程方式从数据创建页面。 Gatsby并不局限于像许多静态站点生成器一样从文件中创建页面。 Gatsby允许您使用GraphQL来查询数据并将数据映射到页面 - 所有这些都是在构建时完成的。 This is a really powerful idea. We'll be exploring its implications and ways to use it for the remainder of the tutorial.
 
 Creating new pages has two steps, 1) generate the "path" or "slug" for the page and 2) create the page.
 
