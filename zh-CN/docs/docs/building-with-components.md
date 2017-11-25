@@ -68,13 +68,13 @@ export default AboutPage;
 
 ### 页面模板组件
 
-You can programmatically create pages using "page template components". All pages are React components but very often these components are fairly simple wrappers around data from files or other sources.
+您可以使用“页面模板组件”以编程方式创建页面。 所有页面都是React组件，但是这些组件通常都是相当简单的包装来自文件或其他来源的数据。
 
-`src/templates/post.jsx` is an example of a page component. It queries GraphQL for markdown data and then renders the page using this data.
+src/templates/post.jsx是一个页面组件的例子。 它向GraphQL查询markdown数据，然后使用这些数据呈现页面。
 
-See [part four](/tutorial/part-four/) of the tutorial for a detailed introduction to programmatically creating pages.
+有关以编程方式创建页面的详细介绍，请参阅教程的[第四部分](/tutorial/part-four/) 。
 
-Example:
+例如:
 
 ```jsx
 import React from "react"
@@ -106,11 +106,11 @@ query BlogPostBySlug($slug: String!) {
 `
 ```
 
-### Layout components
+### 布局组件
 
-`src/layouts/index.jsx` (optional) wraps page components. You can use it for portions of pages that are shared across pages like headers and footers.
+src/layouts/index.jsx（可选）包装页面组件。 您可以将其用于跨页面共享的部分页面，如页眉和页脚。
 
-Example:
+例如:
 
 ```jsx
 import React from 'react';
@@ -128,18 +128,24 @@ export default class Template extends React.Component {
 }
 ```
 
-### HTML component
+### HTML 组件
 
-`src/html.jsx` is responsible for everything other than where Gatsby lives in the `<body />`.
+src/html.jsx负责除了Gatsby在中的所有内容。
 
-In this file you can modify the `<head>` metadata, general structure of the document and add external links.
+在这个文件中，您可以修改
 
-Typically you should omit this from your site as the default html.js file will suffice. If you need more control over server rendering, then it's valuable to have an html.js.
-
-Example:
-
-```jsx
-import React from 'react';
+<head>
+  元数据，文档的一般结构并添加外部链接。</p> 
+  
+  <p>
+    通常，您应该从您的网站中省略这个，因为默认的html.js文件就足够了。 如果你需要更多的控制服务器渲染，那么有一个html.js是很有价值的。
+  </p>
+  
+  <p>
+    例如:
+  </p>
+  
+  <pre><code class="jsx">import React from 'react';
 import favicon from './favicon.png';
 
 let inlinedStyles = '';
@@ -156,36 +162,38 @@ export default class HTML extends React.Component {
     let css;
     if (process.env.NODE_ENV === 'production') {
       css = (
-        <style
+        &lt;style
           id="gatsby-inlined-css"
           dangerouslySetInnerHTML={{ __html: inlinedStyles }}
-        />
+        /&gt;
       );
     }
     return (
 
-      <html lang="en">
-        <head>
-          <meta charSet="utf-8" />
-          <meta
+      &lt;html lang="en"&gt;
+        &lt;head&gt;
+          &lt;meta charSet="utf-8" /&gt;
+          &lt;meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
-          />
+          /&gt;
           {this.props.headComponents}
-          <link rel="shortcut icon" href={favicon} />
+          &lt;link rel="shortcut icon" href={favicon} /&gt;
           {css}
-        </head>
-        <body>
-          <div
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
-          />
+          /&gt;
           {this.props.postBodyComponents}
-        </body>
-      </html>
+        &lt;/body&gt;
+      &lt;/html&gt;
     );
   }
 }
-```
-
-These are examples of the different ways React components are used in Gatsby sites. To see full working examples, check out the [examples directory](https://github.com/gatsbyjs/gatsby/tree/master/examples) in the Gatsby repo.
+</code></pre>
+  
+  <p>
+    这些是React组件在Gatsby网站中使用的不同方式的示例。 要查看完整的工作示例，请查看Gatsby仓库中的示例目录。
+  </p>
