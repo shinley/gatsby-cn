@@ -594,25 +594,25 @@ console.log(styles)
 
             
             <p>
-              如果您将它与我们的CSS文件进行比较，您会看到每个类现在都是导入对象中的一个键，指向一个长字符串，例如 头像指向about-css-modules-module --- avatar ---- hYcv。 这些是CSS模块生成的类名称。 They're guaranteed to be unique across your site. And because you have to import them to use the classes, there's never any question about where some CSS is being used.
+              如果您将它与我们的CSS文件进行比较，您会看到每个类现在都是导入对象中的一个键，指向一个长字符串，例如 头像指向about-css-modules-module --- avatar ---- hYcv。 这些是CSS模块生成的类名称。 他们保证在您的网站是唯一的。 而且因为你必须导入它们才能使用这些类，所以从来没有任何关于使用某些CSS的问题。
             </p>
 
 
             
             <p>
-              Let's use our styles to create a simple <code>User</code> component.
+              让我们使用我们的样式来创建一个简单的用户组件。
             </p>
 
 
             
             <p>
-              Let's create the new component inline in the <code>about-css-modules.js</code> page component. The general rule of thumb is if you use a component in multiple places on a site, it should be in its own module file in the <code>components</code> directory. But, if it's used only in one file, create it inline.
+              让我们在about-css-modules.js页面组件中内联创建新组件。 一般的经验法则是如果你在一个站点的多个地方使用一个组件，它应该在它自己的组件目录中的模块文件中。 但是，如果仅在一个文件中使用，请将其内联创建。
             </p>
 
 
             
             <p>
-              Modify <code>about-css-modules.js</code> so it looks like the following:
+              修改about-css-modules.js，使其如下所示：
             </p>
 
 
@@ -655,7 +655,7 @@ export default () =&gt;
 
             
             <p>
-              The finished page should now look like:
+              现在完成的页面应该如下所示：
             </p>
 
 
@@ -673,19 +673,19 @@ export default () =&gt;
 
             
             <p>
-              Let's create the same page using <a href="https://github.com/threepointone/glamor">Glamor</a>.
+              让我们用<a href="https://github.com/threepointone/glamor">Glamour</a>来创建相同的页面。
             </p>
 
 
             
             <p>
-              Glamor lets you write <em>real</em> CSS inline in your components using the same Object CSS syntax React supports for the <code>style</code> prop.
+              Glamour可以让你在你的组件中使用相同的React支持的Object CSS语法
             </p>
 
 
             
             <p>
-              First install the Gatsby plugin for Glamor.
+              首先安装Glamor的Gatsby插件。
             </p>
 
 
@@ -696,7 +696,7 @@ export default () =&gt;
 
             
             <p>
-              And then add it to your <code>gatsby-config.js</code>
+              然后把它添加到你的gatsby-config.js
             </p>
 
 
@@ -717,13 +717,13 @@ export default () =&gt;
 
             
             <p>
-              Restart <code>gatsby develop</code> again to enable the Glamor plugin.
+              重新启动gatsby develop命令启用Glamor插件。
             </p>
 
 
             
             <p>
-              Now create the Glamor page at <code>src/pages/about-glamor.js</code>
+              现在在src/pages/about-glamour.js中创建Glamor页面
             </p>
 
 
@@ -742,7 +742,7 @@ export default () =&gt;
 
             
             <p>
-              Let's add the same inline <code>User</code> component but this time using Glamor's <code>css</code> prop.
+              让我们添加相同的内联用户组件，但这次使用Glamor的CSS的 prop属性。
             </p>
 
 
@@ -795,7 +795,7 @@ export default () =&gt;
 
             
             <p>
-              The final Glamor page should look identical to the CSS Modules page.
+              最后的Glamor页面应该看起来与CSS模块页面相同。
             </p>
 
 
@@ -807,25 +807,25 @@ export default () =&gt;
 
             
             <h3>
-              Styled Components
+              样式组件
             </h3>
 
 
             
             <p>
-              For our final CSS-in-JS example, we'll try <a href="https://www.styled-components.com/">Styled Components</a>.
+              对于我们最后的CSS-in-JS示例，我们将尝试使用样式组件。
             </p>
 
 
             
             <p>
-              Styled Components lets you use actual CSS syntax inside your components.
+              样式组件允许您在组件中使用实际的CSS语法。
             </p>
 
 
             
             <p>
-              First, like normal, we'll install the Gatsby plugin for Styled Components.
+              首先，像平常一样，我们将为样式组件安装Gatsby插件。
             </p>
 
 
@@ -836,7 +836,7 @@ export default () =&gt;
 
             
             <p>
-              Then modify the <code>gatsby-config.js</code>. Before we can use Styled Components however, we'll need to remove the Glamor plugin and delete the Glamor component page we created. The two plugins conflict with each other as both want to take control during server rendering.
+              然后修改gatsby-config.js。 在我们可以使用样式组件之前，我们需要删除Glamor插件并删除我们创建的Glamor组件页面。 这两个插件相互冲突，因为它们都想在服务器渲染过程中进行控制。
             </p>
 
 
@@ -857,7 +857,7 @@ export default () =&gt;
 
             
             <p>
-              Then at <code>src/pages/about-styled-components.js</code> create:
+              然后在src/pages/about-styled-components.js创建：
             </p>
 
 
@@ -930,13 +930,13 @@ export default () =&gt;
 
             
             <h3>
-              Other CSS options
+              其他CSS选项
             </h3>
 
 
             
             <p>
-              Gatsby supports almost every possible styling option (if there isn't a plugin yet for your favorite CSS option, <a href="/docs/how-to-contribute/">please contribute one!</a>)
+              Gatsby支持几乎所有可能的样式选项（如果您的CSS选项没有插件，请提供一个！）
             </p>
 
 
@@ -971,5 +971,5 @@ export default () =&gt;
 
             
             <p>
-              Now continue on to <a href="/tutorial/part-three/">Part Three</a> of the tutorial.
+              现在继续教程的第三部分。
             </p>
