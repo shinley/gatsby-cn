@@ -1,21 +1,21 @@
 ---
-title: Add custom webpack config
+title: 添加自定义webpack配置
 ---
-*Before creating custom webpack configuration, check to see if there's a Gatsby plugin already built that handles your use case in the [plugins section](/docs/plugins/). If there's not yet one and your use case is a general one, we highly encourage you to contribute back your plugin to the Gatsby repo so it's available to others (including your future self *
+*在创建自定义webpack配置之前，请检查是否有已经构建的Gatsby插件来处理插件部分的用例。 如果还没有一个，你的用例是一个普通的用例，我们强烈建议你把你的插件提交给Gatsby仓库，这样它可以提供给其他人（包括你未来的自己 *
 
-To add custom webpack configurations, create (if there's not one already) a `gatsby-node.js` file in your root directory. Inside this file, export a function called `modifyWebpackConfig`.
+要添加自定义webpack配置，请在根目录中创建（如果没有的话）gatsby-node.js文件。 在这个文件里面，导出一个名为modifyWebpackConfig的函数。
 
-When Gatsby creates its webpack config, this function will be called allowing you to modify the default webpack config using [webpack-configurator](https://github.com/lewie9021/webpack-configurator).
+当Gatsby创建它的webpack配置时，这个函数将被调用，允许你使用webpack-configurator修改默认的webpack配置。
 
-Gatsby does multiple webpack builds with somewhat different configuration. We call each build type a "stage". The following stages exist:
+Gatsby做多个webpack的构建时有些不同的配置。 我们称每个构建类型为“阶段”。 有以下几个阶段：
 
-1. develop: when running the `gatsby develop` command. Has configuration for hot reloading and CSS injection into page
-2. develop-html: same as develop but without react-hmre in the babel config for rendering the HTML component.
-3. build-css: production build of CSS
-4. build-html: production build static HTML pages
-5. build-javascript: production JavaScript build. Creates route bundles as well as a `commons` and `app bundle`.
+1. develop：运行gatsby develop命令时。 配置热加载和CSS注入页面
+2. develop-html：与开发相同，但是没有在babel配置文件中react-hmre来渲染HTML组件。
+3. build-css：CSS的生产版本
+4. build-html：生成构建静态HTML页面
+5. build-javascript：制作JavaScript构建。 创建路由捆绑以及公共和应用程序捆绑。
 
-Check [webpack.config.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js) for the source.
+检查源的webpack.config.js。
 
 There are many plugins in the Gatsby repo using this API to look to for examples e.g. [Sass](/packages/gatsby-plugin-sass/), [Typescript](/packages/gatsby-plugin-typescript/), [Glamor](/packages/gatsby-plugin-glamor/), and many more!
 
