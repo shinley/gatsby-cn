@@ -1,15 +1,15 @@
 ---
 title: Gatsby on Windows
 ---
-## Setting up your environment for building native Node.js modules.
+## 设置您的环境来构建本地Node.js模块。
 
-Many Gatsby plugins and themes require building native Node.js modules, e.g. [Sharp (a common Gatsby dependency used for image processing)](/packages/gatsby-plugin-sharp/). To do so, you need a functional build environment (Python and Visual C++ Build Tools).
+许多Gatsby插件和主题需要构建本地Node.js模块，例如， [Sharp（用于图像处理的普通的Gatsby依赖）](/packages/gatsby-plugin-sharp/)。 为此，您需要一个功能性的构建环境（Python和Visual C ++构建工具）。
 
-The easy way to setup your build environment on Windows is to install the [`windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools) package by running `npm install windows-build-tools -g` on an admin PowerShell console. Upon installing this package, it downloads and installs the Visual C++ Build Tools 2015, provided free of charge by Microsoft. These tools are required to compile popular native modules. It will also install Python 2.7, configuring your machine and npm appropriately.
+在Windows上设置构建环境的简单方法是通过在管理PowerShell控制台上运行npm install windows-build-tools -g来安装[windows-build-tools](https://github.com/felixrieseberg/windows-build-tools)软件包。 在安装此软件包时，它会下载并安装由Microsoft免费提供的Visual C ++ Build Tools 2015。 这些工具是编译流行的本地模块所必需的。 它也将安装Python 2.7，正确地配置你的机器和npm
 
-### If `npm install` still fails...
+### 如果npm安装仍然失败...
 
-Sometimes the `windows-build-tools` won't properly install the required libraries. This is true if you already have a regular .NET development environment setup. This has been reported on Windows 10 x64 (and possibly other architectures or Windows versions).
+有时windows-build-tools不能正确安装所需的库。 This is true if you already have a regular .NET development environment setup. This has been reported on Windows 10 x64 (and possibly other architectures or Windows versions).
 
 This might be your problem if, after running `npm install` on a Gatsby site, you see compilation errors such as `node-gyp` or `sharp` or `binding.gyp not found`.
 
