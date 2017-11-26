@@ -1,9 +1,9 @@
 ---
-title: Gatsby Lifecycle APIs
+title: Gatsby生命周期API
 ---
-Gatsby provides a rich set of lifecycle APIs to hook into Gatsby's bootstrap, build, and client runtime operations.
+Gatsby提供了一组丰富的生命周期API，以便挂钩Gatsby的引导，构建和客户端运行时操作。
 
-Gatsby's design principles include:
+Gatsby的设计原则包括：
 
 * Conventions > code but use low-level primitives to build conventions with code.
 * Extracting logic and configuration into [plugins](/docs/plugins/) should be trivial and encouraged.
