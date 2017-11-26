@@ -9,15 +9,15 @@ title: Gatsby on Windows
 
 ### 如果npm安装仍然失败...
 
-有时windows-build-tools不能正确安装所需的库。 This is true if you already have a regular .NET development environment setup. This has been reported on Windows 10 x64 (and possibly other architectures or Windows versions).
+有时windows-build-tools不能正确安装所需的库。 当你已经正确的安装.NET开发环境的话。 这个问题已在Windows 10 x64（可能还有其他体系结构或Windows版本）中报告过。
 
-This might be your problem if, after running `npm install` on a Gatsby site, you see compilation errors such as `node-gyp` or `sharp` or `binding.gyp not found`.
+如果在Gatsby站点上运行npm install之后，您可能会看到编译错误，例如node-gyp或sharp或binding.gyp未找到。
 
-If you suspect this is your problem, download the [Visual Studio Community 2015 Package](https://www.visualstudio.com/products/visual-studio-community-vs) and install only the part of the package that interests us : `Programming languages > Visual C++ > Common tools for Visual Studio 2015`. Be sure to download the 2015 version of VS Community, not the 2017 version (see Note 1 below) ; you'll have to use the [search bar on the VS site](https://www.visualstudio.com/products/visual-studio-community-vs) to find it. You can uncheck everything else. You don't need to install the full VS2015 Express on your system and this won't mess up your existing VS201x installs.
+如果您怀疑这是您的问题，请下载Visual Studio Community 2015 Package，并只安装我们感兴趣的软件包部分：编程语言> Visual C ++> Visual Studio 2015的常用工具。 请务必下载2015版的VS社区，而不是2017版（请参阅下面的注1）; 你将不得不使用VS[网站上的搜索栏](https://www.visualstudio.com/products/visual-studio-community-vs)来找到它。 你可以取消选中其他的。 您不需要在系统上安装完整的VS2015 Express，这不会影响您现有的VS201x安装。
 
-![Common tools for Visual Studio 2015 inside the VS 2015 Community Package](https://i.stack.imgur.com/J1aet.png)
+![VS 2015社区包内Visual Studio 2015的常用工具](然后在Gatsby上运行命令：)
 
-Then run the commands on Gatsby:
+然后在Gatsby上运行命令：
 
 ```powershell
 npm uninstall node-gyp -g
@@ -27,8 +27,8 @@ npm cache clean -f
 npm install
 ```
 
-You should then be all set.
+你应该全部设置。
 
-If that still doesn't work, refer to the [`node-gyp` npm package homepage](https://www.npmjs.com/package/node-gyp) for further instructions and contact the `node-gyp`team on [GitHub](https://github.com/nodejs/node-gyp/issues).
+如果仍然不起作用，请参阅[node-gyp](https://www.npmjs.com/package/node-gyp) npm软件包主页以获取更多说明，并联系[GitHub](https://github.com/nodejs/node-gyp/issues)上的node-gypteam。
 
-Note 1 : the Visual Studio Community 2017 surely contains the package too but we weren't able to find it. If you found it, run `npm config set msvs_version 2017` instead and report it here with a screenshot!
+注1：Visual Studio Community 2017肯定也包含了这个包，但是我们无法找到它。 如果你找到了，请运行npm config set msvs_version 2017，并在屏幕上用截图报告。
