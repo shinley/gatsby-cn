@@ -1,5 +1,5 @@
 ---
-title: Adding Images, Fonts, and Files
+title: 添加图像，字体和文件
 ---
 With Webpack you can **`import` a file right in a JavaScript module**. This tells Webpack to include that file in the bundle. Unlike CSS imports, importing a file gives you a string value. This value is the final path you can reference in your code, e.g. as the `src` attribute of an image or the `href` of a link to a PDF.
 
