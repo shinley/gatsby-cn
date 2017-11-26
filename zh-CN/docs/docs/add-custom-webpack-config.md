@@ -17,11 +17,11 @@ Gatsby做多个webpack的构建时有些不同的配置。 我们称每个构建
 
 检查源的webpack.config.js。
 
-There are many plugins in the Gatsby repo using this API to look to for examples e.g. [Sass](/packages/gatsby-plugin-sass/), [Typescript](/packages/gatsby-plugin-typescript/), [Glamor](/packages/gatsby-plugin-glamor/), and many more!
+在使用这个API的Gatsby repo中有很多插件来查看例如， [SASS](/packages/gatsby-plugin-sass/)，[Typescript](/packages/gatsby-plugin-typescript/)，[Glamor](/packages/gatsby-plugin-glamor/)，还有更多！
 
-## Example
+## 例如
 
-Here is an example adding support for **flexboxgrid** when processing css files.
+以下是处理css文件时添加对flexboxgrid的支持的示例。
 
 ```js
 exports.modifyWebpackConfig = ({ config, stage }) => {
