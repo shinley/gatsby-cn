@@ -446,31 +446,31 @@ export default typography
 
             
             <p>
-              CSS Modules is very popular, as it lets you write CSS like normal but with a lot more safety. The tool automatically makes class and animation names unique so you don't have to worry about selector name collisions.
+              CSS模块非常受欢迎，因为它可以让你像平常一样编写CSS，但安全性更高。 该工具自动使类和动画的名称独特，所以你不必担心选择器名称冲突。
             </p>
 
 
             
             <p>
-              CSS Modules are highly recommended for those new to building with Gatsby (and React in general).
+              CSS模块被强烈推荐给那些用Gatsby构建的新模块（通常是React）。
             </p>
 
 
             
             <p>
-              Gatsby works out of the box with CSS Modules.
+              Gatsby开箱即用CSS模块。
             </p>
 
 
             
             <p>
-              Let's build a page using CSS Modules.
+              让我们使用CSS模块构建一个页面。
             </p>
 
 
             
             <p>
-              First, let's create a new <code>Container</code> component which we'll use for each of the CSS-in-JS examples. Create a <code>components</code> directory at <code>src/components</code> and then, in this directory, create a file named <code>container.js</code> and paste the following.
+              首先，我们创建一个新的Container组件，我们将使用它来为每个CSS-in-JS示例使用。 在src/components创建一个组件目录，然后在这个目录下创建一个名为container.js的文件并粘贴下面的代码。
             </p>
 
 
@@ -486,7 +486,7 @@ export default ({ children }) =&gt;
 
             
             <p>
-              Then create a new component page by creating a file at <code>src/pages/about-css-modules.js</code>:
+              然后通过在src/pages/about-css-modules.js中创建一个文件来创建一个新的组件页面：
             </p>
 
 
@@ -505,13 +505,13 @@ export default () =&gt;
 
             
             <p>
-              You'll notice we imported the <code>Container</code> component we just created.
+              您会注意到我们导入了刚刚创建的Container组件。
             </p>
 
 
             
             <p>
-              Your page should now look like:
+              您的页面现在应该如下所示：
             </p>
 
 
@@ -523,13 +523,13 @@ export default () =&gt;
 
             
             <p>
-              Let's create a simple list of people with names, avatars, and short latin biographies.
+              我们来创建一个简单的名单，头像和简短的拉丁传记名单。
             </p>
 
 
             
             <p>
-              First, let's create the file for the CSS at <code>src/pages/about-css-modules.module.css</code>. You'll notice that the file name ends with <code>.module.css</code> instead of <code>.css</code> like normal. This is how we tell Gatsby that this CSS file should be processed as CSS modules.
+              首先，我们在src/pages/about-css-modules.module.css中创建CSS的文件。 您会注意到，文件名以.module.css结尾，而不是像普通的.css结尾。 这就是我们如何告诉Gatsby这个CSS文件应该作为CSS模块来处理。
             </p>
 
 
@@ -570,7 +570,7 @@ export default () =&gt;
 
             
             <p>
-              Now import that file into the <code>about-css-modules.js</code> page we created earlier. Also log the resulting import so we can see what the processed file looks like.
+              现在将该文件导入我们前面创建的about-css-modules.js页面。 同时记录结果导入，以便我们可以看到处理文件的样子。
             </p>
 
 
@@ -582,7 +582,7 @@ console.log(styles)
 
             
             <p>
-              If you open the developer console in your browser you'll see:
+              如果您在浏览器中打开开发者控制台，您将看到：
             </p>
 
 
@@ -594,7 +594,7 @@ console.log(styles)
 
             
             <p>
-              If you compare that to our CSS file, you'll see that each class is now a key in the imported object pointing to a long string e.g. <code>avatar</code> points to <code>about-css-modules-module---avatar----hYcv</code>. These are the class names CSS Modules generates. They're guaranteed to be unique across your site. And because you have to import them to use the classes, there's never any question about where some CSS is being used.
+              如果您将它与我们的CSS文件进行比较，您会看到每个类现在都是导入对象中的一个键，指向一个长字符串，例如 头像指向about-css-modules-module --- avatar ---- hYcv。 这些是CSS模块生成的类名称。 They're guaranteed to be unique across your site. And because you have to import them to use the classes, there's never any question about where some CSS is being used.
             </p>
 
 
