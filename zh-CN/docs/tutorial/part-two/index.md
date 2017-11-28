@@ -63,6 +63,7 @@ typora-copy-images-to: './'
 <p>
   使用它看起来像这样:
 </p>
+
 ```jsx
 import Typography from "typography"
 
@@ -117,7 +118,7 @@ const typography = new Typography({
   这会创建一个具有以下结构的新站点。
 </p>
 
-```
+```shell
 ├── package.json
 ├── src
 │   └── pages
@@ -147,7 +148,7 @@ const typography = new Typography({
   将以下内容复制到gatsby-config.js中
 </p>
 
-```
+```javascript
 module.exports = {
   plugins: [`gatsby-plugin-typography`],
 }
@@ -654,20 +655,14 @@ export default () =>
   Glamour可以让你在你的组件中使用相同的React支持的Object CSS语法
 </p>
 
-
-
 <p>
   首先安装Glamor的Gatsby插件。
 </p>
 
-
-            
 ```shell
 npm install --save gatsby-plugin-glamor
 ```
 
-
-            
 <p>
   然后把它添加到你的gatsby-config.js
 </p>
@@ -902,49 +897,33 @@ export default () =>
   </Container>
 ```
 
+<h3>
+  其他CSS选项
+</h3>
 
-            
-            <h3>
-              其他CSS选项
-            </h3>
+<p>
+  Gatsby支持几乎所有可能的样式选项（如果您的CSS选项没有插件，请提供一个！）
+</p>
 
-
-            
-            <p>
-              Gatsby支持几乎所有可能的样式选项（如果您的CSS选项没有插件，请提供一个！）
-            </p>
-
-
-            
-            <ul>
-              <li>
-                <a href="/packages/gatsby-plugin-sass/">Sass</a>
-              </li>
-
-              
-              <li>
-                <a href="/packages/gatsby-plugin-emotion/">Emotion</a>
-              </li>
-
-              
-              <li>
-                <a href="/packages/gatsby-plugin-jss/">JSS</a>
-              </li>
-
-              
-              <li>
-                <a href="/packages/gatsby-plugin-stylus/">Stylus</a>
-              </li>
-
-              
-              <li>
-                and more!
-              </li>
-
-            </ul>
+<ul>
+  <li>
+    <a href="/packages/gatsby-plugin-sass/">Sass</a>
+  </li>
+  <li>
+    <a href="/packages/gatsby-plugin-emotion/">Emotion</a>
+  </li>
+  <li>
+    <a href="/packages/gatsby-plugin-jss/">JSS</a>
+  </li>
+  <li>
+    <a href="/packages/gatsby-plugin-stylus/">Stylus</a>
+  </li>
+  <li>
+    and more!
+  </li>
+</ul>
 
 
-            
-            <p>
-              现在继续教程的第三部分。
-            </p>
+<p>
+  现在继续教程的第三部分。
+</p>

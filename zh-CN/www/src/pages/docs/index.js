@@ -10,16 +10,16 @@ class IndexRoute extends React.Component {
   render() {
     return (
       <Container>
-        <h1 css={{ marginTop: 0 }}>Get started</h1>
+        <h1 css={{ marginTop: 0 }}>开始</h1>
         <p>Gatsby is a blazing-fast static site generator for React.</p>
-        <h2>Install Gatsby{`'`}s command line tool</h2>
+        <h2>安装 Gatsby{`'`}s 命令行工具</h2>
         <p>
           <code>npm install --global gatsby-cli</code>
         </p>
-        <h2>Using the Gatsby CLI</h2>
+        <h2>使用Gatsby命令行工具</h2>
         <ol>
           <li>
-            Create a new site.
+            创建一个新站点.
             {` `}
             <code>gatsby new gatsby-site</code>
           </li>
