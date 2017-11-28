@@ -1,14 +1,15 @@
 ---
 title: PRPL Pattern
 ---
-PRPL is a web site architecture developed by Google for building websites and apps that work exceptionally well on smartphones and other devices with unreliable network connections.
+PRPL是由Google开发的网站架构，用于构建在智能手机和其他具有不可靠网络连接的设备上运行得非常好的网站和应用程序。
 
 https://developers.google.com/web/fundamentals/performance/prpl-pattern/
 
-PRPL stands for:
+PRPL代表：
 
-* **Push** critical resources for the initial URL route using `<link preload>` and http/2.
-* **Render** initial route.
+* 使用<link preload />
+    和http/2为初始URL路由推送关键资源。
+* 渲染初始路由。
 * **Pre-cache** remaining routes.
 * **Lazy-load** and create remaining routes on demand.
 
