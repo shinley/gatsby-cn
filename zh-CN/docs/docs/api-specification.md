@@ -12,11 +12,11 @@ API的两个最重要的优先事项是a）实现广泛和强大的插件生态�
 * 数据源（例如来自文件系统或API或数据库）
 * 将数据从一种类型转换为另一种类型（例如将Markdown文件转换为HTML）
 * 创建页面（例如，一个markdown文件的目录都会被转换成页面，而URL是从它们的文件名派生的）。
-* Modifying webpack config (e.g. for styling options, adding support for other compile-to-js languages)
-* Adding things to the rendered HTML (e.g. meta tags, analytics JS snippits like Google Analytics)
-* Writing out things to build directory based on site data (e.g. service worker, sitemap, RSS feed)
+* 修改webpack配置（例如，样式选项，添加对其他编译为js语言的支持）
+* 将东西添加到渲染的HTML（例如元标记，Google Analytics等分析JS 片断）
+* 写出基于站点数据构建目录的东西（例如服务工作者，站点地图，RSS提要）
 
-A single plugin can use multiple APIs to accomplish its purpose. E.g. the plugin for the css-in-js library [Glamor ](/packages/gatsby-plugin-glamor/)
+一个插件可以使用多个API来实现其目的。 例如。 css-in-js库[Glamor](/packages/gatsby-plugin-glamor/)插件
 
 1. modifies the webpack config to add its plugin
 2. adds a Babel plugin to replace React's default createElement
