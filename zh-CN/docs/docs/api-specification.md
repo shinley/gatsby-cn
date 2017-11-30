@@ -1,17 +1,17 @@
 ---
-title: API specification
+title: API规范
 ---
 Gatsby's APIs are tailored conceptually to some extent after React.js to improve the coherence between the two systems.
 
-The two top priorities of the API are a) enable a broad and robust plugin ecosystem and b) on top of that a broad and robust theme ecosystem (themes are on the back burner btw until after v1 comes out).
+API的两个最重要的优先事项是a）实现广泛和强大的插件生态系统，b）基于广泛而强大的主题生态系统之上（主题在v1后出现）。
 
-## Plugins
+## 插件
 
-Plugins can extend Gatsby in many ways:
+插件可以用很多方式扩展Gatsby：
 
-* Sourcing data (e.g. from the filesystem or an API or a database)
-* Transforming data from one type to another (e.g. a markdown file to HTML)
-* Creating pages (e.g. a directory of markdown files all gets turned into pages with URLs derived from their file names).
+* 数据源（例如来自文件系统或API或数据库）
+* 将数据从一种类型转换为另一种类型（例如将Markdown文件转换为HTML）
+* 创建页面（例如，一个markdown文件的目录都会被转换成页面，而URL是从它们的文件名派生的）。
 * Modifying webpack config (e.g. for styling options, adding support for other compile-to-js languages)
 * Adding things to the rendered HTML (e.g. meta tags, analytics JS snippits like Google Analytics)
 * Writing out things to build directory based on site data (e.g. service worker, sitemap, RSS feed)
