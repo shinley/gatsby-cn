@@ -14,6 +14,6 @@ module.exports = {
 }
 ```
 
-This way, when you `fetch('/api/todos')` in development, the development server will recognize that it’s not a static asset, and will proxy your request to `http://dev-mysite.com/api/todos` as a fallback.
+这样，当您在开发中获取（'/ api / todos'）时，开发服务器将认识到它不是一个静态资源，并将您的请求代理为http://dev-mysite.com/api/todos。
 
-Keep in mind that `proxy` only has effect in development (with `gatsby develop`), and it is up to you to ensure that URLs like `/api/todos` point to the right place in production.
+请记住，代理仅在开发中有效（与gatsby开发），并且由您来确保像/api/todos这样的URL指向生产中环境中的正确位置。
