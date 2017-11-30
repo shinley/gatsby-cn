@@ -41,19 +41,19 @@ Webpack在CSS中查找所有相关的模块引用（以./开头），并用编�
 
 ### 在模块系统之外添加资源
 
-You can also add other assets to a `static` folder at the root of your project.
+您也可以将其他资源添加到项目根目录的静态文件夹中。
 
-Note that we normally encourage you to `import` assets in JavaScript files instead. This mechanism provides a number of benefits:
+请注意，我们通常鼓励您使用JavaScript文件导入资源。 这种机制提供了许多好处：
 
-* Scripts and stylesheets get minified and bundled together to avoid extra network requests.
-* Missing files cause compilation errors instead of 404 errors for your users.
-* Result filenames include content hashes so you don’t need to worry about browsers caching their old versions.
+* 脚本和样式表被缩小并捆绑在一起以避免额外的网络请求。
+* 缺少文件会导致编译错误，而不是404用户的错误。
+* 结果文件名会被散列成新值，因此您不必担心浏览器缓存旧版本。
 
-However there is an **escape hatch** that you can use to add an asset outside of the module system.
+但是，您可以使用escape hatch在模块系统之外添加资产。
 
-If you put a file into the `static` folder, it will **not** be processed by Webpack. Instead it will be copied into the public folder untouched. E.g. if you add a file named `sun.jpg` to the static folder, it'll be copied to `public/sun.jpg`. To reference assets in the `static` folder, you need to use a special variable called `__PATH_PREFIX__`. You will need to make sure you set `pathPrefix` in your gatsby-config.js for this to work (set it to `/` if you don't have a path prefix).
+如果你把一个文件放到静态文件夹中，它不会被Webpack处理。 相反，它将被复制到公用文件夹中。 例如。 如果将一个名为sun.jpg的文件添加到静态文件夹中，它将被复制到public / sun.jpg。 要引用静态文件夹中的资源，您需要使用一个名为__PATH_PREFIX__的特殊变量。 你将需要确保你在你的gatsby-config.js中设置了pathPrefix来使其工作（如果你没有路径前缀，就把它设置为/）。
 
-In JavaScript code, you can use `__PATH_PREFIX__` for similar purposes:
+在JavaScript代码中，您可以使用__PATH_PREFIX__用于类似的目的：
 
 ```js
 render() {
@@ -64,7 +64,7 @@ render() {
 }
 ```
 
-Keep in mind the downsides of this approach:
+请记住这种方法的缺点：
 
 * None of the files in `static` folder get post-processed or minified.
 * Missing files will not be called at compilation time, and will cause 404 errors for your users.
