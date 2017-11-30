@@ -66,15 +66,16 @@ render() {
 
 请记住这种方法的缺点：
 
-* None of the files in `static` folder get post-processed or minified.
-* Missing files will not be called at compilation time, and will cause 404 errors for your users.
-* Result filenames won’t include content hashes so you’ll need to add query arguments or rename them every time they change.
+* 静态文件夹中的文件都不会被后处理或缩小。
+* 缺少的文件将不会在编译时被调用，并会导致您的用户产生404错误。
+* 结果文件名将不会被散列，因此您需要添加查询参数或每次更改时重命名它们。
 
-### When to Use the `static` Folder
+### 什么时候使用静态文件夹
 
-Normally we recommend importing [stylesheets](#adding-a-stylesheet), [images, and fonts](#adding-images-and-fonts) from JavaScript. The `static` folder is useful as a workaround for a number of less common cases:
+通常我们建议从JavaScript导入样式表，图片和字体。 静态文件夹可用于解决一些不常见的情况：
 
-* You need a file with a specific name in the build output, such as [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
-* You have thousands of images and need to dynamically reference their paths.
-* You want to include a small script like [`pace.js`](http://github.hubspot.com/pace/docs/welcome/) outside of the bundled code.
-* Some library may be incompatible with Webpack and you have no other option but to include it as a `<script>` tag.
+* 您需要在构建输出中使用具有特定名称的文件，例如[manifest.webmanifest](https://developer.mozilla.org/en-US/docs/Web/Manifest)。
+* 你有成千上万的图像，需要动态引用他们的路径。
+* 你想在包装代码之外加入一个像[pace.js](http://github.hubspot.com/pace/docs/welcome/)这样的小脚本。
+* 有些库可能与Webpack不兼容，除此之外，您没有别的选择，只能将其作为<script>标签包含在内。</li>
+</ul>
