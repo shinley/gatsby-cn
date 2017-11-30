@@ -24,7 +24,7 @@ API的两个最重要的优先事项是a）实现广泛和强大的插件生态�
       中。</li> </ol> 
       
       <p>
-        Plugins can also depend on other plugins. <a href="/packages/gatsby-plugin-sharp/">The Sharp plugin</a> exposes a number of high-level APIs for transforming images that several other Gatsby image plugins depend on. <a href="/packages/gatsby-transformer-remark/">gatsby-transformer-remark</a> does basic markdown->html transformation but exposes an API to allow other plugins to intervene in the conversion process e.g. <a href="/packages/gatsby-remark-prismjs/">gatsby-remark-prismjs</a> which adds highlighting to code blocks.
+        插件也可以依赖于其他插件。 <a href="/packages/gatsby-plugin-sharp/">Sharp插件</a>公开了一些高级API来转换其他几张Gatsby插件所依赖的图像。 <a href="/packages/gatsby-transformer-remark/">gatsby-transformer-remark</a>做了基本的markdown-> html转换，但是暴露了一个API以允许其他插件干预转换过程，例如 <a href="/packages/gatsby-remark-prismjs/">gatsby-remark-prismjs</a>增加了代码块的高亮显示。
       </p>
       
       <p>
