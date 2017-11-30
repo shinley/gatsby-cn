@@ -1,9 +1,9 @@
 ---
-title: Proxying API Requests in Development
+title: '在开发中代理API请求'
 ---
-People often serve the front-end React app from the same host and port as their backend implementation.
+人们经常将来自同一主机和端口的服务作为前端React应用程序的后端实现。
 
-To tell the development server to proxy any unknown requests to your API server in development, add a `proxy` field to your `gatsby-config.js`, for example:
+要告诉开发服务器在开发中将任何未知的请求代理到您的API服务器，请在您的gatsby-config.js中添加一个代理字段，例如：
 
 ```js
 module.exports = {
