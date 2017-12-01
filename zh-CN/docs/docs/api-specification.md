@@ -28,7 +28,7 @@ API的两个最重要的优先事项是a）实现广泛和强大的插件生态�
       </p>
       
       <p>
-        Transformer plugins are decoupled from source plugins. Transformer plugins simply look at the media type of new nodes created by source plugins to decide if they can transform it or not. Which means that a markdown transformer plugin can easily transform markdown from any source without any other configuration e.g. from file, a code comment, or external service like Trello which supports markdown in some of its data fields.
+        Transformer 插件与源插件分离。 Transformer plugins simply look at the media type of new nodes created by source plugins to decide if they can transform it or not. Which means that a markdown transformer plugin can easily transform markdown from any source without any other configuration e.g. from file, a code comment, or external service like Trello which supports markdown in some of its data fields.
       </p>
       
       <p>
