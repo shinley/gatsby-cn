@@ -28,11 +28,11 @@ API的两个最重要的优先事项是a）实现广泛和强大的插件生态�
       </p>
       
       <p>
-        Transformer 插件与源插件分离。 Transformer plugins simply look at the media type of new nodes created by source plugins to decide if they can transform it or not. Which means that a markdown transformer plugin can easily transform markdown from any source without any other configuration e.g. from file, a code comment, or external service like Trello which supports markdown in some of its data fields.
+        Transformer 插件与源插件分离。 Transformer插件只需查看由插件创建的新节点的媒体类型，以决定是否可以转换它。 这意味着一个Markdown转换插件可以轻松地从任何来源转换Markdown，没有任何其他配置，例如 来自文件，代码注释或Trello等外部服务，它在某些数据字段中支持Markdown。
       </p>
       
       <p>
-        See <a href="/docs/plugins/">the full list of (official only for now — adding support for community plugins later) plugins</a>.
+        查看<a href="/docs/plugins/">完整列表（目前只有官方的 - 稍后添加对社区插件的支持）插件</a>。
       </p>
       
       <h1>
@@ -40,30 +40,30 @@ API的两个最重要的优先事项是a）实现广泛和强大的插件生态�
       </h1>
       
       <h2>
-        Concepts
+        概念
       </h2>
       
       <ul>
         <li>
-          <em>Page</em> — a site page with a pathname, a template component, and optional graphql query and layout component
+          <em>页面 </em>- 带有路径名，模板组件和可选的graphql查询和布局组件的站点页面
         </li>
         <li>
-          <em>Page Component</em> — React.js component that renders a page and can optionally specify a layout component and a graphql query
+          <em>页面组件</em> - 呈现页面的React.js组件，可以选择指定一个布局组件和一个graphql查询
         </li>
         <li>
-          <em>Component extensions</em> — extensions that are resolvable as components. <code>.js</code> and <code>.jsx</code> are supported by core. But plugins can add support for other compile-to-js languages.
+          <em>组件扩展</em> - 可作为组件解析的扩展。 .js和.jsx受核心支持。 但插件可以添加对其他编译为js语言的支持。
         </li>
         <li>
-          <em>Dependency</em> — Gatsby tracks automatically dependencies between different objects e.g. a page can depend on certain nodes. This allows for hot reloading, caching, incremental rebuilds, etc.
+          <em>依赖</em> - Gatsby自动跟踪不同对象之间的依赖关系，例如 一个页面可以依靠某些节点。 这允许热重新加载，缓存，增量构建等。
         </li>
         <li>
-          <em>Node</em> — a data object
+          <em>节点</em> - 一个数据对象
         </li>
         <li>
-          <em>Node Field</em> — a field added by a plugin to a node that it doesn't control
+          <em>节点字段</em> - 由插件添加到不受其控制的节点的字段
         </li>
         <li>
-          <em>Node Link</em> — a connection between nodes that gets converted to GraphQL relationships. Can be created in a variety of ways as well as automatically inferred. Parent/child links from nodes and their transformed derivative nodes are first class links.
+          <em>节点链接</em> - 转换为GraphQL关系的节点之间的连接。 可以以各种方式创建，也可以自动推断。 来自节点及其变换派生节点的父/子链接是第一类链接。
         </li>
       </ul>
       
