@@ -241,8 +241,8 @@
       "path---blog-2017-10-16-making-website-building-fun-b90c7137edf96d287e83.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-d52f5400758fc719ec2b.js",
-      "component---src-layouts-index-js-d52f5400758fc719ec2b.js.map"
+      "component---src-layouts-index-js-3071a94302cf87e94866.js",
+      "component---src-layouts-index-js-3071a94302cf87e94866.js.map"
     ],
     "path---packages-gatsby-source-filesystem": [
       "path---packages-gatsby-source-filesystem-1c06949e8e6a1432a718.js",
@@ -541,9 +541,9 @@
       "path---packages-gatsby-plugin-manifest-37b32edd12c663a3101f.js.map"
     ],
     "app": [
-      "app-38d0a8f7581421f25753.js",
+      "app-869e3f877b79cc658216.js",
       "build-js-styles.css",
-      "app-38d0a8f7581421f25753.js.map",
+      "app-869e3f877b79cc658216.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-gatsby-first-beta-release": [
@@ -651,8 +651,8 @@
       "path---docs-browser-support-938506d94ff4162763b4.js.map"
     ],
     "component---src-pages-docs-index-js": [
-      "component---src-pages-docs-index-js-6d5c47bd66cb8ca3f2c0.js",
-      "component---src-pages-docs-index-js-6d5c47bd66cb8ca3f2c0.js.map"
+      "component---src-pages-docs-index-js-6a5ee3cd18a4d6a2b018.js",
+      "component---src-pages-docs-index-js-6a5ee3cd18a4d6a2b018.js.map"
     ],
     "path---docs-custom-html": [
       "path---docs-custom-html-1d284a06e9bff8662a0d.js",
