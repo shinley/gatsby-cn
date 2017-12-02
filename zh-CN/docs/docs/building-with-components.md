@@ -1,11 +1,11 @@
 ---
-title: Building with Components
+title: 使用组件我件
 ---
-## Requirements
+## 要求
 
 要使用Gatsby，您需要对React组件有一个基本的了解。
 
-The [official tutorial](https://facebook.github.io/react/tutorial/tutorial.html) is a good place to start.
+[官方教程](https://facebook.github.io/react/tutorial/tutorial.html)是一个起步入门的地方。
 
 ## 为什么使用React组件？
 
