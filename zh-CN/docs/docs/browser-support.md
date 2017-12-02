@@ -1,11 +1,11 @@
 ---
-title: Browser Support
+title: 浏览器支持
 ---
-Gatsby supports [the same browsers as the current stable version of React.js](https://facebook.github.io/react/docs/react-dom.html#browser-support) which is currently IE9+ as well as the most recent versions of other popular browsers.
+Gatsby支持与当前稳定版本的React.js相同的浏览器，也就是目前IE9 +以及其他流行浏览器的最新版本。
 
 ## Polyfills
 
-Gatsby uses the ES6 Promise API. As some older browsers don't support this, Gatsby includes by default a Promise polyfill. If you would like to provide your own Promise polyfill, you can set `polyfill` to `false` in your `gatsby-config.js`:
+Gatsbuy使用ES6 Promise API。 由于一些旧的浏览器不支持这个，Gatsby默认包含一个Promise的polyfill。 如果您想提供自己的Promise填充，可以在gatsby-config.js中将polyfill设置为false：
 
     module.exports = {
       polyfill: false,
@@ -13,7 +13,7 @@ Gatsby uses the ES6 Promise API. As some older browsers don't support this, Gats
     }
     
 
-## Specify what browsers your project supports using "Browserslist"
+## 使用“Browserslist”指定您的项目支持哪些浏览器
 
 You may customize your list of supported browser versions by declaring a [`"browserslist"`](https://github.com/ai/browserslist) key within your `package.json`. Changing these values will modify your JavaScript (via [`babel-preset-env`](https://github.com/babel/babel-preset-env#targetsbrowsers)) and your CSS (via [`autoprefixer`](https://github.com/postcss/autoprefixer)) output.
 
