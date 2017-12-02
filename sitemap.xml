@@ -145,6 +145,6 @@
 <url> <loc>https://www.gatsbyjs.cn/docs/bound-action-creators/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/docs/browser-apis/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/docs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.gatsbyjs.cn/docs/node-apis/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.gatsbyjs.cn/docs/ssr-apis/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.gatsbyjs.cn/docs/node-apis/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
