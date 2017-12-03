@@ -50,4 +50,4 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
 * 确保本地数据与源代码同步并且100％准确。 如果你的源代码允许你添加一个updatedSince查询（或类似的东西），你可以存储上一次使用setPluginStatus获取数据的时间。
 * 使用精确的媒体类型，容易理解的有意义的类型和准确的contentDigest来创建节点。
 * 根据需要创建“Link”节点类型（请参阅API规范概念部分中的节点链接。
-* Return either a promise or use the callback (3rd parameter) to report back to Gatsby when you're done sourcing nodes. Otherwise either Gatsby will continue on before you're done sourcing or hang while waiting for you to indicate you're finished.
+* 返回promise或使用回调（第三参数）在完成sourcing nodes时向Gatsby报告。 在您完成sourcing 或挂起之前，Gatsby 会继续等待您的指示完成。
