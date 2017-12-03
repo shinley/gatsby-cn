@@ -13,7 +13,7 @@ Gatsby可以很容易地以编程方式控制您的网页。
 
 ## 调试帮助
 
-要查看代码或插件正在创建哪些页面，可以在GraphiQL中开发时查询页面信息。 Paste the following query in the Graph*i*QL IDE for your site. The Graph*i*QL IDE is available when running your sites development server at `HOST:PORT/___graphql` e.g. `localhost:8000/___graphql`.
+要查看代码或插件正在创建哪些页面，可以在GraphiQL中开发时查询页面信息。 将以下查询粘贴到您的站点的GraphiQL IDE中。 在HOST:PORT/___ graphql上运行站点开发服务器时，可以使用GraphiQL IDE。localhost:8000/___ graphql。
 
 ```graphql
 {
@@ -32,17 +32,17 @@ Gatsby可以很容易地以编程方式控制您的网页。
 }
 ```
 
-You can also query for any `context` data you or plugins added to pages.
+您还可以查询上下文数据或插件添加到页面的数据。
 
-## Creating pages in gatsby-node.js
+## 在gatsby-node.js中创建页面
 
-Often you will need to programmatically create pages. For example, you have markdown files where each should be a page.
+通常您需要以编程方式创建页面。 例如，你有markdown 文件，每个文件应该是一个页面。
 
-This example assumes that each markdown page has a "path" set in the frontmatter of the markdown file.
+此示例假定每个markdown 页面都有一个在markdown 文件的前端设置的“路径”。
 
 ```javascript
-// Implement the Gatsby API “createPages”. This is called once the
-// data layer is bootstrapped to let plugins create pages from data.
+//实现Gatsby API 的“createPages”。 这被称为一次
+//数据层被引导，让插件从数据中创建页面。
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
@@ -90,19 +90,19 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 }
 ```
 
-## Modifying pages created by core or plugins
+## 修改由核心或插件创建的页面
 
-Gatsby core and plugins can automatically create pages for you. Sometimes the default isn't quite what you want and you need to modify the created page objects.
+Gatsby核心和插件可以自动为您创建页面。 有时默认不是你想要的，你需要修改创建的页面对象。
 
-### Removing trailing slashes
+### 删除尾部的斜杠
 
-A common reason for needing to modify automatically created pages is to remove trailing slashes.
+需要修改自动创建的页面的一个常见原因是删除结尾的斜线。
 
-To do this, in your site's `gatsby-node.js` add code similar to the following:
+要做到这一点，在您的网站的gatsby-node.js添加代码类似于以下内容：
 
 ```javascript
-// Implement the Gatsby API “onCreatePage”. This is
-// called after every page is created.
+//实现Gatsby AP I“onCreatePage”。 这是
+//在创建每个页面后调用。
 exports.onCreatePage = ({ page, boundActionCreators }) => {
   const { createPage, deletePage } = boundActionCreators
 
@@ -125,7 +125,7 @@ exports.onCreatePage = ({ page, boundActionCreators }) => {
 }
 ```
 
-### Creating client-only routes
+### 创建client-only （仅客户端）路由
 
 If you're creating a "hybrid" Gatsby app with both statically rendered pages as well as client-only routes e.g. an app that combines marketing pages and your app that lives under `/app/*`, you want to add code to your `gatsby-node.js` like the following:
 
