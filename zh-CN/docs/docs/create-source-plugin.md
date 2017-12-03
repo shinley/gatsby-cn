@@ -14,11 +14,11 @@ Gatsby-source-filesystem插件从文件系统有关文件作为“sources”的�
 
 媒体类型（也是MIME类型和内容类型）是识别在因特网上传输的文件/内容的格式的标准方式，例如 通过HTTP或通过电子邮件。 您可能熟悉诸如application/javascript，application/pdf，audio/mpeg，text/html，text/plain，image/jpeg等多种媒体类型。
 
-Each source plugin is responsible for setting the media type for the nodes they create. This way, source and transformer plugins can work together easily.
+每个source插件负责为它们创建的节点设置媒体类型。 这样，源代码和transformer(转换) 插件可以轻松地一起工作。
 
-This is not a required field but it's the way for source plugins to indicate to transformers that there is "raw" data that can still be further processed. It allows plugins to remain small and focused. Source plugins don't have to have opinions on how to transform their data. They can just set the `mediaType` and push that responsibility to transformer plugins.
+这不是必需的字段，但它是source 插件向transformers 指示存在仍然可以进一步处理的“raw”数据的方式。 它允许插件保持小而专注。 Source 插件不必对如何转换他们的数据有意见。 他们可以设置mediaType并将这个责任推到transformer 插件上。
 
-For example, it's quite common for services to allow you to add content as markdown. If you pull that markdown into Gatsby and create a new node, what then? How would a user of your source plugin convert that markdown into HTML they can use in their site? Luckily you don't have to do anything. Just create a node for the markdown content and set its mediaType as `text/markdown` and the various Gatsby markdown transformer plugins will see your node and transform it into HTML.
+例如，服务通常允许您将内容添加为markdown。 如果你把这个标记放进Gatsby ，并创建一个新的节点，那么呢？ 你的源代码插件的用户如何将这种markdown 转换成他们可以在他们的网站中使用的HTML？ 幸运的是，你不必做任何事情。 Just create a node for the markdown content and set its mediaType as `text/markdown` and the various Gatsby markdown transformer plugins will see your node and transform it into HTML.
 
 This loose coupling between data source and transformer plugins allow Gatsby site builders to quickly assemble complex data transformation pipelines with little work on their (and your (the source plugin author)) part.
 
