@@ -127,11 +127,11 @@ exports.onCreatePage = ({ page, boundActionCreators }) => {
 
 ### 创建client-only （仅客户端）路由
 
-If you're creating a "hybrid" Gatsby app with both statically rendered pages as well as client-only routes e.g. an app that combines marketing pages and your app that lives under `/app/*`, you want to add code to your `gatsby-node.js` like the following:
+如果你正在创建一个“hybrid”的Gatsby应用程序，包括静态渲染的页面以及客户端路线， 一个结合了营销页面和你的应用程序，在/app/*下的应用程序，你想添加代码到你的gatsby-node.js，如下所示：
 
 ```javascript
-// Implement the Gatsby API “onCreatePage”. This is
-// called after every page is created.
+//实现Gatsby API“onCreatePage”。 这是
+//在创建每个页面后调用。
 exports.onCreatePage = async ({ page, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
@@ -146,15 +146,15 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
 }
 ```
 
-### Choosing the page layout
+### 选择页面布局
 
-By default, all pages will use the layout found at `/layouts/index.js`.
+默认情况下，所有页面将使用在/layouts/index.js中找到的布局。
 
-You may wish to choose a custom layout for certain pages (such as removing header and footer for landing pages). You can choose the layout component when creating pages with the `createPage` action by adding a layout key to the page object or modify pages created elsewhere using the `onCreatePage` API. All components in the `/layouts/` directory are automatically available.
+您可能希望为某些页面选择自定义布局（例如删除登录页面的页眉和页脚）。 在使用createPage操作创建页面时，可以通过向页面对象添加布局键或使用onCreatePage API修改其他位置创建的页面来选择布局组件。 /layouts/目录中的所有组件都是自动可用的。
 
 ```javascript
-// Implement the Gatsby API “onCreatePage”. This is
-// called after every page is created.
+//实现Gatsby API“onCreatePage”。 这是
+//在创建每个页面后调用。
 exports.onCreatePage = async ({ page, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
