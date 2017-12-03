@@ -6,14 +6,14 @@ Gatsby可以很容易地以编程方式控制您的网页。
 页面可以通过三种方式创建：
 
 * 在你的网站的gatsby-node.js中通过实现API [createPages](/docs/node-apis/#createPages)
-* Gatsby core automatically turns React components in `src/pages` into pages
-* Plugins can also implement `createPages` and create pages for you
+* Gatsby核心自动将src/pages中的React组件转换为页面
+* 插件也可以实现createPages并为你创建页面
 
-You can also implement the API [`onCreatePage`](/docs/node-apis/#onCreatePage) to modify pages created in core or plugins or to create client-only pages.
+您也可以实现API onCreatePage来修改在核心或插件中创建的页面或创建仅客户端页面。
 
-## Debugging help
+## 调试帮助
 
-To see what pages are being created by your code or plugins, you can query for page information while developing in Graph*i*QL. Paste the following query in the Graph*i*QL IDE for your site. The Graph*i*QL IDE is available when running your sites development server at `HOST:PORT/___graphql` e.g. `localhost:8000/___graphql`.
+要查看代码或插件正在创建哪些页面，可以在GraphiQL中开发时查询页面信息。 Paste the following query in the Graph*i*QL IDE for your site. The Graph*i*QL IDE is available when running your sites development server at `HOST:PORT/___graphql` e.g. `localhost:8000/___graphql`.
 
 ```graphql
 {
