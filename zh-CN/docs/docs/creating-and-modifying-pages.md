@@ -1,11 +1,11 @@
 ---
-title: Creating and modifying pages
+title: 创建和修改页面
 ---
-Gatsby makes it easy to programmatically control your pages.
+Gatsby可以很容易地以编程方式控制您的网页。
 
-Pages can be created in three ways:
+页面可以通过三种方式创建：
 
-* In your site's gatsby-node.js by implementing the API [`createPages`](/docs/node-apis/#createPages)
+* 在你的网站的gatsby-node.js中通过实现API [createPages](/docs/node-apis/#createPages)
 * Gatsby core automatically turns React components in `src/pages` into pages
 * Plugins can also implement `createPages` and create pages for you
 
