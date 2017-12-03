@@ -1,18 +1,18 @@
 ---
-title: Create a source plugin
+title: 创建一个Source插件
 ---
-There are two types of plugins that work within Gatsby's data system, "source" and "transformer" plugins.
+在Gatsby的数据系统中有两种类型的插件，“Source”和“transformer”插件。
 
-* **Source** plugins "source" data from remote or local locations into what Gatsby calls [nodes](/docs/node-interface/).
-* **Transformer** plugins "transform" data provided by source plugins into new nodes and/or node fields.
+* Source插件将来自远程或本地位置的“Source”数据转换为Gatsby调用的节点。
+* Transformer插件将source插件提供的数据“transform”(转换) 为新的节点和/或节点字段。
 
-For example:
+例如:
 
-The [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) plugin "sources" data about files from the file system. It creates nodes with a type `File`, each File node corresponding to a file on the filesystem. On each node are fields like the `absolutePath`, `extension`, `modifiedTime`, etc.
+Gatsby-source-filesystem插件从文件系统有关文件作为“sources”的数据。 它使用File类型创建节点，每个File节点对应于文件系统上的文件。 在每个节点上都有像absolutePath，extension，modifiedTime等的字段
 
-And importantly, each node created by the filesystem source plugin includes the raw content of the file and its *media type*.
+重要的是，由文件系统源插件创建的每个节点都包括文件的原始内容和媒体类型。
 
-[A **media type**](https://en.wikipedia.org/wiki/Media_type) (also **MIME type** and **content type**) are an official way to identify the format of files/content that is transmitted on the internet e.g. over HTTP or through email. You're probably familiar with many media types such as `application/javascript`, `application/pdf`, `audio/mpeg`, `text/html`, `text/plain`, `image/jpeg`, etc.
+媒体类型（也是MIME类型和内容类型）是识别在因特网上传输的文件/内容的格式的标准方式，例如 通过HTTP或通过电子邮件。 您可能熟悉诸如application/javascript，application/pdf，audio/mpeg，text/html，text/plain，image/jpeg等多种媒体类型。
 
 Each source plugin is responsible for setting the media type for the nodes they create. This way, source and transformer plugins can work together easily.
 
