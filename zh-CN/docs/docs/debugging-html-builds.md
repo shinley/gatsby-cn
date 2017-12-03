@@ -3,13 +3,13 @@ title: 调试HTML构建
 ---
 构建静态HTML文件时出现错误通常有两个原因。
 
-1. 一些代码引用“browser globals”，如窗口或文档。 如果这是你的问题，你应该看到上面的错误，如“window is not defined”. To fix this, find the offending code and either a) check before calling the code if window is defined so the code doesn't run while gatsby is building (see code sample below) or b) if the code is in the render function of a React.js component, move that code into "componentDidMount" which ensures the code doesn't run unless it's in the browser.
+1. 一些代码引用“browser globals”，如窗口或文档。 如果这是你的问题，你应该看到上面的错误，如“window is not defined”. 为了解决这个问题，找到有问题的代码，然后： a）在调用代码之前检查是否定义了窗口，这样在构建gatsby时代码不会运行（参见下面的代码示例）或者 b）如果代码在 一个React.js组件，将代码移动到“componentDidMount”中，确保代码不会运行，除非它在浏览器中。
 
-2. Check that each of your JS files listed in your `pages` directory (and any sub-directories) are exporting either a React component or string. Gatsby treats any JS file listed under the pages dir as a page component, so it must have a default export that's a component or string.
+2. 检查您的网页目录（和任何子目录）中列出的每个JS文件是否正在导出React组件或字符串。 Gatsby将页面目录下列出的任何JS文件视为页面组件，因此它必须具有默认的导出组件或字符串。
 
-3. Some other reason :-) #1 is the most common reason building static files fail. If it's another reason, you have to be a bit more creative in figuring out the problem.
+3. 其他一些原因:-)＃1是构建静态文件失败的最常见原因。 如果这是另外一个原因，那么在解决问题时就必须更有创意。
 
-## How to check if `window` is defined
+## 如何检查窗口是否被定义
 
 ```javascript
 // Requiring function causes error during builds
@@ -22,13 +22,13 @@ if (typeof window !== `undefined`) {
 }
 ```
 
-## Fixing third-party modules
+## 解决第三方模块问题
 
-So, the worst has happened and you're using an NPM module that expects `window` to be defined. You may be able to file an issue and get the module patched, but what to do in the mean time?
+所以，最糟糕的事情发生了，你正在使用一个NPM模块，期望窗口被定义。 您可能能够提交问题并获取模块修补程序，但是同时要执行哪些操作？
 
-One solution is to [customize](../add-custom-webpack-config) your webpack configuration to replace the offending module with a dummy module during server rendering.
+一个解决方案是定制你的[webpack](../add-custom-webpack-config)配置，以在服务器渲染期间用伪模块替换违规模块。
 
-`gatsby-node.js` in the project root:
+项目根目录下的gatsby-node.js：
 
 ```js
 exports.modifyWebpackConfig = ({ config, stage }) => {
