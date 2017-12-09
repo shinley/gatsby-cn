@@ -7,17 +7,17 @@ Gatsby社区正在构建一个更全面的指南部分， 全部都是容易理�
 
 ## 目录
 
-- [What are Guide articles?](#what-are-guide-articles)
-- [What can I write an article about?](#what-can-i-write-an-article-about)
-- [How to contribute](#how-to-contribute)
+- [什么是指南文章？](#what-are-guide-articles)
+- [我能写一篇关于什么的文章？](#what-can-i-write-an-article-about)
+- [如何参与贡献](#how-to-contribute)
 - [Running the Guide locally on your own computer](#running-the-guide-locally-on-your-own-computer)
 - [Article style guide](#article-style-guide)
 
-# What are Guide articles?
+# 什么是指南文章？
 
-Guide articles can cover a broad range of topics. Please see the following examples: [tutorials](https://www.gatsbyjs.org/tutorial/part-one/), [code documentation](https://www.gatsbyjs.org/docs/browser-apis/), [explanatory articles](https://www.gatsbyjs.org/docs/prpl-pattern/), and [focused guides](https://www.gatsbyjs.org/docs/add-404-page/).
+指南文章可以涵盖范围广泛的主题。 Please see the following examples: [tutorials](https://www.gatsbyjs.org/tutorial/part-one/), [code documentation](https://www.gatsbyjs.org/docs/browser-apis/), [explanatory articles](https://www.gatsbyjs.org/docs/prpl-pattern/), and [focused guides](https://www.gatsbyjs.org/docs/add-404-page/).
 
-# What can I write an article about?
+# 我能写一篇关于什么的文章？
 
 We welcome your help writing these articles! You don't have to be an expert in a topic to write about it--this entire Guide is open source, so even if you make a mistake, another contributor will eventually correct it.
 
