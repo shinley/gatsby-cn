@@ -1,11 +1,11 @@
 ---
-title: Gatsby Style Guide
+title: Gatsby样式指南
 ---
-The Gatsby community is building out a more comprehensive Guides section. It will be full of relevant articles written to be easily understood by the awesome people who love building with Gatsby!
+Gatsby社区正在构建一个更全面的指南部分， 全部都是容易理解的相关的文章，以便与盖茨比一起热爱构建静态网站的人们很容易理解！
 
-We plan, write, and maintain these Guide articles on Github.
+我们在Github上规划，编写和维护这些文章。
 
-## Table of Contents
+## 目录
 
 - [What are Guide articles?](#what-are-guide-articles)
 - [What can I write an article about?](#what-can-i-write-an-article-about)
