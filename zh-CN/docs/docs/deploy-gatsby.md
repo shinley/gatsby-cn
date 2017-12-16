@@ -40,22 +40,22 @@ Without this change, [S3 doesn't look for index.html files when serving "clean u
 
 ### 署用户/组织站点
 
-Unlike project pages, user/organization sites on Github live in a special repository dedicated to files for the site. The sites must be published from the `master` branch of the repository which means the site source files should be kept in a branch named `source` or something similar. We also don't need to prefix links like we do with project sites.
+与项目页面不同，Github上的用户/组织站点位于专用于该站点文件的专用存储库中。 这些站点必须从存储库的主分支发布，这意味着站点源文件应该保存在一个名为源或类似的分支中。 我们也不需要在项目网站上加上前缀链接。
 
-The repository for these sites requires a special name. See https://help.github.com/articles/user-organization-and-project-pages/ for documentation on naming your site's repository.
+这些网站的存储库需要一个特殊的名称。 请参阅https://help.github.com/articles/user-organization-and-project-pages/以获取有关命名您的网站存储库的文档。
 
-Like with project sites, add `gh-pages` as a `devDependency` and add a `deploy` script to your site's `package.json` file:
+与项目站点一样，将gh-pages添加为devDependency并将部署脚本添加到站点的package.json文件中：
 
     "scripts": {
       "deploy": "gatsby build && gh-pages -d public --branch master",
     }
     
 
-## Debugging tips
+## 调试技巧
 
-### Don't minify HTML
+### 不要最小化HTML
 
-If you see the following error:
+如果您看到以下错误：
 
     Unable to find element with ID ##
     
