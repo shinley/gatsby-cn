@@ -14,11 +14,11 @@ Without this change, [S3 doesn't look for index.html files when serving "clean u
 
 ## Github Pages
 
-### Deploying a project page
+### 发布项目页面
 
-You can deploy sites on Github Pages with or without a custom domain. If you choose to use the default setup (without a custom domain), you will need to setup your site with [path prefixing](/docs/path-prefix/).
+您可以在Github上部署网站，可以使用或不使用自定义域名。 如果您选择使用默认设置（没有自定义域），则需要使用路径前缀来设置您的站点。
 
-### Use the NPM package `gh-pages` for deploying
+### 使用NPM包gh-pages进行部署
 
 First add **gh-pages** as a `devDependency` of your site and create an npm script to **deploy** your project by running `npm install gh-pages --save-dev` or `yarn add gh-pages --dev` (if you have yarn installed).
 
