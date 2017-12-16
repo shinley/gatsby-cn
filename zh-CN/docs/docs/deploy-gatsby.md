@@ -8,7 +8,7 @@ title: 部署Gatsby
 
 ## Amazon S3和Cloudfront
 
-If you decide to host your Gatsby site on S3 with Cloudfront as CDN, you should change the "Origin Domain Name" on the Cloudfront panel with the real URL of your S3 bucket: **examplewebsite.com.s3-website-eu-west-1.amazonaws.com** replacing the default URL suggested by Amazon **examplewebsite.com.s3.amazonaws.com**.
+如果您决定使用Cloudfront作为CDN在S3上托管您的Gatsby站点，则应该使用S3存储桶的实际URL更改Cloudfront面板上的“源域名”：examplewebsite.com.s3-website-eu-west-1.amazonaws.com替换Amazon examplewebsite.com.s3.amazonaws.com建议的默认URL。
 
 Without this change, [S3 doesn't look for index.html files when serving "clean urls"](https://forums.aws.amazon.com/message.jspa?messageID=314454).
 
