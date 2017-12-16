@@ -20,25 +20,25 @@ Without this change, [S3 doesn't look for index.html files when serving "clean u
 
 ### 使用NPM包gh-pages进行部署
 
-First add **gh-pages** as a `devDependency` of your site and create an npm script to **deploy** your project by running `npm install gh-pages --save-dev` or `yarn add gh-pages --dev` (if you have yarn installed).
+首先添加gh-pages作为你站点的devDependency，并通过运行npm install gh-pages --save-dev或者yarn add gh-pages --dev（如果你已经安装了yarn）创建一个npm脚本来部署你的项目。
 
-Then add a `deploy` script in your `package.json` file.
+然后在你的package.json文件中添加一个部署脚本。
 
     "scripts": {
       "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     }
     
 
-In the `gatsby-config.js`, set the `pathPrefix` to be added to your site's link paths. The `pathPrefix` should be the project name in your repository. (ex. `https://github.com/username/project-name` - your `pathPrefix` should be `/project-name`). See [the docs page on path prefixing for more](/docs/path-prefix/).
+在gatsby-config.js中，将pathPrefix设置为添加到您网站的链接路径。 AthPrefix应该是存储库中的项目名称。 (例如: https://github.com/username/project-name - 你的pathPrefix应该是/ project-name）。 有关更多信息，请参阅路径前缀上的[文档](/docs/path-prefix/)页面。
 
     module.exports = {
       pathPrefix: `/project-name`,
     }
     
 
-Now run `yarn deploy` or `npm run deploy`. Preview changes in your github page `https://username.github.io/project-name/`. You can also find the link to your site on Github under `Settings` > `Github Pages`.
+现在运行yarn deploy或npm run deploy。 在你的github页面预览更改https://username.github.io/project-name/。 您也可以在设置> Github页面下的Github上找到您的网站的链接。
 
-### Deploying a user/organization site
+### 署用户/组织站点
 
 Unlike project pages, user/organization sites on Github live in a special repository dedicated to files for the site. The sites must be published from the `master` branch of the repository which means the site source files should be kept in a branch named `source` or something similar. We also don't need to prefix links like we do with project sites.
 
