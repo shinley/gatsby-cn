@@ -1,12 +1,12 @@
 ---
-title: Deploying Gatsby
+title: 部署Gatsby
 ---
-## Tutorials for deploying on different static site hosts
+## 在不同的静态站点主机上部署的教程
 
 * [S3/Cloudfront](/docs/deploy-gatsby/#amazon-s3-and-cloudfront)
 * [Github Pages](/docs/deploy-gatsby/#github-pages)
 
-## Amazon S3 and Cloudfront
+## Amazon S3和Cloudfront
 
 If you decide to host your Gatsby site on S3 with Cloudfront as CDN, you should change the "Origin Domain Name" on the Cloudfront panel with the real URL of your S3 bucket: **examplewebsite.com.s3-website-eu-west-1.amazonaws.com** replacing the default URL suggested by Amazon **examplewebsite.com.s3.amazonaws.com**.
 
