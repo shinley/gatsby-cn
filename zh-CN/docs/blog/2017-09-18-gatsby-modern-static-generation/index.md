@@ -4,6 +4,10 @@ date: "2017-09-18"
 image: "code-image.jpg"
 author: "Kostas Bariotis"
 excerpt: "In this post, I will talk about static site generators -- how they have evolved and why I switched from a Ghost powered site to Gatsby.js, a modern static site generator."
+tags:
+  - ghost
+  - wordpress
+  - caching
 ---
 In this post, I will talk about static site generators -- how they have evolved and why I switched from a [Ghost](https://ghost.org) powered site to [Gatsby.js](/), a modern static site generator.
 
@@ -13,7 +17,7 @@ Jekyll, my tool of preference for quite a few years, helped me build [robust](ht
 
 Static site generators like Jekyll all work pretty similarly:
 
-* Describe your content in some common templating language ([Pug](pugjs.org), [Handlebars](http://handlebarsjs.com), etc)
+* Describe your content in some common templating language ([Pug](http://pugjs.org), [Handlebars](http://handlebarsjs.com), etc)
 * While in development, start a local web server and add file "watchers" that will listen for content changes and re-render the site
 * Finally, render the whole site in static HTML and deploy. The generator will combine your files and produce a well formed HTML content.
 
@@ -55,7 +59,11 @@ On your end, the development flow looks:
 
 It’s really that easy? Well, sort of.
 
-There is the need for a strong abstraction that will… * track your links across your components * parse content written in another format, like blog posts written in Markdown * generate code that will not bloat the client and will efficiently serve the content to the user.
+There is the need for a strong abstraction that will…
+
+* track your links across your components
+* parse content written in another format, like blog posts written in Markdown
+* generate code that will not bloat the client and will efficiently serve the content to the user.
 
 Thankfully, there are a few projects that took the initiative on this: [Gatsby.js](/), [Phenomic](https://phenomic.io), and [nextein](https://nextein.now.sh).
 
