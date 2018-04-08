@@ -9,7 +9,14 @@ In addition to `.env.*` files, any variable in the environment prefixed with `GA
 
 To add environment variables for the JavaScript run in node.js, e.g. in `gatsby-config.js` or `gatsby-node.js`, you can add environment variables the normal ways e.g. when calling gatsby on the command line or by adding environment variables through your hosting/build tool.
 
-If you want to access variables in `.env.*` files in your node.js code, use the NPM package [dotenv](https://www.npmjs.com/package/dotenv). Once you've installed dotenv and followed their setup instructions, you can use your environment variables in the same way as shown in the example below.
+If you want to access variables in `.env.*` files in your node.js code, use the NPM package [dotenv](https://www.npmjs.com/package/dotenv). Install the package and require it in your `gatsby-config.js` or `gatsby-node.js` the following way on top of your file:
+
+    require('dotenv').config({
+      path: `.env.${process.env.NODE_ENV}`
+    });
+    
+
+Now the variables are available.
 
 ## Example
 
@@ -21,7 +28,6 @@ If you want to access variables in `.env.*` files in your node.js code, use the 
     # Example .env.production file
     
     API_URL=https://example.com/api
-    
     
 
 These variables will be available to your site as `process.env.API_URL`.
@@ -46,5 +52,5 @@ render() {
 
 Reserved environment variables:
 
-- `NODE_ENV`
-- `PUBLIC_DIR`
+* `NODE_ENV`
+* `PUBLIC_DIR`
