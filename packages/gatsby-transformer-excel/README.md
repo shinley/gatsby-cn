@@ -6,20 +6,35 @@ Parses Excel files into JSON arrays.
 
 `npm install --save gatsby-transformer-excel`
 
+Note: You generally will use this plugin together with the [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) plugin. `gatsby-source-filesystem` reads in the files then this plugin *transforms* the files into data you can query.
+
 ## How to use
+
+If you put your Excel's files in `./src/data`:
 
 ```javascript
 // In your gatsby-config.js
-plugins: [
-  `gatsby-transformer-excel`,
-]
+module.exports = {
+  plugins: [ 
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      },
+    },
+    `gatsby-transformer-excel`,
+  ],
+}
 ```
+
+You can see an example project at https://github.com/gatsbyjs/gatsby/tree/master/examples/using-excel.
 
 ## Parsing algorithm
 
 The parsing is powered by the [SheetJS / js-xlsx](https://git.io/xlsx) library.
-Each row of each worksheet is converted into a node whose keys are determined
-by the first row and whose type is determined by the name of the worksheet.
+Each row of each worksheet is converted into a node whose keys are determined by
+the first row and whose type is determined by the name of the worksheet.
 
 So if your project has a `letters.xlsx` with two worksheets:
 
@@ -47,11 +62,11 @@ the following nodes would be created:
 
 ```javascript
 [
-  { letter: 'a', value: 97, type: 'LettersXlsxSheet1' },
-  { letter: 'b', value: 98, type: 'LettersXlsxSheet1' },
-  { letter: 'A', value: 65, type: 'LettersXlsxSheet2' },
-  { letter: 'B', value: 66, type: 'LettersXlsxSheet2' },
-]
+  { letter: "a", value: 97, type: "LettersXlsxSheet1" },
+  { letter: "b", value: 98, type: "LettersXlsxSheet1" },
+  { letter: "A", value: 65, type: "LettersXlsxSheet2" },
+  { letter: "B", value: 66, type: "LettersXlsxSheet2" },
+];
 ```
 
 ## How to query
@@ -93,4 +108,3 @@ Which would return:
   }
 }
 ```
-

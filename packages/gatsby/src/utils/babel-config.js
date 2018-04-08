@@ -35,9 +35,7 @@ function resolvePlugin(pluginName, directory, type) {
     ? pluginName
     : `babel-${type}-${pluginName}`
   const pluginInvariantMessage = `
-  You are trying to use a Babel plugin or preset which Gatsby cannot find: ${
-    pluginName
-  }
+  You are trying to use a Babel plugin or preset which Gatsby cannot find: ${pluginName}
 
   You can install it using "npm install --save ${name}".
 
@@ -130,7 +128,7 @@ function findBabelPackage(directory) {
  * the paths will be absolute so that Babel behaves as expected.
  */
 module.exports = async function babelConfig(program, stage) {
-  const { directory } = program
+  const { directory, noUglify } = program
 
   let babelrc = findBabelrc(directory) || findBabelPackage(directory)
 
@@ -151,7 +149,7 @@ module.exports = async function babelConfig(program, stage) {
       require.resolve(`babel-preset-env`),
       {
         loose: true,
-        uglify: true,
+        uglify: !noUglify,
         modules: `commonjs`,
         targets: {
           browsers: program.browserslist,
@@ -181,6 +179,7 @@ module.exports = async function babelConfig(program, stage) {
 
   const normalizedConfig = normalizeConfig(babelrc, directory)
   let modifiedConfig = await apiRunnerNode(`modifyBabelrc`, {
+    stage,
     babelrc: normalizedConfig,
   })
   if (modifiedConfig.length > 0) {

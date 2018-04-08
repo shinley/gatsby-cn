@@ -36,26 +36,36 @@ const inImageCache = props => {
 
 let io
 const listeners = []
-if (typeof window !== `undefined` && window.IntersectionObserver) {
-  io = new window.IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        listeners.forEach(l => {
-          if (l[0] === entry.target) {
-            if (entry.isIntersecting) {
-              io.unobserve(l[0])
-              l[1]()
+
+function getIO() {
+  if (
+    typeof io === `undefined` &&
+    typeof window !== `undefined` &&
+    window.IntersectionObserver
+  ) {
+    io = new window.IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          listeners.forEach(l => {
+            if (l[0] === entry.target) {
+              // Edge doesn't currently support isIntersecting, so also test for an intersectionRatio > 0
+              if (entry.isIntersecting || entry.intersectionRatio > 0) {
+                io.unobserve(l[0])
+                l[1]()
+              }
             }
-          }
+          })
         })
-      })
-    },
-    { rootMargin: `200px` }
-  )
+      },
+      { rootMargin: `200px` }
+    )
+  }
+
+  return io
 }
 
 const listenToIntersections = (el, cb) => {
-  io.observe(el)
+  getIO().observe(el)
   listeners.push([el, cb])
 }
 
@@ -77,8 +87,24 @@ const isWebpSupported = () => {
   return isWebpSupportedCache
 }
 
+const noscriptImg = props => {
+  // Check if prop exists before adding each attribute to the string output below to prevent
+  // HTML validation issues caused by empty values like width="" and height=""
+  const src = props.src ? `src="${props.src}" ` : `src=""` // required attribute
+  const srcSet = props.srcSet ? `srcset="${props.srcSet}" ` : ``
+  const sizes = props.sizes ? `sizes="${props.sizes}" ` : ``
+  const title = props.title ? `title="${props.title}" ` : ``
+  const alt = props.alt ? `alt="${props.alt}" ` : `alt=""` // required attribute
+  const width = props.width ? `width="${props.width}" ` : ``
+  const height = props.height ? `height="${props.height}" ` : ``
+  const opacity = props.opacity ? props.opacity : `1`
+  const transitionDelay = props.transitionDelay ? props.transitionDelay : `0.5s`
+
+  return `<img ${width}${height}${src}${srcSet}${alt}${title}${sizes}style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:${transitionDelay};opacity:${opacity};width:100%;height:100%;object-fit:cover;object-position:center"/>`
+}
+
 const Img = props => {
-  const { opacity, onLoad, transitionDelay = ``, ...otherProps } = props
+  const { style, onLoad, ...otherProps } = props
   return (
     <img
       {...otherProps}
@@ -88,20 +114,18 @@ const Img = props => {
         top: 0,
         left: 0,
         transition: `opacity 0.5s`,
-        transitionDelay,
-        opacity,
         width: `100%`,
         height: `100%`,
         objectFit: `cover`,
         objectPosition: `center`,
+        ...style,
       }}
     />
   )
 }
 
 Img.propTypes = {
-  opacity: PropTypes.number,
-  transitionDelay: PropTypes.string,
+  style: PropTypes.object,
   onLoad: PropTypes.func,
 }
 
@@ -159,9 +183,11 @@ class Image extends React.Component {
       className,
       outerWrapperClassName,
       style = {},
+      imgStyle = {},
       sizes,
       resolutions,
       backgroundColor,
+      Tag,
     } = convertProps(this.props)
 
     let bgColor
@@ -169,6 +195,17 @@ class Image extends React.Component {
       bgColor = `lightgray`
     } else {
       bgColor = backgroundColor
+    }
+
+    const imagePlaceholderStyle = {
+      opacity: this.state.imgLoaded ? 0 : 1,
+      transitionDelay: `0.25s`,
+      ...imgStyle,
+    }
+
+    const imageStyle = {
+      opacity: this.state.imgLoaded || this.props.fadeIn === false ? 1 : 0,
+      ...imgStyle,
     }
 
     if (sizes) {
@@ -182,28 +219,26 @@ class Image extends React.Component {
 
       // The outer div is necessary to reset the z-index to 0.
       return (
-        <div
+        <Tag
           className={`${
             outerWrapperClassName ? outerWrapperClassName : ``
           } gatsby-image-outer-wrapper`}
           style={{
-            zIndex: 0,
             // Let users set component to be absolutely positioned.
             position: style.position === `absolute` ? `initial` : `relative`,
           }}
         >
-          <div
+          <Tag
             className={`${className ? className : ``} gatsby-image-wrapper`}
             style={{
               position: `relative`,
               overflow: `hidden`,
-              zIndex: 1,
               ...style,
             }}
             ref={this.handleRef}
           >
             {/* Preserve the aspect ratio. */}
-            <div
+            <Tag
               style={{
                 width: `100%`,
                 paddingBottom: `${100 / image.aspectRatio}%`,
@@ -216,8 +251,7 @@ class Image extends React.Component {
                 alt={alt}
                 title={title}
                 src={image.base64}
-                opacity={!this.state.imgLoaded ? 1 : 0}
-                transitionDelay={`0.25s`}
+                style={imagePlaceholderStyle}
               />
             )}
 
@@ -227,14 +261,13 @@ class Image extends React.Component {
                 alt={alt}
                 title={title}
                 src={image.tracedSVG}
-                opacity={!this.state.imgLoaded ? 1 : 0}
-                transitionDelay={`0.25s`}
+                style={imagePlaceholderStyle}
               />
             )}
 
             {/* Show a solid background color. */}
             {bgColor && (
-              <div
+              <Tag
                 title={title}
                 style={{
                   backgroundColor: bgColor,
@@ -257,17 +290,22 @@ class Image extends React.Component {
                 srcSet={image.srcSet}
                 src={image.src}
                 sizes={image.sizes}
-                opacity={
-                  this.state.imgLoaded || this.props.fadeIn === false ? 1 : 0
-                }
+                style={imageStyle}
                 onLoad={() => {
                   this.state.IOSupported && this.setState({ imgLoaded: true })
                   this.props.onLoad && this.props.onLoad()
                 }}
               />
             )}
-          </div>
-        </div>
+
+            {/* Show the original image during server-side rendering if JavaScript is disabled */}
+            <noscript
+              dangerouslySetInnerHTML={{
+                __html: noscriptImg({ alt, title, ...image }),
+              }}
+            />
+          </Tag>
+        </Tag>
       )
     }
 
@@ -277,7 +315,6 @@ class Image extends React.Component {
         position: `relative`,
         overflow: `hidden`,
         display: `inline-block`,
-        zIndex: 1,
         width: image.width,
         height: image.height,
         ...style,
@@ -295,19 +332,16 @@ class Image extends React.Component {
 
       // The outer div is necessary to reset the z-index to 0.
       return (
-        <div
+        <Tag
           className={`${
             outerWrapperClassName ? outerWrapperClassName : ``
           } gatsby-image-outer-wrapper`}
           style={{
-            zIndex: 0,
             // Let users set component to be absolutely positioned.
             position: style.position === `absolute` ? `initial` : `relative`,
-            width: image.width,
-            height: image.height,
           }}
         >
-          <div
+          <Tag
             className={`${className ? className : ``} gatsby-image-wrapper`}
             style={divStyle}
             ref={this.handleRef}
@@ -318,8 +352,7 @@ class Image extends React.Component {
                 alt={alt}
                 title={title}
                 src={image.base64}
-                opacity={!this.state.imgLoaded ? 1 : 0}
-                transitionDelay={`0.35s`}
+                style={imagePlaceholderStyle}
               />
             )}
 
@@ -329,14 +362,13 @@ class Image extends React.Component {
                 alt={alt}
                 title={title}
                 src={image.tracedSVG}
-                opacity={!this.state.imgLoaded ? 1 : 0}
-                transitionDelay={`0.25s`}
+                style={imagePlaceholderStyle}
               />
             )}
 
             {/* Show a solid background color. */}
             {bgColor && (
-              <div
+              <Tag
                 title={title}
                 style={{
                   backgroundColor: bgColor,
@@ -357,17 +389,28 @@ class Image extends React.Component {
                 height={image.height}
                 srcSet={image.srcSet}
                 src={image.src}
-                opacity={
-                  this.state.imgLoaded || this.props.fadeIn === false ? 1 : 0
-                }
+                style={imageStyle}
                 onLoad={() => {
                   this.setState({ imgLoaded: true })
                   this.props.onLoad && this.props.onLoad()
                 }}
               />
             )}
-          </div>
-        </div>
+
+            {/* Show the original image during server-side rendering if JavaScript is disabled */}
+            <noscript
+              dangerouslySetInnerHTML={{
+                __html: noscriptImg({
+                  alt,
+                  title,
+                  width: image.width,
+                  height: image.height,
+                  ...image,
+                }),
+              }}
+            />
+          </Tag>
+        </Tag>
       )
     }
 
@@ -378,6 +421,7 @@ class Image extends React.Component {
 Image.defaultProps = {
   fadeIn: true,
   alt: ``,
+  Tag: `div`,
 }
 
 Image.propTypes = {
@@ -394,9 +438,11 @@ Image.propTypes = {
     PropTypes.object,
   ]),
   style: PropTypes.object,
+  imgStyle: PropTypes.object,
   position: PropTypes.string,
   backgroundColor: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   onLoad: PropTypes.func,
+  Tag: PropTypes.string,
 }
 
 export default Image
