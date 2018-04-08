@@ -31,12 +31,12 @@ As proof of this, Gatsbygram loads *2-3x faster* than the real Instagram site.
 
 I tested Gatsbygram and Instagram on [webpagetest.org](https://www.webpagetest.org/) using a simulated 3G network and a Moto G4 smartphone—a budget Android typical of many lower-end phones used today. The median [speed index](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index) score for [Gatsbygram](http://www.webpagetest.org/result/170310_XP_11AS/) was 3151 vs. 8251 for [Instagram](http://www.webpagetest.org/result/170310_PC_11AZ/).
 
-![gatsbygram vs. instagram filmstrip](gatsbygram-instagram.png)*Filmstrip of Gatsbygram (top) and Instagram (bottom) loading on webpagetest.org*
+![gatsbygram vs. instagram filmstrip](gatsbygram-instagram.png)_Filmstrip of Gatsbygram (top) and Instagram (bottom) loading on webpagetest.org_
 
 The second repeat view is even faster for Gatsbygram as it now loads from its service worker. It has *pixels on the screen in under a 1/2 second on a budget Android device*! And for both the initial and repeat view, Gatsbygram *finishes* loading a full second before Instagram gets started.
 
 ![gatsbygram vs. instagram filmstrip repeat
-load](gatsbygram-instagram-repeat-load.png)*Filmstrip of a repeat view of Gatsbygram (top) and Instagram (bottom) loading on webpagetest.org*
+load](gatsbygram-instagram-repeat-load.png)_Filmstrip of a repeat view of Gatsbygram (top) and Instagram (bottom) loading on webpagetest.org_
 
 The difference in Time to Interactivity (TTI) (measure of how long before the user can actually interact with the page e.g. click on a link) between the sites is just as dramatic. Gatsbygram's TTI is 6.1s vs 14.1s for Instagram.
 
@@ -98,18 +98,18 @@ This is fine at first, but can be limiting. For example, in Gatsbygram, we have 
 Here is how we define pages from our JSON data for Gatsbygram at build time in the site's [`gatsby-node.js` file](https://github.com/gatsbyjs/gatsby/blob/master/examples/gatsbygram/gatsby-node.js):
 
 ```javascript
-const _ = require(`lodash`)
-const Promise = require(`bluebird`)
-const path = require(`path`)
-const slug = require(`slug`)
-const slash = require(`slash`)
+const _ = require(`lodash`);
+const Promise = require(`bluebird`);
+const path = require(`path`);
+const slug = require(`slug`);
+const slash = require(`slash`);
 
 // Implement the Gatsby API “createPages”. This is
 // called after the Gatsby bootstrap is finished so you have
 // access to any information necessary to programmatically
 // create pages.
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+  const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
     // The “graphql” function allows us to run arbitrary
@@ -125,23 +125,23 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     resolve(
       graphql(
         `
-      {
-        allPostsJson(limit: 1000) {
-          edges {
-            node {
-              id
+          {
+            allPostsJson(limit: 1000) {
+              edges {
+                node {
+                  id
+                }
+              }
             }
           }
-        }
-      }
-    `
+        `
       ).then(result => {
         if (result.errors) {
-          reject(new Error(result.errors))
+          reject(new Error(result.errors));
         }
 
         // Create image post pages.
-        const postTemplate = path.resolve(`src/templates/post-page.js`)
+        const postTemplate = path.resolve(`src/templates/post-page.js`);
         // We want to create a detailed page for each
         // Instagram post. Since the scrapped Instagram data
         // already includes an ID field, we just use that for
@@ -160,14 +160,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             context: {
               id: edge.node.id,
             },
-          })
-        })
+          });
+        });
 
-        return
+        return;
       })
-    )
-  })
-}
+    );
+  });
+};
 ```
 
 ## Using templates
@@ -177,8 +177,8 @@ Gatsby uses standard React.js components to render pages. When you define a page
 As you can see above, when defining a page, we can set "context" data, which is passed as a `prop` to the component and as a [GraphQL variable](http://graphql.org/learn/queries/#variables) in our `GraphQL` query. For the "[post template](https://github.com/gatsbyjs/gatsby/blob/master/examples/gatsbygram/src/templates/post-page.js)", we pass the id to the post. Below we use that id to query our `GraphQL` schema and return a fully formed page:
 
 ```jsx
-import React from "react"
-import PostDetail from "../components/post-detail"
+import React from "react";
+import PostDetail from "../components/post-detail";
 
 class PostTemplate extends React.Component {
   render() {
@@ -186,11 +186,11 @@ class PostTemplate extends React.Component {
       // PostDetail is used for this detail page and
       // also in the modal.
       <PostDetail post={this.props.data.posts} />
-    )
+    );
   }
 }
 
-export default PostTemplate
+export default PostTemplate;
 
 // The post template's GraphQL query. Notice the “id”
 // variable which is passed in. We set this on the page
@@ -231,12 +231,12 @@ export const pageQuery = `
       }
     }
   }
-`
+`;
 ```
 
 ## Creating React.js component pages
 
-In addition to creating pages for our Instagram photos, we want to make an index page for browsing all photos. To build this index page, Gatsby lets us create pages using simple React.js components.
+In addition to creating pages for our Instagram photos, we want to make an index page for browsing all photos. To build this index page, Gatsby lets us create pages using React.js components.
 
     pages/
       index.js
@@ -245,38 +245,34 @@ In addition to creating pages for our Instagram photos, we want to make an index
 
 These React component pages can query the Gatsbygram GraphQL schema for data and are automatically converted into their own pages at `gatsbygram.gatsbyjs.org/` and `gatsbygram.gatsbyjs.org/about/`.
 
-Gatsbygram's `about.js` is a simple React component with no query. `index.js` is more complex. It queries for thumbnails for all images and has an infinite scroll implementation to lazy load in image thumbnails.
+Gatsbygram's `about.js` is a plain React component with no query. `index.js` is more complex. It queries for thumbnails for all images and has an infinite scroll implementation to lazy load in image thumbnails.
 
-[Read pages/index.js on Github](https://github.com/gatsbyjs/gatsby/blob/master/examples/gatsbygram/src/pages/index.js) [Read pages/about.js on Github](https://github.com/gatsbyjs/gatsby/blob/master/examples/gatsbygram/src/pages/about.js)
+[Read pages/index.js on GitHub](https://github.com/gatsbyjs/gatsby/blob/master/examples/gatsbygram/src/pages/index.js) [Read pages/about.js on GitHub](https://github.com/gatsbyjs/gatsby/blob/master/examples/gatsbygram/src/pages/about.js)
 
 ## The Layout Component
 
 Each Gatsby site has a top-level layout component at `layouts/index.js`. This layout component is used on every page of your site so can contain things like your header, footer, and default page structure. It is also used as the "[app shell](https://developers.google.com/web/updates/2015/11/app-shell)" when loading your site from a service worker.
 
-A simple layout component might look something like this.
+A small layout component might look something like this.
 
 ```jsx
-import React from "react"
-import Link from "gatsby-link"
+import React from "react";
+import Link from "gatsby-link";
 
 class Layout extends React.Component {
-  render () {
+  render() {
     return (
       <div>
-        <Link
-          to="/"
-        >
-          Home
-        </Link>
+        <Link to="/">Home</Link>
         <br />
         {/* Render children pages */}
         {this.props.children()}
       </div>
-    )
+    );
   }
 }
 
-export default Layout
+export default Layout;
 ```
 
 Every page will be rendered as children of the `Layout` component:
@@ -289,7 +285,7 @@ Every page will be rendered as children of the `Layout` component:
 
 Gatsbygram's layout component is somewhat more complicated than most sites as it has logic to show clicked images in either a modal on larger screens or on their own page on smaller screens.
 
-[Read Gatsbygram's Layout component on Github](https://github.com/gatsbyjs/gatsby/blob/master/examples/gatsbygram/src/layouts/index.js).
+[Read Gatsbygram's Layout component on GitHub](https://github.com/gatsbyjs/gatsby/blob/master/examples/gatsbygram/src/layouts/index.js).
 
 ## Client routing and pre-caching
 
@@ -376,7 +372,7 @@ module.exports = {
       },
     },
   ],
-}
+};
 ```
 
 ## Styles
