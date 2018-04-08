@@ -24,8 +24,8 @@ Gatsby means no more compromising between developers, designers, and authors.
 
 In the last year, Gatsby community and usage have exploded. Milestones reached:
 
-* 196 code contributors on Github (with many more helping in [our chat room on Discord](https://discord.gg/0ZcbPKXt5bVoxkfV)).
-* 10,000 stars on Github
+* 196 code contributors on GitHub (with many more helping in [our chat room on Discord](https://discord.gg/0ZcbPKXt5bVoxkfV)).
+* 10,000 stars on GitHub
 * 1000 followers on Twitter
 * 500,000 NPM downloads (100,000 in the last month!!)
 
@@ -58,7 +58,7 @@ But in many conversations among community members building Gatsby sites, two mor
 
 ## Plugin system
 
-![container ship leaving port symbolizing of course GATSBY 1.0 HAS SHIPPED!!!](./images/container-ship-leaving.jpg)*Gatsby v1 heads out to sea delivering components to ports far and wide*
+![container ship leaving port symbolizing of course GATSBY 1.0 HAS SHIPPED!!!](./images/container-ship-leaving.jpg)_Gatsby v1 heads out to sea delivering components to ports far and wide_
 
 The first building block for answering to these questions was a [plugin system](/docs/plugins/).
 
@@ -82,7 +82,7 @@ Plugins can:
 
 Plugins also drive the new GraphQL data processing layer. This new system enables rich integrations with CMSs like Contentful, Wordpress, and Drupal along with other remote and local sources.
 
-In Gatsby v0, (like pretty much every static site generator) data was processed then *pushed* into templates to be rendered into HTML. This is a simple pattern and works great for many use cases. But when you start working on more complex sites, you really start to miss the flexibility of a database-driven site. With a database, all your data is available to query against in any fashion you'd like. Whatever bits of data you need to assemble a page, you can *pull* in. You want to create author pages showing their bio and last 5 posts? It's just a query away.
+In Gatsby v0, (like pretty much every static site generator) data was processed then *pushed* into templates to be rendered into HTML. This is a straight-forward pattern and works great for many use cases. But when you start working on more complex sites, you really start to miss the flexibility of a database-driven site. With a database, all your data is available to query against in any fashion you'd like. Whatever bits of data you need to assemble a page, you can *pull* in. You want to create author pages showing their bio and last 5 posts? It's just a query away.
 
 We wanted this same flexibility for Gatsby. So for 1.0, the Gatsby data team has built a new data processing layer which converts your data (whether from local files or remote sources) into a *GraphQL schema* which you can query against like a database.
 
@@ -92,7 +92,7 @@ Because we know at build-time what data is needed for every page, we can easily 
 
 This pattern of *colocating* your queries next to your views is copied from the [Relay data framework from Facebook](https://facebook.github.io/relay/). Colocation makes it easy to fully understand your views as everything necessary for that view is fully defined there.
 
-A simple example of how this works in practice.
+An example of how this works in practice.
 
 Say we had a markdown file that looked like:
 
@@ -108,11 +108,11 @@ This is my sweet blog post. **Cool!**
 In our site, we would write a React component which acts as a template for all the blog posts. Included with the component is an exported `pageQuery`.
 
 ```jsx
-// A simple React component for rendering a blog page.
-import React from "react"
+// A basic React component for rendering a blog page.
+import React from "react";
 
 class BlogPostTemplate extends React.Component {
-  render () {
+  render() {
     return (
       <div>
         <h1>{this.props.data.markdownRemark.frontmatter.title}</h1>
@@ -123,11 +123,11 @@ class BlogPostTemplate extends React.Component {
           }}
         />
       </div>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPost($slug: String!) {
@@ -141,8 +141,7 @@ export const pageQuery = graphql`
       }
     }
   }
-`
-
+`;
 ```
 
 All data sourcing and transforming is plugin-driven. So in time, any imaginable data source and potential ways of transforming its data will be an `npm install` away.
@@ -184,8 +183,8 @@ Gatsby 1.0 initially only loads the code necessary for the page you're on. As yo
 This means that one page with heavy imports:
 
 ```javascript
-import d3 from "d3"
-import threejs from "react-threejs"
+import d3 from "d3";
+import threejs from "react-threejs";
 ```
 
 ...won't affect the performance of the rest of the site.
@@ -200,4 +199,4 @@ The marketing portion of the site loads quickly with minimal JavaScript. When a 
 
 ## Ending note
 
-Gatsby is just getting started. We're really looking forward to working with you! [See you on Github!](https://github.com/gatsbyjs/gatsby)
+Gatsby is just getting started. We're really looking forward to working with you! [See you on GitHub!](https://github.com/gatsbyjs/gatsby)
