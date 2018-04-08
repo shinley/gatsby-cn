@@ -1,5 +1,5 @@
 ---
-title: 部署Gatsby
+title: "部署Gatsby"
 ---
 ## 在不同的静态站点主机上部署的教程
 
