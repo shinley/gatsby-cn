@@ -1,7 +1,7 @@
 ---
 title: Migrate from Hugo to Gatsby
 date: 2017-11-06
-author: Kalin Chernev
+author: "Kalin Chernev"
 ---
 ## Introduction
 
