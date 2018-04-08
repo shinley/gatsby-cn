@@ -1,6 +1,6 @@
 ---
 title: Gatsby.js 教程 第一部分
-typora-copy-images-to: './'
+typora-copy-images-to: ./
 ---
 使用Gatsby的朋友们，大家好！ 欢迎来到我们社区的第一部分Gatsby.js教程。
 
