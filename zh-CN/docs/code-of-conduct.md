@@ -1,6 +1,6 @@
 ---
 title: Gatsby.js Tutorial Part Two
-typora-copy-images-to: './'
+typora-copy-images-to: ./
 ---
 Welcome to part two of the Gatsby tutorial!
 
