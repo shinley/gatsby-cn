@@ -2,12 +2,16 @@
 title: From WordPress to Developing in React — Starting to See It
 date: "2017-10-20"
 author: "Benjamin Read"
+tags:
+  - React
+  - getting-started
+  - wordpress
 ---
 As a frontend designer I've always prided myself on being a HTML and CSS specialist. My use of JavaScript has been limited to animations and DOM manipulation. However, at [Indigo Tree](https://indigotree.co.uk "Indigo Tree: We Build Awesome Websites") we're branching out from our staple of WordPress and trying different methods of creating websites with functionality that our clients require, whilst maximising their budget.
 
 We're also bracing ourselves for what we’re anticipating to be the stormfront of [Gutenberg](https://wordpress.org/plugins/gutenberg/ "Gutenberg Wordpress plugins") for our WordPress projects. Once it's included in the WordPress Core, writing components in JavaScript for the Gutenberg editor will be necessary for every developer on a project.
 
-So I decided to dive into learning React with a few courses and some experimentation. I had the aim of building a site in [Gatsby.js](https://www.gatsbyjs.org/ "Blazing-fast static site generator for React") as a test for doing projects built entirely in React.
+So I decided to dive into learning React with a few courses and some experimentation. I had the aim of building a site in [Gatsby.js](/ "Blazing-fast static site generator for React") as a test for doing projects built entirely in React.
 
 ## Letting Go
 
@@ -24,19 +28,17 @@ Every time a client returned with a last-minute change, I would open up the code
 Now with Gatsby and React, I have my logic in one language, and in a way that makes groking easier. I have my layout, template and config modules at hand in the folder structure, without duplication.
 
 ```js
-import React from "react"
+import React from "react";
 // Template for blog page
 export default ({ data }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
   return (
     <div>
-      <h1>
-        {post.frontmatter.title}
-      </h1>
+      <h1>{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
-  )
-}
+  );
+};
 // The data query
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
@@ -48,7 +50,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 ```
 
 Whilst this might *look* weird, it actually makes it much easier to understand what’s going on. You know you’re dealing with this data, using this HTML, and with CSS-in-JS strategies such as Styled Components, you can see exactly what CSS is going to be implemented too. In one file.
@@ -73,7 +75,8 @@ export const query = graphql`
         type
       }
     }
-  }`
+  }
+`;
 ```
 
 Aside from those pesky tick characters, which are sometimes hard to spot for a newbie, I think this is a great tool, and has sped up my development a significant amount.
@@ -86,9 +89,9 @@ However, since I'm managing my HTML with JavaScript, why not CSS as well? As abo
 
 ## My Project
 
-Following the [tutorial on Gatsbyjs](https://www.gatsbyjs.org/tutorial/) I built up my project from scratch, breaking things profusely at first, but it honestly didn’t take long to gain confidence enough so that I launched my first site at [freebabylon5.com](https://freebabylon5.com "Our last, best hope of getting back on the air") recently.
+Following the [tutorial on Gatsbyjs](/tutorial/) I built up my project from scratch, breaking things profusely at first, but it honestly didn’t take long to gain confidence enough so that I launched my first site at [freebabylon5.com](https://freebabylon5.com "Our last, best hope of getting back on the air") recently.
 
-Be warned: the tutorial isn’t quite finished yet, you might be better off starting with [one of the starter kits already available](https://www.gatsbyjs.org/docs/gatsby-starters/), so that you get `react-helmet` and active links implemented, the 2 things I had to learn independently.
+Be warned: the tutorial isn’t quite finished yet, you might be better off starting with [one of the starter kits already available](/docs/gatsby-starters/), so that you get `react-helmet` and active links implemented, the 2 things I had to learn independently.
 
 ## The Way Forward?
 
@@ -98,6 +101,6 @@ I'm glad to say I'm sold on the idea and methods of developing with JavaScript, 
 
 Together with my colleagues at [Indigo Tree](https://indigotree.co.uk "Indigo Tree: We Build Awesome Websites") we’re now looking at using WordPress as a backend, where clients can edit their content without the worries of insecure plugins or other methods of being hacked.
 
-Using GatsbyJS with its “Bring Your Own Data” strategy makes perfect sense, and we’re about to start building our first Gatsby client site using the plugin [`gatsby-source-wordpress`](https://www.gatsbyjs.org/packages/gatsby-source-wordpress/ "WordPress content into Gatsby") to pull in our data and build a totally secure website with some pretty impressive gains on loading time. We’ll also sleep better at night knowing insecurities in WordPress are no longer putting our clients at risk.
+Using GatsbyJS with its “Bring Your Own Data” strategy makes perfect sense, and we’re about to start building our first Gatsby client site using the plugin [`gatsby-source-wordpress`](/packages/gatsby-source-wordpress/ "WordPress content into Gatsby") to pull in our data and build a totally secure website with some pretty impressive gains on loading time. We’ll also sleep better at night knowing insecurities in WordPress are no longer putting our clients at risk.
 
 The web is always changing. And the way forward isn't always easy to see. Now, with GatsbyJS, we're beginning to feel like we can visualise where things are going.
