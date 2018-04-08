@@ -4,6 +4,10 @@ date: "2017-10-01"
 image: "hexo-to-gatsby.png"
 author: "Ian Sinnott"
 excerpt: "How I migrated my blog to Gatsby and how you can do the same."
+tags:
+  - hexo
+  - getting-started
+  - markdown
 ---
 *This article was originally posted on [my blog (original link)](https://blog.iansinnott.com/migrating-a-blog-to-gatsby-part-2-of-gatsby-migration/). I'm reposting here in the hopes that it helps more people get started with Gatsby!*
 
@@ -11,7 +15,7 @@ excerpt: "How I migrated my blog to Gatsby and how you can do the same."
 
 * * *
 
-**Abstract:** Gatsby is a great tool for building a blog. In part 1 I did the more simple task of migrating an existing React site to Gatsby. This time I migrated my blog, which was a lot more involved and required a lot more Gatsby-specific knowledge.
+**Abstract:** Gatsby is a great tool for building a blog. In part 1 I did the more basic task of migrating an existing React site to Gatsby. This time I migrated my blog, which was a lot more involved and required a lot more Gatsby-specific knowledge.
 
 Here's the gist of what I'm going to cover:
 
@@ -27,7 +31,7 @@ Let's jump in.
 
 ## Preparing your existing blog for migration
 
-**NOTE:** If you *don't* already have a blog or want to create one from scratch there's a [tutorial for exactly that right here](https://www.gatsbyjs.org/blog/2017-07-19-creating-a-blog-with-gatsby/).
+**NOTE:** If you *don't* already have a blog or want to create one from scratch there's a [tutorial for exactly that right here](/blog/2017-07-19-creating-a-blog-with-gatsby/).
 
 Let's move some files around. Gatsby gives you a good amount of flexibility when it comes to file structure, but for consistency with the docs I'm going to use the suggested file structure for migrating my blog. How you handle this step will depend on what you're migrating from. I am migrating form Hexo, which is very similar to Jekyll in how it structures files.
 
@@ -134,7 +138,7 @@ I recommend getting to know this tool if you're not already familiar. You will b
 
 If you play around with GraphiQL you'll notice there's not that much there. Let's fix that. We need to teach Gatsby how to query the file system. Luckily this is so common it's been done for you. Install the file system source plugin:
 
-    yarn add gatsby-source-filesystem
+    npm i --save gatsby-source-filesystem
     
 
 Now modify `gatsby-config.js` to both use the plugin and tell it what directory to source files from. Add this to the `plugins` array:
@@ -174,7 +178,7 @@ This will list all the files in the directory you specified to the plugin. You c
 
 Being able to query files is a big win, and if you have a directory of HTML files this is all you will need. But if you want to render markdown files as HTML you will need another plugin. Let's add that now:
 
-    yarn add gatsby-transformer-remark
+    npm i --save gatsby-transformer-remark
     
 
 As before, add it to the `plugins` field in `gatsby-config.js`:
@@ -228,7 +232,7 @@ Gatsby has the concept of the `pageQuery`. For every page you create you can spe
 
 ```jsx
 // src/pages/index.js
-import React from 'react';
+import React from "react";
 
 export default class BlogIndex extends React.Component {
   render() {
@@ -256,7 +260,9 @@ export const pageQuery = graphql`
     allMarkdownRemark {
       edges {
         node {
-          frontmatter { title }
+          frontmatter {
+            title
+          }
         }
       }
     }
@@ -275,9 +281,11 @@ The error handling is pretty straightforward, if a bit verbose, as long as you k
 Now let's looks specifically at where we render a link for each blog post:
 
 ```jsx
-{this.props.data.allMarkdownRemark.edges.map(({ node }, i) => (
-  <a key={i}>{node.frontmatter.title}</a>
-))}
+{
+  this.props.data.allMarkdownRemark.edges.map(({ node }, i) => (
+    <a key={i}>{node.frontmatter.title}</a>
+  ));
+}
 ```
 
 Notice that the data shape is exactly what we specified in the GraphQL query. This may seem like a lot of nesting just to get at an array of data, but GraphQL emphasizes *clarity* over conciseness. You'll notice that if you run your GraphQL query in GraphiQL the data will have the exact shape described above.
@@ -290,7 +298,9 @@ export const pageQuery = graphql`
     allMarkdownRemark {
       edges {
         node {
-          frontmatter { title }
+          frontmatter {
+            title
+          }
         }
       }
     }
@@ -300,7 +310,7 @@ export const pageQuery = graphql`
 
 This is how you get data from Gatsby into your react components. Make sure you don't misspell `pageQuery` otherwise you won't get what you want.
 
-Also note that `graphql` is just some magic global variable. Your linter will probably complain about it being undefined and you will just have to ignore it. Personally I think it would be more clear if `graphql` was imported from Gatsby, but the project is still young so the API could change at some point ¯\\*(ツ)*/¯
+Also note that `graphql` is just some magic global variable. Your linter will probably complain about it being undefined and you will just have to ignore it. Personally I think it would be more clear if `graphql` was imported from Gatsby, but the project is still young so the API could change at some point ¯\*( ツ )*/¯
 
 ### Linking to blog posts
 
@@ -356,9 +366,13 @@ export const pageQuery = graphql`
 ```
 
 ```jsx
-{this.props.data.allMarkdownRemark.edges.map(({ node }, i) => (
-  <Link to={node.frontmatter.url} key={i}>{node.frontmatter.title}</Link>
-))}
+{
+  this.props.data.allMarkdownRemark.edges.map(({ node }, i) => (
+    <Link to={node.frontmatter.url} key={i}>
+      {node.frontmatter.title}
+    </Link>
+  ));
+}
 ```
 
 Many existing Gatsby examples use `path` within each markdown file's frontmatter to designate the url. For example:
@@ -390,14 +404,14 @@ In order to extend this particular part of Gatsby you need to create a `gatsby-n
 
 ```js
 // gatsby-node.js
-const { GraphQLString } = require('graphql');
+const { GraphQLString } = require("graphql");
 
-const getURL = (node) => {
+const getURL = node => {
   /* See the source link below for implementation */
 };
 
 exports.setFieldsOnGraphQLNodeType = ({ type }) => {
-  if (type.name !== 'MarkdownRemark') {
+  if (type.name !== "MarkdownRemark") {
     return {};
   }
 
@@ -414,7 +428,7 @@ exports.setFieldsOnGraphQLNodeType = ({ type }) => {
 
 If you've worked with GraphQL before this should look very familiar. In fact, as you can see the string type is imported directly from GraphQL and not from Gatsby.
 
-Basically you check the type of node and if it's a type your interested in you resolve with some fields. Fields in GraphQL require a `type` and a way to `resolve` the value.
+You check the type of node and if it's a type youʼre interested in you resolve with some fields. Fields in GraphQL require a `type` and a way to `resolve` the value.
 
 I've omitted the implementation of `getURL` here, but you can see the [source code here](https://github.com/iansinnott/iansinnott.github.io/blob/gatsby-migration/gatsby-node.js#L17) (NOTE: in the source it's called `getSlug` instead of `getURL`).
 
@@ -441,13 +455,13 @@ The key here is again to hook in to one of Gatsby's many plugin hooks. In this c
 
 exports.createPages = ({ boundActionCreators }) => {
   const { createPage } = boundActionCreators;
-  const postTemplate = path.resolve('./src/templates/custom-page.js');
+  const postTemplate = path.resolve("./src/templates/custom-page.js");
 
   // Create a custom page!
   createPage({
     path: `/my-custom-page/`,
     component: postTemplate,
-    context: {} // Context will be passed in to the page query as graphql variables
+    context: {}, // Context will be passed in to the page query as graphql variables
   });
 };
 ```
@@ -466,7 +480,7 @@ The API is actually pretty simple: To generate a new page call `createPage` with
 markdownFiles.forEach(post => {
   createPage({
     path: post.url,
-    component: './src/templates/post.js',
+    component: "./src/templates/post.js",
     context: {
       id: post.id,
     },
@@ -479,18 +493,21 @@ I've included the pseudo code to highlight the fact that nothing too magical is 
 So in order to make this work we also need to be able to query GraphQL just like we do in the page query. Gatsby let's us do exactly that by giving us access to the `graphql` object and letting us return a promise so that we can do async work.
 
 ```js
-<br />// NOTE: I'm using async/await to simplify the code since it's now natively supported
+// NOTE: I'm using async/await to simplify the code since it's now natively supported
 // in Node 8.x. This means that our function will return a promise
 exports.createPages = async ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
-  const postTemplate = path.resolve('./src/templates/post.js');
+  const postTemplate = path.resolve("./src/templates/post.js");
 
   // Using async await. Query will likely be very similar to your pageQuery in index.js
   const result = await graphql(`
     query {
       allMarkdownRemark {
         edges {
-          node { id url }
+          node {
+            id
+            url
+          }
         }
       }
     }
@@ -498,7 +515,7 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
 
   if (result.errors) {
     console.log(result.errors);
-    throw new Error('Things broke, see console output above');
+    throw new Error("Things broke, see console output above");
   }
 
   // Create blog posts pages.
@@ -506,7 +523,8 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
     createPage({
       path: node.url,
       component: postTemplate,
-      context: { // Context will be passed in to the page query as graphql vars
+      context: {
+        // Context will be passed in to the page query as graphql vars
         id: node.id,
       },
     });
@@ -528,16 +546,19 @@ Here it is in all it's glory:
 
 ```jsx
 // src/templates/post.js
-import React from 'react';
+import React from "react";
 
 export default class BlogPost extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
 
     return (
-      <div className='Post'>
+      <div className="Post">
         <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} className='content' />
+        <div
+          dangerouslySetInnerHTML={{ __html: post.html }}
+          className="content"
+        />
       </div>
     );
   }
