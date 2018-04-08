@@ -3,6 +3,12 @@ title: "Making website building fun"
 date: 2017-10-16
 author: "Kyle Mathews"
 typora-copy-images-to: ./
+tags:
+  - right-building-blocks
+  - gatsby-image
+  - react
+  - graphql
+  - plugins
 ---
 I still remember the first non-trivial React component I built in 2014—not long after I started using React seriously.
 
@@ -13,15 +19,14 @@ After a day or two of working through the niceties of writing a React component 
 Using [react-headroom](https://github.com/KyleAMathews/react-headroom) is so simple I realized you almost don't need documentation. A React header component using it would look like this:
 
 ```jsx
-import React from 'react'
-import Headroom from 'react-headroom'
+import React from "react";
+import Headroom from "react-headroom";
 
-export default () =>
+export default () => (
   <Headroom>
-    <h1>
-      You can put anything you'd like inside the Headroom Component
-    </h1>
+    <h1>You can put anything you'd like inside the Headroom Component</h1>
   </Headroom>
+);
 ```
 
 Having coming from years of building things with Backbone.js and jQuery where implementing a new plugin felt like following a long & intricate cooking recipe, the simplicity of react-headroom was astounding. That's all you do? Import it and use it like an HTML element?
@@ -42,7 +47,7 @@ Compare this with the minimum code necessary for the original headroom.js.
 // grab the element
 var myElement = document.querySelector("header");
 // construct an instance of Headroom, passing the element
-var headroom  = new Headroom(myElement);
+var headroom = new Headroom(myElement);
 // initialise
 headroom.init();
 ```
@@ -51,14 +56,14 @@ headroom.init();
 
 ```css
 .headroom {
-    will-change: transform;
-    transition: transform 200ms linear;
+  will-change: transform;
+  transition: transform 200ms linear;
 }
 .headroom--pinned {
-    transform: translateY(0%);
+  transform: translateY(0%);
 }
 .headroom--unpinned {
-    transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 ```
 
@@ -139,15 +144,15 @@ It has some nice tricks that you'd expect from a modern image component. It uses
 Here's what a really simple Gatsby page component using gatsby-image would look like:
 
 ```jsx
-import React from 'react'
-import Img from 'gatsby-image'
+import React from "react";
+import Img from "gatsby-image";
 
 export default ({ data }) => (
   <div>
     <h1>Hello gatsby-image</h1>
     <Img resolutions={data.file.childImageSharp.resolutions} />
   </div>
-)
+);
 ```
 
 So this is all very nice and it's far better to be able to use this from NPM vs. implementing it yourself or cobbling together several standalone libraries.
@@ -174,19 +179,19 @@ So not only do we skip all the complexity around setting up lazy-loading images 
 The code I showed above was missing the GraphQL query. A full image component would look like:
 
 ```jsx
-import React from 'react'
-import Img from 'gatsby-image'
+import React from "react";
+import Img from "gatsby-image";
 
 export default ({ data }) => (
   <div>
     <h1>Hello gatsby-image</h1>
     <Img resolutions={data.file.childImageSharp.resolutions} />
   </div>
-)
+);
 
 export const query = graphql`
   query GatsbyImageSampleQuery {
-    file(relativePath: { eq: "images/an-image.jpeg"}) {
+    file(relativePath: { eq: "images/an-image.jpeg" }) {
       childImageSharp {
         resolutions(width: l25, height: 125) {
           src
@@ -197,7 +202,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 ```
 
 So instead of a long pipeline of tasks to setup optimized images for your site, the steps now are:
