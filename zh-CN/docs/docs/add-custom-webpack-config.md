@@ -1,54 +1,83 @@
 ---
-title: "添加自定义webpack配置"
+title: "Add Custom webpack Config"
 ---
-*在创建自定义webpack配置之前，请检查是否有已经构建的Gatsby插件来处理插件部分的用例。 如果还没有一个，你的用例是一个普通的用例，我们强烈建议你把你的插件提交给Gatsby仓库，这样它可以提供给其他人（包括你未来的自己 *
+*Before creating custom webpack configuration, check to see if there's a Gatsby plugin already built that handles your use case in the [plugins section](/docs/plugins/). If there's not yet one and your use case is a general one, we highly encourage you to contribute back your plugin to the Gatsby repo so it's available to others (including your future self *
 
-要添加自定义webpack配置，请在根目录中创建（如果没有的话）gatsby-node.js文件。 在这个文件里面，导出一个名为modifyWebpackConfig的函数。
+To add custom webpack configurations, create (if there's not one already) a `gatsby-node.js` file in your root directory. Inside this file, export a function called `modifyWebpackConfig`.
 
-当Gatsby创建它的webpack配置时，这个函数将被调用，允许你使用webpack-configurator修改默认的webpack配置。
+When Gatsby creates its webpack config, this function will be called allowing you to modify the default webpack config using [webpack-configurator](https://github.com/lewie9021/webpack-configurator).
 
 Gatsby做多个webpack的构建时有些不同的配置。 我们称每个构建类型为“阶段”。 有以下几个阶段：
 
-1. develop：运行gatsby develop命令时。 配置热加载和CSS注入页面
-2. develop-html：与开发相同，但是没有在babel配置文件中react-hmre来渲染HTML组件。
+1. develop: when running the `gatsby develop` command. Has configuration for hot reloading and CSS injection into page
+2. develop-html: same as develop but without react-hmre in the babel config for rendering the HTML component.
 3. build-css：CSS的生产版本
 4. build-html：生成构建静态HTML页面
-5. build-javascript：制作JavaScript构建。 创建路由捆绑以及公共和应用程序捆绑。
+5. build-javascript: production JavaScript build. Creates route bundles as well as a `commons` and `app bundle`.
 
-检查源的webpack.config.js。
+Check [webpack.config.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js) for the source.
 
-在使用这个API的Gatsby repo中有很多插件来查看例如， [SASS](/packages/gatsby-plugin-sass/)，[Typescript](/packages/gatsby-plugin-typescript/)，[Glamor](/packages/gatsby-plugin-glamor/)，还有更多！
+There are many plugins in the Gatsby repo using this API to look to for examples e.g. [Sass](/packages/gatsby-plugin-sass/), [Typescript](/packages/gatsby-plugin-typescript/), [Glamor](/packages/gatsby-plugin-glamor/), and many more!
 
-## 例如
+## Modifying the babel loader
 
-以下是处理css文件时添加对flexboxgrid的支持的示例。
+Manually allow tweaking of include + exclude of babel loader.
+
+```javascript
+const generateBabelConfig = require("gatsby/dist/utils/babel-config");
+
+exports.modifyWebpackConfig = ({ config, stage }) => {
+  const program = {
+    directory: __dirname,
+    browserslist: ["> 1%", "last 2 versions", "IE >= 9"],
+  };
+
+  return generateBabelConfig(program, stage).then(babelConfig => {
+    config.removeLoader("js").loader("js", {
+      test: /\.jsx?$/,
+      exclude: modulePath => {
+        return (
+          /node_modules/.test(modulePath) &&
+          !/node_modules\/(swiper|dom7)/.test(modulePath)
+        );
+      },
+      loader: "babel",
+      query: babelConfig,
+    });
+  });
+};
+```
+
+## Example
+
+Here is an example that configures **flexboxgrid** when processing css files. Add this in `gatsby-node.js`:
 
 ```js
 exports.modifyWebpackConfig = ({ config, stage }) => {
   switch (stage) {
-    case 'develop':
-      config.loader('css', {
+    case "develop":
+      config.loader("css", {
         include: /flexboxgrid/,
       });
 
       break;
 
-    case 'build-css':
-      config.loader('css', {
+    case "build-css":
+      config.loader("css", {
         include: /flexboxgrid/,
       });
 
       break;
 
-    case 'build-html':
-      config.loader('css', {
+    case "build-html":
+      config.loader("css", {
         include: /flexboxgrid/,
       });
 
       break;
 
-    case 'build-javascript':
-      config.loader('css', {
+    case "build-javascript":
+      config.loader("css", {
         include: /flexboxgrid/,
       });
 
