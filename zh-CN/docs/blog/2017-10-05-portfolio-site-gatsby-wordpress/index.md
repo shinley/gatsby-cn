@@ -1,9 +1,9 @@
 ---
-title: Rebuilding my portfolio website with the great GatsbyJS and WordPress
-date: 2017-10-05
-image: gatsby-article-cover-image.jpg
-author: David James
-excerpt: Recreating my WordPress portfolio site using GatsbyJS, React and the WordPress REST API
+title: "Rebuilding my portfolio website with the great GatsbyJS and WordPress"
+date: "2017-10-05"
+image: "gatsby-article-cover-image.jpg"
+author: "David James"
+excerpt: "Recreating my WordPress portfolio site using GatsbyJS, React and the WordPress REST API"
 ---
 *This article was originally published on [my portfolio site](http://dfjames.com/blog/site-generating-with-the-great-gatsbyjs) on October 1, 2017.*
 
