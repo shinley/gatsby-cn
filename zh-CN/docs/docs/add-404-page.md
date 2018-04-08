@@ -1,8 +1,8 @@
 ---
 title: "Adding a 404 Page"
 ---
-To create a 404 page create a page whose path matches the regex `/404*`. Most often you'll want to create a React component page at `src/pages/404.js`.
+要创建一个404页面，请创建一个路径与正则表达式/ 404 *匹配的页面。 大多数情况下，您需要在src/pages/404.js创建一个React组件页面。
 
-Gatsby ensures that your 404 page is built as `404.html` as many static hosting platforms default to using this as your 404 error page. If you're hosting your site another way, you'll need to setup a custom rule to serve this file for 404 errors.
+Gatsby确保您的404页面被构建为404.html，因为许多静态托管平台默认使用此页面作为您的404错误页面。 如果您以另一种方式托管您的网站，则需要设置自定义规则以便为此文件提供404错误。
 
 开发时，Gatsby添加一个覆盖自定义404页面的默认404页面。 但是，您仍然可以访问您的404页面的确切网址，以验证其正常工作。
