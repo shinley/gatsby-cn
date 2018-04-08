@@ -7,8 +7,7 @@ https://developers.google.com/web/fundamentals/performance/prpl-pattern/
 
 PRPL代表：
 
-* 使用<link preload />
-    和http/2为初始URL路由推送关键资源。
+* **Push** critical resources for the initial URL route using `<link preload>` and http/2.
 * 渲染初始路由。
 * **Pre-cache** remaining routes.
 * **Lazy-load** and create remaining routes on demand.
@@ -20,3 +19,5 @@ Gatsby follows the PRPL architectural pattern. Gatsby sites *render* a static HT
 This issue written at the start of Gatsby's 1.0 work provides further background on how Gatsby works to guarantee high performance.
 
 https://github.com/gatsbyjs/gatsby/issues/431
+
+This blog post also covers how we think about performance — ["Web Performance 101—also, why is Gatsby so fast?"](/blog/2017-09-13-why-is-gatsby-so-fast/)
