@@ -5,6 +5,10 @@ author: "Kyle Mathews"
 image: "reactnext-gatsby-performance.001.png"
 showImageInArticle: false
 typora-copy-images-to: ./
+tags:
+  - performance
+  - mobile
+  - pwa
 ---
 *I gave this talk last weekend at [ReactNext](http://react-next.com/) in Tel Aviv. I spoke on the basics of measuring and improving web performance and how Gatsby is designed so sites built with it are always very very fast.*
 
@@ -39,6 +43,8 @@ Slow loading sites tend to have many related performance problems.
 ## How to think about & measure performance?
 
 Ok, I've convinced you that site performance is important. You perhaps already have a site that you know is too slow. How to do you go about improving things?
+
+Our first task is to understand how to measure website performance. Only then can we make changes that we're confident are improving things.
 
 Let's discuss two key website performance metrics that summarize the most important parts of website performance. How quickly is your website visible (Speed Index) and how quickly is your site usable (Time to Interactive—TTI).
 
