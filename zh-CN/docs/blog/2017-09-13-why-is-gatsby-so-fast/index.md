@@ -1,10 +1,10 @@
 ---
 title: Web Performance 101—also, why is Gatsby so fast?
-date: 2017-09-13
-author: Kyle Mathews
-image: reactnext-gatsby-performance.001.png
+date: "2017-09-13"
+author: "Kyle Mathews"
+image: "reactnext-gatsby-performance.001.png"
 showImageInArticle: false
-typora-copy-images-to: './'
+typora-copy-images-to: ./
 ---
 *I gave this talk last weekend at [ReactNext](http://react-next.com/) in Tel Aviv. I spoke on the basics of measuring and improving web performance and how Gatsby is designed so sites built with it are always very very fast.*
 
