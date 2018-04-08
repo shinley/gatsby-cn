@@ -1,10 +1,10 @@
 ---
-title: 'Community Roundup #1'
+title: "Community Roundup #1"
 date: 2017-09-21
-author: Kyle Mathews
-image: on-the-trail.jpg
+author: "Kyle Mathews"
+image: "on-the-trail.jpg"
 showImageInArticle: true
-typora-copy-images-to: './'
+typora-copy-images-to: ./
 ---
 It's been a wild 77 days since Gatsby 1.0.0 was released into the world on July 6th, 2017.
 
