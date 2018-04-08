@@ -1,5 +1,5 @@
 ---
-title: Gatsby Starters
+title: 'Gatsby Starters'
 ---
 Gatsby CLI工具可让您安装“Starters”。 这些是部分建立的网站预先配置，以帮助您更快地创建一个特定类型的网站。
 
