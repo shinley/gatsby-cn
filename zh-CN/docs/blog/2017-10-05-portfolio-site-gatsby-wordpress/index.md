@@ -4,6 +4,13 @@ date: "2017-10-05"
 image: "gatsby-article-cover-image.jpg"
 author: "David James"
 excerpt: "Recreating my WordPress portfolio site using GatsbyJS, React and the WordPress REST API"
+tags:
+  - portfolio-site
+  - wordpress
+  - graphql
+  - plugins
+  - performance
+  - getting-started
 ---
 *This article was originally published on [my portfolio site](http://dfjames.com/blog/site-generating-with-the-great-gatsbyjs) on October 1, 2017.*
 
@@ -21,26 +28,26 @@ Originally, following Scott's and the official Gatsby tutorial, I had it pulling
 
 I was skeptical at first: would I have to parse large amounts of JSON to get the data I needed? I have never even interacted with the WordPress REST API, how will I query it?
 
-The answer... [GraphQL](http://graphql.org/). Gatsby ships with it and through an npm install of a [gatsby-source plugin](https://www.gatsbyjs.org/docs/plugins/) of your choice and a tiny bit of a config, you can start querying in no time. I was amazed with how simple queries are using GraphQL. You look at them and you go "Huh, that's it? Really?". Gatsby even ships with an in-browser query tester so you can see exactly what data you are getting from your GraphQL queries. Wanna sort those blog posts by date? No problem, just add a flag.
+The answer... [GraphQL](http://graphql.org/). Gatsby ships with it and through an npm install of a [gatsby-source plugin](/docs/plugins/) of your choice and a tiny bit of a config, you can start querying in no time. I was amazed with how simple queries are using GraphQL. You look at them and you go "Huh, that's it? Really?". Gatsby even ships with an in-browser query tester so you can see exactly what data you are getting from your GraphQL queries. Wanna sort those blog posts by date? No problem, just add a flag.
 
 With very little configuration and the installation of a single plugin on my WordPress site, I began creating pages and pulling data from them using a simple GraphQL schema. Here is an example of my Projects page which includes pulling some ACF fields which were originally defined in my Projects page template:
 
 ```js
 // Pull the project page content from Wordpress
 export const projectsPageQuery = graphql`
-query projectsPageQuery {
-  wordpressPage(slug: {eq: "projects"}) {
-    id
-    title
-    content
-    childWordpressAcfField {
-      internal {
-        content
+  query projectsPageQuery {
+    wordpressPage(slug: { eq: "projects" }) {
+      id
+      title
+      content
+      childWordpressAcfField {
+        internal {
+          content
+        }
       }
     }
   }
-}
-`
+`;
 ```
 
 Pulling blog posts was even easier! If you’d like to sort them by date, ID, title etc. you just add a simple flag to the query like so:
@@ -61,12 +68,18 @@ export const postQuery = graphql`
       }
     }
   }
-`
+`;
 ```
 
 ## Wrap up and future
 
-In just a few weekends I managed to rebuild my portfolio site with the blog I wanted. I'd highly recommend [Gatsby](https://www.gatsbyjs.org/tutorial/) for anyone who has started getting acquainted with React. Before I started this project I didn't know a lot about: * Static site generation/JAMstack * Creating a Progressive Web App (PWA) and what qualifies as one * React Router * GraphQL * WordPress REST API
+In just a few weekends I managed to rebuild my portfolio site with the blog I wanted. I'd highly recommend [Gatsby](/tutorial/) for anyone who has started getting acquainted with React. Before I started this project I didn't know a lot about:
+
+* Static site generation/JAMstack
+* Creating a Progressive Web App (PWA) and what qualifies as one
+* React Router
+* GraphQL
+* WordPress REST API
 
 Moving forward with Gatsby, I'd like to extend my site to include pagination within the blog, use [Styled Components](https://www.styled-components.com/) and ensure the site scores a 90+ overall on [Lighthouse](https://developers.google.com/web/tools/lighthouse/), Google’s performance auditing tool.
 
