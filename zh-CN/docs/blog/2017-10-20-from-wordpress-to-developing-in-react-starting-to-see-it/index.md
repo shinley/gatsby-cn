@@ -1,7 +1,7 @@
 ---
 title: From WordPress to Developing in React — Starting to See It
-date: 2017-10-20
-author: Benjamin Read
+date: "2017-10-20"
+author: "Benjamin Read"
 ---
 As a frontend designer I've always prided myself on being a HTML and CSS specialist. My use of JavaScript has been limited to animations and DOM manipulation. However, at [Indigo Tree](https://indigotree.co.uk "Indigo Tree: We Build Awesome Websites") we're branching out from our staple of WordPress and trying different methods of creating websites with functionality that our clients require, whilst maximising their budget.
 
