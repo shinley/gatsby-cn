@@ -1,8 +1,8 @@
 ---
-title: Making website building fun
+title: "Making website building fun"
 date: 2017-10-16
-author: Kyle Mathews
-typora-copy-images-to: './'
+author: "Kyle Mathews"
+typora-copy-images-to: ./
 ---
 I still remember the first non-trivial React component I built in 2014—not long after I started using React seriously.
 
