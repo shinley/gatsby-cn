@@ -54,8 +54,8 @@ A minimal config module would look like:
 module.exports = {
   siteMetadata: {
     title: `My Sweet Gatsby Site!`,
-  }
-}
+  },
+};
 ```
 
 and a minimal query would look like
@@ -131,68 +131,68 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
   ],
-}
+};
 ```
 
 ### Create slugs for markdown files
 
-It's handy to store the pathname of "slug" for each markdown page with the markdown data. This let's you easily query the slug from multiple places.
+It's handy to store the pathname of "slug" for each markdown page with the markdown data. This let's you query the slug from multiple places.
 
 Here's how you do that.
 
 ```javascript
 // In your gatsby-node.js
-const path = require('path')
+const path = require("path");
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators
-  let slug
+  const { createNodeField } = boundActionCreators;
+  let slug;
   if (node.internal.type === `MarkdownRemark`) {
-    const fileNode = getNode(node.parent)
-    const parsedFilePath = path.parse(fileNode.relativePath)
+    const fileNode = getNode(node.parent);
+    const parsedFilePath = path.parse(fileNode.relativePath);
     if (parsedFilePath.name !== `index` && parsedFilePath.dir !== ``) {
-      slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`
+      slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
     } else if (parsedFilePath.dir === ``) {
-      slug = `/${parsedFilePath.name}/`
+      slug = `/${parsedFilePath.name}/`;
     } else {
-      slug = `/${parsedFilePath.dir}/`
+      slug = `/${parsedFilePath.dir}/`;
     }
 
     // Add slug as a field on the node.
-    createNodeField({ node, name: `slug`, value: slug })
+    createNodeField({ node, name: `slug`, value: slug });
   }
-}
+};
 ```
 
 Now we can create pages for each markdown file using our slug. In the same `gatsby-node.js` file add:
 
 ```javascript
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+  const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const pages = []
-    const blogPost = path.resolve("src/templates/blog-post.js")
+    const pages = [];
+    const blogPost = path.resolve("src/templates/blog-post.js");
     // Query for all markdown "nodes" and for the slug we previously created.
     resolve(
       graphql(
         `
-        {
-          allMarkdownRemark {
-            edges {
-              node {
-                fields {
-                  slug
+          {
+            allMarkdownRemark {
+              edges {
+                node {
+                  fields {
+                    slug
+                  }
                 }
               }
             }
           }
-        }
-      `
+        `
       ).then(result => {
         if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
+          console.log(result.errors);
+          reject(result.errors);
         }
 
         // Create blog posts pages.
@@ -203,14 +203,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             context: {
               slug: edge.node.fields.slug,
             },
-          })
-        })
+          });
+        });
 
-        return
+        return;
       })
-    )
-  })
-}
+    );
+  });
+};
 ```
 
 So we've now generated the pathname or slug for each markdown page as well as told Gatsby about these pages. You'll notice above that we reference a blog post template file when creating the pages. We haven't created that yet so let's do it.
@@ -220,41 +220,40 @@ In your `src` directory, create a templates directory and add `blog-post.js`.
 This is a normal React.js component with a special Gatsby twist—a GraphQL query specifying the data needs of the component. As a start, make the component look like the following. You can make it more complex once the basics are working.
 
 ```javascript
-import React from "react"
+import React from "react";
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const post = this.props.data.markdownRemark;
 
     return (
       <div>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-query BlogPostBySlug($slug: String!) {
-  markdownRemark(fields: { slug: { eq: $slug }}) {
-    html
-    frontmatter {
-      title
+  query BlogPostBySlug($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+      }
     }
   }
-}
-`
+`;
 ```
 
 At the bottom of the file you'll notice the graphql query. This is how pages and templates in Gatsby v1 get their data. In v0, wrapper components had little control over what data they got. In v1, templates and pages can query for exactly the data they need.
 
 There will be a more in-depth tutorial and GraphQL-specific documentation soon but in the meantime, check out http://graphql.org/ and play around on Gatsby's built-in GraphQL IDE (Graph*i*QL) which can be reached when you start the development server.
 
-At this point you should have working markdown pages when you run `gatsby
-develop`! Now start gradually adding back what you had in your wrapper component adding HTML elements, styles, and extending the GraphQL query as needed.
+At this point you should have working markdown pages when you run `gatsby develop`! Now start gradually adding back what you had in your wrapper component adding HTML elements, styles, and extending the GraphQL query as needed.
 
 Repeat this process for other wrapper components you were using.
 
@@ -266,16 +265,13 @@ Also the target div now must have an id of `___gatsby`. So the body section of y
 
 ```jsx
 <body>
-  <div
-    id="___gatsby"
-    dangerouslySetInnerHTML={{ __html: this.props.body }}
-  />
+  <div id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
   {this.props.postBodyComponents}
 </body>
 ```
 
-## _template.js is now src/layouts/index.js
+## \_template.js is now src/layouts/index.js
 
 You should be able to copy your `_template.js` file directly making only one change making `this.props.children` a function call so `this.props.children()`. The rational for this change is described [in this PR comment](https://github.com/gatsbyjs/gatsby/pull/940#issuecomment-300878300).
 
-Nested layouts (similar to the nested _template feature) are *not* supported yet but are on the roadmap for v1.
+Nested layouts (similar to the nested *template feature) are \_not* supported yet but are on the roadmap for v1.
