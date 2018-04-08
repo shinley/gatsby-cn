@@ -1,6 +1,6 @@
 ---
 title: Gatsby.js Tutorial Part Four
-typora-copy-images-to: './'
+typora-copy-images-to: ./
 ---
 欢迎来到教程的第四部分！ 中途！ 希望事情开始感觉很舒服 
 
