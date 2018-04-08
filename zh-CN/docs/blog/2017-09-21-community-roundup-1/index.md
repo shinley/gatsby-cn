@@ -5,12 +5,16 @@ author: "Kyle Mathews"
 image: "on-the-trail.jpg"
 showImageInArticle: true
 typora-copy-images-to: ./
+tags:
+  - v1
+  - tutorials
+  - plugins
 ---
 It's been a wild 77 days since Gatsby 1.0.0 was released into the world on July 6th, 2017.
 
 By the numbers we've seen:
 
-* 3150 new Github stars
+* 3150 new GitHub stars
 * ~380,000 new NPM downloads
 * 110 new contributors (hey y'all!)
 * ~400 merged PRs
