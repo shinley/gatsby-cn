@@ -20,7 +20,7 @@ This framework would have to be:
 
 I believe that Gatsby fulfills these requirements. After several years of working on the project and seeing it used successfully by many people on a wide variety of sites, I'm confident that Gatsby works.
 
-Since I open sourced Gatsby in 2015, it's collected over **8000 stars** on Github (by far the most stars on Github for a project of its type), been joined by **122 contributors**, and **downloaded 130,000** times!
+Since I open sourced Gatsby in 2015, it's collected over **8000 stars** on GitHub (by far the most stars on GitHub for a project of its type), been joined by **122 contributors**, and **downloaded 130,000** times!
 
 In mid-2016, I decided to [work full-time on Gatsby](https://www.bricolage.io/gatsby-open-source-work/) and started researching and prototyping ideas that are now coming together as Gatsby 1.0.
 
@@ -92,8 +92,8 @@ Gatsby 1.0 only loads the scripts necessary for the page you're on. As you navig
 This means that one page with heavy imports:
 
 ```javascript
-import d3 from "d3"
-import threejs from "react-threejs"
+import d3 from "d3";
+import threejs from "react-threejs";
 ```
 
 ...won't affect the performance of the rest of the site.
@@ -166,10 +166,10 @@ In our site, we would write a React component which acts as a template for all t
 
 ```javascript
 // A simple React component for rendering a blog page.
-import React from "react"
+import React from "react";
 
 class BlogPostTemplate extends React.Component {
-  render () {
+  render() {
     <div>
       <h1>{this.props.data.markdown.frontmatter.title}</h1>
       <small>{this.props.data.markdown.frontmatter.date}</small>
@@ -178,11 +178,11 @@ class BlogPostTemplate extends React.Component {
           __html: this.props.data.markdown.html,
         }}
       />
-    </div>
+    </div>;
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = `
   query BlogPost($slug: String!) {
@@ -196,8 +196,7 @@ export const pageQuery = `
       }
     }
   }
-`
-
+`;
 ```
 
 All data parsing and processing is plugin-driven. So in time, any imaginable data format and source and potential way of processing its data will be an npm install away.
@@ -212,7 +211,7 @@ The GraphQL layer can also connect to external data sources like databases, APIs
 
 Gatsby 1.0 is still in alpha so I don't recommend it yet for casual use. If you don't mind some growth pains and diving it to fix bugs and add features, Gatsby 1.0 is mostly feature-complete now and can be used to build real sites.
 
-The first beta will be released in the coming weeks along with more documentation and a getting started tutorial. Subscribe to the [1.0 meta issue](https://github.com/gatsbyjs/gatsby/issues/419) on Github to get updates.
+The first beta will be released in the coming weeks along with more documentation and a getting started tutorial. Subscribe to the [1.0 meta issue](https://github.com/gatsbyjs/gatsby/issues/419) on GitHub to get updates.
 
 This has been a super fun project to work on. I'm really interested to hear your reactions and what kind of problems you face that you think Gatsby will help with.
 
