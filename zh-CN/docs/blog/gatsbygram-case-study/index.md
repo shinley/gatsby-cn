@@ -1,8 +1,8 @@
 ---
 title: Gatsbygram Case Study
-date: 2017-03-09
-author: Kyle Mathews
-image: ui-and-code.png
+date: "2017-03-09"
+author: "Kyle Mathews"
+image: 'ui-and-code.png'
 imageTitle: Gatsbygram
 ---
 [Gatsbygram](https://gatsbygram.gatsbyjs.org) is a clone of Instagram built with Gatsby v1.
