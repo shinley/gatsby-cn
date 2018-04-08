@@ -1,12 +1,12 @@
 ---
 title: Gatsby生命周期API
 ---
-Gatsby提供了一组丰富的生命周期API，以便挂钩Gatsby的引导，构建和客户端运行时操作。
+Gatsby provides a rich set of lifecycle APIs to hook into Gatsby's bootstrap, build, and client runtime operations.
 
 Gatsby的设计原则包括：
 
-* 约定>代码，但是使用低级原语来构建包含代码的约定。
-* 在插件中提取逻辑和配置应该是不重要的，并且是鼓励的。
+* Conventions > code but use low-level primitives to build conventions with code.
+* Extracting logic and configuration into [plugins](/docs/plugins/) should be trivial and encouraged.
 * 插件很容易打开源代码并重用。 他们只是NPM包。
 
 有关完整的API文档，请参阅“REFERENCE”下左侧的链接。
