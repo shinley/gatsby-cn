@@ -4,6 +4,10 @@ date: "2017-09-26"
 image: "toa-heftiba-274947.jpg"
 author: "Tim Arney"
 excerpt: "Moving to Gatsby 1.x and embracing the new GraphQL setup can be daunting but the effort is going to payoff"
+tags:
+  - v1
+  - graphql
+  - getting-started
 ---
 Before I built [React FAQ](https://reactfaq.site/), I went looking for a static site generator.
 
@@ -18,7 +22,7 @@ Gatsby at the time was still pre-1.0 but its workflow met my needs. I loved that
 
 Webpack loader —> React.js wrapper component —> static HTML page. Done.
 
-Well...done until I read this [Github Issue](https://github.com/gatsbyjs/gatsby/issues/420) … "New GraphQL data layer".
+Well...done until I read this [GitHub Issue](https://github.com/gatsbyjs/gatsby/issues/420) … "New GraphQL data layer".
 
 ![issue-420](issue-420.png)
 
@@ -64,7 +68,7 @@ There were a few bumps into the road but thanks to the starter example, I pieced
 
 ## Digging Deeper
 
-I'm not the type of person to settle on “It's working so don't touch anything”. So I started digging into how Gatsby 1.x works—particular the [data layer](https://www.gatsbyjs.org/tutorial/part-four/#data-in-gatsby).
+I'm not the type of person to settle on “It's working so don't touch anything”. So I started digging into how Gatsby 1.x works—particular the [data layer](/tutorial/part-four/#data-in-gatsby).
 
 Things really clicked when I read this part about the GraphiQL IDE and watched how to drill down on the data.
 
