@@ -2,6 +2,10 @@
 title: My search for the perfect universal JavaScript framework
 date: "2017-10-29"
 author: "Tal Bereznitskey"
+tags:
+  - react
+  - ssr
+  - static
 ---
 It was 2010 when [Backbone.js](http://backbonejs.org) came out. Finally I could write structured code to create full web applications for our users. And with Backbone.js and Node.js, a new dream started to emerge, a website that starts rendering on the server side and continues to render on the users’ browsers.
 
