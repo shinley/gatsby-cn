@@ -4,7 +4,7 @@ typora-copy-images-to: ./
 ---
 Welcome to Part Four of the tutorial! Halfway through! Hope things are starting to feel pretty comfortable 
 
-## 本教程前半部分的总结
+## 教程前半部分的回顾
 
 So far, we've been learning how to use React.js—how powerful it is to be able to create our *own* components to act as custom building blocks for websites.
 
