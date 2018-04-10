@@ -1,7 +1,7 @@
 ---
 title: "Add Custom webpack Config"
 ---
-*Before creating custom webpack configuration, check to see if there's a Gatsby plugin already built that handles your use case in the [plugins section](/docs/plugins/). If there's not yet one and your use case is a general one, we highly encourage you to contribute back your plugin to the Gatsby repo so it's available to others (including your future self *
+*在创建自定义webpack配置之前，请检查是否有已经构建的Gatsby插件来处理插件部分的用例。 If there's not yet one and your use case is a general one, we highly encourage you to contribute back your plugin to the Gatsby repo so it's available to others (including your future self *
 
 To add custom webpack configurations, create (if there's not one already) a `gatsby-node.js` file in your root directory. Inside this file, export a function called `modifyWebpackConfig`.
 
