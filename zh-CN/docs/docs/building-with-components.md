@@ -1,5 +1,5 @@
 ---
-title: 使用组件我件
+title: Building with Components
 ---
 要使用Gatsby，您需要对React组件有一个基本的了解。
 
