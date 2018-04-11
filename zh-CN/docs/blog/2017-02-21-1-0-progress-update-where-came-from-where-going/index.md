@@ -26,7 +26,7 @@ draft: true
 
 ## 什么是 Gatsby？
 
-Gatsby combines the fast performance of static websites with the powerful abstractions, excellent tools, and client capabilities of the web-app world.
+Gatsby 汇聚了网站应用世界中的最快性能的静态网站技术、强大的抽象化能力、优秀的工具和客户端能力。
 
 It is a general purpose data-centric web framework that is [successfully being used for a wide variety of sites](https://github.com/gatsbyjs/gatsby#sites-built-with-gatsby) including blogs, marketing sites, documentation sites, and e-commerce.
 
