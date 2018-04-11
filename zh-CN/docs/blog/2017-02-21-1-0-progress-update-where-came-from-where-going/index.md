@@ -5,9 +5,9 @@ author: "Kyle Mathews"
 image: 'ui-and-code.png'
 draft: true
 ---
-想象一下什么是完美的网站框架？ One that produced really fast sites by default, that let you use the latest web tools and browser features without complicated setup, and that helped your team stay coordinated as you develop, ship, and maintain sites.
+想象一下什么是完美的网站框架？ 它可以让你可以让你快速建站，可以让你不用复杂的去搭建环境就可以使用最新的建站技术和浏览器新特性，它可以帮助你的团队协调开发、交付和维护。
 
-This framework would have to be:
+这个框架必须具备如下特征：
 
 * **universal**, work for all types of sites from simple brocurewares to complex web-apps.
 * **simple**, not requiring any setup to start using and with thoughtful APIs to extend the framework.
