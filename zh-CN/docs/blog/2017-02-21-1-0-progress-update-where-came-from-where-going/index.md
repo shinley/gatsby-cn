@@ -9,8 +9,8 @@ draft: true
 
 这个框架必须具备如下特征：
 
-* **universal**, work for all types of sites from simple brocurewares to complex web-apps.
-* **simple**, not requiring any setup to start using and with thoughtful APIs to extend the framework.
+* **通用的**。适用于各种网站。由小型的企业宣传网站到复杂的大型网站应用。
+* **简单易用**。不需要任何的安装就可以开始使用，并且提供合理的API来扩展框架。
 * **fast**, doesn't lose customers to slow page loads. Takes advantage of HTTP/2, browser caching, service workers, inlined critical css, and code splitting so your site always loads incredibly fast—no matter what you build.
 * **JavaScript-driven**, the web is huge and intensely competitive. Sites that win are fast and richly interactive. Your framework must make it trivial to use advanced JavaScript.
 * **team ready**, use industry standard collaboration tools like NPM, Git, and continuous deployment, so your team is always on the same page and shipping new features is easy.
