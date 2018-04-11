@@ -18,13 +18,13 @@ draft: true
 * **互联网的规模**。你的网站要支持百万级的访问量而不崩溃（或者让你蒙受经济损失）。
 * **安全性**。不要让你的用户数据有被黑客窃取的风险。
 
-我相信 Gatsby 已经达到了这些要求。 After several years of working on the project and seeing it used successfully by many people on a wide variety of sites, I'm confident that Gatsby works.
+我相信 Gatsby 已经达到了这些要求。 几年来，对这项目的开发与不断完善，并看到它在很多不用类型网站上面的成功应用，我现在已经对 Gatsby 非常有信心。
 
-Since I open sourced Gatsby in 2015, it's collected over **8000 stars** on GitHub (by far the most stars on GitHub for a project of its type), been joined by **122 contributors**, and **downloaded 130,000** times!
+自从2015年我开源 Gasby 以来，它已经在GitHub上收集到了**8000个star了**（在同类型的项目中是最多的），已经有**122个贡献者**，被**下载了13,000**次。
 
-In mid-2016, I decided to [work full-time on Gatsby](https://www.bricolage.io/gatsby-open-source-work/) and started researching and prototyping ideas that are now coming together as Gatsby 1.0.
+在2016年年中，我决定[全职开发Gatsby](https://www.bricolage.io/gatsby-open-source-work/)和开始研究把原始的创意和想法汇总到Gatsby 1.0版本。
 
-## What is Gatsby
+## 什么是 Gatsby？
 
 Gatsby combines the fast performance of static websites with the powerful abstractions, excellent tools, and client capabilities of the web-app world.
 
