@@ -13,7 +13,7 @@ draft: true
 * **简单易用**。不需要任何的安装就可以开始使用，并且提供合理的API来扩展框架。
 * **快速加载**。不要因为页面的加载慢而失去了用户了。 得益于HTTP/2、浏览器缓存、Service worker、内行关键css样式和代码切割技术，你的网站总可以非常快速地被加载，不管你要构建的是什么类型的网站。
 * **JavaScript 驱动**。互联网是巨大和竞争激烈的。只有那些快速的和交互丰富的网站才能生存下来。你的框架必须让其轻易的就可以用上高级的JavaScript。
-* **team ready**, use industry standard collaboration tools like NPM, Git, and continuous deployment, so your team is always on the same page and shipping new features is easy.
+* **支持团队协作**。使用行业标准化的协作工具如NPM、Git和支持持续发布，这样你的团队总可以在同一个页面上协作开发和容易增加新的功能。
 * **modular**, allows for cleanly separated features so fixing bugs and adding new features is easy and complexity is contained.
 * **internet scale**, launch your site to millions without crashing your site (or your wallet).
 * **secure**, doesn't put your your users' data at risk of hacking.
