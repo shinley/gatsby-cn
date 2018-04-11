@@ -1,5 +1,5 @@
 ---
-title: Gatsby 1.0版本将给我们带来什么惊喜
+title: Gatsby 1.0版本将给我们带来什么
 date: "2017-02-23"
 author: "Kyle Mathews"
 image: 'ui-and-code.png'
