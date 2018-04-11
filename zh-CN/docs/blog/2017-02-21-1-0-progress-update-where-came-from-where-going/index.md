@@ -16,9 +16,9 @@ draft: true
 * **支持团队协作**。使用行业标准化的协作工具如NPM、Git和支持持续发布，这样你的团队总可以在同一个页面上协作开发和容易增加新的功能。
 * **支持模块化**。允许干净的单独的功能独立出来，这样可以便于bug的修复、增加新的功能和降低复杂。
 * **互联网的规模**。你的网站要支持百万级的访问量而不崩溃（或者让你蒙受经济损失）。
-* **secure**, doesn't put your your users' data at risk of hacking.
+* **安全性**。不要让你的用户数据有被黑客窃取的风险。
 
-I believe that Gatsby fulfills these requirements. After several years of working on the project and seeing it used successfully by many people on a wide variety of sites, I'm confident that Gatsby works.
+我相信 Gatsby 已经达到了这些要求。 After several years of working on the project and seeing it used successfully by many people on a wide variety of sites, I'm confident that Gatsby works.
 
 Since I open sourced Gatsby in 2015, it's collected over **8000 stars** on GitHub (by far the most stars on GitHub for a project of its type), been joined by **122 contributors**, and **downloaded 130,000** times!
 
