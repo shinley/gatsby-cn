@@ -11,7 +11,7 @@ draft: true
 
 * **通用的**。适用于各种网站。由小型的企业宣传网站到复杂的大型网站应用。
 * **简单易用**。不需要任何的安装就可以开始使用，并且提供合理的API来扩展框架。
-* **fast**, doesn't lose customers to slow page loads. Takes advantage of HTTP/2, browser caching, service workers, inlined critical css, and code splitting so your site always loads incredibly fast—no matter what you build.
+* **快速加载**。不要因为页面的加载慢而失去了用户了。 得益于HTTP/2、浏览器缓存、Service worker、内行关键css样式和代码切割技术，你的网站总可以非常快速地被加载，不管你要构建的是什么类型的网站。
 * **JavaScript-driven**, the web is huge and intensely competitive. Sites that win are fast and richly interactive. Your framework must make it trivial to use advanced JavaScript.
 * **team ready**, use industry standard collaboration tools like NPM, Git, and continuous deployment, so your team is always on the same page and shipping new features is easy.
 * **modular**, allows for cleanly separated features so fixing bugs and adding new features is easy and complexity is contained.
