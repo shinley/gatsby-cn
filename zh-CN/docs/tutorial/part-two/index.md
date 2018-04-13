@@ -1,18 +1,20 @@
 ---
-title: Gatsby.js Tutorial Part Two
+title: Introduction to Using CSS in Gatsby
 typora-copy-images-to: ./
 ---
 欢迎来到Gatsby教程的第二部分！
 
-在这一部分，我们将探索Gatsby网站的样式选择，并深入探讨如何使用React组件来构建网站。
+## What's in this tutorial?
 
-## 用组件构建
+In this part we're going to explore options for styling Gatsby websites and dive deeper into using React components for building sites.
 
-在开始构建组件时，您所做的一个重大转变就是现在您的CSS，HTML和JavaScript紧密结合，甚至在同一个文件中也是如此。
+## Building with components
 
-虽然看似简单的变化，但它对于如何考虑构建网站有着深远的影响。
+One of the big mental shifts you make when starting to build with components (if you are already a developer) is that now your CSS, HTML, and JavaScript are tightly coupled, and often living even within the same file.
 
-以创建自定义按钮的简单示例为例。 在过去，你会创建一个CSS类（可能.primary-button）与你的自定义样式，然后当你想要应用这些样式，例如
+While a seemingly simple change, this has profound implications for how you think about building websites.
+
+Take the example of creating a custom button. In the past you would create a CSS class (perhaps `.primary-button`) with your custom styles and then whenever you want to apply those styles e.g.
 
 ```html
 <button class="primary-button">
@@ -20,65 +22,78 @@ typora-copy-images-to: ./
 </button>
 ```
 
-在组件的世界中，您可以使用按钮样式创建一个PrimaryButton组件，并在整个站点中使用它，如下所示：
+In the world of components, you instead create a `PrimaryButton` component with your button styles and use it throughout your site like:
+
+<!-- prettier-ignore -->
 
 ```jsx
 <PrimaryButton>Click me</PrimaryButton>
 ```
 
-组件成为您网站的基础构建块。 而不仅限于浏览器提供的内容，例如 <button />，您可以轻松地创建优雅地满足项目需求的新建筑模块。
+组件成为您网站的基础构建块。 Instead of being limited to what the browser provides e.g. `<button />`, you can easily create new building blocks that elegantly meet the needs of your projects.
 
-## 创建全局样式
+## Creating global styles
 
-每个网站都有一些全局的样式。 这包括网站的排版和背景颜色。 这些样式设置了网站的整体感觉 - 就像墙壁的颜色和纹理设置了整个房间的感觉。
+每个网站都有一些全局的样式。 This includes things like the site's typography and background colors. These styles set the overall feel of the site—much like the color and texture of a wall sets the overall feel of a room.
 
-通常人们会使用像Bootstrap或Foundation这样的全局风格。 问题是它们很难定制，而且它们不能与React组件配合使用。
+Often people will use something like Bootstrap or Foundation for their global styles. The problem with these, however, is they're difficult to customize and they're not designed to work well with React components.
 
-因此，在本教程中，我们来探索一个名为Typography.js的JavaScript库，它可以生成全局样式，并且可以与Gatsby和React一起使用。
+For this tutorial, let's explore a JavaScript library called [Typography.js](https://github.com/kyleamathews/typography.js) that generates global styles and works particularly well with Gatsby and React.
 
 ### Typography.js
 
 Typography.js是一个生成印刷CSS的JavaScript库。
 
-您不需要直接设置不同的HTML元素的字体大小，而是通过Typography.js来获得所需的baseFontSize和baseLineHeight，并根据这些信息生成所有元素的基本CSS。
+Instead of directly setting the `font-size` of different HTML elements, you tell Typography.js things like your desired `baseFontSize` and `baseLineHeight` and based on these, it generates the base CSS for all your elements.
 
-这使得更改站点上所有元素的字体大小变得微不足道，而无需直接修改很多CSS规则。
+This makes it trivial to change the font size of all elements on a site without having to directly modify the dozens of CSS rules.
 
 使用它看起来像这样:
 
 ```javascript
-import Typography from "typography"
+import Typography from "typography";
 
 const typography = new Typography({
-  baseFontSize: '18px',
+  baseFontSize: "18px",
   baseLineHeight: 1.45,
-  headerFontFamily: ['Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
-  bodyFontFamily: ['Georgia', 'serif'],
-})
+  headerFontFamily: [
+    "Avenir Next",
+    "Helvetica Neue",
+    "Segoe UI",
+    "Helvetica",
+    "Arial",
+    "sans-serif",
+  ],
+  bodyFontFamily: ["Georgia", "serif"],
+});
 ```
 
-## Gatsby插件
+## Gatsby plugins
 
-但在我们回到构建和尝试Typography.js之前，让我们快速转换一下，讨论一下Gatsby插件。
+But before we can get back to building and trying out Typography.js, let's make a quick diversion and talk about Gatsby plugins.
 
-你可能很熟悉插件的概念。 许多软件系统都支持添加自定义插件来添加新功能，甚至修改软件的核心工作。
+You're probably familiar with the idea of plugins. Many software systems support adding custom plugins to add new functionality or even modify the core workings of the software.
 
 盖茨比插件以同样的方式工作。
 
-社区成员（比如你）可以贡献插件（少量JavaScript代码），其他人可以在构建Gatsby网站时使用这些插件。
+Community members (like you!) can contribute plugins (small amounts of JavaScript code) that others can then use when building Gatsby sites.
 
-已经有很多的插件了！ 可以从 [plugins section of the site](/docs/plugins/)检出.
+There's already dozens of plugins! Check them out at the [plugins section of the site](/docs/plugins/).
 
-盖茨比插件很容易安装和使用。 几乎在你建立的每一个Gatsby网站上，你都会安装插件。 在完成本教程的其余部分时，您将有很多机会来练习安装和使用插件。
+Our goal with Gatsby plugins is to make them straightforward to install and use. In almost every Gatsby site you build, you will be installing plugins. While working through the rest of the tutorial, you'll have many opportunities to practice installing and using plugins.
 
-## 安装你的第一个Gatsby插件
+## Installing your first Gatsby plugin
 
-让我们开始创建一个新的网站。 类似于第一部分，运行以下来创建一个新的站点。
+Let's start by creating a new site. At this point it probably makes sense to close the terminal windows you used to build tutorial-part-one so that you don't accidentally start building tutorial-part-two in the wrong place. If you don't close tutorial-part-one prior to building tutorial-part-two, you will see that tutorial-part-two appears at localhost:8001 instead of localhost:8000.
 
-    gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
-    
+Just like in part one, open a new terminal window and and run the following commands to create a new Gatsby site in a directory called `tutorial-part-two`. Then, change to this new directory:
 
-这会创建一个具有以下结构的新站点。
+```shell
+gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
+cd tutorial-part-two
+```
+
+This creates a new site with the following structure.
 
 ```shell
 ├── package.json
@@ -87,168 +102,117 @@ const typography = new Typography({
 │       └── index.js
 ```
 
-这是Gatsby网站的最小设置。
+This is the minimal setup for a Gatsby site.
 
-要安装插件，有两个步骤。 首先安装插件的NPM包，然后将插件添加到网站的gatsby-config.js中。
+To install a plugin, there are two steps. First, you install the plugin's NPM package and second, you add the plugin to your site's `gatsby-config.js`.
 
-Typography.js有一个Gatsby插件，所以让我们通过运行下面命令来安装：
+Typography.js has a Gatsby plugin, so let's install that by running:
 
 ```shell
 npm install --save gatsby-plugin-typography
 ```
 
-接下来，在名为gatsby-config.js的项目文件夹的根目录下创建一个文件。 这是您将插件添加到网站以及其他网站配置的地方。
+Next, in your code editor, create a file at the root of your project folder named `gatsby-config.js`. This is where you add plugins along with other site configuration.
 
-将以下内容复制到gatsby-config.js中
+Copy the following into `gatsby-config.js`
 
 ```javascript
 module.exports = {
   plugins: [`gatsby-plugin-typography`],
-}
+};
 ```
 
-启动时，Gatsby读取站点的配置文件。 在这里，我们告诉它寻找一个名为gatsby-plugin-typography的插件。 盖茨比知道寻找插件是NPM包，所以它会找到我们以前安装的软件包。
+Gatsby reads the site's config file when starting. Here, we tell it to look for a plugin named `gatsby-plugin-typography`. Gatsby knows to look for plugins that are NPM packages, so it will find the package we installed previously.
 
-现在运行 gatsby develop. 加载站点后, 如果您使用 Chrome 开发人员工具检查生成的 HTML, 您会看到排版插件将其生成的 CSS的
+Now run `gatsby develop`. Once you load the site, if you inspect the generated HTML using the Chrome developer tools, you'll see that the typography plugin added a `<style>` element to the `<head>` element with its generated CSS.
 
-<style>
-  元素添加到
-  
-  <head>
-    元素中。</p>
+![typography-styles](typography-styles.png)
 
+Copy the following into your `src/pages/index.js` so we can better see the effect of the typography CSS generated by Typography.js.
 
-    
-    <p>
-      <img src="typography-styles.png" alt="typography-styles" />
-    </p>
+```jsx
+import React from "react";
 
-
-    
-    <p>
-      将以下内容复制到src/pages/index.js中，以便更好地看到Typography.js生成的排版CSS的效果
-    </p>
-
-
-    
-    <pre><code class="jsx">import React from "react"
-
-export default () =&gt;
-  &lt;div&gt;
-    &lt;h1&gt;Richard Hamming on Luck&lt;/h1&gt;
-    &lt;div&gt;
-      &lt;p&gt;
-        From Richard Hamming’s classic and must-read talk, “&lt;a href="http://www.cs.virginia.edu/~robins/YouAndYourResearch.html"&gt;
+export default () => (
+  <div>
+    <h1>Richard Hamming on Luck</h1>
+    <div>
+      <p>
+        From Richard Hamming’s classic and must-read talk, “<a href="http://www.cs.virginia.edu/~robins/YouAndYourResearch.html">
           You and Your Research
-        &lt;/a&gt;”.
-      &lt;/p&gt;
-      &lt;blockquote&gt;
-        &lt;p&gt;
+        </a>”.
+      </p>
+      <blockquote>
+        <p>
           There is indeed an element of luck, and no, there isn’t. The prepared
           mind sooner or later finds something important and does it. So yes, it
           is luck.{" "}
-          &lt;em&gt;
+          <em>
             The particular thing you do is luck, but that you do something is
             not.
-          &lt;/em&gt;
-        &lt;/p&gt;
-      &lt;/blockquote&gt;
-    &lt;/div&gt;
-    &lt;p&gt;Posted April 09, 2011&lt;/p&gt;
-  &lt;/div&gt;
-</code></pre>
-
-
-    
-    <p>
-      你的网站现在应该是这样的
-    </p>
-
-
-    
-    <p>
-      <img src="typography-not-centered.png" alt="typography-not-centered" />
-    </p>
-
-
-    
-    <p>
-      让我们快速改进一下。 许多网站在页面中间有一列文本。 要创建它，请将以下样式添加到src/pages/index.js中的
-      
-      <div>
+          </em>
         </p>
+      </blockquote>
+    </div>
+    <p>Posted April 09, 2011</p>
+  </div>
+);
+```
 
+Your site should now look like this:
 
-        
-        <pre><code class="jsx{4}">import React from "react"
+![typography-not-centered](typography-not-centered.png)
 
-export default () =&gt;
-  &lt;div style={{ margin: '3rem auto', maxWidth: 600 }}&gt;
-    &lt;h1&gt;Richard Hamming on Luck&lt;/h1&gt;
-    &lt;div&gt;
-      &lt;p&gt;
-        From Richard Hamming’s classic and must-read talk, “&lt;a href="http://www.cs.virginia.edu/~robins/YouAndYourResearch.html"&gt;
+Let's make a quick improvement. Many sites have a single column of text centered in the middle of the page. To create this, add the following styles to the `<div>` in `src/pages/index.js`.
+
+```jsx{4,25}
+import React from "react";
+
+export default () =>
+  <div style={{ margin: '3rem auto', maxWidth: 600 }}>
+    <h1>Richard Hamming on Luck</h1>
+    <div>
+      <p>
+        From Richard Hamming’s classic and must-read talk, “<a href="http://www.cs.virginia.edu/~robins/YouAndYourResearch.html">
           You and Your Research
-        &lt;/a&gt;”.
-      &lt;/p&gt;
-      &lt;blockquote&gt;
-        &lt;p&gt;
+        </a>”.
+      </p>
+      <blockquote>
+        <p>
           There is indeed an element of luck, and no, there isn’t. The prepared
           mind sooner or later finds something important and does it. So yes, it
           is luck.{" "}
-          &lt;em&gt;
+          <em>
             The particular thing you do is luck, but that you do something is
             not.
-          &lt;/em&gt;
-        &lt;/p&gt;
-      &lt;/blockquote&gt;
-    &lt;/div&gt;
-    &lt;p&gt;Posted April 09, 2011&lt;/p&gt;
-  &lt;/div&gt;
-</code></pre>
-
-
-        
-        <p>
-          <img src="typography-centered.png" alt="basic-typography-centered" />
+          </em>
         </p>
+      </blockquote>
+    </div>
+    <p>Posted April 09, 2011</p>
+  </div>
+```
 
+![basic-typography-centered](typography-centered.png)
 
-        
-        <p>
-          啊，这个开始变好看了！
-        </p>
+Ah, this is starting to look nice!
 
+What we're seeing here is the default CSS Typography.js produces. We can easily customize it, however. Let's do that.
 
-        
-        <p>
-          我们在这里看到的是Typography.js生成的默认的CSS 。 但是，我们可以轻松地定制它。 我们来做吧
-        </p>
+In your site, create a new directory at `src/utils`. In that directory, create a file named `typography.js`. In that file, add the following code.
 
+```javascript
+import Typography from "typography";
 
-        
-        <p>
-          在您的站点中，在 src/utils/ code>处创建一个新目录。 在那里创建一个名为 typography.js 的文件。 在其中添加下面的代码。
-        </p>
+const typography = new Typography({ baseFontSize: "18px" });
 
+export default typography;
+```
 
-        
-        <pre><code class="javascript">import Typography from "typography"
+Then set this module to be used by `gatsby-plugin-typography` as its config in our `gatsby-config.js` file.
 
-const typography = new Typography({ baseFontSize: '18px' })
-
-export default typography
-</code></pre>
-
-
-        
-        <p>
-          然后将这个模块设置为gatsby-plugin-typography作为它的配置在我们的gatsby-config.js文件中使用。
-        </p>
-
-
-        
-        <pre><code class="javascript{2..9}">module.exports = {
+```javascript{2..9}
+module.exports = {
   plugins: [
     {
       resolve: `gatsby-plugin-typography`,
@@ -257,237 +221,115 @@ export default typography
       },
     },
   ],
-}
-</code></pre>
+};
+```
 
+Stop `gatsby develop` by typing <kbd>Ctrl + c</kbd> into the terminal window where the development process has been running. Then, run `gatsby develop` again to restart it. This will allow our plugin change to take effect.
 
-        
-        <p>
-          停止 gatsby develop ，然后重新启动它，让我们的插件更改生效。
-        </p>
+Now, all the text font sizes should be slightly bigger. Try changing the `baseFontSize` to `24px` then `12px`. All elements get resized as their `font-size` is based on the `baseFontSize`.
 
+*Note that if you use `gatsby-plugin-typography` with the default starter, you'll need to delete the default index.css used by that starter as it overrides the Typography.js CSS*
 
-        
-        <p>
-          现在所有的文字字体大小都应该稍大些。 尝试将 baseFontSize 更改为 24px， 所有的元素都被调整大小，因为它们的 font-size是基于baseFontSize的。
-        </p>
+There are [many themes available](https://github.com/KyleAMathews/typography.js#published-typographyjs-themes) for Typography.js. Let's try a couple. In your terminal at the root of your site, run:
 
+```shell
+npm install --save typography-theme-bootstrap typography-theme-lawton
+```
 
-        
-        <p>
-          为Typography.js提供了<a href="https://github.com/KyleAMathews/typography.js#published-typographyjs-themes">许多主题</a>. 我们来试试一下吧, 在您的站点的根目录下运行终端命令：
-        </p>
+To use the Bootstrap theme, change your typography code to:
 
+```javascript{2,4}
+import Typography from "typography";
+import bootstrapTheme from "typography-theme-bootstrap";
 
-        
-        <pre><code class="shell">npm install --save typography-theme-bootstrap typography-theme-lawton
-</code></pre>
+const typography = new Typography(bootstrapTheme);
 
+export default typography;
+```
 
-        
-        <p>
-          要使用Bootstrap主题，请将您的印刷代码更改为：
-        </p>
+![typography-bootstrap](typography-bootstrap.png)
 
+Themes can also add Google Fonts. The Lawton theme we installed along with the Bootstrap theme does this. Replace your typography module code with the following, then restart the dev server (necessary to load the new Google Fonts).
 
-        
-        <pre><code class="javascript{2,4}">import Typography from "typography"
-import bootstrapTheme from "typography-theme-bootstrap"
-
-const typography = new Typography(bootstrapTheme)
-
-export default typography
-</code></pre>
-
-
-        
-        <p>
-          <img src="typography-bootstrap.png" alt="typography-bootstrap" />
-        </p>
-
-
-        
-        <p>
-          主题还可以添加Google字体。 我们与Bootstrap主题一起安装的Lawton主题是这样做的。 用以下替换您的印刷术模块代码，然后重新启动开发服务器（加载新的Google字体所必需的）。
-        </p>
-
-
-        
-        <pre><code class="javascript{2-3,5}">import Typography from "typography"
+```javascript{2-3,5}
+import Typography from "typography";
 // import bootstrapTheme from "typography-theme-bootstrap"
-import lawtonTheme from "typography-theme-lawton"
+import lawtonTheme from "typography-theme-lawton";
 
-const typography = new Typography(lawtonTheme)
+const typography = new Typography(lawtonTheme);
 
-export default typography
-</code></pre>
+export default typography;
+```
 
+![typography-lawton](typography-lawton.png)
 
-        
-        <p>
-          <img src="typography-lawton.png" alt="typography-lawton" />
-        </p>
+*Challenge:* Typography.js has more than 30 themes! [Try them live](http://kyleamathews.github.io/typography.js) or check out [the complete list](https://github.com/KyleAMathews/typography.js#published-typographyjs-themes) and try installing one on your current Gatsby site.
 
+## Component CSS
 
-        
-        <p>
-          Typography.js有超过30个主题！ <a href="http://kyleamathews. github. io/typography. js">试一下</a>或者查看代码的 <a href="https://github. com/KyleAMathews/typography. js#published-typographyjs-themes">完整列表</a>
-        </p>
+Gatsby has a wealth of options available for styling components. In this tutorial, we'll explore one very popular method: CSS Modules.
 
+### CSS-in-JS
 
-        
-        <h2>
-          CSS组件
-        </h2>
+While we won't cover CSS-in-JS in this initial tutorial, we encourage you to explore CSS-in-JS libraries because these solve many of the problems with traditional CSS plus help make your React components even smarter. There are mini-tutorials for two libraries, [Glamor](/docs/glamor/) and [Styled Components](/docs/styled-components/). Check out the following resources for background reading on CSS-in-JS:
 
+[Christopher "vjeux" Chedeau's 2014 presentation that sparked this movement](https://speakerdeck.com/vjeux/react-css-in-js) as well as [Mark Dalgleish's more recent post "A Unified Styling Language"](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
 
-        
-        <p>
-          盖茨比有丰富的选项可用于样式组件。 让我们来探索三个非常受欢迎的产品选项。 我们将建立一个简单的页面三次，以探索每个样式选项。
-        </p>
+### CSS Modules
 
+Let's explore **CSS Modules**.
 
-        
-        <p>
-          每个都是“CSS-in-JS”中的一个变种，它解决了传统CSS的许多问题。
-        </p>
+Quoting from [the CSS Module homepage](https://github.com/css-modules/css-modules):
 
+> A **CSS Module** is a CSS file in which all class names and animation names are scoped locally by default.
 
-        
-        <p>
-          他们解决的最重要的问题之一是选择器名称冲突。 使用传统的CSS，您必须小心，不要覆盖站点中其他地方使用的CSS选择器，因为所有CSS选择器都位于同一个全局名称空间中。 这个限制会让你必须小心（并且经常令人困惑）选择器命名方案。
-        </p>
+CSS Modules is very popular as it lets you write CSS like normal but with a lot more safety. The tool automatically makes class and animation names unique so you don't have to worry about selector name collisions.
 
+CSS Modules are highly recommended for those new to building with Gatsby (and React in general).
 
-        
-        <p>
-          使用CSS-in-JS，可以避免所有这些，因为CSS选择器会自动限定到其组件。 样式与其组件紧密结合。 这使得知道如何编辑组件的CSS变得非常容易，因为从来没有任何关于如何和在哪里使用CSS的混淆。
-        </p>
+Gatsby开箱即用CSS模块。
 
+让我们使用CSS模块构建一个页面。
 
-        
-        <p>
-          有关CSS-in-JS的一些背景知识，请参见<a href="https://speakerdeck. com/vjeux/react-css-in-js"> Christopher“vjeux”Chedeau 2014年的演讲，激发了这一运动</ a >以及<a href="https://medium. com/seek-blog/a-unified-styling-language-d0c208de2660"> Mark Dalgleish最近发布的“统一样式语言”</a>。</p>
+First, let's create a new `Container` component which we'll use for each of the CSS-in-JS examples. Create a `components` directory at `src/components` and then, in this directory, create a file named `container.js` and paste the following:
 
+```javascript
+import React from "react";
 
-          
-          <h3>
-            CSS模块
-          </h3>
+export default ({ children }) => (
+  <div style={{ margin: "3rem auto", maxWidth: 600 }}>{children}</div>
+);
+```
 
+Then, create a new component page by creating a file at `src/pages/about-css-modules.js`:
 
-          
-          <p>
-            我们来开发第一个CSS模块
-          </p>
+```javascript
+import React from "react";
 
+import Container from "../components/container";
 
-          
-          <p>
-            从CSS模块主页引用：
-          </p>
+export default () => (
+  <Container>
+    <h1>About CSS Modules</h1>
+    <p>CSS Modules are cool</p>
+  </Container>
+);
+```
 
+您会注意到我们导入了刚刚创建的Container组件。
 
-          
-          <blockquote>
-            <p>
-              CSS模块是一个CSS文件，其中所有类名称和动画名称默认在本地范围内。
-            </p>
+您的页面现在应该如下所示：
 
-          </blockquote>
+![css-modules-1](css-modules-1.png)
 
+Let's create a list of people with names, avatars, and short latin biographies.
 
-          
-          <p>
-            CSS模块非常受欢迎，因为它可以让你像平常一样编写CSS，但安全性更高。 该工具自动使类和动画的名称独特，所以你不必担心选择器名称冲突。
-          </p>
+First, let's create the file for the CSS at `src/pages/about-css-modules.module.css`. You'll notice that the file name ends with `.module.css` instead of `.css` like normal. This is how we tell Gatsby that this CSS file should be processed as CSS modules.
 
+Paste the following into the file:
 
-          
-          <p>
-            CSS模块被强烈推荐给那些用Gatsby构建的新模块（通常是React）。
-          </p>
-
-
-          
-          <p>
-            Gatsby开箱即用CSS模块。
-          </p>
-
-
-          
-          <p>
-            让我们使用CSS模块构建一个页面。
-          </p>
-
-
-          
-          <p>
-            首先，我们创建一个新的Container组件，我们将使用它来为每个CSS-in-JS示例使用。 在src/components创建一个组件目录，然后在这个目录下创建一个名为container.js的文件并粘贴下面的代码。
-          </p>
-
-
-          
-          <pre><code class="javascript">import React from "react"
-
-export default ({ children }) =&gt;
-  &lt;div style={{ margin: "3rem auto", maxWidth: 600 }}&gt;
-    {children}
-  &lt;/div&gt;
-</code></pre>
-
-
-          
-          <p>
-            然后通过在src/pages/about-css-modules.js中创建一个文件来创建一个新的组件页面：
-          </p>
-
-
-          
-          <pre><code class="javascript">import React from "react"
-
-import Container from "../components/container"
-
-export default () =&gt;
-  &lt;Container&gt;
-    &lt;h1&gt;About CSS Modules&lt;/h1&gt;
-    &lt;p&gt;CSS Modules are cool&lt;/p&gt;
-  &lt;/Container&gt;
-</code></pre>
-
-
-          
-          <p>
-            您会注意到我们导入了刚刚创建的Container组件。
-          </p>
-
-
-          
-          <p>
-            您的页面现在应该如下所示：
-          </p>
-
-
-          
-          <p>
-            <img src="css-modules-1.png" alt="css-modules-1" />
-          </p>
-
-
-          
-          <p>
-            我们来创建一个简单的名单，头像和简短的拉丁传记名单。
-          </p>
-
-
-          
-          <p>
-            首先，我们在src/pages/about-css-modules.module.css中创建CSS的文件。 您会注意到，文件名以.module.css结尾，而不是像普通的.css结尾。 这就是我们如何告诉Gatsby这个CSS文件应该作为CSS模块来处理。
-          </p>
-
-
-          
-          <pre><code class="css">.user {
+```css
+.user {
   display: flex;
   align-items: center;
   margin: 0 auto 12px auto;
@@ -518,411 +360,78 @@ export default () =&gt;
 .excerpt {
   margin: 0;
 }
-</code></pre>
+```
 
+Now import that file into the `about-css-modules.js` page we created earlier, by adding the following on lines 2 and 3. (The `console.log(styles)` code logs the resulting import so we can see what the processed file looks like).
 
-          
-          <p>
-            现在将该文件导入我们前面创建的about-css-modules.js页面。 同时记录结果导入，以便我们可以看到处理文件的样子。
-          </p>
+```javascript
+import styles from "./about-css-modules.module.css";
+console.log(styles);
+```
 
+If you open the developer console (using e.g. Firefox or Chrome's developer tools) in your browser, you'll see:
 
-          
-          <pre><code class="javascript">import styles from "./about-css-modules.module.css"
-console.log(styles)
-</code></pre>
+![css-modules-console](css-modules-console.png)
 
+If you compare that to our CSS file, you'll see that each class is now a key in the imported object pointing to a long string e.g. `avatar` points to `about-css-modules-module---avatar----hYcv`. These are the class names CSS Modules generates. They're guaranteed to be unique across your site. And because you have to import them to use the classes, there's never any question about where some CSS is being used.
 
-          
-          <p>
-            如果您在浏览器中打开开发者控制台，您将看到：
-          </p>
+Let's use our styles to create a `User` component.
 
+Let's create the new component inline in the `about-css-modules.js` page component. The general rule of thumb is this: if you use a component in multiple places on a site, it should be in its own module file in the `components` directory. But, if it's used only in one file, create it inline.
 
-          
-          <p>
-            <img src="css-modules-console.png" alt="css-modules-console" />
-          </p>
+Modify `about-css-modules.js` so it looks like the following:
 
+```jsx{6-17,23-30}
+import React from "react";
+import styles from "./about-css-modules.module.css";
+console.log(styles);
 
-          
-          <p>
-            如果您将它与我们的CSS文件进行比较，您会看到每个类现在都是导入对象中的一个键，指向一个长字符串，例如 头像指向about-css-modules-module --- avatar ---- hYcv。 这些是CSS模块生成的类名称。 他们保证在您的网站是唯一的。 而且因为你必须导入它们才能使用这些类，所以从来没有任何关于使用某些CSS的问题。
-          </p>
+import Container from "../components/container";
 
-
-          
-          <p>
-            让我们使用我们的样式来创建一个简单的用户组件。
-          </p>
-
-
-          
-          <p>
-            让我们在about-css-modules.js页面组件中内联创建新组件。 一般的经验法则是如果你在一个站点的多个地方使用一个组件，它应该在它自己的组件目录中的模块文件中。 但是，如果仅在一个文件中使用，请将其内联创建。
-          </p>
-
-
-          
-          <p>
-            修改about-css-modules.js，使其如下所示：
-          </p>
-
-
-          
-          <pre><code class="jsx{6-17,23-30}">import React from "react"
-import styles from "./about-css-modules.module.css"
-
-import Container from "../components/container"
-
-const User = props =&gt;
-  &lt;div className={styles.user}&gt;
-    &lt;img src={props.avatar} className={styles.avatar} alt="" /&gt;
-    &lt;div className={styles.description}&gt;
-      &lt;h2 className={styles.username}&gt;
+const User = props =>
+  <div className={styles.user}>
+    <img src={props.avatar} className={styles.avatar} alt="" />
+    <div className={styles.description}>
+      <h2 className={styles.username}>
         {props.username}
-      &lt;/h2&gt;
-      &lt;p className={styles.excerpt}&gt;
+      </h2>
+      <p className={styles.excerpt}>
         {props.excerpt}
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+      </p>
+    </div>
+  </div>
 
-export default () =&gt;
-  &lt;Container&gt;
-    &lt;h1&gt;About CSS Modules&lt;/h1&gt;
-    &lt;p&gt;CSS Modules are cool&lt;/p&gt;
-    &lt;User
+export default () =>
+  <Container>
+    <h1>About CSS Modules</h1>
+    <p>CSS Modules are cool</p>
+    <User
       username="Jane Doe"
       avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
       excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    /&gt;
-    &lt;User
+    />
+    <User
       username="Bob Smith"
       avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
       excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    /&gt;
-  &lt;/Container&gt;
-</code></pre>
+    />
+  </Container>
+```
 
+The finished page should now look like:
 
-          
-          <p>
-            现在完成的页面应该如下所示：
-          </p>
+![css-modules-final](css-modules-final.png)
 
+### Other CSS options
 
-          
-          <p>
-            <img src="css-modules-final.png" alt="css-modules-final" />
-          </p>
+Gatsby supports almost every possible styling option (if there isn't a plugin yet for your favorite CSS option, [please contribute one!](/docs/how-to-contribute/))
 
+* [Sass](/packages/gatsby-plugin-sass/)
+* [Emotion](/packages/gatsby-plugin-emotion/)
+* [JSS](/packages/gatsby-plugin-jss/)
+* [Stylus](/packages/gatsby-plugin-stylus/)
+* and more!
 
-          
-          <h3>
-            Glamor
-          </h3>
+## What's coming next?
 
-
-          
-          <p>
-            让我们用<a href="https://github.com/threepointone/glamor">Glamour</a>来创建相同的页面。
-          </p>
-
-
-          
-          <p>
-            Glamour可以让你在你的组件中使用相同的React支持的Object CSS语法
-          </p>
-
-
-          
-          <p>
-            首先安装Glamor的Gatsby插件。
-          </p>
-
-
-          
-          <pre><code class="shell">npm install --save gatsby-plugin-glamor
-</code></pre>
-
-
-          
-          <p>
-            然后把它添加到你的gatsby-config.js
-          </p>
-
-
-          
-          <pre><code class="javascript{9}">module.exports = {
-  plugins: [
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography.js`,
-      },
-    },
-    `gatsby-plugin-glamor`,
-  ],
-}
-</code></pre>
-
-
-          
-          <p>
-            重新启动gatsby develop命令启用Glamor插件。
-          </p>
-
-
-          
-          <p>
-            现在在src/pages/about-glamour.js中创建Glamor页面
-          </p>
-
-
-          
-          <pre><code class="jsx">import React from "react"
-
-import Container from "../components/container"
-
-export default () =&gt;
-  &lt;Container&gt;
-    &lt;h1&gt;About Glamor&lt;/h1&gt;
-    &lt;p&gt;Glamor is cool&lt;/p&gt;
-  &lt;/Container&gt;
-</code></pre>
-
-
-          
-          <p>
-            让我们添加相同的内联用户组件，但这次使用Glamor的CSS的 prop属性。
-          </p>
-
-
-          
-          <pre><code class="jsx{5-26,32-40}">import React from "react"
-
-import Container from "../components/container"
-
-const User = props =&gt;
-  &lt;div
-    css={{
-      display: `flex`,
-      alignItems: `center`,
-      margin: `0 auto 12px auto`,
-      "&:last-child": { marginBottom: 0 }
-    }}
-  &gt;
-    &lt;img
-      src={props.avatar}
-      css={{ flex: `0 0 96px`, width: 96, height: 96, margin: 0 }}
-      alt=""
-    /&gt;
-    &lt;div css={{ flex: 1, marginLeft: 18, padding: 12 }}&gt;
-      &lt;h2 css={{ margin: `0 0 12px 0`, padding: 0 }}&gt;
-        {props.username}
-      &lt;/h2&gt;
-      &lt;p css={{ margin: 0 }}&gt;
-        {props.excerpt}
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-export default () =&gt;
-  &lt;Container&gt;
-    &lt;h1&gt;About Glamor&lt;/h1&gt;
-    &lt;p&gt;Glamor is cool&lt;/p&gt;
-    &lt;User
-      username="Jane Doe"
-      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-      excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    /&gt;
-    &lt;User
-      username="Bob Smith"
-      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
-      excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    /&gt;
-  &lt;/Container&gt;
-</code></pre>
-
-
-          
-          <p>
-            最后的Glamor页面应该看起来与CSS模块页面相同。
-          </p>
-
-
-          
-          <p>
-            <img src="glamor-example.png" alt="glamor-example" />
-          </p>
-
-
-          
-          <h3>
-            样式组件
-          </h3>
-
-
-          
-          <p>
-            对于我们最后的CSS-in-JS示例，我们将尝试使用样式组件。
-          </p>
-
-
-          
-          <p>
-            样式组件允许您在组件中使用实际的CSS语法。
-          </p>
-
-
-          
-          <p>
-            首先，像平常一样，我们将为样式组件安装Gatsby插件。
-          </p>
-
-
-          
-          <pre><code class="sh">npm install --save gatsby-plugin-styled-components
-</code></pre>
-
-
-          
-          <p>
-            然后修改gatsby-config.js。 在我们可以使用样式组件之前，我们需要删除Glamor插件并删除我们创建的Glamor组件页面。 这两个插件相互冲突，因为它们都想在服务器渲染过程中进行控制。
-          </p>
-
-
-          
-          <pre><code class="javascript{9}">module.exports = {
-  plugins: [
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography.js`,
-      },
-    },
-    `gatsby-plugin-styled-components`,
-  ],
-}
-</code></pre>
-
-
-          
-          <p>
-            然后在src/pages/about-styled-components.js创建：
-          </p>
-
-
-          
-          <pre><code class="jsx">import React from "react"
-import styled from "styled-components"
-
-import Container from "../components/container"
-
-const UserWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 0 auto 12px auto;
-  &:last-child {
-    margin-bottom: 0;
-  }
-`
-
-const Avatar = styled.img`
-  flex: 0 0 96px;
-  width: 96px;
-  height: 96px;
-  margin: 0;
-`
-
-const Description = styled.div`
-  flex: 1;
-  margin-left: 18px;
-  padding: 12px;
-`
-
-const Username = styled.h2`
-  margin: 0 0 12px 0;
-  padding: 0;
-`
-
-const Excerpt = styled.p`margin: 0;`
-
-const User = props =&gt;
-  &lt;UserWrapper&gt;
-    &lt;Avatar src={props.avatar} alt="" /&gt;
-    &lt;Description&gt;
-      &lt;Username&gt;
-        {props.username}
-      &lt;/Username&gt;
-      &lt;Excerpt&gt;
-        {props.excerpt}
-      &lt;/Excerpt&gt;
-    &lt;/Description&gt;
-  &lt;/UserWrapper&gt;
-
-export default () =&gt;
-  &lt;Container&gt;
-    &lt;h1&gt;About Styled Components&lt;/h1&gt;
-    &lt;p&gt;Styled Components is cool&lt;/p&gt;
-    &lt;User
-      username="Jane Doe"
-      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-      excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    /&gt;
-    &lt;User
-      username="Bob Smith"
-      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
-      excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    /&gt;
-  &lt;/Container&gt;
-
-</code></pre>
-
-
-          
-          <h3>
-            其他CSS选项
-          </h3>
-
-
-          
-          <p>
-            Gatsby支持几乎所有可能的样式选项（如果您的CSS选项没有插件，请提供一个！）
-          </p>
-
-
-          
-          <ul>
-            <li>
-              <a href="/packages/gatsby-plugin-sass/">Sass</a>
-            </li>
-
-            
-            <li>
-              <a href="/packages/gatsby-plugin-emotion/">Emotion</a>
-            </li>
-
-            
-            <li>
-              <a href="/packages/gatsby-plugin-jss/">JSS</a>
-            </li>
-
-            
-            <li>
-              <a href="/packages/gatsby-plugin-stylus/">Stylus</a>
-            </li>
-
-            
-            <li>
-              and more!
-            </li>
-
-          </ul>
-
-
-          
-          <p>
-            现在继续教程的第三部分。
-          </p>
+Now continue on to [Part Three](/tutorial/part-three/) of the tutorial.
