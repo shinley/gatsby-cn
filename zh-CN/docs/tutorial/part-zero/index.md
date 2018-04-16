@@ -14,9 +14,9 @@ typora-copy-images-to: ./
 ### 有用，但不是必要的：
 
 * 有关HTML，CSS和JS的一些知识可能会有所帮助。 那里有很多优秀的教程; Codecademy是一个很好的选择。
-* [React](https://reactjs.org/)是Gatsby用来构建页面和构造内容的JavaScript框架。 之前的React经验是有用的，但不是必需的。 In fact, many people are using Gatsby as a way to learn React.
-* The Gatsby tutorials also teach you basic [GraphQL](http://graphql.org/), which is a query language (a programming language that allows you to pull data into your website). Prior GraphQL knowledge is helpful but definitely not necessary. Many people are using Gatsby as a way to learn GraphQL.
+* [React](https://reactjs.org/)是Gatsby用来构建页面和构造内容的JavaScript框架。 之前的React经验是有用的，但不是必需的。 事实上，很多人都在使用Gatsby来学习React。
+* Gatsby教程还教你基本的[GraphQL](http://graphql.org/)，它是一种查询语言（一种允许你将数据拉入你的网站的编程语言）。 以前的GraphQL知识很有帮助，但绝对没有必要。 很多人都在使用Gatsby来学习GraphQL。
 
-## What's coming next?
+## 接下来会发生什么？
 
-Proceed to the next part of the tutorial, [Building pages for your first Gatsby site (Part 1)](/tutorial/part-one/)
+继续阅读本教程的下一部分，为您的第一张Gatsby网站构建页面（第1部分）
