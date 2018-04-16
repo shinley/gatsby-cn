@@ -59,23 +59,23 @@ gatsby develop
 
 这样，它就开始工作了！
 
-Too cool 
+太酷了 
 
-Gatsby's development server is a "hot reloading" server, meaning any change you make to your React.js page components (and later we'll learn, your data files) will be immediately visible and/or loaded in the browser.
+Gatsby的开发服务器是一个“热重新加载”服务器，这意味着您对React.js页面组件（以及稍后我们将了解的，您的数据文件）所做的任何更改都将立即在浏览器中可见和/或加载。
 
 这是它最大的优点，因为它使开发更快更有趣。
 
 让我们试一下!
 
-本教程的下一部分需要使用代码编辑软件。 VS Code是一个不错的选择。 With your code editor, open the folder on your computer called "tutorial-part-one," which was automatically created in the location you chose when you ran the `gatsby new` terminal command above.
+本教程的下一部分需要使用代码编辑软件。 VS Code是一个不错的选择。 使用您的代码编辑器，打开计算机上名为“tutorial-part-one”的文件夹，该文件夹会在您运行上述gatsby new terminal命令时选择的位置自动创建。
 
-Once you've opened the "tutorial-part-one" folder in your code editing software, it's time to edit your website. You'll see groups of directories and files; find the file in this location: `src/pages/index.js`. Once you open that file, try changing "Hello world!" in the page component to "Hello Gatsby!". Once you save that change, the text in your browser should change within a second (tip: you will always need to save changes before they appear in your browser).
+一旦您在代码编辑软件中打开了“tutorial-part-one”文件夹，就可以编辑您的网站了。 你会看到一组目录和文件; 在这个位置找到该文件：src/pages/index.js。 一旦你打开该文件，请尝试更改“Hello world！” 在页面组件中“Hello Gatsby！”。 保存更改后，浏览器中的文本应该在一秒内更改（小技巧：在更改显示在浏览器中之前，您始终需要保存更改）。
 
 尝试一些其他的技巧，如下所示：
 
-1. Gatsby lets you add "inline styles" via a JavaScript style "prop" (we'll learn about other styling options later).
+1. Gatsby允许您通过JavaScript风格的“道具”添加“内联样式”（我们将在后面了解其他样式选项）。
     
-    Try replacing your page component with this:
+    尝试用这个替换你的页面组件：
 
 ```jsx
 import React from "react";
@@ -110,17 +110,17 @@ export default () =>
  </div>
 ```
 
-Now your screen should look something like this:
+现在你的屏幕应该是这样的：
 
 ![Screen Shot 2017-06-03 at 11.57.10 AM](moving-along.png)
 
-## Linking between pages
+## 链接页面
 
-Websites are pages and links between pages. While we've now got a pretty sweet first page—one page and no links doesn't feel very webby. So let's create a new page.
+网站是页面和页面之间的链接。 虽然我们现在已经有了一个非常可爱的第一页 - 一页，并且没有任何链接感觉不到webby。 所以让我们创建一个新页面。
 
 首先创建到新页面的链接。
 
-To do that, import the `<Link>` component from the `gatsby-link` package that was installed along with the starter.
+为此，请从与启动器一起安装的gatsby-link软件包中导入<Link>组件。
 
 Unlike the normal HTML `<a>` element, Gatsby's `Link` component uses `to` for specifying the page you want to link to. Let's link to a page with the pathname of `/page-2/`. 尝试添加。 Once you're done, the page component should look like:
 
