@@ -28,15 +28,15 @@ Gatsby支持将版本节点恢复为v6和npm至v3。
 
 ## 安装 "Hello World" starter
 
-Gatsby使用“Starters”开始新项目。 Starters 部分建立了预先配置的Gatsby网站，以帮助您更快地移动。 有一些官方的的“starters”和许多其他从Gatsby社区贡献的“starters”！ 详细信息请查看 Starters页面
+Gatsby使用“Starters”开始新项目。 Starters 部分建立了预先配置的Gatsby网站，以帮助您更快地移动。 有一些官方的的“starters”和许多其他从Gatsby社区贡献的“starters”！ [详细信息请查看 Starters页面](/docs/gatsby-starters/)。
 
-To install a starter, first install Gatsby's command line program by running the following:
+要安装starter，首先通过运行以下命令来安装Gatsby的命令行程序：
 
 ```sh
 npm install --global gatsby-cli
 ```
 
-Once that's installed, open a new terminal window and run the following commands to create a new Gatsby site in a directory called `tutorial-part-one` and then move to this new directory:
+安装完成后，打开一个新的终端窗口并运行以下命令，在名为tutorial-part-1的目录中创建一个新的Gatsby站点，然后移至此新目录：
 
 ```sh
 gatsby new tutorial-part-one https://github.com/gatsbyjs/gatsby-starter-hello-world
