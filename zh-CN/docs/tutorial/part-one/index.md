@@ -43,17 +43,17 @@ gatsby new tutorial-part-one https://github.com/gatsbyjs/gatsby-starter-hello-wo
 cd tutorial-part-one
 ```
 
-This command downloads the files for the starter and then installs the needed npm packages. It should take around 1.5-3 minutes to finish. It may look like nothing is happening at first; be patient!
+该命令下载启动程序的文件，然后安装所需的npm软件包。 它应该需要大约1.5-3分钟才能完成。 起初可能看起来没有任何事情发生; 耐心一点！
 
 现在我们来试试运行Gatsby！
 
-Gatsby has a built-in development server. Let's start it up by running the following command:
+Gatsby有一个内置的开发服务器。 让我们通过运行以下命令启动它：
 
 ```sh
 gatsby develop
 ```
 
-You should shortly see some text, close to the bottom, that says `The development server is listening at:` <http://localhost:8000>. Open that address in your browser and...
+您应该很快会看到一些接近底部的文字，表示开发服务器正在侦听：http：// localhost：8000。 Open that address in your browser and...
 
 ![Gatsby.js hello world](hello-world.png)
 
