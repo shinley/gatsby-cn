@@ -6,27 +6,27 @@ typora-copy-images-to: ./
 
 ## 本教程中的内容是什么？
 
-In this tutorial you'll be gently introduced to the Gatsby development environment, how to create component pages, and how to build and deploy Gatsby sites.
+在本教程中，您将轻松介绍Gatsby开发环境，如何创建组件页面以及如何构建和部署Gatsby网站。
 
 坐好了， 系上安全带，我们出发了！
 
-## Check your development environment
+## 检查你的开发环境
 
-Let's check first that you have everything set up to start creating with Gatsby. You will need a recent version of Node.js installed.
+我们首先检查你是否已经开始创建与Gatsby一起创建的所有东西。 您将需要安装最新版本的Node.js。
 
-Node.js is a programming tool for running JavaScript on servers and in your computer's terminal. Gatsby is built using Node.js.
+Node.js是用于在服务器和计算机终端上运行JavaScript的编程工具。 Gatsby使用Node.js构建。
 
-打开一个终端窗口。 See [terminal instructions for Mac users](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/) and [terminal instructions for Windows users](https://www.quora.com/How-do-I-open-terminal-in-windows). In your terminal window, type `node --version` and hit ENTER, then `npm --version` and hit ENTER (tip: to run a specified command, you must type the command into your terminal and then press ENTER. Then the command will run).
+打开一个终端窗口。 有关Mac用户的终端说明和适用于Windows用户的终端说明。 在你的终端窗口中，输入node --version并点击ENTER，然后npm --version并点击ENTER（提示：要运行指定的命令，必须在终端中输入命令，然后按ENTER键。 然后该命令将运行）。</p> 
 
 你会看到以下信息：
 
 ![检查是否安装了node.js / npm](check-versions.png)
 
-Gatsby supports versions of Node back to v6 and npm to v3.
+Gatsby支持将版本节点恢复为v6和npm至v3。
 
-If you don't have Node.js installed, go to https://nodejs.org/ and install the recommended version for your operating system.
+如果您没有安装Node.js，请转到https://nodejs.org/并安装操作系统的推荐版本。
 
-## Install the "Hello World" starter
+## 安装 "Hello World" starter
 
 Gatsby使用“Starters”开始新项目 Starters are partially built Gatsby sites that are pre-configured to help you get moving faster. There are several official starters and many others contributed from the Gatsby community! 详细信息请查看 Starters页面
 
