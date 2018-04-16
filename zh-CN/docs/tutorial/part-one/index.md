@@ -2,9 +2,9 @@
 title: Introduction to Gatsby basics
 typora-copy-images-to: ./
 ---
-Hello fellow Gatsby-er! Welcome to *part one* of our community Gatsby.js tutorial.
+你好， 学习Gatsby的小伙伴们！ 欢迎来到我们社区的第一部分Gatsby.js教程。
 
-## What's in this tutorial?
+## 本教程中的内容是什么？
 
 In this tutorial you'll be gently introduced to the Gatsby development environment, how to create component pages, and how to build and deploy Gatsby sites.
 
