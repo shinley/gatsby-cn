@@ -28,7 +28,7 @@ Gatsby支持将版本节点恢复为v6和npm至v3。
 
 ## 安装 "Hello World" starter
 
-Gatsby使用“Starters”开始新项目 Starters are partially built Gatsby sites that are pre-configured to help you get moving faster. There are several official starters and many others contributed from the Gatsby community! 详细信息请查看 Starters页面
+Gatsby使用“Starters”开始新项目。 Starters are partially built Gatsby sites that are pre-configured to help you get moving faster. There are several official starters and many others contributed from the Gatsby community! 详细信息请查看 Starters页面
 
 To install a starter, first install Gatsby's command line program by running the following:
 
