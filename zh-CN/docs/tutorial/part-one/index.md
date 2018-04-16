@@ -122,151 +122,147 @@ export default () =>
 
 为此，请从与启动器一起安装的gatsby-link软件包中导入<Link>组件。
 
-Unlike the normal HTML `<a>` element, Gatsby's `Link` component uses `to` for specifying the page you want to link to. Let's link to a page with the pathname of `/page-2/`. 尝试添加。 Once you're done, the page component should look like:
+与普通的HTML <a>元素不同，Gatsby的链接组件用于指定要链接的页面。 让我们链接到路径名为/page-2/的页面。 尝试添加。 完成后，页面组件应如下所示：</p> 
 
-```jsx{2,9-12}
-import React from "react";
+<pre><code class="jsx{2,9-12}">import React from "react";
 import Link from "gatsby-link";
 
-export default () =>
-  <div style={{ color: `tomato` }}>
-    <h1>Hello Gatsby!</h1>
-    <p>What a world.</p>
-    <img src="https://source.unsplash.com/random/400x200" alt="" />
-    <br />
-    <div>
-      <Link to="/page-2/">Link</Link>
-    </div>
-  </div>
-```
+export default () =&gt;
+  &lt;div style={{ color: `tomato` }}&gt;
+    &lt;h1&gt;Hello Gatsby!&lt;/h1&gt;
+    &lt;p&gt;What a world.&lt;/p&gt;
+    &lt;img src="https://source.unsplash.com/random/400x200" alt="" /&gt;
+    &lt;br /&gt;
+    &lt;div&gt;
+      &lt;Link to="/page-2/"&gt;Link&lt;/Link&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
 
-If you click on that link in the browser you should see:
+<p>
+  如果您在浏览器中点击该链接，您应该看到：
+</p>
 
-![Gatsby.js 开发404页面](dev-404.png)
+<p>
+  <img src="dev-404.png" alt="Gatsby.js 开发404页面" />
+</p>
 
-What you're seeing is the Gatsby.js development 404 page. Let's do what it says and create a React.js page component at `src/pages/page-2.js`.
+<p>
+  你看到的是Gatsby.js开发404页面。 让我们按照它的说法在src/pages/page-2.js创建一个React.js页面组件。
+</p>
 
-使第二个页面组件如下所示：
+<p>
+  使第二个页面组件如下所示：
+</p>
 
-```jsx
-import React from "react";
+<pre><code class="jsx">import React from "react";
 import Link from "gatsby-link";
 
-export default () => (
-  <div>
-    <p>Hello world from my second Gatsby page</p>
-    <Link to="/">back home</Link>
-  </div>
+export default () =&gt; (
+  &lt;div&gt;
+    &lt;p&gt;Hello world from my second Gatsby page&lt;/p&gt;
+    &lt;Link to="/"&gt;back home&lt;/Link&gt;
+  &lt;/div&gt;
 );
-```
+</code></pre>
 
-Save that and now you should be able to click back and forth between the two pages!
+<p>
+  保存之后，现在你应该能够在两页之间来回点击！
+</p>
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="/images/clicking-2.mp4"></source>
   <p>Your browser does not support the video element.</p>
 </video>
 
-*Challenge*: Using the instructions above as hints, see if you can create a third page and link to it from the home page.
+<p>
+  <em>挑战：</em>使用上述说明作为提示，看看您是否可以创建第三页并从主页链接到它。
+</p>
 
-## Interactive page
+<h2>
+  交互式页面
+</h2>
 
-One nice thing about using Gatsby for building websites vs. other tools is that itʼs easier to add interactivity to your pages. React.js was designed for Facebook.com and is used on many other world-class web applications.
+<p>
+  One nice thing about using Gatsby for building websites vs. other tools is that itʼs easier to add interactivity to your pages. React.js was designed for Facebook.com and is used on many other world-class web applications.
+</p>
 
-Let's see how to add interactive elements to our pages. Let's start with a counter.
+<p>
+  Let's see how to add interactive elements to our pages. Let's start with a counter.
+</p>
 
-We'll start by creating a new link to a page at `/counter`/ from our original `index.js` page component `<Link to="/counter/">Counter</Link>`.
+<p>
+  We'll start by creating a new link to a page at <code>/counter</code>/ from our original <code>index.js</code> page component <code>&lt;Link to="/counter/"&gt;Counter&lt;/Link&gt;</code>.
+</p>
 
-```jsx{13-15}
-import React from "react";
+<pre><code class="jsx{13-15}">import React from "react";
 import Link from "gatsby-link";
 
-export default () =>
-  <div style={{ color: `tomato` }}>
-    <h1>Hello Gatsby!</h1>
-    <p>What a world.</p>
-    <img src="https://source.unsplash.com/random/400x200" alt="" />
-    <br />
-    <div>
-      <Link to="/page-2/">Link</Link>
-    </div>
-    <div>
-      <Link to="/counter/">Counter</Link>
-    </div>
-  </div>
-```
+export default () =&gt;
+  &lt;div style={{ color: `tomato` }}&gt;
+    &lt;h1&gt;Hello Gatsby!&lt;/h1&gt;
+    &lt;p&gt;What a world.&lt;/p&gt;
+    &lt;img src="https://source.unsplash.com/random/400x200" alt="" /&gt;
+    &lt;br /&gt;
+    &lt;div&gt;
+      &lt;Link to="/page-2/"&gt;Link&lt;/Link&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;Link to="/counter/"&gt;Counter&lt;/Link&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
 
-Add that link, click on it, and then we'll create a "Hello World" page component for `/counter/` as before. But instead of using the "functional component" form as we did before, this time we'll create a "class" component at `src/pages/counter.js`.
+<p>
+  Add that link, click on it, and then we'll create a "Hello World" page component for <code>/counter/</code> as before. But instead of using the "functional component" form as we did before, this time we'll create a "class" component at <code>src/pages/counter.js</code>.
+</p>
 
-```jsx
-import React from "react";
+<pre><code class="jsx">import React from "react";
 
 class Counter extends React.Component {
   render() {
-    return <div>Hello Class Component</div>;
+    return &lt;div&gt;Hello Class Component&lt;/div&gt;;
   }
 }
 
 export default Counter;
-```
+</code></pre>
 
-The class form of React allows us to have component state. We'll need that for our counter.
+<p>
+  The class form of React allows us to have component state. We'll need that for our counter.
+</p>
 
-Let's continue to flesh out our counter. Let's add two buttons. One to increment and one to decrement the count of the counter.
+<p>
+  Let's continue to flesh out our counter. Let's add two buttons. One to increment and one to decrement the count of the counter.
+</p>
 
-```jsx{5-12}
-import React from "react";
+<pre><code class="jsx{5-12}">import React from "react";
 
 class Counter extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Counter</h1>
-        <p>current count: 0</p>
-        <button>plus</button>
-        <button>minus</button>
-      </div>
+      &lt;div&gt;
+        &lt;h1&gt;Counter&lt;/h1&gt;
+        &lt;p&gt;current count: 0&lt;/p&gt;
+        &lt;button&gt;plus&lt;/button&gt;
+        &lt;button&gt;minus&lt;/button&gt;
+      &lt;/div&gt;
     )
   }
 }
 
 export default Counter
-```
+</code></pre>
 
-Now we have everything we need to make a nice counter. Let's make it live.
+<p>
+  Now we have everything we need to make a nice counter. Let's make it live.
+</p>
 
-First we'll set up the component state.
+<p>
+  First we'll set up the component state.
+</p>
 
-```jsx{4-7,13}
-import React from "react";
-
-class Counter extends React.Component {
-  constructor() {
-    super()
-    this.state = { count: 0 }
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>Counter</h1>
-        <p>current count: {this.state.count}</p>
-        <button>plus</button>
-        <button>minus</button>
-      </div>
-    )
-  }
-}
-
-export default Counter
-```
-
-We're now rendering the current count from the component state.
-
-Let's now change the state when we click on our buttons.
-
-```jsx{14-19}
-import React from "react";
+<pre><code class="jsx{4-7,13}">import React from "react";
 
 class Counter extends React.Component {
   constructor() {
@@ -276,66 +272,121 @@ class Counter extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Counter</h1>
-        <p>current count: {this.state.count}</p>
-        <button onClick={() => this.setState({ count: this.state.count +
-          1 })}>plus
-        </button>
-        <button onClick={() => this.setState({ count: this.state.count -
-          1 })}>minus
-        </button>
-      </div>
+      &lt;div&gt;
+        &lt;h1&gt;Counter&lt;/h1&gt;
+        &lt;p&gt;current count: {this.state.count}&lt;/p&gt;
+        &lt;button&gt;plus&lt;/button&gt;
+        &lt;button&gt;minus&lt;/button&gt;
+      &lt;/div&gt;
     )
   }
 }
 
 export default Counter
-```
+</code></pre>
 
-There you go! A working React.js counter inside your static website 
+<p>
+  We're now rendering the current count from the component state.
+</p>
 
-*Bonus challenge*: One fun thing is that hot reloading isn't just for content and styles; it works on code as well. Currently, when you click the buttons on the counter, the numbers go up and down in increments of 1. Try to make the counter go up and down in a different increments (for example, 5).
+<p>
+  Let's now change the state when we click on our buttons.
+</p>
 
-## Deploying Gatsby.js websites
+<pre><code class="jsx{14-19}">import React from "react";
 
-Gatsby.js is a *static site generator*, which means there are no servers to setup or complicated databases to deploy. Instead, the Gatsby `build` command produces a directory of static HTML and JavaScript files which you can deploy to a static site hosting service.
+class Counter extends React.Component {
+  constructor() {
+    super()
+    this.state = { count: 0 }
+  }
 
-Let's try using [Surge](http://surge.sh/) for deploying our first Gatsby website. Surge is one of many "static site hosts" which make it possible to deploy Gatsby sites.
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Counter&lt;/h1&gt;
+        &lt;p&gt;current count: {this.state.count}&lt;/p&gt;
+        &lt;button onClick={() =&gt; this.setState({ count: this.state.count +
+          1 })}&gt;plus
+        &lt;/button&gt;
+        &lt;button onClick={() =&gt; this.setState({ count: this.state.count -
+          1 })}&gt;minus
+        &lt;/button&gt;
+      &lt;/div&gt;
+    )
+  }
+}
 
-If you haven't previously installed & setup Surge, open a new terminal window and install their terminal tool:
+export default Counter
+</code></pre>
 
-```bash
-npm install --global surge
+<p>
+  There you go! A working React.js counter inside your static website 
+</p>
+
+<p>
+  <em>Bonus challenge</em>: One fun thing is that hot reloading isn't just for content and styles; it works on code as well. Currently, when you click the buttons on the counter, the numbers go up and down in increments of 1. Try to make the counter go up and down in a different increments (for example, 5).
+</p>
+
+<h2>
+  Deploying Gatsby.js websites
+</h2>
+
+<p>
+  Gatsby.js is a <em>static site generator</em>, which means there are no servers to setup or complicated databases to deploy. Instead, the Gatsby <code>build</code> command produces a directory of static HTML and JavaScript files which you can deploy to a static site hosting service.
+</p>
+
+<p>
+  Let's try using <a href="http://surge.sh/">Surge</a> for deploying our first Gatsby website. Surge is one of many "static site hosts" which make it possible to deploy Gatsby sites.
+</p>
+
+<p>
+  If you haven't previously installed & setup Surge, open a new terminal window and install their terminal tool:
+</p>
+
+<pre><code class="bash">npm install --global surge
 
 # Then create a (free) account with them
 surge
-```
+</code></pre>
 
-Next, build your site by running the following command in the terminal at the root of your site (tip: make sure you're running this command at the root of your site, in this case in the tutorial-part-one folder, which you can do by opening a new tab in the same window you used to run `gatsby develop`):
+<p>
+  Next, build your site by running the following command in the terminal at the root of your site (tip: make sure you're running this command at the root of your site, in this case in the tutorial-part-one folder, which you can do by opening a new tab in the same window you used to run <code>gatsby develop</code>):
+</p>
 
-```bash
-gatsby build
-```
+<pre><code class="bash">gatsby build
+</code></pre>
 
-Building should take 15-30 seconds. At this point, it's useful to take a look at the files that the `gatsby build` command just prepared to deploy. Take a look at a list of the generated files by typing in the following terminal command into the root of your site, which will let you look at the `public` directory:
+<p>
+  Building should take 15-30 seconds. At this point, it's useful to take a look at the files that the <code>gatsby build</code> command just prepared to deploy. Take a look at a list of the generated files by typing in the following terminal command into the root of your site, which will let you look at the <code>public</code> directory:
+</p>
 
-```bash
-ls public
-```
+<pre><code class="bash">ls public
+</code></pre>
 
-Then finally deploy your site by publishing the generated files to surge.sh.
+<p>
+  Then finally deploy your site by publishing the generated files to surge.sh.
+</p>
 
-```bash
-surge public/
-```
+<pre><code class="bash">surge public/
+</code></pre>
 
-Once this finishes running, you should see in your terminal something like:
+<p>
+  Once this finishes running, you should see in your terminal something like:
+</p>
 
-![Screenshot of publishing Gatsby site with Surge](surge-deployment.png)
+<p>
+  <img src="surge-deployment.png" alt="Screenshot of publishing Gatsby site with Surge" />
+</p>
 
-Open the web address listed on the bottom line (`lowly-pain.surge.sh` in this case) and you'll see your newly published site! Good work!
+<p>
+  Open the web address listed on the bottom line (<code>lowly-pain.surge.sh</code> in this case) and you'll see your newly published site! Good work!
+</p>
 
-## What's coming next?
+<h2>
+  What's coming next?
+</h2>
 
-In this tutorial, you've installed Gatsby, played in the development environment, and deployed your first site! Awesome! We hope you're enjoying yourself so far. Feel free to continue now to part two of the tutorial, ["Introduction to using CSS in Gatsby"](/tutorial/part-two/), or go exploring around the rest of the site.
+<p>
+  In this tutorial, you've installed Gatsby, played in the development environment, and deployed your first site! Awesome! We hope you're enjoying yourself so far. Feel free to continue now to part two of the tutorial, <a href="/tutorial/part-two/">"Introduction to using CSS in Gatsby"</a>, or go exploring around the rest of the site.
+</p>
