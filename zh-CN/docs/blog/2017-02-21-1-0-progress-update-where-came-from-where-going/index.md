@@ -73,15 +73,15 @@ React 给web开发的世界带来了诸多好处。 它的三大观点, 可复�
 
 gatsby 的目标是成为一个 *现代 web 框架* , 所以你需要一个现代化的客户端。 Gatsby 通过全面的现代javascript编译器和打包工具，确保你可以直接开始开发你的网站而且*一切都会正常运行*。
 
-## Gatsby 1.0: Setting the foundation for a modern JavaScript website framework
+## Gatsby 1.0: 为现代 javascript 网站框架奠定基础
 
-I started working on the [1.0 branch](https://github.com/gatsbyjs/gatsby/tree/1.0) in August and after months of hard work, our first beta release is in sight.
+我8月创建 [1.0 分支](https://github.com/gatsbyjs/gatsby/tree/1.0)，经过数月的辛勤工作, 我们的第一个测试版已经发布。
 
-The changes for 1.0 can be organized into a few areas.
+可以从以下几点来认识1.0版的变动：
 
-### Add service worker and offline support
+### 加入service worker和脱机支持
 
-Service workers are perhaps the most exciting technology that's come to the web in the past several years. It makes possible (finally!) sophisticated client caching plus true offline support. I've added excellent on-by-default support to Gatsby for Service Workers and a great offline experience. If you're using Chrome or Firefox, this site loads offline! *Service workers make your site much more resilient against bad networks*. If someone loads your site on a train and goes through a tunnel, you won't lose them as they'll still be able to keep clicking around.
+Service workers 或许是过去几年来web开发上最令人兴奋的技术。 It makes possible (finally!) sophisticated client caching plus true offline support. I've added excellent on-by-default support to Gatsby for Service Workers and a great offline experience. If you're using Chrome or Firefox, this site loads offline! *Service workers make your site much more resilient against bad networks*. If someone loads your site on a train and goes through a tunnel, you won't lose them as they'll still be able to keep clicking around.
 
 ### Route-based code splitting
 
