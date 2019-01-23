@@ -59,7 +59,7 @@ experience](https://camo.githubusercontent.com/0506699aaaae2f9772cc381b92f2aa5e1
 
 React 给web开发的世界带来了诸多好处。 它的三大观点, 可复用组件、生命周期 api 和单向数据流极大的 *简化* web的ui开发。 在其他框架中很难解决的问题，React几乎都可以轻松应对。
 
-## Time for a JavaScript web framework?
+## 基于Javascript的Web框架时代的来临？
 
 最初，互联网在开源 cms 上运行--主要是 wordpress 和 drupal。 我大学花了大部分的时间建设 drupal 网站, 和编写 [开源 drupal 模块](https://www.bricolage.io/first-beta-release-drupal-native-mailinglist-module/)。 我的第一份工作是在 [Pantheon](https://pantheon.io)-在那里我为 团队建设 drupal & wordpress 网站 [设计和构建开发人员工具](https://www.bricolage.io/new-beginnings/) 。
 
@@ -69,9 +69,9 @@ React 给web开发的世界带来了诸多好处。 它的三大观点, 可复�
 
 随着越来越多的网站希望变得像应用程序一样, 人们*渴望在我们的网站添加更多的 javascript* ，这也导致了工具复杂性的爆发, 同时也导致网站性能的下降， 因为在错误的时间加载太多javascript。
 
-但其实并不需要这样。 We use web frameworks because they *embed smart ideas about how to organize our code* so we're guided towards building fast sites that are simple to build and maintain.
+但其实并不需要这样。 我们使用 web 框架, 因为它们 *对于如何组织我们的代码有很棒的想法*, 这有助于我们轻松构建和维护快速响应的网站。
 
-Gatsby aims to be a *modern web framework* that's designed with the assumption that you need a rich client. Gatsby bakes in modern JavaScript compiler and bundling tools along with a full asset pipeline so you can just start writing your website and *be confident things will work*.
+gatsby 的目标是成为一个 *现代 web 框架* , 所以你需要一个现代化的客户端。 Gatsby 通过全面的现代javascript编译器和打包工具，确保你可以直接开始开发你的网站而且*一切都会正常运行*。
 
 ## Gatsby 1.0: Setting the foundation for a modern JavaScript website framework
 
