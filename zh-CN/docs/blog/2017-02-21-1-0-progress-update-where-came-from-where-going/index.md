@@ -28,22 +28,22 @@ draft: true
 
 Gatsby 汇聚了网站应用世界中的最快性能的静态网站技术、强大的抽象化能力、优秀的工具和客户端能力。
 
-它是一个通用的以数据为中心的 web 框架, 被广泛用于各种站点的开发, 包括博客、营销网站、文档站点和电子商务。
+它是一个通用的以数据为中心的 web 框架, 被[广泛用于各种站点](https://github.com/gatsbyjs/gatsby#sites-built-with-gatsby)的开发, 包括博客、营销网站、文档站点和电子商务。
 
 它是由三个最流行的 web 应用工具整理而成的一个综合性的网站框架:
 
 * [React](https://facebook.github.io/react/) facebook的ui构建工具
 * [webpack](https://webpack.js.org/) 用于打包 javascript 和 css
-* [GraphQL](http://graphql.org/) from Facebook for declarative data queries
+* [graphql](http://graphql.org/) facebook 的声明式数据查询工具
 
-While designing Gatsby, I wanted a synthesis of two of my favorite developer experiences. The simplicity of building sites with markdown and static site generators and the powerful hot-reloading environment of the React world.
+在设计 gatsby 时, 我想要实现同时支持我最喜欢的两种开发体验。 通过markdown和静态网站生成器的简洁性， 以及React相关的超级方便的热加载能力。
 
 ![Gatsby development
 experience](https://camo.githubusercontent.com/0506699aaaae2f9772cc381b92f2aa5e14eba296/687474703a2f2f7a697070792e6766796361742e636f6d2f556c74696d6174655765656b6c7942617265626972646261742e676966)
 
-When loading a page in a Gatsby site, browsers first load the page's pre-built HTML file and then load the minimum JavaScript needed to make that page interactive.
+在 gatsby 网站中加载页面时, 浏览器首先加载该页面的预构建html 文件, 然后加载该页面交互性所需的最小 javascript代码。
 
-Because Gatsby sites are just static files, you're ensured a much more *carefree deployment*. There are no *complicated databases* to install and maintain and *web-servers to scale* and protect against hacking.
+由于 gatsby 站点只是静态文件, 因此您可以 更加*自由部署*。 There are no *complicated databases* to install and maintain and *web-servers to scale* and protect against hacking.
 
 Serving static files ensures consistent *super fast load times*. Once your site is loaded, Gatsby automatically *pre-fetches* adjacent pages. This means navigating around your site feels *instantaneous* as all the content and scripts for the next page has been loaded already. Since you're reading this on a Gatsby site, try clicking on a link in the header and then click back (note, this site is still being worked on as we approach 1.0). A bit faster than your current site no? 
 
