@@ -28,12 +28,12 @@ draft: true
 
 Gatsby 汇聚了网站应用世界中的最快性能的静态网站技术、强大的抽象化能力、优秀的工具和客户端能力。
 
-It is a general purpose data-centric web framework that is [successfully being used for a wide variety of sites](https://github.com/gatsbyjs/gatsby#sites-built-with-gatsby) including blogs, marketing sites, documentation sites, and e-commerce.
+它是一个通用的以数据为中心的 web 框架, 被广泛用于各种站点的开发, 包括博客、营销网站、文档站点和电子商务。
 
-It wraps three of the most popular web app tools into a cohesive website framework:
+它是由三个最流行的 web 应用工具整理而成的一个综合性的网站框架:
 
-* [React](https://facebook.github.io/react/) from Facebook for building UIs
-* [Webpack](https://webpack.js.org/) for bundling JavaScript and CSS
+* [React](https://facebook.github.io/react/) facebook的ui构建工具
+* [webpack](https://webpack.js.org/) 用于打包 javascript 和 css
 * [GraphQL](http://graphql.org/) from Facebook for declarative data queries
 
 While designing Gatsby, I wanted a synthesis of two of my favorite developer experiences. The simplicity of building sites with markdown and static site generators and the powerful hot-reloading environment of the React world.
