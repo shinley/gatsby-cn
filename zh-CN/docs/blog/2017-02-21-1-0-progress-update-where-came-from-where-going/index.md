@@ -49,11 +49,11 @@ experience](https://camo.githubusercontent.com/0506699aaaae2f9772cc381b92f2aa5e1
 
 ## Apps vs sites
 
-几乎从网站开发开始时， 对于web作为应用程序平台还是一系列的“文档”一直存在很大的争议。
+几乎从网站开发开始时， 对于web作为app平台还是一系列的“文档”一直存在很大的争议。
 
-In recent years, the "app" paradigm has gained steam as dozens of JavaScript frameworks and other JavaScript tools have been released, exploring ideas and competing for mind-share.
+近年来, 随着数十种 javascript框架和其他 javascript 工具的发布, "app" 的概念越来越深得人心，也激发了许多的想法和交流。
 
-100s of millions of dollars have been invested by the largest companies in the world in these JavaScript frameworks and the larger ecosystem of tools surrounding them.
+世界上最大的公司投资了1000万美元在这些 javascript 框架和它们越来越大的生态工具系统中。
 
 The improvement has been dramatic and exhilarating. I can remember many things I struggled for weeks to build in ~2010-2013 that took me days or even hours once I'd adopted React.
 
