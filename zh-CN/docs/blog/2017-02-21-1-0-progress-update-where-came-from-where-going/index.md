@@ -43,13 +43,13 @@ experience](https://camo.githubusercontent.com/0506699aaaae2f9772cc381b92f2aa5e1
 
 在 gatsby 网站中加载页面时, 浏览器首先加载该页面的预构建html 文件, 然后加载该页面交互性所需的最小 javascript代码。
 
-由于 gatsby 站点只是静态文件, 因此您可以 更加*自由部署*。 There are no *complicated databases* to install and maintain and *web-servers to scale* and protect against hacking.
+由于 gatsby 站点只是静态文件, 因此您可以 更加*自由部署*。 不需要关心 *复杂数据库* 安装和维护、*网络服务器*的考量以及黑客攻击的预防。
 
-Serving static files ensures consistent *super fast load times*. Once your site is loaded, Gatsby automatically *pre-fetches* adjacent pages. This means navigating around your site feels *instantaneous* as all the content and scripts for the next page has been loaded already. Since you're reading this on a Gatsby site, try clicking on a link in the header and then click back (note, this site is still being worked on as we approach 1.0). A bit faster than your current site no? 
+运行静态文件可始终确保 *超快加载时间*。 网站加载后, gatsby 会自动*预加载* 相邻的页面。 这意味着站内导航可以 *瞬时*切换, 因为下一页所有的内容和脚本已经提前加载完成。 既然您正在Gatsby网站上阅读这篇文章, 请尝试单击标题中的链接, 然后单击 "后退" (请注意, 目前我们还在向1.0版本前进，这个网站仍然有效)。 是不是比你当前开发的网站要快一些呢？ 
 
 ## Apps vs sites
 
-From nearly the beginning of the web, the idea of the web as an application platform has competed with the idea of the web as a series of "documents".
+几乎从网站开发开始时， 对于web作为应用程序平台还是一系列的“文档”一直存在很大的争议。
 
 In recent years, the "app" paradigm has gained steam as dozens of JavaScript frameworks and other JavaScript tools have been released, exploring ideas and competing for mind-share.
 
