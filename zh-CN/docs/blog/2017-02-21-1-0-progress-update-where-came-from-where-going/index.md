@@ -55,21 +55,21 @@ experience](https://camo.githubusercontent.com/0506699aaaae2f9772cc381b92f2aa5e1
 
 世界上最大的公司投资了1000万美元在这些 javascript 框架和它们越来越大的生态工具系统中。
 
-The improvement has been dramatic and exhilarating. I can remember many things I struggled for weeks to build in ~2010-2013 that took me days or even hours once I'd adopted React.
+这些进步十分巨大并且振奋人心，我清楚地记得在2010-2013年间许多东西的开发需要我冥思苦想数周，当我学会React后只需要几天甚至几小时就完成了。
 
-React has taken over the web world and for good reason. Its three big ideas, composable components, lifecycle APIs, and one-way data flow dramatically *simplify* web UI development. Things that are really hard to build within other paradigms feel almost easy with React.
+React 给web开发的世界带来了诸多好处。 它的三大观点, 可复用组件、生命周期 api 和单向数据流极大的 *简化* web的ui开发。 在其他框架中很难解决的问题，React几乎都可以轻松应对。
 
 ## Time for a JavaScript web framework?
 
-The internet runs on Open Source CMSs—primarily Wordpress and Drupal. I spent most of college building Drupal websites and writing [open-source Drupal modules](https://www.bricolage.io/first-beta-release-drupal-native-mailinglist-module/). My first startup job was at [Pantheon](https://pantheon.io)—where I helped [design and build developer tools](https://www.bricolage.io/new-beginnings/) for teams building Drupal & Wordpress sites.
+最初，互联网在开源 cms 上运行--主要是 wordpress 和 drupal。 我大学花了大部分的时间建设 drupal 网站, 和编写 [开源 drupal 模块](https://www.bricolage.io/first-beta-release-drupal-native-mailinglist-module/)。 我的第一份工作是在 [Pantheon](https://pantheon.io)-在那里我为 团队建设 drupal & wordpress 网站 [设计和构建开发人员工具](https://www.bricolage.io/new-beginnings/) 。
 
-These open source CMSs are *extraordinary tools and have remarkably dynamic ecosystems*. They truly run the web. Wordpress alone runs more than 25% of all websites on the internet!
+这些开源 cms 拥有者*很棒的工具, 和强大的生态系统*。他们真正地统治着网站。仅 wordpress 就在互联网所有网站中的占比超过25%！
 
-But still, the time seems ripe for a client-centric web framework.
+然而，似乎以客户端为中心的web框架的时代已经到来。
 
-As more and more sites are expected to become app-like there's been a *rush to add more JavaScript into our sites* resulting in an explosion of tool complexity resulting in, at times, poorly optimized sites that ship far too much JavaScript at the wrong times bogging down the site.
+随着越来越多的网站希望变得像应用程序一样, 人们*渴望在我们的网站添加更多的 javascript* ，这也导致了工具复杂性的爆发, 同时也导致网站性能的下降， 因为在错误的时间加载太多javascript。
 
-But it doesn't need to be this way. We use web frameworks because they *embed smart ideas about how to organize our code* so we're guided towards building fast sites that are simple to build and maintain.
+但其实并不需要这样。 We use web frameworks because they *embed smart ideas about how to organize our code* so we're guided towards building fast sites that are simple to build and maintain.
 
 Gatsby aims to be a *modern web framework* that's designed with the assumption that you need a rich client. Gatsby bakes in modern JavaScript compiler and bundling tools along with a full asset pipeline so you can just start writing your website and *be confident things will work*.
 
