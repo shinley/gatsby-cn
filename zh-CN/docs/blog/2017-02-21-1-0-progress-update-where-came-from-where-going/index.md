@@ -81,9 +81,9 @@ gatsby 的目标是成为一个 *现代 web 框架* , 所以你需要一个现�
 
 ### 加入service worker和脱机支持
 
-Service workers 或许是过去几年来web开发上最令人兴奋的技术。 It makes possible (finally!) sophisticated client caching plus true offline support. I've added excellent on-by-default support to Gatsby for Service Workers and a great offline experience. If you're using Chrome or Firefox, this site loads offline! *Service workers make your site much more resilient against bad networks*. If someone loads your site on a train and goes through a tunnel, you won't lose them as they'll still be able to keep clicking around.
+Service workers 或许是过去几年来web开发上最令人兴奋的技术。 它使复杂的客户端缓存和真正的离线支持成为可能（终于）。 我在Gatsby里添加了对Service Workers的出色的默认支持和出色的离线体验。 如果您使用的是chrome 或 firefox, 此网站将离线加载! *在网络状态不好的情况下，Service workers使您的网站更有弹性*。 如果有人在火车通过隧道时加载您的网站, 你也不会丢失他们，因为他们仍然可以保持和网站的交互。
 
-### Route-based code splitting
+### 基于路由进行代码拆分
 
 Many sites generate one JavaScript bundle for the *entire* site. Which means someone loading your frontpage loads far more code than is necessary.
 
