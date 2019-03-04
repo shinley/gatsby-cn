@@ -112,7 +112,7 @@ Wordpress & Jekyll are both great examples of open source communities with robus
 
 Themes and plugins help accelerate building as you can build on what others have done and help collaborate with others on basic building blocks
 
-Gatsby 1.0 will be adding plugin and theme support.
+Gatsby将在1.0版本添加对插件和主题的支持。
 
 The plugin system will let you hook into lifecycle APIs from events during the bootstrap and build processes and in the browser.
 
