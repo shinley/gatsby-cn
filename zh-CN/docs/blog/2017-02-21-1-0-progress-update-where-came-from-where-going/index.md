@@ -85,9 +85,9 @@ Service workers 或许是过去几年来web开发上最令人兴奋的技术。 
 
 ### 基于路由进行代码拆分
 
-Many sites generate one JavaScript bundle for the *entire* site. Which means someone loading your frontpage loads far more code than is necessary.
+许多站点将这个站点生成为一个JavaScript包。这将意味着用户访问你的前端页面将加载远超所需的代码量。
 
-Gatsby 1.0 only loads the scripts necessary for the page you're on. As you navigate around, Gatsby loads the JavaScript needed for each route.
+Gatsby 1.0仅为您加载所在页面所需的代码。当您来回跳转时，Gatsby仅加载每个路由所需的JavaScript代码。
 
 This means that one page with heavy imports:
 
