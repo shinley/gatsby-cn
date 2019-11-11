@@ -5,9 +5,10 @@ image: "smartive-loves-gatsby.png"
 author: "Moreno Feltscher"
 excerpt: "At smartive we always saw the potential of static site generators. We recently made the switch to Gatsby.js for our company site. A decision we don’t regret. Here’s why."
 tags:
-  - company-site
-  - ci
+  - "company-site"
+  - "ci"
 ---
+
 *This article was originally published on [our company blog](https://blog.smartive.ch/smartive-ch-goes-gatsby-js-27a056b3b817) on September 27, 2017.*
 
 # smartive.ch goes Gatsby
