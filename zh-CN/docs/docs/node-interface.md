@@ -1,6 +1,7 @@
 ---
 title: Node Interface
 ---
+
 The "node" is the center of Gatsby's data system. All data that's added to Gatsby is modeled using nodes.
 
 The basic node data structure is as follows:
