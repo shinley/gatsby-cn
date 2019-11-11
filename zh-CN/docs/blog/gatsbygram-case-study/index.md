@@ -5,6 +5,7 @@ author: "Kyle Mathews"
 image: 'ui-and-code.png'
 imageTitle: Gatsbygram
 ---
+
 [Gatsbygram](https://gatsbygram.gatsbyjs.org) is a clone of Instagram built with Gatsby v1.
 
 The [source code for Gatsbygram](https://github.com/gatsbyjs/gatsby/tree/master/examples/gatsbygram) lives in the Gatsby monorepo. See the instructions at the end for how to start playing with the code!
