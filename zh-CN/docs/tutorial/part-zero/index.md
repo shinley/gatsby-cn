@@ -2,6 +2,7 @@
 title: Programming Basics (Part Zero)
 typora-copy-images-to: ./
 ---
+
 下面列出了在Gatsby教程中继续使用之前所需的基本编程知识和工具。 如果你对这些东西不熟悉，我们提供了有关这些主题的有用教程的链接！
 
 ### 必要的工具：
