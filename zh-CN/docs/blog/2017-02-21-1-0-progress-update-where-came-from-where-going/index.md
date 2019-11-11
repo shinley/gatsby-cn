@@ -90,7 +90,7 @@ Service workers 或许是过去几年来web开发上最令人兴奋的技术。 
 
 Gatsby 1.0仅为您加载所在页面所需的代码。当您来回跳转时，Gatsby仅加载每个路由所需的JavaScript代码。
 
-这也就是说，某一个页面加载大量的js库：
+这也就是说，即使某一个页面加载大量的js库：
 
 ```javascript
 import d3 from "d3";
@@ -99,7 +99,7 @@ import threejs from "react-threejs";
 
 ...也不会影响到其他页面的性能。
 
-这对于多人协作开发一个网站是特别有用，因为这样可以对不同的页面使用不同的技术和实现不同的业务需求。 Different parts of the site can evolve independently of each other.
+这对于多人协作开发一个网站是特别有用，因为这样可以对不同的页面使用不同的技术和实现不同的业务需求。 网站不同的部分可以进行独立的开发和演变。
 
 One client I'm working with on Gatsby 1.0 (a stealth startup in San Francisco) is using Gatsby to build both their marketing site *and* SaaS app within the *same Gatsby codebase*.
 
