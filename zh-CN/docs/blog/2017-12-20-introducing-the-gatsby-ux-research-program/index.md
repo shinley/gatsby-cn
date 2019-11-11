@@ -3,8 +3,9 @@ title: Introducing the Gatsby UX Research Program
 date: "2017-12-20"
 author: "Shannon Soper"
 tags:
-  - ux
+  - "ux"
 ---
+
 ## How this all started
 
 After teaching college-level writing and training sales people for the last several years, I’d been contemplating a career change. Earlier this year on a car trip with my brother near the [red rock cliffs](https://utah.com/hiking/st-george) of southern Utah, he suggested that UX design could be a natural fit. After serious reflection, I applied to a UX bootcamp for this fall and got in.
