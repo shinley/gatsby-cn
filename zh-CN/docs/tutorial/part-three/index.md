@@ -2,6 +2,7 @@
 title: Building nested layouts in Gatsby
 typora-copy-images-to: ./
 ---
+
 Welcome to part three!
 
 ## What's in this tutorial?
