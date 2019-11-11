@@ -8,6 +8,7 @@ imageAuthorLink: https://flic.kr/p/mozahn
 imageTitle: Container ship loading containers
 excerpt: "We shipped today Gatsby's first beta for 1.0! Gatsby is a modern blazing-fast static site generator for React.js…"
 ---
+
 We shipped today Gatsby's first beta for 1.0! Gatsby is a modern blazing-fast static site generator for React.js.
 
 Ten months and one day ago [I announced I was now working full-time on Gatsby](https://www.bricolage.io/gatsby-open-source-work/) followed a month later by posting [an issue kickstarting the rewrite of Gatsby for a 1.0 release](https://github.com/gatsbyjs/gatsby/issues/419)
