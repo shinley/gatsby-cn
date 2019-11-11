@@ -1,6 +1,7 @@
 ---
 title: Querying Data with GraphQL
 ---
+
 There are many options for loading data into React components. One of the most popular and powerful of these is a technology called [GraphQL](http://graphql.org/).
 
 GraphQL was invented at Facebook to help product engineers *pull* needed data into React components.
