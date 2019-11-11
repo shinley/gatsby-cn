@@ -3,11 +3,12 @@ title: Building Sites with Headless CMSs
 date: "2018-02-03"
 author: "Shannon Soper"
 tags:
-  - headless-cms
-  - contentful
-  - graphcms
-  - cloudcms
+  - "headless-cms"
+  - "contentful"
+  - "graphcms"
+  - "cloudcms"
 ---
+
 ## What is a traditional CMS?
 
 A traditional Content Management System (CMS)--like Wordpress, Drupal, or Joomla--manages three things for a website: content, admin screens, and presentation layer. These three things are tightly integrated, which has advantages. For example, there’s only one system to learn / one vendor relationship, and overall, there may be fewer choices to make. In addition, traditional CMSs have been around for so long that many teams are familiar with them and many websites are already be running on them. Both advantages.
