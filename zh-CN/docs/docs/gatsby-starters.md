@@ -1,6 +1,7 @@
 ---
 title: 'Gatsby Starters'
 ---
+
 The Gatsby CLI tool lets you install "starters". These are partially built sites preconfigured to help you get moving faster on creating a certain type of site.
 
 When creating a new site, you can optionally specify a starter to base your new site on e.g.
