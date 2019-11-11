@@ -3,11 +3,12 @@ title: "Migrate from Jekyll to Gatsby"
 date: 2017-11-08
 author: "Nahuel Scotti"
 tags:
-  - jekyll
-  - markdown
-  - getting-started
-  - ci
+  - "jekyll"
+  - "markdown"
+  - "getting-started"
+  - "ci"
 ---
+
 ## A bit of history
 
 Some years ago I created my [blog](https://blog.singuerinc.com/) with [Jekyll](https://jekyllrb.com/) and it has been working well ever since.
