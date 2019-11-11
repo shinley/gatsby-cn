@@ -5,14 +5,15 @@ author: "Josh Weaver"
 image: "gatsby-contentful-netlify-algolia.jpg"
 excerpt: "Gatsby has been getting a lot of recognition and adoption lately, and for good reason. It’s so flexible and it works well with nearly everything."
 tags:
-  - contentful
-  - netlify
-  - algolia
-  - getting-started
-  - hosting
-  - ci
-  - performance
+  - "contentful"
+  - "netlify"
+  - "algolia"
+  - "getting-started"
+  - "hosting"
+  - "ci"
+  - "performance"
 ---
+
 Gatsby has been getting a lot of recognition and [adoption](https://github.com/gatsbyjs/gatsby#showcase) lately, and for good reason. It’s so flexible and it works well with nearly everything.
 
 If you’re on a tight budget and don’t want to sacrifice developer experience or cutting-edge deployments, I’ve landed on a favorite set of tools (Gatsby included, of course) for developing static sites that solves multiple problems at once.
