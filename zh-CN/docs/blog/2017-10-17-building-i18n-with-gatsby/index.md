@@ -3,8 +3,9 @@ title: "Building i18n with Gatsby"
 date: 2017-10-17
 author: "Samuel Goudie"
 tags:
-  - i18n
+  - "i18n"
 ---
+
 Languages are a key part of who we are; they are an expression of our identity. Serving users content in their own language is a powerful thing, and it allows you to include nuances and specific cultural references in a way Google Translate just wouldn't allow.
 
 When we were looking for a new framework for the new [doopoll](https://doopoll.co) marketing site, we knew we'd want to support i18n from the start.
