@@ -3,9 +3,10 @@ title: "Building a static blog using Gatsby and Strapi"
 date: "2018-01-18"
 author: "Pierre Burgy"
 tags:
-  - gatsby
-  - strapi
+  - "gatsby"
+  - "strapi"
 ---
+
 ## Introduction
 
 A static website contains Web pages with fixed content. Technically, it is a simple list of HTML files, which displays the same information to every visitor. Unlike dynamic websites, they do not require any back-end programming or databases. Publishing a static website is easy: the files are uploaded on a simple Web server or storage provider. The two main advantages of static websites are security and speed: there is no database so it can not be hacked and there is no need to render a page for each request, which makes Web browsing faster.
