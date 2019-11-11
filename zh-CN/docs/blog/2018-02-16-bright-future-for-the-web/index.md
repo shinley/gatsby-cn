@@ -4,11 +4,12 @@ date: "2018-02-16"
 image: "bright-future.jpg"
 author: "Ryan Wiemer"
 tags:
-  - markdown
-  - JAMstack
-  - netlify
-  - contentful
+  - "markdown"
+  - "JAMstack"
+  - "netlify"
+  - "contentful"
 ---
+
 *This article was originally published on [Medium](https://medium.com/@ryanwiemer/gatsby-and-the-jam-stack-91e31508f364) on January 31, 2018.*
 
 Recently I relaunched my wife’s photography portfolio, [KNW Photography](https://www.knw.io/), using a combination of Gatsby, [Contentful](https://www.contentful.com/) and [Netlify](https://www.netlify.com/). This particular group of tools represents a new and exciting web development architecture known as the [JAMstack](https://jamstack.org/) (Javascript, APIs and Markup). In this post I will be sharing my personal thoughts on each of these new tools and why together they represent the “holy grail” of the static website world.
