@@ -1,6 +1,7 @@
 ---
 title: "Creating and Modifying Pages"
 ---
+
 Gatsby可以很容易地以编程方式控制您的网页。
 
 页面可以通过三种方式创建：
