@@ -4,8 +4,9 @@ date: "2018-02-09"
 image: "gatsbymanor.jpg"
 author: "Steven Natera"
 tags:
-  - themes
+  - "themes"
 ---
+
 I am proud to announce [Gatsby Manor](https://www.gatsbymanor.com/), a gallery of themes for Gatsby. After 5 months of development, Gatsby Manor is now in public alpha. Check out our [themes](https://www.gatsbymanor.com/themes) then use our [getting started](https://www.gatsbymanor.com/docs/quick-start/getting-started) guide to kickstart your Gatsby project.
 
 ## Overview
