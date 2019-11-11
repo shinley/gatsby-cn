@@ -1,6 +1,7 @@
 ---
 title: "Awesome Gatsby"
 ---
+
 A curated list of interesting Gatsby community projects and learning resources.
 
 ## Site showcase
