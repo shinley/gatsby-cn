@@ -1,6 +1,7 @@
 ---
 title: Gatsby生命周期API
 ---
+
 Gatsby provides a rich set of lifecycle APIs to hook into Gatsby's bootstrap, build, and client runtime operations.
 
 Gatsby的设计原则包括：
