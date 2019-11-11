@@ -5,10 +5,11 @@ image: "hexo-to-gatsby.png"
 author: "Ian Sinnott"
 excerpt: "How I migrated my blog to Gatsby and how you can do the same."
 tags:
-  - hexo
-  - getting-started
-  - markdown
+  - "hexo"
+  - "getting-started"
+  - "markdown"
 ---
+
 *This article was originally posted on [my blog (original link)](https://blog.iansinnott.com/migrating-a-blog-to-gatsby-part-2-of-gatsby-migration/). I'm reposting here in the hopes that it helps more people get started with Gatsby!*
 
 # Migrating a blog to Gatsby
