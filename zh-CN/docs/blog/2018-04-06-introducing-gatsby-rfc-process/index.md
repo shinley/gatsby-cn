@@ -3,6 +3,7 @@ title: "Introducing the Gatsby RFC Process"
 author: Kyle Mathews
 date: "2018-04-06"
 ---
+
 We're adopting an RFC ("request for comments") process for contributing ideas to Gatsby.
 
 Inspired by [React](https://github.com/reactjs/rfcs), [Yarn](https://github.com/yarnpkg/rfcs), [Ember](https://github.com/emberjs/rfcs), and [Rust](https://github.com/rust-lang/rfcs), the goal is to allow Gatsby core team members and community members to collaborate on the design of new features. It's also intended to provide a clear path for ideas to enter the project:
