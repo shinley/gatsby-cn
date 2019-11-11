@@ -1,6 +1,7 @@
 ---
 title: Migrating from v0 to v1
 ---
+
 ## Move source directories (pages, components, utils, etc.) under `src`
 
 [We moved site source files under a "src" directory](https://github.com/gatsbyjs/gatsby/issues/814) to cleanly separate them from config/data/build folders so to make integration with various JavaScript tooling (e.g. [Prettier](https://github.com/prettier/prettier)) simpler.
