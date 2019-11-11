@@ -1,6 +1,7 @@
 ---
 title: Adding a Path Prefix
 ---
+
 Many sites are hosted at something other than the root of their domain.
 
 E.g. a Gatsby blog could live at `example.com/blog/` or a site could be hosted on GitHub Pages at `example.github.io/my-gatsby-site/`
