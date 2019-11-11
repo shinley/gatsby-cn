@@ -1,6 +1,7 @@
 ---
 title: Themes
 ---
+
 Rough outline
 
 Themes are collections of plugins with optional additional assets such as react components, css, and binary files e.g. images.
