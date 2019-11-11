@@ -1,6 +1,7 @@
 ---
 title: Building with Components
 ---
+
 要使用Gatsby，您需要对React组件有一个基本的了解。
 
 The [official tutorial](https://reactjs.org/tutorial/tutorial.html) is a good place to start.
