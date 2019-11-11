@@ -4,11 +4,12 @@ date: "2018-02-27"
 author: "Jia Hao Goh"
 excerpt: My thought process during the long overdue rewrite of this website
 tags:
-  - jekyll
-  - plugins
-  - getting-started
-  - gatsby-apis
+  - "jekyll"
+  - "plugins"
+  - "getting-started"
+  - "gatsby-apis"
 ---
+
 *This article is the first of a two part series, on the engineering behind my [website](https://jiahao.codes). Originally published [here](https://jiahao.codes/blog/why-i-upgraded-my-website/)*
 
 For the past couple of weeks, I’ve been rebuilding my personal website from scratch, live at <https://jiahao.codes> with the source code on [GitHub](https://github.com/jiahaog/jiahao.codes). In this article, I'll tell the story of this long overdue rewrite and talk about the new static site framework I eventually settled on, Gatsby.
