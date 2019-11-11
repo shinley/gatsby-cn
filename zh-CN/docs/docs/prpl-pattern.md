@@ -1,6 +1,7 @@
 ---
 title: PRPL Pattern
 ---
+
 PRPL是由Google开发的网站架构，用于构建在智能手机和其他具有不可靠网络连接的设备上运行得非常好的网站和应用程序。
 
 https://developers.google.com/web/fundamentals/performance/prpl-pattern/
