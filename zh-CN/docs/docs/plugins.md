@@ -1,6 +1,7 @@
 ---
 title: Plugins
 ---
+
 Plugins are Node.js packages that implement Gatsby APIs. They enable you to easily solve common website build problems e.g. setup Sass, add markdown support, process images, etc.
 
 For larger / complex sites, they let you modularize your site customizations into site-specific plugins.
