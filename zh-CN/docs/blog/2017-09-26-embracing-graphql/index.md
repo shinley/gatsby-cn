@@ -5,10 +5,11 @@ image: "toa-heftiba-274947.jpg"
 author: "Tim Arney"
 excerpt: "Moving to Gatsby 1.x and embracing the new GraphQL setup can be daunting but the effort is going to payoff"
 tags:
-  - v1
-  - graphql
-  - getting-started
+  - "v1"
+  - "graphql"
+  - "getting-started"
 ---
+
 Before I built [React FAQ](https://reactfaq.site/), I went looking for a static site generator.
 
 I had a few criteria in mind.
