@@ -1,6 +1,7 @@
 ---
 title: "Create a Source Plugin"
 ---
+
 There are two types of plugins that work within Gatsby's data system, "source" and "transformer" plugins.
 
 * **Source** plugins "source" data from remote or local locations into what Gatsby calls [nodes](/docs/node-interface/).
