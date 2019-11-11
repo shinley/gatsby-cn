@@ -6,10 +6,11 @@ image: "on-the-trail.jpg"
 showImageInArticle: true
 typora-copy-images-to: ./
 tags:
-  - v1
-  - tutorials
-  - plugins
+  - "v1"
+  - "tutorials"
+  - "plugins"
 ---
+
 It's been a wild 77 days since Gatsby 1.0.0 was released into the world on July 6th, 2017.
 
 By the numbers we've seen:
