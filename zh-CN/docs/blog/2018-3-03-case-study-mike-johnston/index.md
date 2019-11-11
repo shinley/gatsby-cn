@@ -4,11 +4,12 @@ date: 2018-03-03
 author: Brandon Konkle
 image: mike-johnston-homepage.png
 tags:
-  - wordpress
-  - netlify
-  - security
-  - case-studies
+  - "wordpress"
+  - "netlify"
+  - "security"
+  - "case-studies"
 ---
+
 ### How we used React, Headless WordPress, GraphQL & Gatsby to build Mike’s new online platform
 
 [Ecliptic](http://www.ecliptic.io) is a small development team out of Broomfield, Colorado. We build everything from high-performance content-driven sites to richly interactive web and mobile applications using React, GraphQL, and functional programming. [Mike Johnston](https://www.mikejohnstonforcolorado.com) is a Colorado gubernatorial candidate with an ambitious vision. When we heard about his ideas for an online platform to truly engage with his constituents and give them a real voice, we were excited about the opportunity to make his ideas into reality!
