@@ -3,9 +3,10 @@ title: How to Build a Website with React
 date: "2018-02-16"
 author: Shannon Soper
 tags:
-  - React
-  - architecture
+  - "React"
+  - "architecture"
 ---
+
 # What is React?
 
 React is a fantastic and wildly popular tool for building websites and apps, and it creates a world where JavaScript and HTML live in happy harmony in the same files and efficiently renders your ever-changing data to the browser.
