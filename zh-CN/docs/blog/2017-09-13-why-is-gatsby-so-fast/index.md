@@ -6,10 +6,11 @@ image: "reactnext-gatsby-performance.001.png"
 showImageInArticle: false
 typora-copy-images-to: ./
 tags:
-  - performance
-  - mobile
-  - pwa
+  - "performance"
+  - "mobile"
+  - "pwa"
 ---
+
 *I gave this talk last weekend at [ReactNext](http://react-next.com/) in Tel Aviv. I spoke on the basics of measuring and improving web performance and how Gatsby is designed so sites built with it are always very very fast.*
 
 *Slides to follow interspersed with notes.*
