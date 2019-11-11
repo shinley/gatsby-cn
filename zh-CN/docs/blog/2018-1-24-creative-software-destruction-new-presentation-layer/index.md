@@ -3,10 +3,11 @@ title: "Creative Software Destruction and the New Presentation Layer"
 date: "2018-01-24"
 author: "Robin Vasan"
 tags:
-  - architecture
-  - serverless
-  - cdn
+  - "architecture"
+  - "serverless"
+  - "cdn"
 ---
+
 > “To improve is to change, so to be perfect is to have changed often.” — Winston Churchill
 
 And so it is that about every decade the technology industry rethinks the application architecture in light of new systems, capabilities, and desired outcomes. Right now we are in the early phases of another platform shift which will have massive ripple effects throughout the technology landscape. Current incumbents will fade in significance and new entrants will take their place within new categories. Hundreds of billions in market capitalization is at stake.
