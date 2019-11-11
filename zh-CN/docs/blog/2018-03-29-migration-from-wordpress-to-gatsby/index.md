@@ -6,6 +6,7 @@ canonicalLink: https://www.vojtechruzicka.com/gatsby-migration/
 publishedAt: Vojtech Ruzicka's Programming Blog
 excerpt: How and Why I migrated from WordPress to static JAM Stack site built with Gatsby JS.
 ---
+
 ![jam](./jam.jpg)
 
 How and Why I migrated from WordPress to static JAM Stack site built with Gatsby JS.
