@@ -1,6 +1,7 @@
 ---
 title: GraphQL Reference
 ---
+
 > Work in progress - pull requests showing additional examples are strongly encouraged.
 
 ## Intro
