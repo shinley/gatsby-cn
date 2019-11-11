@@ -1,6 +1,7 @@
 ---
 title: 调试HTML构建
 ---
+
 构建静态HTML文件时出现错误通常有两个原因。
 
 1. 一些代码引用“browser globals”，如窗口或文档。 如果这是你的问题，你应该看到上面的错误，如“window is not defined”. To fix this, find the offending code and either a) check before calling the code if window is defined so the code doesn't run while gatsby is building (see code sample below) or b) if the code is in the render function of a React.js component, move that code into "componentDidMount" which ensures the code doesn't run unless it's in the browser.
