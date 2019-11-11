@@ -1,6 +1,7 @@
 ---
 title: How Gatsby Works with GitHub Pages
 ---
+
 The easiest way to push a gatsby app to GitHub Pages is using a package called `gh-pages`.
 
 `npm install gh-pages --save-dev`
