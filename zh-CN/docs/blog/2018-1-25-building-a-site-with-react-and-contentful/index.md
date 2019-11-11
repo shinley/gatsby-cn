@@ -3,10 +3,11 @@ title: Building a Site with React and Contentful
 date: "2018-01-25"
 author: "Shannon Soper"
 tags:
-  - react
-  - contentful
-  - graphql
+  - "react"
+  - "contentful"
+  - "graphql"
 ---
+
 A poster of *Starry Night* by Vincent Van Gogh followed me to each new dorm room in college until it ripped beyond repair. I loved that poster.
 
 My poster of *Starry Night* often led to debates with my sister (a professional artist) about the merits and demerits of reprinting great works of art.
