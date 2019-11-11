@@ -2,6 +2,7 @@
 title: Introduction to Using CSS in Gatsby
 typora-copy-images-to: ./
 ---
+
 欢迎来到Gatsby教程的第二部分！
 
 ## What's in this tutorial?
