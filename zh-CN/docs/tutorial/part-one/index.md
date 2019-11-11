@@ -2,6 +2,7 @@
 title: Introduction to Gatsby basics
 typora-copy-images-to: ./
 ---
+
 你好， 学习Gatsby的小伙伴们！ 欢迎来到我们社区的第一部分Gatsby.js教程。
 
 ## 本教程中的内容是什么？
