@@ -1,6 +1,7 @@
 ---
 title: Gatsby Config
 ---
+
 Site configuration options for a Gatsby site are placed in a file at the root of the project folder called `gatsby-config.js`.
 
 *Note: There are many sample configs which may be helpful to reference in the different [Gatsby Example Websites](https://github.com/gatsbyjs/gatsby/tree/master/examples).*
