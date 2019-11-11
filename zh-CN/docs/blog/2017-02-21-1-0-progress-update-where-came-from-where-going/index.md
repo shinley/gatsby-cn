@@ -5,6 +5,7 @@ author: "Kyle Mathews"
 image: 'ui-and-code.png'
 draft: true
 ---
+
 想象一下什么是完美的网站框架？ 它可以让你可以让你快速建站，可以让你不用复杂的去搭建环境就可以使用最新的建站技术和浏览器新特性，它可以帮助你的团队协调开发、交付和维护。
 
 这个框架必须具备如下特征：
@@ -89,16 +90,16 @@ Service workers 或许是过去几年来web开发上最令人兴奋的技术。 
 
 Gatsby 1.0仅为您加载所在页面所需的代码。当您来回跳转时，Gatsby仅加载每个路由所需的JavaScript代码。
 
-This means that one page with heavy imports:
+这也就是说，某一个页面加载大量的js库：
 
 ```javascript
 import d3 from "d3";
 import threejs from "react-threejs";
 ```
 
-...won't affect the performance of the rest of the site.
+...也不会影响到其他页面的性能。
 
-This is particularly helpful for teams of people collaborating on a site with pages with very different technical and business requirements. Different parts of the site can evolve independently of each other.
+这对于多人协作开发一个网站是特别有用，因为这样可以对不同的页面使用不同的技术和实现不同的业务需求。 Different parts of the site can evolve independently of each other.
 
 One client I'm working with on Gatsby 1.0 (a stealth startup in San Francisco) is using Gatsby to build both their marketing site *and* SaaS app within the *same Gatsby codebase*.
 
