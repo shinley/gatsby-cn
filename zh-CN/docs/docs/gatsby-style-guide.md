@@ -1,6 +1,7 @@
 ---
 title: Gatsby样式指南
 ---
+
 The Gatsby community is building out a more comprehensive Guides section. It will be full of relevant articles written to be easily understood by the awesome people who love building with Gatsby!
 
 We plan, write, and maintain these Guide articles on GitHub.
@@ -139,22 +140,22 @@ Here are specific formatting guidelines for any code:
 * GitHub-flavored markdown supports syntax highlighting in code blocks for many programming languages. To use it, indicate the language after the opening three back ticks ``\`
     
     ```html
-<div class="awesome" id="more-awesome">
- <p>This is text in html</p>
-</div>
-```
-
-```javascript
-function logTheThings(stuff) {
-console.log(stuff);
-}
-```
-
-```css
-.awesome {
-background-color: #fccfcc;
-}
-```
+    <div class="awesome" id="more-awesome">
+     <p>This is text in html</p>
+    </div>
+    ```
+    
+    ```javascript
+    function logTheThings(stuff) {
+    console.log(stuff);
+    }
+    ```
+    
+    ```css
+    .awesome {
+    background-color: #fccfcc;
+    }
+    ```
 
 # Adding images to articles
 
