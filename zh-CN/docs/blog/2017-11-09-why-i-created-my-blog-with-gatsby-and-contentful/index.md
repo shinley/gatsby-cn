@@ -3,12 +3,13 @@ title: "Why I created my blog with Gatsby and Contentful"
 date: 2017-11-09
 author: "Fernando Poumian"
 tags:
-  - contentful
-  - netlify
-  - getting-started
-  - hosting
-  - static
+  - "contentful"
+  - "netlify"
+  - "getting-started"
+  - "hosting"
+  - "static"
 ---
+
 I recently deployed my new blog at [halfelectronic.com](https://www.halfelectronic.com) and I thought it would be fitting to talk about how I built it in the first place -- you know, me being a web developer and all.
 
 There is certainly no shortage of options when it comes to platforms and CMSs to build a blog these days: From the more traditional, cumbersome and usually troublesome PHP based ones -- I'm looking at you Wordpress -- to the more minimal and modern ones like Ghost, Medium and Tumblr.
