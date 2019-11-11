@@ -4,12 +4,13 @@ date: 2017-10-16
 author: "Kyle Mathews"
 typora-copy-images-to: ./
 tags:
-  - right-building-blocks
-  - gatsby-image
-  - react
-  - graphql
-  - plugins
+  - "right-building-blocks"
+  - "gatsby-image"
+  - "react"
+  - "graphql"
+  - "plugins"
 ---
+
 I still remember the first non-trivial React component I built in 2014—not long after I started using React seriously.
 
 I decided to port to React [headroom.js](http://wicky.nillia.ms/headroom.js/)—a JavaScript library that shows & hides headers as you scroll up & down a site.
