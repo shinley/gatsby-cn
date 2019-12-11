@@ -1,5 +1,5 @@
 ---
-title: Creating a Blog with Gatsby
+title: 使用GatsBy创建博客
 date: "2017-07-19"
 author: "Dustin Schau"
 image: "../images/15009741473_9ced5e3209_o.jpg"
@@ -10,8 +10,8 @@ canonicalLink: "https://objectpartners.com/2017/07/19/creating-a-static-blog-wit
 publishedAt: "Object Partners, Inc."
 excerpt: "In this post, we'll take a deep dive into Gatsby and some of the new 1.0 features by creating a static blog. Let's get on it!"
 tags:
-  - "getting-started"
-  - "blog"
+  - "入门"
+  - "博客"
   - "markdown"
 ---
 
