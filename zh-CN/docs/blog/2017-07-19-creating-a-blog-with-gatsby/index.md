@@ -15,9 +15,9 @@ tags:
   - "markdown"
 ---
 
-Gatsby是一个令人难以置信的静态站点生成器，它允许将React用作基础渲染引擎来构建静态站点，该站点真正具有现代Web应用程序中预期的所有好处。 It does this by rendering dynamic React components into static HTML content via [server side rendering](https://facebook.github.io/react/docs/react-dom-server.html) at build time. This means that your users get all the benefits of a static site such as the ability to work without JavaScript, search engine friendliness, speedy load times, etc. without losing the dynamism and interactivity that is expected of the modern web. Once rendered to static HTML, client-site React/JavaScript *can* take over (if creating stateful components or logic in `componentDidMount`) and add dynamism to the statically generated content.
+Gatsby是一个令人难以置信的静态站点生成器，它允许将React用作基础渲染引擎来构建静态站点，该站点真正具有现代Web应用程序中预期的所有好处。 它通过[服务端渲染](https://facebook.github.io/react/docs/react-dom-server.html)在构建时把 动态React组件渲染为静态HTML内容。 这意味着您的用户获得了所有静态站点的好处，例如不使用 JavaScript 的能力、搜索引擎友好、快速的加载时间等。 而不会失去现代网络所期望的动态性和交互性。 一旦渲染为静态HTML, 在客户端 React/JavaScript *可以接管* (如果在 `组件DidMount`中创建状态组件或逻辑)，并将这些交互添加到静态生成的内容中。
 
-Gatsby [recently released](/blog/gatsby-v1/) a v1.0.0 with a bunch of new features, including (but not limited to) the ability to create content queries with GraphQL, integration with various CMSs--including WordPress, Contentful, Drupal, etc., and route based code splitting to keep the end-user experience as snappy as possible. In this post, we'll take a deep dive into Gatsby and some of these new features by creating a static blog. Let's get on it!
+Gatsby [最近发布了包含很多新功能的](/blog/gatsby-v1/) v1.0 版本，包括(但不限于) 能够使用 GraphQL 创建内容查询，整合各种 CMS-including WordPress、Contental、Drupal等，还有基于路线的代码拆分功能以尽可能保留最终用户体验。 In this post, we'll take a deep dive into Gatsby and some of these new features by creating a static blog. Let's get on it!
 
 ## Getting started
 
