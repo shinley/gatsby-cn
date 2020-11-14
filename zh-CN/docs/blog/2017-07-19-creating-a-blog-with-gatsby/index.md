@@ -17,19 +17,19 @@ tags:
 
 Gatsby是一个令人难以置信的静态站点生成器，它允许将React用作基础渲染引擎来构建静态站点，该站点真正具有现代Web应用程序中预期的所有好处。 它通过[服务端渲染](https://facebook.github.io/react/docs/react-dom-server.html)在构建时把 动态React组件渲染为静态HTML内容。 这意味着您的用户获得了所有静态站点的好处，例如不使用 JavaScript 的能力、搜索引擎友好、快速的加载时间等。 而不会失去现代网络所期望的动态性和交互性。 一旦渲染为静态HTML, 在客户端 React/JavaScript *可以接管* (如果在 `组件DidMount`中创建状态组件或逻辑)，并将这些交互添加到静态生成的内容中。
 
-Gatsby [最近发布了包含很多新功能的](/blog/gatsby-v1/) v1.0 版本，包括(但不限于) 能够使用 GraphQL 创建内容查询，整合各种 CMS-including WordPress、Contental、Drupal等，还有基于路线的代码拆分功能以尽可能保留最终用户体验。 In this post, we'll take a deep dive into Gatsby and some of these new features by creating a static blog. Let's get on it!
+Gatsby [最近发布了包含很多新功能的](/blog/gatsby-v1/) v1.0 版本，包括(但不限于) 能够使用 GraphQL 创建内容查询，整合各种 CMS-including WordPress、Contental、Drupal等，还有基于路线的代码拆分功能以尽可能保留最终用户体验。 在这个帖子中，我们会通过创建一个静态博客深入Gatsby和这些新功能。 让我们继续吧！
 
-## Getting started
+## 新手指南
 
-### Installing the CLI
+### 安装CLI
 
 `npm install -g gatsby-cli`
 
-Gatsby ships with a great CLI (command line interface) that contains the functionality of scaffolding out a working site, as well as commands to help develop the site once created.
+Gatsby船舶上有一个超棒的 CLI (命令行接口)，可以用来方便的搭建网站以及之后的快速开发。
 
 `gatsby new personal-blog && cd $_`
 
-This command will create the folder `personal-blog` and then change into that directory. A working `gatsby` statically generated application can now be developed upon. The Gatsby CLI includes many common development features such as `gatsby build` (build a production, statically generated version of the project), `gatsby develop` (launch a hot-reload enabled web development server), etc.
+此命令将创建并切换到文件夹 `personal-blog` 。 A working `gatsby` statically generated application can now be developed upon. Gatsby CLI 包含许多常见的开发功能，例如 `gatsby build` (构建生产) 静态生成的 项目版本， `gatsby develop` (启动启用热重新加载的网页开发服务器)， 等。
 
 We can now begin the exciting task of *actually* developing on the site, and creating a functional, modern blog. You'll generally want to use `gatsby develop` to launch the local development server to validate functionality as we progress through the steps.
 
