@@ -29,17 +29,17 @@ Gatsby船舶上有一个超棒的 CLI (命令行接口)，可以用来方便的�
 
 `gatsby new personal-blog && cd $_`
 
-此命令将创建并切换到文件夹 `personal-blog` 。 A working `gatsby` statically generated application can now be developed upon. Gatsby CLI 包含许多常见的开发功能，例如 `gatsby build` (构建生产) 静态生成的 项目版本， `gatsby develop` (启动启用热重新加载的网页开发服务器)， 等。
+此命令将创建并切换到文件夹 `personal-blog` 。 现在可以进行 `gatsby` 静态生成应用程序开发工作了。 Gatsby CLI 包含许多常见的开发功能，例如 `gatsby build` (构建生产) 静态生成的 项目版本， `gatsby develop` (启动启用热重新加载的网页开发服务器)， 等。
 
-We can now begin the exciting task of *actually* developing on the site, and creating a functional, modern blog. You'll generally want to use `gatsby develop` to launch the local development server to validate functionality as we progress through the steps.
+我们现在可以开始这个激动人心的任务： *实际动手* 在网站上进行开发并创建一个功能性的现代博客。 您一般想要使用 `gatsby develop` 来启动本地开发服务器来验证功能。我们下面逐步完成这些步骤。
 
-## Adding necessary plugins
+## 添加必要插件
 
-Gatsby supports a [rich plugin interface](/docs/plugins/), and many incredibly useful plugins have been authored to make accomplishing common tasks a breeze. Plugins can be broken up into three main categories: **functional** plugins, **source** plugins, and **transformer** plugins.
+Gatsby 支持[丰富的插件接口](/docs/plugins/)，其中许多非常棒的常用插件都已经完成，可以轻松完成常见任务。 插件可以分成三大类： **功能性** 插件，**源** 插件，以及 **迁移** 插件。
 
-### Functional plugins
+### 功能性插件
 
-Functional plugins either implement some functionality (e.g. offline support, generating a sitemap, etc.) *or* they extend Gatsby's webpack configuration adding support for typescript, sass, etc.
+函数插件要么实现某些功能(例如离线支持，生成站点地图等等)*或者* 他们扩展了Gatsby 的 webpack 配置，添加了对 typescript、sass 等的支持。
 
 For this particular blog post, we want a single page app-like feel (without page reloads), as well as the ability to dynamically change the `title` tag within the `head` tags. As noted, the Gatsby plugin ecosystem is rich, vibrant, and growing, so oftentimes a plugin already exists that solves the particular problem you're trying to solve. To address the functionality we want for *this* blog, we'll use the following plugins:
 
